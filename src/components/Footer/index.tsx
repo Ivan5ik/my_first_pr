@@ -1,28 +1,22 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
+import { basicWords } from "./utils";
+
 import useStyles from "./style";
 
 export default function Footer() {
   const classes = useStyles();
 
   const history = useNavigate();
-  const array = [
-    { title: "Головна", key: "/todo" },
-    { title: "Про Тараса", key: "/pro-tarasa" },
-    { title: "Продукція", key: "/cataloge" },
-    { title: "Оплата і доставка", key: "/todo" },
-    { title: "Повернення товару", key: "/todo" },
-    { title: "Контакти", key: "/todo" },
-  ];
 
   return (
     <div className={classes.root}>
       <div className={classes.footer}>
         <div className={classes.container}>
-          <div className={classes.footerTop}>
-            <div className={classes.footerMenu}>
-              {array.map((item) => (
+          <div className={classes.top}>
+            <div className={classes.menu}>
+              {basicWords.map((item) => (
                 <div
                   key={item.title}
                   className={classes.link}
@@ -37,7 +31,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className={classes.footerContacts}>
+          <div className={classes.contacts}>
             <div className={classes.contactsRight}>
               <a className={classes.link} href="mailto:tparandii@gmail.com">
                 TPARANDII@GMAIL.COM
@@ -62,7 +56,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className={classes.footerBottom}>
+          <div className={classes.bottom}>
             <div className={classes.social}>
               <a
                 href="https://www.facebook.com/"

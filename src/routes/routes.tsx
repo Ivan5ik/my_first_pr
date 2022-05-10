@@ -23,7 +23,7 @@ export interface IRoutes {
   component?: ReactNode;
 }
 
-export const routesBottom: IRoutes[] = [
+export const navigationBottom: IRoutes[] = [
   { name: "Копчене м'яско", path: "smoked" },
   { name: "Новинки", path: "new" },
   { name: "Делікатеси", path: "deli" },
@@ -35,7 +35,7 @@ export const routesBottom: IRoutes[] = [
   { name: "Кава/Чай", path: "coffee" },
 ];
 
-export const routesMiddleBottom: IRoutes[] = [
+export const navigationMiddleBottom: IRoutes[] = [
   { name: "Про Тараса", path: "pro-tarasa" },
   { name: "Продукція", path: "cataloge" },
   { name: "Виробництво", path: "production" },
@@ -43,7 +43,8 @@ export const routesMiddleBottom: IRoutes[] = [
   { name: "Контакти", path: "contacts" },
   { name: "Кошик", path: "box" },
 ];
-export const routesMiddleAbove: IRoutes[] = [
+
+export const navigationMiddleTop: IRoutes[] = [
   { name: "+38(063) 623 55 35", path: "phone" },
   { name: "УКРАЇНСЬКА" },
 ];

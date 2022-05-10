@@ -2,9 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import {
-  routesBottom,
-  routesMiddleAbove,
-  routesMiddleBottom,
+  navigationBottom,
+  navigationMiddleTop,
+  navigationMiddleBottom,
 } from "../../routes/routes";
 
 import useStyles from "./style";
@@ -16,10 +16,10 @@ export default function Header() {
     <div className={classes.main}>
       <div className={classes.divFixed}>
         <div className={classes.above}>
-          <img src="./assets/photo.png" className={classes.img} alt="photoo" />
+          <img src="./assets/photo.png" className={classes.img} alt="logo" />
           <div className={classes.cover}>
             <div className={classes.MiddleTop}>
-              {routesMiddleAbove.map((item) => (
+              {navigationMiddleTop.map((item) => (
                 <Link
                   className={classes.colorWordsAbove}
                   to={String(item.path)}
@@ -29,7 +29,7 @@ export default function Header() {
               ))}
             </div>
             <div className={classes.middleBottom}>
-              {routesMiddleBottom.map((item) => (
+              {navigationMiddleBottom.map((item) => (
                 <Link
                   className={classes.colorWordsAbove}
                   to={String(item.path)}
@@ -42,7 +42,7 @@ export default function Header() {
         </div>
 
         <div className={classes.bottom}>
-          {routesBottom.map((item) => (
+          {navigationBottom.map((item) => (
             <Link className={classes.colorWords} to={String(item.path)}>
               {item.name}
             </Link>

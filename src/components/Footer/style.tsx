@@ -1,5 +1,12 @@
 import { createUseStyles } from "react-jss";
 
+const pallet = {
+  boxSizing: "border-box",
+  colorForBorder: "#31353a",
+  width: "960px",
+  color: "white",
+  fontSize: "18px",
+};
 const useStyles = createUseStyles({
   root: {},
   footer: {
@@ -7,7 +14,7 @@ const useStyles = createUseStyles({
     height: "538px",
     background: "black",
     padding: "50px 0px 35px 0px",
-    boxSizing: "border-box",
+    boxSizing: pallet.boxSizing,
     display: "flex",
     justifyContent: "center",
   },
@@ -16,46 +23,46 @@ const useStyles = createUseStyles({
     height: "453px",
     margin: "0px 105px 0px 105px",
     padding: "0px 10px 0px 10px",
-    boxSizing: "border-box",
+    boxSizing: pallet.boxSizing,
   },
-  footerTop: {
+  top: {
     borderTop: "2px solid #31353a ",
-    width: "960px",
+    width: pallet.width,
     boxSizing: "border-box",
     height: "56px",
     padding: "12px 0px 12px 0px",
     display: "flex",
     justifyContent: "space-between",
   },
-  footerContacts: {
-    width: "960px",
+  contacts: {
+    width: pallet.width,
     boxSizing: "border-box",
     height: "183px",
     borderTop: "2px solid #31353a ",
     padding: "20px 0px 20px 0px",
     display: "flex",
   },
-  footerBottom: {
-    width: "960px",
+  bottom: {
+    width: pallet.width,
     boxSizing: "border-box",
     height: "217px",
     borderTop: "2px solid #31353a ",
     paddingTop: "55px",
   },
-  footerMenu: {
+  menu: {
     display: "flex",
     justifyContent: "space-between",
     width: "768px",
   },
   link: {
     display: "block",
-    color: "white",
-    fontSize: "18px",
+    color: pallet.color,
+    fontSize: pallet.fontSize,
   },
 
   topAside: {
-    color: "white",
-    fontSize: "18px",
+    color: pallet.color,
+    fontSize: pallet.fontSize,
   },
   contactsRight: {
     width: "210px",
@@ -77,10 +84,10 @@ const useStyles = createUseStyles({
     alignItems: "center",
   },
   contactsMainTop: {
-    height: "70.5px",
+    height: "70px",
   },
   contactsMainBottom: {
-    height: "70.5px",
+    height: "70px",
   },
   pForContacts: {
     color: "#5a6771",
@@ -88,13 +95,13 @@ const useStyles = createUseStyles({
     textAlign: "center",
   },
   social: {
-    width: "960px",
+    width: pallet.width,
     boxSizing: "border-box",
     display: "flex",
     justifyContent: "center",
   },
   copyRight: {
-    width: "960px",
+    width: pallet.width,
     boxSizing: "border-box",
     marginTop: "60px",
     display: "flex",
