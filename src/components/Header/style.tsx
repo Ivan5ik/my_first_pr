@@ -5,6 +5,10 @@ const useStyles = createUseStyles({
     display: "flex",
     flexDirection: "column",
   },
+  divFixed: {
+    position: "fixed",
+    width: "100%",
+  },
   above: {
     display: "flex",
     height: "75px",
@@ -32,7 +36,7 @@ const useStyles = createUseStyles({
     color: "white",
     fontSize: "18px",
   },
-  MiddleBottom: {
+  middleBottom: {
     borderTop: "2px solid #31353a",
     width: "854px",
     display: "flex",

@@ -1,5 +1,6 @@
 import React from "react";
-const Pro_Tarasa = () => {
+
+const ProTarasa = () => {
   return (
     <div>
       <h1> Pro-Tarasa </h1>
@@ -7,4 +8,4 @@ const Pro_Tarasa = () => {
     </div>
   );
 };
-export { Pro_Tarasa };
+export { ProTarasa };
