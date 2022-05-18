@@ -117,7 +117,7 @@ const useStyles = createUseStyles({
     display: "flex",
     justifyContent: "center",
   },
-  fb: {
+  pictureFacebook: {
     width: "60px",
     height: "60px",
     borderRadius: "10px",

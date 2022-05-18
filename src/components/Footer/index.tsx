@@ -52,7 +52,9 @@ export default function Footer() {
               </div>
             </div>
             <div className={classes.contactsLeft}>
-              <p className={classes.link}>+38 (063) 623 55 35</p>
+              <a className={classes.link} href="tel:+380636235535">
+                +38 (063) 623 55 35
+              </a>
             </div>
           </div>
 
@@ -63,7 +65,11 @@ export default function Footer() {
                 rel="noreferrer"
                 target="_blank"
               >
-                <img className={classes.fb} src="./assets/fb.png" alt="fb" />
+                <img
+                  className={classes.pictureFacebook}
+                  src="./assets/fb.png"
+                  alt="Facebook"
+                />
               </a>
               <a
                 href="https://www.instagram.com/"
@@ -71,7 +77,7 @@ export default function Footer() {
                 target="_blank"
               >
                 <img
-                  className={classes.fb}
+                  className={classes.pictureFacebook}
                   src="./assets/inst.png"
                   alt="inst"
                 />

@@ -27,7 +27,7 @@ export interface ICard {
   imgUrl: string[];
 }
 export const basicWords = [
-  { title: "Головна", key: "/todo" },
+  { title: "Головна", key: "/" },
   { title: "Про Тараса", key: "/pro-tarasa" },
   { title: "Продукція", key: "/cataloge" },
   { title: "Оплата і доставка", key: "/todo" },

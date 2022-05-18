@@ -56,6 +56,7 @@ const useStyles = createUseStyles({
     width: "90px",
     height: "75px",
     display: "block",
+    cursor: "pointer",
   },
   nav: {
     width: "100%",
