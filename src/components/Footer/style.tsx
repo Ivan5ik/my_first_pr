@@ -58,11 +58,21 @@ const useStyles = createUseStyles({
     display: "block",
     color: pallet.color,
     fontSize: pallet.fontSize,
+    "&:hover": {
+      cursor: "pointer",
+      color: "#ab3838",
+      transition: "all 0.3s",
+    },
   },
 
   topAside: {
-    color: pallet.color,
+    color: "#566570",
     fontSize: pallet.fontSize,
+    "&:hover": {
+      cursor: "pointer",
+      color: pallet.color,
+      transition: "all 0.3s",
+    },
   },
   contactsRight: {
     width: "210px",

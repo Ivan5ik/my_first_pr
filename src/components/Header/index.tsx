@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import {
-  navigationBottom,
   navigationMiddleTop,
   navigationMiddleBottom,
 } from "../../routes/routes";
@@ -13,12 +12,12 @@ export default function Header() {
   const classes = useStyles();
 
   return (
-    <div className={classes.main}>
-      <div className={classes.divFixed}>
-        <div className={classes.above}>
-          <img src="./assets/photo.png" className={classes.img} alt="logo" />
-          <div className={classes.cover}>
-            <div className={classes.MiddleTop}>
+    <div className={classes.fixed}>
+      <div className={classes.above}>
+        <div className={classes.cover}>
+          <img src="../assets/photo.png" className={classes.img} alt="logo" />
+          <div className={classes.nav}>
+            <div className={classes.middleTop}>
               {navigationMiddleTop.map((item) => (
                 <Link
                   className={classes.colorWordsAbove}
@@ -39,14 +38,6 @@ export default function Header() {
               ))}
             </div>
           </div>
-        </div>
-
-        <div className={classes.bottom}>
-          {navigationBottom.map((item) => (
-            <Link className={classes.colorWords} to={String(item.path)}>
-              {item.name}
-            </Link>
-          ))}
         </div>
       </div>
     </div>

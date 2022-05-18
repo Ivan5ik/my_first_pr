@@ -13,7 +13,7 @@ function App() {
   return (
     <div>
       <Header />
-      <div style={{ paddingTop: "145px" }}>
+      <div style={{ paddingTop: "97px" }}>
         <Route />
       </div>
       <Footer />

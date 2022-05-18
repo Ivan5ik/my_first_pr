@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-import { basicWords } from "./utils";
+import { basicWords } from "../../utils";
 
 import useStyles from "./style";
 
@@ -52,7 +52,7 @@ export default function Footer() {
               </div>
             </div>
             <div className={classes.contactsLeft}>
-              <p className={classes.topAside}>+38 (063) 623 55 35</p>
+              <p className={classes.link}>+38 (063) 623 55 35</p>
             </div>
           </div>
 
