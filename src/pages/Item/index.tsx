@@ -6,6 +6,7 @@ import { Select } from "../../components/Select";
 import { arrayCard, arraySelect } from "../../utils";
 
 import useStyles from "./style";
+import { Button } from "../../components/Button";
 
 const Item = () => {
   const classes = useStyles();
@@ -44,8 +45,11 @@ const Item = () => {
             <p className={classes.description}>{description}</p>
             <div>
               <div className={classes.pricePlusSelect}>
-                <p style={{ color: "white" }}>{price}</p>
-                <p style={{ color: "white" }}>{purchaseType}</p>
+                <div className={classes.cover}>
+                  <p className={classes.price}>{price}</p>
+                  <span className={classes.price}>грн /</span>
+                  <p className={classes.purchaseType}>{purchaseType}</p>
+                </div>
                 <p>
                   <Select
                     selectValue={selectValue}
@@ -54,8 +58,8 @@ const Item = () => {
                   />
                 </p>
               </div>
-              <button className={classes.button}>В кошик</button>
-              <div className={classes.shareBox}>
+              <Button />
+              {/* <div className={classes.shareBox}>
                 <p className={classes.shareFriends}>Розповісти друзям</p>
                 <div style={{ display: "flex" }}>
                   <img src="../assets/fb.png" alt="fb" className={classes.fb} />
@@ -65,7 +69,7 @@ const Item = () => {
                     className={classes.fb}
                   />
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

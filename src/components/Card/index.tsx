@@ -5,6 +5,7 @@ import { Select } from "../Select";
 import { arraySelect, ICard } from "../../utils";
 
 import useStyles from "./style";
+import { Button } from "../Button";
 
 interface ICardProps {
   item: ICard;
@@ -22,14 +23,14 @@ const Card: FC<ICardProps> = ({ item }) => {
     <div className={classes.card}>
       <div onClick={() => history(`/catalog/${id}`)} className={classes.top}>
         <img className={classes.imgOfCard} alt="imgOfCard" src={imgUrl[0]} />
-        <h1 className={classes.cardTittle}>{name}</h1>
-        <p style={{ color: "white" }}>{description}</p>
+        <h1 className={classes.whiteColor}>{name}</h1>
+        <p className={classes.whiteColor}>{description}</p>
       </div>
 
       <div className={classes.bottom}>
         <div className={classes.pricePlusSelect}>
-          <p style={{ color: "white" }}>{price}</p>
-          <p style={{ color: "white" }}>{purchaseType}</p>
+          <p className={classes.whiteColor}>{price}</p>
+          <p className={classes.whiteColor}>{purchaseType}</p>
           <p>
             <Select
               selectValue={selectValue}
@@ -39,7 +40,7 @@ const Card: FC<ICardProps> = ({ item }) => {
           </p>
         </div>
         <div className={classes.butPlusP}>
-          <button className={classes.button}>В кошик</button>
+          <Button />
           <p className={classes.inMoreDetail}>Детальніше</p>
         </div>
       </div>

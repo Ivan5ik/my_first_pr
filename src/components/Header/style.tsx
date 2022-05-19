@@ -1,12 +1,14 @@
 import { createUseStyles } from "react-jss";
+import { globalColors } from "../../utils";
 
 const useStyles = createUseStyles({
   fixed: {
     position: "fixed",
     width: "100%",
-    background: "#1f1f1f",
+    background: globalColors.darkBlack,
     borderBottom: "2px solid #31353a",
     padding: "0 20px 0 20px",
+    zIndex: "2",
   },
   above: {
     display: "flex",
@@ -24,7 +26,7 @@ const useStyles = createUseStyles({
     color: "white",
     fontSize: "18px",
     "&:hover": {
-      color: "#ab3838",
+      color: globalColors.red,
       transition: "all 0.3s",
     },
   },
@@ -43,7 +45,7 @@ const useStyles = createUseStyles({
     color: "white",
     fontSize: "18px",
     "&:hover": {
-      color: "#ab3838",
+      color: globalColors.red,
       transition: "all 0.3s",
     },
   },

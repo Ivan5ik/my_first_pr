@@ -3,6 +3,12 @@ export interface IArraySelect {
   key: string;
 }
 
+export const globalColors = {
+  red: "#ab3838",
+  white: "#ffffff",
+  darkBlack: "#1f1f1f",
+};
+
 export const arraySelect: IArraySelect[] = [
   { name: "1 piece", key: "1" },
   { name: "2 piece", key: "2" },

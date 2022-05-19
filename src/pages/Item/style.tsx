@@ -1,35 +1,43 @@
 import { createUseStyles } from "react-jss";
+import { globalColors } from "../../utils";
 
 const useStyles = createUseStyles({
   name: {
-    color: "white",
+    color: globalColors.white,
     fontSize: "24px",
     marginBottom: "25px",
     paddingTop: "30px",
     textAlign: "center",
   },
   toCataloge: {
-    color: "white",
+    color: globalColors.white,
     fontSize: "18px",
-    marginLeft: "35px",
+    marginLeft: "22px",
+    "&:hover": {
+      color: globalColors.red,
+    },
   },
   underName: {
     display: "flex",
     position: "relative",
+    marginBottom: "12px",
   },
+
   root: {
-    background: "#1f1f1f",
+    background: globalColors.darkBlack,
     width: "100%",
     maxWidth: "980px",
     margin: "0px auto",
-    padding: "0px 20px 0px 20px",
+    "& .ant-carousel .slick-dots": {
+      zIndex: "1",
+    },
   },
   symbol: {
     display: "block",
-    color: "white",
+    color: globalColors.white,
     fontSize: "18px",
     position: "absolute",
-    marginLeft: "15px",
+    marginLeft: "1px",
   },
   content: {
     height: "355px",
@@ -38,6 +46,7 @@ const useStyles = createUseStyles({
     display: "flex",
     flexDirection: "column",
     justifyContent: "space-between",
+    paddingBottom: "46px",
   },
   img: { width: "50%", height: "355px" },
   mainContainer: {
@@ -45,7 +54,7 @@ const useStyles = createUseStyles({
     paddingBottom: "20px",
   },
   description: {
-    color: "white",
+    color: globalColors.white,
     fontSize: "18px",
   },
   pricePlusSelect: {
@@ -54,13 +63,13 @@ const useStyles = createUseStyles({
   },
   button: {
     display: "block",
-    background: "#1f1f1f",
+    background: globalColors.darkBlack,
     "&:hover": {
       cursor: "pointer",
-      background: "#ab3838",
+      background: globalColors.red,
       transition: "all 0.3s",
     },
-    color: "white",
+    color: globalColors.white,
     padding: "5px 10px 5px 10px",
     border: "1px solid white",
     borderRadius: "3px",
@@ -68,22 +77,22 @@ const useStyles = createUseStyles({
     fontSize: "16px",
     margin: "0px auto",
   },
-  shareBox: {
-    marginTop: "20px",
-    display: "flex",
-    justifyContent: "space-between",
-  },
-  fb: {
-    width: "40px",
-    height: "40px",
-    borderRadius: "20px",
-    display: "block",
-    marginRight: "20px",
-  },
-  shareFriends: {
-    color: "#46596d",
-    fontSize: "16px",
-  },
+  // shareBox: {
+  //   marginTop: "20px",
+  //   display: "flex",
+  //   justifyContent: "space-between",
+  // },
+  // fb: {
+  //   width: "40px",
+  //   height: "40px",
+  //   borderRadius: "20px",
+  //   display: "block",
+  //   marginRight: "20px",
+  // },
+  // shareFriends: {
+  //   color: "#46596d",
+  //   fontSize: "16px",
+  // },
   underDescription: {
     display: "flex",
     flexDirection: "column",
@@ -99,5 +108,10 @@ const useStyles = createUseStyles({
     height: "100%",
     width: "100%",
   },
+  cover: {
+    display: "flex",
+  },
+  price: { color: globalColors.white, marginRight: "5px" },
+  purchaseType: { color: globalColors.white },
 });
 export default useStyles;

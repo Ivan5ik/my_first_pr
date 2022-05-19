@@ -1,4 +1,5 @@
 import { createUseStyles } from "react-jss";
+import { globalColors } from "../../utils";
 
 const useStyles = createUseStyles({
   inputAnt: {
@@ -9,7 +10,7 @@ const useStyles = createUseStyles({
   },
   root: {
     "& .ant-input": {
-      backgroundColor: "#1f1f1f",
+      backgroundColor: globalColors.darkBlack,
       border: "1px solid white",
       color: "white",
       boxShadow: "none",

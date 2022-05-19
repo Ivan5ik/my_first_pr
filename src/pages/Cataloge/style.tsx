@@ -1,15 +1,15 @@
 import { createUseStyles } from "react-jss";
+import { globalColors } from "../../utils";
 
 const useStyles = createUseStyles({
   container: {
-    background: "#1f1f1f",
+    background: globalColors.darkBlack,
     width: "100%",
     maxWidth: "980px",
     margin: "0px auto",
-    padding: "0px 20px 0px 20px",
   },
   product: {
-    color: "white",
+    color: globalColors.white,
     marginBottom: "60px",
     paddingTop: "25px",
     textAlign: "center",
@@ -20,7 +20,7 @@ const useStyles = createUseStyles({
     marginBottom: "10px",
   },
   reset: {
-    color: "white",
+    color: globalColors.white,
     fontSize: "16px",
     cursor: "pointer",
   },

@@ -1,8 +1,9 @@
 import { createUseStyles } from "react-jss";
+import { globalColors } from "../utils";
 
 const useStyles = createUseStyles({
   color: {
-    background: "#1f1f1f",
+    background: globalColors.darkBlack,
   },
 });
 export default useStyles;

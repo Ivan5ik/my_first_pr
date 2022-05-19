@@ -1,4 +1,5 @@
 import { createUseStyles } from "react-jss";
+import { globalColors } from "../../utils";
 
 const useStyles = createUseStyles({
   root: {
@@ -6,13 +7,13 @@ const useStyles = createUseStyles({
       backgroundColor: "#1f1f1f !important",
     },
     "& .ant-select-arrow": {
-      color: "#ffffff",
+      color: globalColors.white,
     },
     "& .ant-select": {
-      color: "#ffffff",
+      color: globalColors.white,
     },
     "& .ant-select:not(.ant-select-disabled):hover .ant-select-selector": {
-      borderColor: "#ab3838",
+      borderColor: globalColors.red,
     },
   },
 });

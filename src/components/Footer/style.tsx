@@ -1,10 +1,10 @@
 import { createUseStyles } from "react-jss";
+import { globalColors } from "../../utils";
 
 const pallet = {
   boxSizing: "border-box",
   colorForBorder: "#31353a",
   width: "960px",
-  color: "white",
   fontSize: "18px",
 };
 const useStyles = createUseStyles({
@@ -56,21 +56,21 @@ const useStyles = createUseStyles({
   },
   link: {
     display: "block",
-    color: pallet.color,
+    color: globalColors.white,
     fontSize: pallet.fontSize,
     "&:hover": {
       cursor: "pointer",
-      color: "#ab3838",
+      color: globalColors.red,
       transition: "all 0.3s",
     },
   },
 
   topAside: {
-    color: "#566570",
+    color: "#5a6771",
     fontSize: pallet.fontSize,
     "&:hover": {
       cursor: "pointer",
-      color: pallet.color,
+      color: globalColors.white,
       transition: "all 0.3s",
     },
   },
