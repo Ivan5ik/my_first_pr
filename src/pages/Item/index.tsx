@@ -58,7 +58,7 @@ const Item = () => {
                   />
                 </p>
               </div>
-              <Button />
+              {/* <Button mainValue={0} /> */}
               {/* <div className={classes.shareBox}>
                 <p className={classes.shareFriends}>Розповісти друзям</p>
                 <div style={{ display: "flex" }}>

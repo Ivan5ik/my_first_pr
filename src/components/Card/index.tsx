@@ -9,9 +9,10 @@ import { Button } from "../Button";
 
 interface ICardProps {
   item: ICard;
+  valueNumber: number;
 }
 
-const Card: FC<ICardProps> = ({ item }) => {
+const Card: FC<ICardProps> = ({ item, valueNumber }) => {
   const classes = useStyles();
 
   const [selectValue, setSelectValue] = useState("1");
@@ -19,8 +20,12 @@ const Card: FC<ICardProps> = ({ item }) => {
 
   const history = useNavigate();
 
+  const getBool = (valueNumber: number) => {
+    console.log(valueNumber);
+  };
+
   return (
-    <div className={classes.card}>
+    <div onClick={() => getBool(valueNumber)} className={classes.card}>
       <div onClick={() => history(`/catalog/${id}`)} className={classes.top}>
         <img className={classes.imgOfCard} alt="imgOfCard" src={imgUrl[0]} />
         <h1 className={classes.whiteColor}>{name}</h1>
@@ -40,7 +45,7 @@ const Card: FC<ICardProps> = ({ item }) => {
           </p>
         </div>
         <div className={classes.butPlusP}>
-          <Button />
+          <Button mainValue={valueNumber} />
           <p className={classes.inMoreDetail}>Детальніше</p>
         </div>
       </div>

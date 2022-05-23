@@ -48,8 +48,8 @@ const Cataloge = () => {
                 .includes(selectValue.toLowerCase());
             }
           })
-          .map((item: ICard) => (
-            <Card item={item} />
+          .map((item: ICard, index) => (
+            <Card item={item} valueNumber={index} />
           ))}
       </div>
     </div>

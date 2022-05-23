@@ -9,6 +9,38 @@ export const globalColors = {
   darkBlack: "#1f1f1f",
 };
 
+export const payArray = [
+  { name: "Готівкою", check: 1 },
+  { name: "Безготівковий рахунок", check: 2 },
+];
+
+export const deliveryArray = [
+  {
+    name: "Доставка по Черкасам",
+    check: "che",
+    img: "",
+    style: "",
+  },
+  {
+    name: "Доставка по Україні (Нова Пошта)",
+    check: "np",
+    img: "../assets/novaPochta.png",
+    style: "imgNova",
+  },
+  {
+    name: "Доставка по Україні (Justin)",
+    check: "js",
+    img: "../assets/justin.png",
+    style: "imgUkr",
+  },
+  {
+    name: "Доставка по Україні (УкрПошта)",
+    check: "ukr",
+    img: "../assets/ukrPochta.png",
+    style: "imgUkr",
+  },
+];
+
 export const arraySelect: IArraySelect[] = [
   { name: "1 piece", key: "1" },
   { name: "2 piece", key: "2" },
