@@ -77,22 +77,6 @@ const useStyles = createUseStyles({
     fontSize: "16px",
     margin: "0px auto",
   },
-  // shareBox: {
-  //   marginTop: "20px",
-  //   display: "flex",
-  //   justifyContent: "space-between",
-  // },
-  // fb: {
-  //   width: "40px",
-  //   height: "40px",
-  //   borderRadius: "20px",
-  //   display: "block",
-  //   marginRight: "20px",
-  // },
-  // shareFriends: {
-  //   color: "#46596d",
-  //   fontSize: "16px",
-  // },
   underDescription: {
     display: "flex",
     flexDirection: "column",

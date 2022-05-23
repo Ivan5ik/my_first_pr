@@ -6,7 +6,6 @@ import { Select } from "../../components/Select";
 import { arrayCard, arraySelect } from "../../utils";
 
 import useStyles from "./style";
-import { Button } from "../../components/Button";
 
 const Item = () => {
   const classes = useStyles();
@@ -58,18 +57,6 @@ const Item = () => {
                   />
                 </p>
               </div>
-              {/* <Button mainValue={0} /> */}
-              {/* <div className={classes.shareBox}>
-                <p className={classes.shareFriends}>Розповісти друзям</p>
-                <div style={{ display: "flex" }}>
-                  <img src="../assets/fb.png" alt="fb" className={classes.fb} />
-                  <img
-                    src="../assets/inst.png"
-                    alt="fb"
-                    className={classes.fb}
-                  />
-                </div>
-              </div> */}
             </div>
           </div>
         </div>

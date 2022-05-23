@@ -46,7 +46,7 @@ const useStyles = createUseStyles({
     width: pallet.width,
     boxSizing: "border-box",
     height: "217px",
-    borderTop: "2px solid getColors.white",
+    borderTop: "2px solid ${getColors.white}",
     paddingTop: "55px",
   },
   menu: {

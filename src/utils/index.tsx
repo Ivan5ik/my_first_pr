@@ -1,4 +1,4 @@
-export interface IArraySelect {
+export interface IOptionsList {
   name: string;
   key: string;
 }
@@ -41,13 +41,13 @@ export const deliveryArray = [
   },
 ];
 
-export const arraySelect: IArraySelect[] = [
+export const arraySelect: IOptionsList[] = [
   { name: "1 piece", key: "1" },
   { name: "2 piece", key: "2" },
   { name: "3 piece ", key: "3" },
 ];
 
-export const arrayCategory: IArraySelect[] = [
+export const arrayCategory: IOptionsList[] = [
   { name: "Категорія", key: "category" },
   { name: "М'ясо", key: "meat" },
   { name: "Сало", key: "salo" },
