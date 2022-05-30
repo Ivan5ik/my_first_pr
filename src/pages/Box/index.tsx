@@ -29,7 +29,7 @@ const Box = () => {
 
   const handleAllInput = (
     e: React.ChangeEvent<HTMLInputElement>,
-    flag: any
+    flag: string
   ) => {
     const result: any = { ...form };
     result[flag] = e.target.value;

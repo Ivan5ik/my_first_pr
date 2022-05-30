@@ -5,7 +5,7 @@ import classNames from "classnames";
 
 import { useTranslation } from "react-i18next";
 
-import { navigationMiddleBottom } from "../../routes/routes";
+import { IRoutes, navigationMiddleBottom } from "../../routes/routes";
 
 import useStyles from "./style";
 
