@@ -75,11 +75,8 @@ export interface ICard {
 }
 export const basicWords = [
   { title: "home", key: "/" },
-  { title: "aboutTaras", key: "/pro-tarasa" },
   { title: "product", key: "/cataloge" },
-  { title: "delivery", key: "/todo" },
-  { title: "returnOfGoods", key: "/todo" },
-  { title: "contact", key: "/todo" },
+  { title: "productionFooter", key: "/production" },
 ];
 
 export const button = { key: "cataloge" };
