@@ -14,11 +14,8 @@ export default function Header() {
 
   const history = useNavigate();
   const location = useLocation();
-  console.log(location);
 
   const { t, i18n } = useTranslation();
-
-  console.log(i18n);
 
   return (
     <div className={classes.fixed}>
