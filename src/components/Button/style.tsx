@@ -11,7 +11,7 @@ const useStyles = createUseStyles({
     },
     color: "white",
     padding: "5px 10px 5px 10px",
-    border: "1px solid white",
+    border: `1px solid ${globalColors.white}`,
     borderRadius: "3px",
     maxWidth: "140px",
     width: "100%",

@@ -204,13 +204,13 @@ const useStyles = createUseStyles({
     marginBottom: "2px",
   },
   top: {
-    borderBottom: "2px solid #5a6771",
+    borderBottom: `2px solid ${globalColors.lightGrey}`,
     display: "flex",
     justifyContent: "center",
   },
   middle: {},
   blockGoods: {
-    borderBottom: "2px solid #5a6771",
+    borderBottom: `2px solid ${globalColors.lightGrey}`,
     padding: "20px 0px 20px 0px",
     display: "flex",
   },
@@ -226,7 +226,7 @@ const useStyles = createUseStyles({
     color: globalColors.white,
     fontSize: "17px",
     height: "50%",
-    borderBottom: "2px solid #5a6771",
+    borderBottom: `2px solid ${globalColors.lightGrey}`,
     paddingTop: "5px",
     marginBottom: "5px",
   },
@@ -250,7 +250,7 @@ const useStyles = createUseStyles({
   },
   bottom: {
     padding: "20px 0 0 20px",
-    borderBottom: "2px solid #5a6771",
+    borderBottom: `2px solid ${globalColors.lightGrey}`,
   },
   yourOrder: {
     fontSize: "27px",
@@ -259,7 +259,7 @@ const useStyles = createUseStyles({
   },
   total: {
     fontSize: "20px",
-    color: "#5a6771",
+    color: globalColors.lightGrey,
   },
   uan: {
     fontSize: "27px",

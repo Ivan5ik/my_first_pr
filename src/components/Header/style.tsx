@@ -6,7 +6,7 @@ const useStyles = createUseStyles({
     position: "fixed",
     width: "100%",
     background: globalColors.darkBlack,
-    borderBottom: "2px solid #31353a",
+    borderBottom: `2px solid ${globalColors.darkGrey}`,
     padding: "0 20px 0 20px",
     zIndex: "2",
   },
@@ -31,7 +31,7 @@ const useStyles = createUseStyles({
     },
   },
   middleBottom: {
-    borderTop: "2px solid #31353a",
+    borderTop: `2px solid ${globalColors.darkGrey}`,
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-between",
