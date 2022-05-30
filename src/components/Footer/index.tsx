@@ -59,8 +59,8 @@ export default function Footer() {
               </div>
             </div>
             <div className={classes.contactsLeft}>
-              <a className={classes.link} href="tel:+380636235535">
-                +38 (063) 623 55 35
+              <a href="callto:+380636235535" className={classes.link}>
+                +380 63 623 55 35
               </a>
             </div>
           </div>
