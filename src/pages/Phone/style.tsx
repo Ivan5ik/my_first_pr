@@ -8,7 +8,7 @@ const useStyles = createUseStyles({
     color: globalColors.white,
   },
   root: {
-    color: "white",
+    color: globalColors.white,
   },
 });
 export default useStyles;

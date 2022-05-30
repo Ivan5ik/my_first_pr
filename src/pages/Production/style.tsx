@@ -112,7 +112,7 @@ const useStyles = createUseStyles({
   blockComponent: {
     maxWidth: "731px !important",
     minHeight: "340px",
-    background: "black",
+    background: globalColors.black,
     opacity: "0.7",
   },
   h2: {

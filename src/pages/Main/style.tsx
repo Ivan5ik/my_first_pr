@@ -114,10 +114,10 @@ const useStyles = createUseStyles({
   iconAntd: {
     fontSize: "20px",
     marginRight: "15px",
-    color: "#5a6771",
+    color: globalColors.lightGrey,
   },
   question: {
-    color: "#5a6771",
+    color: globalColors.lightGrey,
     fontSize: "20px",
     margin: "20px 0px 30px 0px",
   },
@@ -134,7 +134,7 @@ const useStyles = createUseStyles({
     width: "330px",
   },
   ruleDescription: {
-    color: "#5a6771",
+    color: globalColors.lightGrey,
     fontSize: "10px",
     margin: "2px 0 15px 0",
   },

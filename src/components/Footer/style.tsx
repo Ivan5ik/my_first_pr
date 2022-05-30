@@ -12,7 +12,7 @@ const useStyles = createUseStyles({
   footer: {
     width: "100%",
     height: "538px",
-    background: "black",
+    background: globalColors.black,
     padding: "50px 0px 35px 0px",
     boxSizing: pallet.boxSizing,
     display: "flex",
@@ -83,8 +83,8 @@ const useStyles = createUseStyles({
   },
   contactsMain: {
     width: "558px",
-    borderLeft: "2px solid #31353a",
-    borderRight: "2px solid #31353a",
+    borderLeft: `2px solid ${globalColors.darkGrey}`,
+    borderRight: `2px solid ${globalColors.darkGrey}`,
     padding: "0px 30px 0px 30px",
   },
   contactsLeft: {
@@ -100,7 +100,7 @@ const useStyles = createUseStyles({
     height: "70px",
   },
   pForContacts: {
-    color: "#5a6771",
+    color: globalColors.lightGrey,
     fontSize: "17px",
     textAlign: "center",
   },
@@ -125,7 +125,7 @@ const useStyles = createUseStyles({
     margin: "0px 50px 0px 50px",
   },
   pForCopyRight: {
-    color: "#5a6771",
+    color: globalColors.lightGrey,
     fontSize: "14px",
     display: "block",
   },
