@@ -13,7 +13,7 @@ export interface IRoutes {
   component?: ReactNode;
 }
 
-export const navigationMiddleBottom: any = [
+export const navigationMiddleBottom: IRoutes[] = [
   { name: "home", path: "/" },
   { name: "product", path: "/cataloge" },
   { name: "production", path: "/production" },

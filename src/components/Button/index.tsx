@@ -2,7 +2,7 @@ import React, { FC } from "react";
 import useStyles from "./style";
 
 interface IButton {
-  onClick: any;
+  onClick: () => void;
 }
 
 const Button: FC<IButton> = (props) => {
