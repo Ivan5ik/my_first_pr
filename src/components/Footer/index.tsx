@@ -12,7 +12,7 @@ export default function Footer() {
   const history = useNavigate();
   const { t } = useTranslation();
   return (
-    <div className={classes.root}>
+    <div>
       <div className={classes.footer}>
         <div className={classes.container}>
           <div className={classes.top}>

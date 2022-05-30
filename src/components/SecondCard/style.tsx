@@ -13,7 +13,6 @@ const useStyles = createUseStyles({
     display: "flex",
     justifyContent: "center",
   },
-  middle: {},
   blockGoods: {
     borderBottom: `2px solid ${globalColors.lightGrey}`,
     padding: "20px 0px 20px 0px",

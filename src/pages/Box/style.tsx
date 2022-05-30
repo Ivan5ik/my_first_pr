@@ -61,7 +61,6 @@ const useStyles = createUseStyles({
     display: "flex",
     paddingBottom: "40px",
   },
-  orderData: {},
   yourContactData: {
     color: globalColors.white,
     fontSize: "18px",
@@ -110,7 +109,6 @@ const useStyles = createUseStyles({
     fontSize: "16px",
     display: "flex",
   },
-  dataDelivery: {},
   paragraphDelivery: {
     width: "26%",
     padding: "0px 10px 0px 0px",
@@ -124,7 +122,6 @@ const useStyles = createUseStyles({
   coverForAntRadio: {
     width: "75%",
   },
-  novaPoshta: {},
   city: { width: "26%", padding: "0px 10px 0px 0px" },
   adress: { width: "26%", padding: "0px 10px 0px 0px" },
   coverCity: {
@@ -208,7 +205,6 @@ const useStyles = createUseStyles({
     display: "flex",
     justifyContent: "center",
   },
-  middle: {},
   blockGoods: {
     borderBottom: `2px solid ${globalColors.lightGrey}`,
     padding: "20px 0px 20px 0px",

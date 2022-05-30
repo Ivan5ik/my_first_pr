@@ -64,7 +64,7 @@ const Box = () => {
 
       <div className={classes.coverOrder}>
         <div className={classes.orderLeft}>
-          <div className={classes.orderData}>
+          <div>
             <p className={classes.yourContactData}>
               {t("boxPage.contactData")}
             </p>
@@ -123,7 +123,7 @@ const Box = () => {
               </div>
             </div>
             <div className={classes.dataDelivery}>
-              <div className={classes.novaPoshta}>
+              <div>
                 <div className={classes.coverCity}>
                   <p className={classes.city}>{t("boxPage.city")}</p>
                   <div className={classes.root}>
@@ -195,7 +195,7 @@ const Box = () => {
           <div className={classes.top}>
             <p className={classes.goods}>{t("boxPage.goods")}</p>
           </div>
-          <div className={classes.middle}>
+          <div>
             {context.order.map((item: any) => (
               <SecondCard item={item} />
             ))}
