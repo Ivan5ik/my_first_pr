@@ -7,5 +7,8 @@ const useStyles = createUseStyles({
     paddingBottom: "10px",
     color: globalColors.white,
   },
+  root: {
+    color: "white",
+  },
 });
 export default useStyles;

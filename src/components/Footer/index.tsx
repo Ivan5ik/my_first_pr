@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 import { basicWords } from "../../utils";
 
@@ -9,7 +10,7 @@ export default function Footer() {
   const classes = useStyles();
 
   const history = useNavigate();
-
+  const { t } = useTranslation();
   return (
     <div className={classes.root}>
       <div className={classes.footer}>
@@ -22,12 +23,17 @@ export default function Footer() {
                   className={classes.link}
                   onClick={() => history(item.key)}
                 >
-                  {item.title}
+                  {t(item.title)}
                 </div>
               ))}
             </div>
             <div>
-              <p className={classes.topAside}>НА ГОРУ 🠕</p>
+              <p
+                className={classes.topAside}
+                onClick={() => window.scrollTo(0, 0)}
+              >
+                <p>{t("up")}</p>
+              </p>
             </div>
           </div>
 
@@ -40,14 +46,15 @@ export default function Footer() {
             <div className={classes.contactsMain}>
               <div className={classes.contactsMainTop}>
                 <p className={classes.pForContacts}>
-                  Адреса:
-                  <br /> вул. Чигоріна 12, офіс 213, м. Київ, Україна
+                  {t("address.beforeBr")}
+                  <br /> {t("address.afterBr")}
                 </p>
               </div>
               <div className={classes.contactsMainBottom}>
                 <p className={classes.pForContacts}>
-                  Адреса виробництва:
-                  <br /> м. Київ, вул. Зрошувальна 5В
+                  {t("addressProduction.beforeBr")}
+                  <br />
+                  {t("addressProduction.afterBr")}
                 </p>
               </div>
             </div>
@@ -84,10 +91,7 @@ export default function Footer() {
               </a>
             </div>
             <div className={classes.copyRight}>
-              <p className={classes.pForCopyRight}>
-                © ДИМНЕ М'ЯСО ВІД ТАРАСА. 2022 . ВСІ ПРАВА ЗАХИЩЕНІ. ЗРОБЛЕНО BY
-                UniCode
-              </p>
+              <p className={classes.pForCopyRight}>{t("license")}</p>
               <img
                 className={classes.logo}
                 src="./assets/logo.png"

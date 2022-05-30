@@ -36,6 +36,10 @@ const useStyles = createUseStyles({
     flexDirection: "row",
     justifyContent: "space-between",
     padding: "5px 0px 0px 20px",
+    "& .show": {
+      color: globalColors.red,
+      fontSize: "18px",
+    },
   },
   cover: {
     display: "flex",
@@ -48,11 +52,17 @@ const useStyles = createUseStyles({
       color: globalColors.red,
       transition: "all 0.3s",
     },
+    marginBottom: "0px",
+    cursor: "pointer",
   },
   middleTop: {
     display: "flex",
     justifyContent: "space-between",
     padding: "5px 0px 5px 20px",
+    "& .show": {
+      color: globalColors.red,
+      fontSize: "18px",
+    },
   },
   img: {
     width: "90px",
@@ -62,6 +72,12 @@ const useStyles = createUseStyles({
   },
   nav: {
     width: "100%",
+  },
+  antIcon: {
+    display: "inline",
+    color: globalColors.red,
+    marginLeft: "7px",
+    fontSize: "20px",
   },
 });
 

@@ -13,7 +13,7 @@ const useStyles = createUseStyles({
     padding: "5px 10px 5px 10px",
     border: "1px solid white",
     borderRadius: "3px",
-    minWidth: "140px",
+    maxWidth: "140px",
     width: "100%",
     fontSize: "16px",
   },

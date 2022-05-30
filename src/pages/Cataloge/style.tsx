@@ -18,6 +18,16 @@ const useStyles = createUseStyles({
     display: "flex",
     justifyContent: "space-between",
     marginBottom: "10px",
+    "& .inputAnt-0-2-17": {
+      margin: "0px",
+    },
+  },
+  coverUnderProduct: {
+    display: "flex",
+    "& .inputAnt-0-2-18": {
+      margin: "0px 15px 0px 0px",
+      height: "32px",
+    },
   },
   reset: {
     color: globalColors.white,

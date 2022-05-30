@@ -12,13 +12,17 @@ const useStyles = createUseStyles({
   },
   butPlusP: {
     display: "flex",
-    justifyContent: "space-around",
+    justifyContent: "space-between",
     marginBottom: "14px",
   },
   whiteColor: { color: globalColors.white },
   pricePlusSelect: {
     display: "flex",
-    justifyContent: "space-around",
+    justifyContent: "space-between",
+  },
+  price: {
+    color: globalColors.white,
+    fontSize: "16px",
   },
   inMoreDetail: {
     marginBottom: "0px",
@@ -36,6 +40,10 @@ const useStyles = createUseStyles({
   bottom: { display: "flex", flexDirection: "column" },
   imgOfCard: {
     "&:hover": { border: "1px solid #ab3838" },
+  },
+  coverPrice: {
+    display: "flex",
+    paddingTop: "3px",
   },
 });
 export default useStyles;

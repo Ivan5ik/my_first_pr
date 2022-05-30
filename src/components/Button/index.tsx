@@ -1,25 +1,18 @@
-import React, { useState } from "react";
-import { arrayCard } from "../../utils";
+import React, { FC } from "react";
 import useStyles from "./style";
 
-const Button = (props: { mainValue: number }) => {
+interface IButton {
+  onClick: any;
+}
+
+const Button: FC<IButton> = (props) => {
   const classes = useStyles();
-  const { mainValue } = props;
-
-  const [res, setRes] = useState(arrayCard);
-
-  const getTrue = (index: number) => {
-    const prev = [...res];
-    prev[index].hot = true;
-    setRes(prev);
-  };
+  const { onClick } = props;
 
   return (
-    <div>
-      <button className={classes.button} onClick={() => getTrue(mainValue)}>
-        В кошик
-      </button>
-    </div>
+    <button className={classes.button} onClick={onClick}>
+      В кошик
+    </button>
   );
 };
 export { Button };

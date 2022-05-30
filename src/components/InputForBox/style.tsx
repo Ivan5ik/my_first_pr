@@ -2,7 +2,6 @@ import { createUseStyles } from "react-jss";
 import { globalColors } from "../../utils";
 
 const useStyles = createUseStyles({
-  root: {},
   inputNameSur: {
     background: globalColors.darkBlack,
     border: "none",
@@ -14,7 +13,7 @@ const useStyles = createUseStyles({
     },
     display: "block",
     padding: "0px 10px 0px 10px",
-    minWidth: "350px",
+    width: "100%",
     height: "38px",
     paddingTop: "7px",
   },

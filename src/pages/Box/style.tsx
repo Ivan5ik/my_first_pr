@@ -1,7 +1,11 @@
 import { createUseStyles } from "react-jss";
+
 import { globalColors } from "../../utils";
 
 const useStyles = createUseStyles({
+  root: {
+    width: "320px",
+  },
   container: {
     background: globalColors.darkBlack,
     width: "100%",
@@ -43,7 +47,7 @@ const useStyles = createUseStyles({
   orderLeft: {
     width: "50%",
     minHeight: "300px",
-    padding: "0px 15px 0px 15px",
+    padding: "0px 15px 0px 0px",
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
@@ -51,7 +55,7 @@ const useStyles = createUseStyles({
   orderRight: {
     width: "50%",
     minHeight: "300px",
-    padding: "0px 15px 0px 15px",
+    padding: "0px 0px 0px 15px",
   },
   coverOrder: {
     display: "flex",
@@ -86,10 +90,20 @@ const useStyles = createUseStyles({
   },
   paragraphName: {
     width: "26%",
-    padding: "0px 10px 0px 10px",
+    padding: "0px 10px 0px 0px",
     marginBottom: "0px",
   },
-  delivery: {},
+  delivery: {
+    "& .ant-radio-checked .ant-radio-inner": {
+      borderColor: `${globalColors.red}`,
+    },
+    "& .ant-radio-checked .ant-radio-inner:after": {
+      backgroundColor: `${globalColors.red}`,
+    },
+    "& .ant-radio:hover .ant-radio-inner": {
+      borderColor: `${globalColors.red}`,
+    },
+  },
   deliveryTo: {
     marginBottom: "22px",
     color: globalColors.white,
@@ -99,7 +113,7 @@ const useStyles = createUseStyles({
   dataDelivery: {},
   paragraphDelivery: {
     width: "26%",
-    padding: "0px 10px 0px 10px",
+    padding: "0px 10px 0px 0px",
     marginBottom: "0px",
   },
   radioButton: {
@@ -111,8 +125,8 @@ const useStyles = createUseStyles({
     width: "75%",
   },
   novaPoshta: {},
-  city: { width: "26%", padding: "0px 10px 0px 10px" },
-  adress: { width: "26%", padding: "0px 10px 0px 10px" },
+  city: { width: "26%", padding: "0px 10px 0px 0px" },
+  adress: { width: "26%", padding: "0px 10px 0px 0px" },
   coverCity: {
     marginBottom: "0px",
 
@@ -151,7 +165,7 @@ const useStyles = createUseStyles({
   note: { color: globalColors.white, fontSize: "16px", marginTop: "40px" },
   noteP: {
     width: "26%",
-    padding: "0px 10px 0px 10px",
+    padding: "0px 10px 0px 0px",
   },
   coverNote: {
     marginBottom: "22px",
@@ -166,7 +180,7 @@ const useStyles = createUseStyles({
     fontSize: "16px",
     display: "flex",
   },
-  payP: { width: "26%", padding: "0px 10px 0px 10px" },
+  payP: { width: "26%", padding: "0px 10px 0px 0px" },
   button: {
     background: globalColors.darkBlack,
     "&:hover": {
@@ -187,7 +201,6 @@ const useStyles = createUseStyles({
   goods: {
     fontSize: "19px",
     color: "#576167",
-    fontFamily: "Roboto Condensed sans-serif",
     marginBottom: "2px",
   },
   top: {

@@ -1,8 +1,9 @@
 import React, { FC, useState } from "react";
+import Zoom from "react-reveal/Zoom";
 import { useNavigate } from "react-router-dom";
 
 import { Select } from "../Select";
-import { arraySelect, ICard } from "../../utils";
+import { arraySelectGram, arraySelectPiece, ICard } from "../../utils";
 
 import useStyles from "./style";
 import { Button } from "../Button";
@@ -10,9 +11,10 @@ import { Button } from "../Button";
 interface ICardProps {
   item: ICard;
   valueNumber: number;
+  onBuy?: any;
 }
 
-const Card: FC<ICardProps> = ({ item, valueNumber }) => {
+const Card: FC<ICardProps> = ({ item, valueNumber, onBuy }) => {
   const classes = useStyles();
 
   const [selectValue, setSelectValue] = useState("1");
@@ -20,36 +22,66 @@ const Card: FC<ICardProps> = ({ item, valueNumber }) => {
 
   const history = useNavigate();
 
-  const getBool = (valueNumber: number) => {
-    console.log(valueNumber);
+  const handleBuy = () => {
+    onBuy({ goods: item, count: Number(selectValue) });
+  };
+
+  const getBool = (valueNumber: number) => {};
+
+  const setValue = () => {
+    if (purchaseType === "100gram") {
+      return "100гр";
+    }
+    if (purchaseType === "piece") {
+      return "шт";
+    }
+  };
+
+  const getArray = () => {
+    if (purchaseType === "100gram") {
+      return arraySelectGram;
+    }
+    if (purchaseType === "piece") {
+      return arraySelectPiece;
+    }
   };
 
   return (
-    <div onClick={() => getBool(valueNumber)} className={classes.card}>
-      <div onClick={() => history(`/catalog/${id}`)} className={classes.top}>
-        <img className={classes.imgOfCard} alt="imgOfCard" src={imgUrl[0]} />
-        <h1 className={classes.whiteColor}>{name}</h1>
-        <p className={classes.whiteColor}>{description}</p>
-      </div>
+    <Zoom>
+      <div onClick={() => getBool(valueNumber)} className={classes.card}>
+        <div onClick={() => history(`/catalog/${id}`)} className={classes.top}>
+          <img className={classes.imgOfCard} alt="imgOfCard" src={imgUrl[0]} />
+          <h1 className={classes.whiteColor}>{name}</h1>
+          <p className={classes.whiteColor}>{description}</p>
+        </div>
 
-      <div className={classes.bottom}>
-        <div className={classes.pricePlusSelect}>
-          <p className={classes.whiteColor}>{price}</p>
-          <p className={classes.whiteColor}>{purchaseType}</p>
-          <p>
-            <Select
-              selectValue={selectValue}
-              setValue={setSelectValue}
-              optionArray={arraySelect}
-            />
-          </p>
-        </div>
-        <div className={classes.butPlusP}>
-          <Button mainValue={valueNumber} />
-          <p className={classes.inMoreDetail}>Детальніше</p>
+        <div className={classes.bottom}>
+          <div className={classes.pricePlusSelect}>
+            <div className={classes.coverPrice}>
+              <p className={classes.price}>{price}грн /</p>
+              <p className={classes.price}> {setValue()}</p>
+            </div>
+
+            <p>
+              <Select
+                selectValue={selectValue}
+                setValue={setSelectValue}
+                optionArray={getArray()}
+              />
+            </p>
+          </div>
+          <div className={classes.butPlusP}>
+            <Button onClick={handleBuy} />
+            <p
+              className={classes.inMoreDetail}
+              onClick={() => history(`/catalog/${id}`)}
+            >
+              Детальніше
+            </p>
+          </div>
         </div>
       </div>
-    </div>
+    </Zoom>
   );
 };
 export { Card };

@@ -4,7 +4,7 @@ import { globalColors } from "../../utils";
 const useStyles = createUseStyles({
   root: {
     "& .ant-select:not(.ant-select-customize-input) .ant-select-selector": {
-      backgroundColor: " ${globalColors.red} !important",
+      backgroundColor: `${globalColors.darkBlack} !important`,
     },
     "& .ant-select-arrow": {
       color: globalColors.white,

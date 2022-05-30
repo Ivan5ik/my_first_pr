@@ -1,14 +1,12 @@
 import React, { FC } from "react";
 import { Select as SelectAnt } from "antd";
 
-import { IArraySelect } from "../../utils";
-
 import useStyles from "./style";
 
 const { Option } = SelectAnt;
 
 interface ISelect {
-  optionArray: IArraySelect[];
+  optionArray: any;
   selectValue: string;
   setValue: React.Dispatch<React.SetStateAction<string>>;
 }
@@ -29,7 +27,7 @@ const Select: FC<ISelect> = (props) => {
         style={{ width: 120 }}
         onChange={getSelect}
       >
-        {optionArray.map((item: IArraySelect) => (
+        {optionArray.map((item: any) => (
           <Option value={item.key}>{item.name}</Option>
         ))}
       </SelectAnt>

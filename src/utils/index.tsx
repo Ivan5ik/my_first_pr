@@ -10,41 +10,47 @@ export const globalColors = {
 };
 
 export const payArray = [
-  { name: "Готівкою", check: 1 },
-  { name: "Безготівковий рахунок", check: 2 },
+  { name: "boxPage.payRadioBut.cash", check: 1 },
+  { name: "boxPage.payRadioBut.cashless", check: 2 },
 ];
 
 export const deliveryArray = [
   {
-    name: "Доставка по Черкасам",
+    name: "boxPage.deliveryTo.cherkassy",
     check: "che",
     img: "",
     style: "",
   },
   {
-    name: "Доставка по Україні (Нова Пошта)",
+    name: "boxPage.deliveryTo.np",
     check: "np",
     img: "../assets/novaPochta.png",
     style: "imgNova",
   },
   {
-    name: "Доставка по Україні (Justin)",
+    name: "boxPage.deliveryTo.js",
     check: "js",
     img: "../assets/justin.png",
     style: "imgUkr",
   },
   {
-    name: "Доставка по Україні (УкрПошта)",
+    name: "boxPage.deliveryTo.ukr",
     check: "ukr",
     img: "../assets/ukrPochta.png",
     style: "imgUkr",
   },
 ];
 
-export const arraySelect: IOptionsList[] = [
-  { name: "1 piece", key: "1" },
-  { name: "2 piece", key: "2" },
-  { name: "3 piece ", key: "3" },
+export const arraySelectPiece: IOptionsList[] = [
+  { name: "1 шт", key: "1" },
+  { name: "2 шт", key: "2" },
+  { name: "3 шт ", key: "3" },
+];
+
+export const arraySelectGram: IOptionsList[] = [
+  { name: "100 гр", key: "1" },
+  { name: "200 гр", key: "2" },
+  { name: "300 гр", key: "3" },
 ];
 
 export const arrayCategory: IOptionsList[] = [
@@ -65,13 +71,16 @@ export interface ICard {
   imgUrl: string[];
 }
 export const basicWords = [
-  { title: "Головна", key: "/" },
-  { title: "Про Тараса", key: "/pro-tarasa" },
-  { title: "Продукція", key: "/cataloge" },
-  { title: "Оплата і доставка", key: "/todo" },
-  { title: "Повернення товару", key: "/todo" },
-  { title: "Контакти", key: "/todo" },
+  { title: "home", key: "/" },
+  { title: "aboutTaras", key: "/pro-tarasa" },
+  { title: "product", key: "/cataloge" },
+  { title: "delivery", key: "/todo" },
+  { title: "returnOfGoods", key: "/todo" },
+  { title: "contact", key: "/todo" },
 ];
+
+export const button = { key: "cataloge" };
+// export const moreDetail = { key: "/catalog/:id" };
 
 export const arrayCard: ICard[] = [
   {

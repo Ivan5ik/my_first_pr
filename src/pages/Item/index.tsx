@@ -3,7 +3,7 @@ import { useLocation } from "react-router-dom";
 import { Carousel } from "antd";
 
 import { Select } from "../../components/Select";
-import { arrayCard, arraySelect } from "../../utils";
+import { arrayCard, arraySelectGram, arraySelectPiece } from "../../utils";
 
 import useStyles from "./style";
 
@@ -19,6 +19,24 @@ const Item = () => {
   const { description, name, price, purchaseType, imgUrl } = arrayCard.find(
     (item) => item.id === itemId
   )!;
+
+  const setValue = () => {
+    if (purchaseType === "100gram") {
+      return "100гр";
+    }
+    if (purchaseType === "piece") {
+      return "шт";
+    }
+  };
+
+  const getArray = () => {
+    if (purchaseType === "100gram") {
+      return arraySelectGram;
+    }
+    if (purchaseType === "piece") {
+      return arraySelectPiece;
+    }
+  };
 
   return (
     <div>
@@ -46,14 +64,14 @@ const Item = () => {
               <div className={classes.pricePlusSelect}>
                 <div className={classes.cover}>
                   <p className={classes.price}>{price}</p>
-                  <span className={classes.price}>грн /</span>
-                  <p className={classes.purchaseType}>{purchaseType}</p>
+                  <span className={classes.price}>грн/</span>
+                  <p className={classes.purchaseType}>{setValue()}</p>
                 </div>
                 <p>
                   <Select
                     selectValue={selectValue}
                     setValue={setSelectValue}
-                    optionArray={arraySelect}
+                    optionArray={getArray()}
                   />
                 </p>
               </div>
