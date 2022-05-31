@@ -8,7 +8,6 @@ const pallet = {
   fontSize: "18px",
 };
 const useStyles = createUseStyles({
-  root: {},
   footer: {
     width: "100%",
     height: "538px",

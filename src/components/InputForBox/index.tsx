@@ -1,10 +1,10 @@
-import React, { FC } from "react";
+import React, { ChangeEventHandler, FC } from "react";
 
 import { useStyles } from "./style";
 
 interface IBox {
   value: string;
-  onChange: any;
+  onChange: ChangeEventHandler<HTMLInputElement>;
   placeholder?: string;
 }
 

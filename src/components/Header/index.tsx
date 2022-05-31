@@ -3,12 +3,9 @@ import { Link, useLocation } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import classNames from "classnames";
 
-import { useTranslation, Trans } from "react-i18next";
+import { useTranslation } from "react-i18next";
 
-import {
-  navigationMiddleTop,
-  navigationMiddleBottom,
-} from "../../routes/routes";
+import { IRoutes, navigationMiddleBottom } from "../../routes/routes";
 
 import useStyles from "./style";
 
@@ -17,11 +14,8 @@ export default function Header() {
 
   const history = useNavigate();
   const location = useLocation();
-  console.log(location);
 
   const { t, i18n } = useTranslation();
-
-  console.log(i18n);
 
   return (
     <div className={classes.fixed}>
@@ -35,17 +29,12 @@ export default function Header() {
           />
           <div className={classes.nav}>
             <div className={classes.middleTop}>
-              {navigationMiddleTop.map((item) => (
-                <Link
-                  className={
-                    classNames({ show: item.path === location.pathname }) ||
-                    classes.colorWordsAbove
-                  }
-                  to={String(item.path)}
-                >
-                  {item.name}
-                </Link>
-              ))}
+              <a
+                href="callto:+380636235535"
+                className={classes.colorWordsAbove}
+              >
+                +38(063) 623 55 35
+              </a>
               {/* {Object.keys(lngs).map((item: any) => ( */}
               <p
                 className={classes.colorWordsAbove}

@@ -36,9 +36,7 @@ i18n
             beforeBr: "Адреса виробництва:",
             afterBr: "м. Київ, вул. Зрошувальна 5В",
           },
-          aboutTaras: "Про Тараса",
-          returnOfGoods: "Повернення товару",
-          contact: "Контакти",
+          productionFooter: "Виробництво",
           productionPage: {
             production: "- Виробництво -",
             smoking: 'Чим відрізняється правильне копчення від "промислового"?',
@@ -118,9 +116,7 @@ i18n
             beforeBr: "Production address:",
             afterBr: "Kyiv, Zroshuvalna St, 5в",
           },
-          aboutTaras: "About Taras",
-          returnOfGoods: "Return of goods",
-          contact: "Contact",
+          productionFooter: "Production",
           productionPage: {
             production: "- Production -",
             smoking:
