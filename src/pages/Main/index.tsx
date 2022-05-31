@@ -67,6 +67,11 @@ const Main = () => {
     setForm(result);
   };
 
+  // function sendEmail(e) {
+  //   e.preventDefault();
+  //   emailjs.sendForm()
+  // }
+
   return (
     <>
       <div className={classes.root}>
@@ -120,7 +125,10 @@ const Main = () => {
       </div>
       <div style={{ background: globalColors.darkBlack }}>
         <div className={classes.mapPlusForm}>
-          <div className={classes.form}>
+          <div
+            className={classes.form}
+            //  onSubmit={sendEmail}
+          >
             <div className={classes.coverFrom}>
               <SearchOutlined className={classes.iconAntd} />
               <p className={classes.location}>
