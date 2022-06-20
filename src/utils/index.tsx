@@ -48,12 +48,23 @@ export const arraySelectPiece: IOptionsList[] = [
   { name: "1 шт", key: "1" },
   { name: "2 шт", key: "2" },
   { name: "3 шт ", key: "3" },
+  { name: "4 шт ", key: "4" },
+  { name: "5 шт ", key: "5" },
+  { name: "6 шт ", key: "6" },
+  { name: "7 шт ", key: "7" },
+  { name: "8 шт ", key: "8" },
+  { name: "9 шт ", key: "9" },
+  { name: "10 шт ", key: "10" },
 ];
 
 export const arraySelectGram: IOptionsList[] = [
   { name: "100 гр", key: "1" },
   { name: "200 гр", key: "2" },
   { name: "300 гр", key: "3" },
+  { name: "500 гр", key: "8" },
+  { name: "1 кг", key: "10" },
+  { name: "3 кг", key: "40" },
+  { name: "5 кг", key: "50" },
 ];
 
 export const arrayCategory: IOptionsList[] = [
@@ -85,21 +96,20 @@ export const button = { key: "cataloge" };
 export const arrayCard: ICard[] = [
   {
     id: "9ca8bad4-e31a-4ac9-b28e-97d92893f7d3",
-    name: "Велентін/new🦃/",
-    description:
-      "Велетень у діаметрі. Зроблений з огрядних кусків бедра індика. Став улюбленцем для тих, хто робить своїм діткам бутерброди, хто дбає про калорійність м'яса, але не готовий поступатись у смакових якостях.",
-    price: 53.4,
+    name: "Вареники з капустою",
+    description: "...",
+    price: 42.4,
     purchaseType: "100gram",
     category: "meat",
     hot: false,
     imgUrl: [
-      "../assets/velentin-1.png",
-      "../assets/velentin-2.png",
-      "../assets/velentin-3.png",
-      "../assets/velentin-4.png",
-      "../assets/velentin-5.png",
-      "../assets/velentin-6.png",
-      "../assets/velentin-7.png",
+      "../assets/Вареники з капустою.jpg",
+      // "../assets/velentin-2.png",
+      // "../assets/velentin-3.png",
+      // "../assets/velentin-4.png",
+      // "../assets/velentin-5.png",
+      // "../assets/velentin-6.png",
+      // "../assets/velentin-7.png",
     ],
   },
   {

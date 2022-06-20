@@ -4,9 +4,9 @@ import { useNavigate } from "react-router-dom";
 
 import { Select } from "../Select";
 import { arraySelectGram, arraySelectPiece, ICard } from "../../utils";
+import { Button } from "../Button";
 
 import useStyles from "./style";
-import { Button } from "../Button";
 
 interface ICardProps {
   item: ICard;

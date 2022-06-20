@@ -4,7 +4,6 @@ import { useTranslation } from "react-i18next";
 import Fade from "react-reveal/Fade";
 import Zoom from "react-reveal/Zoom";
 import Slide from "react-reveal/Slide";
-
 import { Carousel } from "antd";
 
 import useStyles from "./style";

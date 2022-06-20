@@ -9,11 +9,13 @@ import Bounce from "react-reveal/Bounce";
 import Zoom from "react-reveal/Zoom";
 import Fade from "react-reveal/Fade";
 
-import useStyles from "./style";
 import { arrayCard, button, globalColors, ICard } from "../../utils";
 import { Card } from "../../components/Card";
 import { StoreContext } from "../../store";
 import { InputForBox } from "../../components/InputForBox";
+// import emailjs from "@emailjs/browser";
+
+import useStyles from "./style";
 
 const Main = () => {
   const classes = useStyles();
@@ -66,6 +68,11 @@ const Main = () => {
     result[flag] = e.target.value;
     setForm(result);
   };
+
+  // const sendEmail = (e: any) => {
+  //   e.preventDefault();
+  //   emailjs.sendForm("service_1ct1lzp", "template_52tfysg", e.target);
+  // };
 
   return (
     <>
@@ -120,7 +127,10 @@ const Main = () => {
       </div>
       <div style={{ background: globalColors.darkBlack }}>
         <div className={classes.mapPlusForm}>
-          <div className={classes.form}>
+          <div
+            className={classes.form}
+            // onSubmit={() => sendEmail(e)}
+          >
             <div className={classes.coverFrom}>
               <SearchOutlined className={classes.iconAntd} />
               <p className={classes.location}>
@@ -157,7 +167,7 @@ const Main = () => {
                   onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
                     handleAllInput(e, "phoneNumber")
                   }
-                  value={form.name}
+                  value={form.phoneNumber}
                   placeholder={t("homePage.form.yourPhone")}
                 />
               </div>
@@ -170,7 +180,7 @@ const Main = () => {
                 onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
                   handleAllInput(e, "question")
                 }
-                value={form.name}
+                value={form.question}
               />
               <p className={classes.ruleDescription}>
                 {t("homePage.form.decriptionTop")} <br />
