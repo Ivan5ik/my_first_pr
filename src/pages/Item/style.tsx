@@ -40,7 +40,7 @@ const useStyles = createUseStyles({
     marginLeft: "1px",
   },
   content: {
-    height: "355px",
+    minHeight: "300px",
     width: "50%",
     paddingLeft: "60px",
     display: "flex",
@@ -52,6 +52,7 @@ const useStyles = createUseStyles({
   mainContainer: {
     display: "flex",
     paddingBottom: "20px",
+    minHeight: "100px",
   },
   description: {
     color: globalColors.white,
