@@ -1,4 +1,5 @@
 import { createUseStyles } from "react-jss";
+
 import { globalColors } from "../../utils";
 
 const useStyles = createUseStyles({
@@ -15,7 +16,13 @@ const useStyles = createUseStyles({
     justifyContent: "space-between",
     marginBottom: "14px",
   },
-  whiteColor: { color: globalColors.white },
+
+  whiteColor: {
+    color: globalColors.white,
+    // overflow: "hidden",
+    // height: "105px",
+    minHeight: "10px",
+  },
   pricePlusSelect: {
     display: "flex",
     justifyContent: "space-between",

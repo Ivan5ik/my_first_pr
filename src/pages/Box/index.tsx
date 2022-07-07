@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import { Radio } from "antd";
+import { useTranslation } from "react-i18next";
+import Fade from "react-reveal/Fade";
 
 import { InputForBox } from "../../components/InputForBox";
 import { deliveryArray, payArray } from "../../utils";
 import { SecondCard } from "../../components/SecondCard";
-import { useTranslation } from "react-i18next";
-import Fade from "react-reveal/Fade";
+import { StoreContext } from "../../store";
 
 import useStyles from "./style";
-import { StoreContext } from "../../store";
 
 const Box = () => {
   const classes: any = useStyles();
@@ -42,12 +42,21 @@ const Box = () => {
   };
 
   let total = 0;
-
-  context.order.forEach(
-    (item: any) => (total += item.count * item.goods.price)
-  );
+  context.order.forEach((item: any) => {
+    total += item.count * item.goods.price;
+    console.log(item, total);
+  });
+  console.log(context.order);
 
   const { t } = useTranslation();
+
+  console.log(context.order);
+
+  const handleDelGoods = (index: number) => {
+    const res = [...context.order];
+    res.splice(index, 1);
+    context.setOrder(res);
+  };
 
   return (
     <div className={classes.container}>
@@ -193,8 +202,8 @@ const Box = () => {
             <p className={classes.goods}>{t("boxPage.goods")}</p>
           </div>
           <div>
-            {context.order.map((item: any) => (
-              <SecondCard item={item} />
+            {context.order.map((item: any, index: number) => (
+              <SecondCard item={item} onClick={() => handleDelGoods(index)} />
             ))}
           </div>
           <div className={classes.bottom}>

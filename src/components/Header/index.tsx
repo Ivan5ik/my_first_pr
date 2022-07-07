@@ -2,10 +2,9 @@ import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import classNames from "classnames";
-
 import { useTranslation } from "react-i18next";
 
-import { IRoutes, navigationMiddleBottom } from "../../routes/routes";
+import { navigationMiddleBottom } from "../../routes/routes";
 
 import useStyles from "./style";
 
@@ -35,6 +34,7 @@ export default function Header() {
               >
                 +38(063) 623 55 35
               </a>
+              {/* If we will have three or more languages */}
               {/* {Object.keys(lngs).map((item: any) => ( */}
               <p
                 className={classes.colorWordsAbove}
@@ -42,7 +42,7 @@ export default function Header() {
                   i18n.changeLanguage(i18n.language === "ua" ? "en" : "ua")
                 }
               >
-                {i18n.language === "ua" ? "УКРЇНСЬКА" : "ENGLISH"}
+                {i18n.language === "ua" ? "УКРАЇНСЬКА" : "ENGLISH"}
               </p>
               {/* ))} */}
             </div>

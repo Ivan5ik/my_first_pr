@@ -1,14 +1,14 @@
 import React, { useState } from "react";
+import Zoom from "react-reveal/Zoom";
+import { useTranslation } from "react-i18next";
 
 import { arrayCard, arrayCategory, ICard } from "../../utils";
 import { Card } from "../../components/Card";
 import { Select } from "../../components/Select";
 import { Input } from "../../components/Input";
-import { useTranslation } from "react-i18next";
-import Zoom from "react-reveal/Zoom";
+import { StoreContext } from "../../store";
 
 import useStyles from "./style";
-import { StoreContext } from "../../store";
 
 const Cataloge = () => {
   const classes = useStyles();

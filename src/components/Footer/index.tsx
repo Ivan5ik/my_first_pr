@@ -74,7 +74,7 @@ export default function Footer() {
               >
                 <img
                   className={classes.pictureFacebook}
-                  src="./assets/fb.png"
+                  src="../assets/fb.png"
                   alt="Facebook"
                 />
               </a>
@@ -85,7 +85,7 @@ export default function Footer() {
               >
                 <img
                   className={classes.pictureFacebook}
-                  src="./assets/inst.png"
+                  src="../assets/inst.png"
                   alt="inst"
                 />
               </a>
@@ -94,7 +94,7 @@ export default function Footer() {
               <p className={classes.pForCopyRight}>{t("license")}</p>
               <img
                 className={classes.logo}
-                src="./assets/logo.png"
+                src="../assets/logo.png"
                 alt="logo"
               />
             </div>
