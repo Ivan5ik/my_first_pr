@@ -15,6 +15,8 @@ const useStyles = createUseStyles({
     marginLeft: "22px",
     "&:hover": {
       color: globalColors.red,
+      cursor: "pointer",
+      transition: "all 0.3s",
     },
   },
   underName: {
@@ -56,11 +58,13 @@ const useStyles = createUseStyles({
   },
   description: {
     color: globalColors.white,
-    fontSize: "18px",
+    fontSize: "16px",
+    marginTop: "23px",
   },
   pricePlusSelect: {
     display: "flex",
-    justifyContent: "space-around",
+    justifyContent: "space-between",
+    alignItems: "center",
   },
   button: {
     display: "block",
@@ -88,6 +92,9 @@ const useStyles = createUseStyles({
     height: "313px",
     width: "470px",
   },
+  selectGram: {
+    margin: "0px",
+  },
   photo: {
     objectFit: "cover",
     height: "100%",
@@ -96,7 +103,16 @@ const useStyles = createUseStyles({
   cover: {
     display: "flex",
   },
-  price: { color: globalColors.white, marginRight: "5px" },
-  purchaseType: { color: globalColors.white },
+  price: {
+    color: globalColors.white,
+    marginRight: "5px",
+    marginBottom: "0px",
+    fontSize: "16px",
+  },
+  purchaseType: {
+    color: globalColors.white,
+    marginBottom: "0px",
+    fontSize: "16px",
+  },
 });
 export default useStyles;

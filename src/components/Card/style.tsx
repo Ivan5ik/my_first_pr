@@ -46,7 +46,7 @@ const useStyles = createUseStyles({
   top: { display: "flex", flexDirection: "column" },
   bottom: { display: "flex", flexDirection: "column" },
   imgOfCard: {
-    "&:hover": { border: `1px solid ${globalColors.red}` },
+    "&:hover": { border: `1px solid ${globalColors.red}`, cursor: "pointer" },
   },
   coverPrice: {
     display: "flex",

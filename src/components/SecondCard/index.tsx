@@ -19,7 +19,7 @@ const SecondCard: FC<ISecondCard> = (props) => {
 
   const [selectValue, setSelectValue] = useState(String(item.count));
 
-  const total = Number(selectValue) * item.goods.price;
+  const total = ((Number(selectValue) * item.goods.price) / 10).toFixed(2);
 
   const context = React.useContext(StoreContext);
 
@@ -35,8 +35,8 @@ const SecondCard: FC<ISecondCard> = (props) => {
   }, [selectValue]);
 
   const setValue = () => {
-    if (item.goods.purchaseType === "100gram") {
-      return "100гр";
+    if (item.goods.purchaseType === "1kg") {
+      return "1кг";
     }
     if (item.goods.purchaseType === "piece") {
       return "шт";
@@ -44,7 +44,7 @@ const SecondCard: FC<ISecondCard> = (props) => {
   };
 
   const getArray = () => {
-    if (item.goods.purchaseType === "100gram") {
+    if (item.goods.purchaseType === "1kg") {
       return arraySelectGram;
     }
     if (item.goods.purchaseType === "piece") {

@@ -16,6 +16,10 @@ const useStyles = createUseStyles({
     "& .ant-select:not(.ant-select-disabled):hover .ant-select-selector": {
       borderColor: globalColors.red,
     },
+    "& .ant-select-single:not(.ant-select-customize-input) .ant-select-selector":
+      {
+        height: "37px",
+      },
   },
 });
 export default useStyles;
