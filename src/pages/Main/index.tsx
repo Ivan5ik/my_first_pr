@@ -109,7 +109,7 @@ const Main = () => {
 
           <div className={classes.productsList}>
             {arrayCard.slice(0, 3).map((item: ICard, index) => (
-              <Card item={item} valueNumber={index} onBuy={handleAdd} />
+              <Card item={item} valueNumber={index} /*onBuy={handleAdd}*/ />
             ))}
           </div>
 

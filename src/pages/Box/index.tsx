@@ -23,6 +23,7 @@ const Box = () => {
   });
 
   const context = React.useContext(StoreContext);
+  console.log(context);
 
   const [delivery, setDelivery] = useState("che");
   const [pay, setPay] = useState();
@@ -43,14 +44,11 @@ const Box = () => {
 
   let total = 0;
   context.order.forEach((item: any) => {
-    total += item.count * item.goods.price;
+    total += Number((item.count * item.goods.price) / 10);
     console.log(item, total);
   });
-  console.log(context.order);
 
   const { t } = useTranslation();
-
-  console.log(context.order);
 
   const handleDelGoods = (index: number) => {
     const res = [...context.order];
@@ -211,7 +209,7 @@ const Box = () => {
             <p className={classes.total}>
               {t("boxPage.total")}
               <span className={classes.uan}>
-                {total}
+                {total.toFixed(2)}
                 грн
               </span>
             </p>

@@ -23,9 +23,10 @@ const Cataloge = () => {
     setSelectValue("category");
   };
 
-  const handleAdd = (item: any) => {
-    context.setOrder([...context.order, item]);
-  };
+  // const handleAdd = (item: any) => {
+  //   context.setOrder([...context.order, item]);
+  // };
+  console.log("Сам контекст", context);
 
   const { t } = useTranslation();
 
@@ -65,7 +66,7 @@ const Cataloge = () => {
           })
 
           .map((item: ICard, index: number) => (
-            <Card item={item} onBuy={handleAdd} valueNumber={index} />
+            <Card item={item} /*onBuy={handleAdd}*/ valueNumber={index} />
           ))}
       </div>
     </div>

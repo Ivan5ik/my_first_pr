@@ -7,6 +7,7 @@ import { arraySelectGram, arraySelectPiece, ICard } from "../../utils";
 import { Button } from "../Button";
 
 import useStyles from "./style";
+import { StoreContext } from "../../store";
 
 interface ICardProps {
   item: ICard;
@@ -20,18 +21,23 @@ const Card: FC<ICardProps> = ({ item, valueNumber, onBuy }) => {
   const [selectValue, setSelectValue] = useState("1");
   const { shortDesc, name, description, price, purchaseType, imgUrl, id } =
     item;
+  const context = React.useContext(StoreContext);
 
   const history = useNavigate();
 
   const handleBuy = () => {
-    onBuy({ goods: item, count: Number(selectValue) });
+    // onBuy({ goods: item, count: Number(selectValue) });
+    context.setOrder([
+      ...context.order,
+      { goods: item, count: Number(selectValue) },
+    ]);
   };
 
   const getBool = (valueNumber: number) => {};
 
   const setValue = () => {
-    if (purchaseType === "100gram") {
-      return "100гр";
+    if (purchaseType === "1kg") {
+      return "1кг";
     }
     if (purchaseType === "piece") {
       return "шт";
@@ -39,7 +45,7 @@ const Card: FC<ICardProps> = ({ item, valueNumber, onBuy }) => {
   };
 
   const getArray = () => {
-    if (purchaseType === "100gram") {
+    if (purchaseType === "1kg") {
       return arraySelectGram;
     }
     if (purchaseType === "piece") {

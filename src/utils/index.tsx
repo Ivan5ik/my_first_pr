@@ -61,7 +61,7 @@ export const arraySelectGram: IOptionsList[] = [
   { name: "100 гр", key: "1" },
   { name: "200 гр", key: "2" },
   { name: "300 гр", key: "3" },
-  { name: "500 гр", key: "8" },
+  { name: "500 гр", key: "5" },
   { name: "1 кг", key: "10" },
   { name: "3 кг", key: "40" },
   { name: "5 кг", key: "50" },
@@ -119,7 +119,7 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 134.52,
-    purchaseType: "100gram",
+    purchaseType: "1kg",
     category: "sausage",
     hot: false,
     imgUrl: ["../assets/kovbasaSalyami.jpg"],
@@ -149,7 +149,7 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 128.91,
-    purchaseType: "100gram",
+    purchaseType: "1kg",
     category: "anchovies",
     hot: false,
     imgUrl: ["../assets/sardelkaDoktorska.jpg"],
@@ -179,7 +179,7 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 146.89,
-    purchaseType: "100gram",
+    purchaseType: "1kg",
     category: "anchovies",
     hot: false,
     imgUrl: ["../assets/sardelkaWithCheese.jpg"],
@@ -209,7 +209,7 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 100.07,
-    purchaseType: "100gram",
+    purchaseType: "1kg",
     category: "anchovies",
     hot: false,
     imgUrl: ["../assets/nishna.jpg"],
@@ -239,7 +239,7 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 109.76,
-    purchaseType: "100gram",
+    purchaseType: "1kg",
     category: "anchovies",
     hot: false,
     imgUrl: ["../assets/sosiskaWithCheese.jpg"],
@@ -268,7 +268,7 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 142.91,
-    purchaseType: "100gram",
+    purchaseType: "1kg",
     category: "anchovies",
     hot: false,
     imgUrl: ["../assets/molochna.jpg"],
@@ -298,7 +298,7 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 158.77,
-    purchaseType: "100gram",
+    purchaseType: "1kg",
     category: "anchovies",
     hot: false,
     imgUrl: ["../assets/shkilna_2.jpg", "../assets/shkilna_1.jpg"],
@@ -328,7 +328,7 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 165.29,
-    purchaseType: "100gram",
+    purchaseType: "1kg",
     category: "anchovies",
     hot: false,
     imgUrl: ["../assets/shkilna_2.jpg", "../assets/shkilna_1.jpg"],
@@ -358,7 +358,7 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 240.94,
-    purchaseType: "100gram",
+    purchaseType: "1kg",
     category: "sausage",
     hot: false,
     imgUrl: ["../assets/kovbasaHanter.jpg"],
@@ -386,7 +386,7 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 139.35,
-    purchaseType: "100gram",
+    purchaseType: "1kg",
     category: "sausage",
     hot: false,
     imgUrl: ["../assets/kopcheneKrilo.jpg"],
@@ -414,7 +414,7 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 136.05,
-    purchaseType: "100gram",
+    purchaseType: "1kg",
     category: "sausage",
     hot: false,
     imgUrl: ["../assets/gomilka.jpg"],
@@ -445,7 +445,7 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 122.2,
-    purchaseType: "100gram",
+    purchaseType: "1kg",
     category: "sausage",
     hot: false,
     imgUrl: ["../assets/dachni.jpg"],
@@ -476,7 +476,7 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 107.06,
-    purchaseType: "100gram",
+    purchaseType: "1kg",
     category: "sausage",
     hot: false,
     imgUrl: ["../assets/kovbaskyShaslichny.jpg"],
@@ -506,7 +506,7 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 224.58,
-    purchaseType: "100gram",
+    purchaseType: "1kg",
     category: "sausage",
     hot: false,
     imgUrl: ["../assets/nemaPhoto.jpg"],
@@ -536,7 +536,7 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 128.62,
-    purchaseType: "100gram",
+    purchaseType: "1kg",
     category: "sausage",
     hot: false,
     imgUrl: ["../assets/shpikachka.jpg"],
@@ -566,7 +566,7 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 176.52,
-    purchaseType: "100gram",
+    purchaseType: "1kg",
     category: "sausage",
     hot: false,
     imgUrl: ["../assets/elitnaKovbasa.jpg"],
@@ -597,7 +597,7 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 179.94,
-    purchaseType: "100gram",
+    purchaseType: "1kg",
     category: "sausage",
     hot: false,
     imgUrl: ["../assets/grillKovbaska.jpg"],
@@ -628,7 +628,7 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 132.72,
-    purchaseType: "100gram",
+    purchaseType: "1kg",
     category: "sausage",
     hot: false,
     imgUrl: ["../assets/cheesePalichki.jpg"],
@@ -657,7 +657,7 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 323.52,
-    purchaseType: "100gram",
+    purchaseType: "1kg",
     category: "sausage",
     hot: false,
     imgUrl: ["../assets/franchKovbaska.jpg"],
@@ -689,7 +689,7 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 333.07,
-    purchaseType: "100gram",
+    purchaseType: "1kg",
     category: "sausage",
     hot: false,
     imgUrl: ["../assets/imperatorska.jpg"],
@@ -720,7 +720,7 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 338.04,
-    purchaseType: "100gram",
+    purchaseType: "1kg",
     category: "sausage",
     hot: false,
     imgUrl: ["../assets/gubernatorska.jpg"],
@@ -750,7 +750,7 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 119.31,
-    purchaseType: "100gram",
+    purchaseType: "1kg",
     category: "sausage",
     hot: false,
     imgUrl: ["../assets/salyamiVidenska.jpg"],
@@ -779,7 +779,7 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 185.87,
-    purchaseType: "100gram",
+    purchaseType: "1kg",
     category: "sausage",
     hot: false,
     imgUrl: ["../assets/nemaPhoto.jpg"],
@@ -808,7 +808,7 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 105.28,
-    purchaseType: "100gram",
+    purchaseType: "1kg",
     category: "sausage",
     hot: false,
     imgUrl: ["../assets/krakovetska.jpg"],
@@ -839,7 +839,7 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 0.0,
-    purchaseType: "100gram",
+    purchaseType: "1kg",
     category: "sausage",
     hot: false,
     imgUrl: ["../assets/mini.jpg"],
@@ -869,7 +869,7 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 149.18,
-    purchaseType: "100gram",
+    purchaseType: "1kg",
     category: "sausage",
     hot: false,
     imgUrl: ["../assets/elitnaSardelka.jpg"],
@@ -898,7 +898,7 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 99.2,
-    purchaseType: "100gram",
+    purchaseType: "1kg",
     category: "sausage",
     hot: false,
     imgUrl: ["../assets/anniversary.jpg"],
@@ -925,7 +925,7 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 220.5,
-    purchaseType: "100gram",
+    purchaseType: "1kg",
     category: "sausage",
     hot: false,
     imgUrl: ["../assets/nemaPhoto.jpg"],
@@ -954,7 +954,7 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 158.17,
-    purchaseType: "100gram",
+    purchaseType: "1kg",
     category: "sausage",
     hot: false,
     imgUrl: ["../assets/kovbasaDitacha.jpg"],
@@ -983,7 +983,7 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 123.55,
-    purchaseType: "100gram",
+    purchaseType: "1kg",
     category: "sausage",
     hot: false,
     imgUrl: ["../assets/fileka.jpg"],
@@ -1012,7 +1012,7 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 108.45,
-    purchaseType: "100gram",
+    purchaseType: "1kg",
     category: "sausage",
     hot: false,
     imgUrl: ["../assets/malyatko.jpg"],
@@ -1039,7 +1039,7 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 147.91,
-    purchaseType: "100gram",
+    purchaseType: "1kg",
     category: "sausage",
     hot: false,
     imgUrl: ["../assets/hungary.jpg"],
@@ -1067,7 +1067,7 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 300.32,
-    purchaseType: "100gram",
+    purchaseType: "1kg",
     category: "sausage",
     hot: false,
     imgUrl: ["../assets/drogobych.jpg"],
@@ -1097,7 +1097,7 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 153.22,
-    purchaseType: "100gram",
+    purchaseType: "1kg",
     category: "sausage",
     hot: false,
     imgUrl: ["../assets/naDrovax.jpg"],
@@ -1126,7 +1126,7 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 122.0,
-    purchaseType: "100gram",
+    purchaseType: "1kg",
     category: "sausage",
     hot: false,
     imgUrl: ["../assets/karapyz.jpg"],
