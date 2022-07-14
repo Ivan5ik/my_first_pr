@@ -15,6 +15,7 @@ export default function Header() {
   const location = useLocation();
 
   const { t, i18n } = useTranslation();
+  console.log(i18n);
 
   return (
     <div className={classes.fixed}>

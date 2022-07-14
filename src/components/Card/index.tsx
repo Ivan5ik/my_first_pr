@@ -54,41 +54,39 @@ const Card: FC<ICardProps> = ({ item, valueNumber, onBuy }) => {
   };
 
   return (
-    <Zoom>
-      <div onClick={() => getBool(valueNumber)} className={classes.card}>
-        <div onClick={() => history(`/catalog/${id}`)} className={classes.top}>
-          <img className={classes.imgOfCard} alt="imgOfCard" src={imgUrl[0]} />
-          <h1 className={classes.whiteColor}>{name}</h1>
-          <p className={classes.whiteColor}>{shortDesc}</p>
+    <div onClick={() => getBool(valueNumber)} className={classes.card}>
+      <div onClick={() => history(`/catalog/${id}`)} className={classes.top}>
+        <img className={classes.imgOfCard} alt="imgOfCard" src={imgUrl[0]} />
+        <h1 className={classes.whiteColor}>{name}</h1>
+        <p className={classes.whiteColor}>{shortDesc}</p>
+      </div>
+
+      <div className={classes.bottom}>
+        <div className={classes.pricePlusSelect}>
+          <div className={classes.coverPrice}>
+            <p className={classes.price}>{price}грн /</p>
+            <p className={classes.price}> {setValue()}</p>
+          </div>
+
+          <p>
+            <Select
+              selectValue={selectValue}
+              setValue={setSelectValue}
+              optionArray={getArray()}
+            />
+          </p>
         </div>
-
-        <div className={classes.bottom}>
-          <div className={classes.pricePlusSelect}>
-            <div className={classes.coverPrice}>
-              <p className={classes.price}>{price}грн /</p>
-              <p className={classes.price}> {setValue()}</p>
-            </div>
-
-            <p>
-              <Select
-                selectValue={selectValue}
-                setValue={setSelectValue}
-                optionArray={getArray()}
-              />
-            </p>
-          </div>
-          <div className={classes.butPlusP}>
-            <Button onClick={handleBuy} />
-            <p
-              className={classes.inMoreDetail}
-              onClick={() => history(`/catalog/${id}`)}
-            >
-              Детальніше
-            </p>
-          </div>
+        <div className={classes.butPlusP}>
+          <Button onClick={handleBuy} />
+          <p
+            className={classes.inMoreDetail}
+            onClick={() => history(`/catalog/${id}`)}
+          >
+            Детальніше
+          </p>
         </div>
       </div>
-    </Zoom>
+    </div>
   );
 };
 export { Card };
