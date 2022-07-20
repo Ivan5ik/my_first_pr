@@ -4,7 +4,6 @@ export interface IOptionsList {
 }
 
 export const currentYear = new Date().getFullYear();
-console.log(currentYear);
 
 export const globalColors = {
   red: "#ab3838",

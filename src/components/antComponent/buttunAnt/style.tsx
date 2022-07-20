@@ -1,5 +1,4 @@
 import { createUseStyles } from "react-jss";
-import { globalColors } from "../../../utils";
 
 const useStyles = createUseStyles({
   root: {
@@ -11,6 +10,5 @@ const useStyles = createUseStyles({
       paddingBottom: "30px",
     },
   },
-  buttonAnt: {},
 });
 export { useStyles };

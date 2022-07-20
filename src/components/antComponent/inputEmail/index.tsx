@@ -1,12 +1,13 @@
 import { Form, Input } from "antd";
 import React, { FC } from "react";
+
 import { useStyles } from "./style";
 
-interface IInputName {
+interface IInputEmail {
   name: string;
 }
 
-const InputEmail: FC<IInputName> = ({ name }) => {
+const InputEmail: FC<IInputEmail> = ({ name }) => {
   const classes = useStyles();
 
   return (

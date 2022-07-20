@@ -2,35 +2,36 @@ import React, { useRef } from "react";
 import { Form, notification } from "antd";
 import { useTranslation } from "react-i18next";
 import Fade from "react-reveal/Fade";
+import emailjs from "@emailjs/browser";
+import { useNavigate } from "react-router-dom";
 
 import { deliveryArray, payArray } from "../../utils";
 import { SecondCard } from "../../components/SecondCard";
 import { StoreContext } from "../../store";
-import emailjs from "@emailjs/browser";
 
-import useStyles from "./style";
 import { InputFieldAnt } from "../../components/antComponent/InputFieldAnt";
 import { RadioGroup } from "../../components/antComponent/radioGroup";
 import { InputPhone } from "../../components/antComponent/inputPhone";
 import { InputEmail } from "../../components/antComponent/inputEmail";
 import { ButAnt } from "../../components/antComponent/buttunAnt";
-import { useNavigate } from "react-router-dom";
+import useStyles from "./style";
 
 type NotificationType = "success" | "info" | "warning" | "error";
 
 const Box = () => {
-  const classes: any = useStyles();
   let total = 0;
 
+  const classes: any = useStyles();
+
   const [formANT] = Form.useForm();
+
+  const { t } = useTranslation();
 
   const { getFieldsValue, setFieldsValue } = formANT;
 
   const historyRoute = useNavigate();
 
   const forma: any = useRef();
-
-  const { t } = useTranslation();
 
   const context = React.useContext(StoreContext);
 
@@ -142,11 +143,7 @@ const Box = () => {
                     {t("boxPage.delivery")}
                   </p>
                   <div className={classes.coverForAntRadio}>
-                    <RadioGroup
-                      name="radioDelivery"
-                      array={deliveryArray}
-                      def={deliveryArray[0].check}
-                    />
+                    <RadioGroup name="radioDelivery" array={deliveryArray} />
                   </div>
                 </div>
                 <div className={classes.dataDelivery}>
@@ -170,9 +167,9 @@ const Box = () => {
                       />
                     </div>
                     <div className={classes.coverAdress}>
-                      <p className={classes.adress}>{t("boxPage.address")}</p>
+                      <p className={classes.address}>{t("boxPage.address")}</p>
                       <div className={classes.root}>
-                        <InputFieldAnt name="adress" booleanValue={true} />
+                        <InputFieldAnt name="address" booleanValue={true} />
                       </div>
                     </div>
                   </div>
@@ -189,11 +186,7 @@ const Box = () => {
                 <div className={classes.coverPay}>
                   <p className={classes.payP}>{t("boxPage.pay")}</p>
                   <div className={classes.coverForAntRadio}>
-                    <RadioGroup
-                      name="pay"
-                      array={payArray}
-                      def={payArray[0].check}
-                    />
+                    <RadioGroup name="pay" array={payArray} />
                   </div>
                 </div>
               </div>

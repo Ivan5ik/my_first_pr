@@ -3,11 +3,14 @@ import { createUseStyles } from "react-jss";
 import { globalColors } from "../../utils";
 
 const useStyles = createUseStyles({
-  container: {
+  root: {
     background: globalColors.darkBlack,
     width: "100%",
     maxWidth: "980px",
     margin: "0px auto",
+    "& .ant-input .inputAnt": {
+      height: "37px",
+    },
   },
   product: {
     color: globalColors.white,

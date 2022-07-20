@@ -1,6 +1,5 @@
 import React, { FC } from "react";
 import { Input as InputAnt } from "antd";
-import { debounce } from "lodash";
 import { useStyles } from "./style";
 
 interface IInput {

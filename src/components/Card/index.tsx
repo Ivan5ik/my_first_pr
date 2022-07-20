@@ -1,5 +1,4 @@
 import React, { FC, useState } from "react";
-import Zoom from "react-reveal/Zoom";
 import { useNavigate } from "react-router-dom";
 
 import { Select } from "../Select";
@@ -11,29 +10,23 @@ import useStyles from "./style";
 
 interface ICardProps {
   item: ICard;
-  valueNumber: number;
-  onBuy?: any;
 }
 
-const Card: FC<ICardProps> = ({ item, valueNumber, onBuy }) => {
+const Card: FC<ICardProps> = ({ item }) => {
   const classes = useStyles();
 
   const [selectValue, setSelectValue] = useState("1");
-  const { shortDesc, name, description, price, purchaseType, imgUrl, id } =
-    item;
+  const { shortDesc, name, price, purchaseType, imgUrl, id } = item;
   const context = React.useContext(StoreContext);
 
   const history = useNavigate();
 
   const handleBuy = () => {
-    // onBuy({ goods: item, count: Number(selectValue) });
     context.setOrder([
       ...context.order,
       { goods: item, count: Number(selectValue) },
     ]);
   };
-
-  const getBool = (valueNumber: number) => {};
 
   const setValue = () => {
     if (purchaseType === "1kg") {
@@ -54,7 +47,7 @@ const Card: FC<ICardProps> = ({ item, valueNumber, onBuy }) => {
   };
 
   return (
-    <div onClick={() => getBool(valueNumber)} className={classes.card}>
+    <div className={classes.card}>
       <div onClick={() => history(`/catalog/${id}`)} className={classes.top}>
         <img className={classes.imgOfCard} alt="imgOfCard" src={imgUrl[0]} />
         <h1 className={classes.whiteColor}>{name}</h1>

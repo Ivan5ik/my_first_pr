@@ -124,7 +124,7 @@ const useStyles = createUseStyles({
     width: "75%",
   },
   city: { width: "26%", padding: "0px 10px 0px 0px" },
-  adress: { width: "26%", padding: "0px 10px 0px 0px" },
+  address: { width: "26%", padding: "0px 10px 0px 0px" },
   coverCity: {
     marginBottom: "0px",
 

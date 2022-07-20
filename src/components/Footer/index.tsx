@@ -11,6 +11,7 @@ export default function Footer() {
 
   const history = useNavigate();
   const { t } = useTranslation();
+
   return (
     <div>
       <div className={classes.footer}>

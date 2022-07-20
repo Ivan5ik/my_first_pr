@@ -109,7 +109,7 @@ const Main = () => {
 
           <div className={classes.productsList}>
             {arrayCard.slice(0, 3).map((item: ICard, index) => (
-              <Card item={item} valueNumber={index} /*onBuy={handleAdd}*/ />
+              <Card item={item} />
             ))}
           </div>
 
@@ -127,10 +127,7 @@ const Main = () => {
       </div>
       <div style={{ background: globalColors.darkBlack }}>
         <div className={classes.mapPlusForm}>
-          <div
-            className={classes.form}
-            // onSubmit={() => sendEmail(e)}
-          >
+          <div className={classes.form}>
             <div className={classes.coverFrom}>
               <SearchOutlined className={classes.iconAntd} />
               <p className={classes.location}>

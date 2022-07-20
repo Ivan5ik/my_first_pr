@@ -1,16 +1,15 @@
-import { Form, Input, Select } from "antd";
+import { Form } from "antd";
 import React, { FC } from "react";
 import InputMask from "react-input-mask";
-import { InputFieldAnt } from "../InputFieldAnt";
+
 import { useStyles } from "./style";
 
 interface IInputPhone {
   name: string;
-  value?: any;
   onChange: any;
 }
 
-const InputPhone: FC<IInputPhone> = ({ name, value, onChange }) => {
+const InputPhone: FC<IInputPhone> = ({ name, onChange }) => {
   const classes = useStyles();
 
   return (
@@ -23,7 +22,6 @@ const InputPhone: FC<IInputPhone> = ({ name, value, onChange }) => {
           className={classes.inputPhone}
           name="phone"
           mask="+38(999)999-99-99"
-          value={value}
           onChange={onChange}
         />
       </Form.Item>

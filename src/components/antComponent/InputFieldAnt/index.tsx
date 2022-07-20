@@ -1,13 +1,14 @@
 import { Form, Input } from "antd";
 import React, { FC } from "react";
+
 import { useStyles } from "./style";
 
-interface IInputName {
+interface IInputFieldAnt {
   name: string;
   booleanValue: boolean;
 }
 
-const InputFieldAnt: FC<IInputName> = ({ name, booleanValue }) => {
+const InputFieldAnt: FC<IInputFieldAnt> = ({ name, booleanValue }) => {
   const classes = useStyles();
 
   return (

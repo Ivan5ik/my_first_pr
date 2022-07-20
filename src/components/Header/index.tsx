@@ -15,7 +15,6 @@ export default function Header() {
   const location = useLocation();
 
   const { t, i18n } = useTranslation();
-  console.log(i18n);
 
   return (
     <div className={classes.fixed}>
@@ -45,7 +44,6 @@ export default function Header() {
               >
                 {i18n.language === "ua" ? "УКРАЇНСЬКА" : "ENGLISH"}
               </p>
-              {/* ))} */}
             </div>
             <div className={classes.middleBottom}>
               {navigationMiddleBottom.map((item: any) => (

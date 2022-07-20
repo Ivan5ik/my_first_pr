@@ -51,7 +51,6 @@ const Item = () => {
       },
     ]);
   };
-  console.log("item", context);
 
   return (
     <div>
