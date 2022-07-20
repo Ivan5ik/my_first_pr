@@ -24,6 +24,7 @@ const useStyles = createUseStyles({
     textAlign: "center",
   },
   toCataloge: {
+    cursor: "pointer",
     color: globalColors.white,
     fontSize: "18px",
     marginLeft: "22px",
@@ -142,6 +143,7 @@ const useStyles = createUseStyles({
     fontSize: "14px",
   },
   underCity: {
+    paddingBottom: "5px",
     paddingTop: "2px",
     display: "flex",
     paddingLeft: "120px",
@@ -172,7 +174,6 @@ const useStyles = createUseStyles({
   },
 
   coverPay: {
-    marginBottom: "30px",
     color: globalColors.white,
     fontSize: "16px",
     display: "flex",

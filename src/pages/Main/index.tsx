@@ -194,7 +194,7 @@ const Main = () => {
             </Bounce>
           </div>
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5188.327345712222!2d32.058819958907904!3d49.44362346841462!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d14b866064977f%3A0xf8dce723a9cbb5d8!2sCherkasy%2C%20Cherkasy%20Oblast%2C%2018000!5e0!3m2!1sen!2sua!4v1653551302400!5m2!1sen!2sua"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2438.2258877867034!2d31.94775921557758!3d49.45484517935038!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d14d967aeeebab%3A0xd2d419e06860c48c!2z0JPQtdGA0L7QvdC40LzQvtCy0LrQsCwg0KfQtdGA0LrQsNGB0YHQutCw0Y8g0L7QsdC70LDRgdGC0YwsINCj0LrRgNCw0LjQvdCwLCAxOTYwMQ!5e1!3m2!1sru!2suk!4v1658134401592!5m2!1sru!2suk"
             width="100%"
             height="450px"
             style={{ border: "0" }}

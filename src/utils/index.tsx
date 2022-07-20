@@ -3,6 +3,9 @@ export interface IOptionsList {
   key: string;
 }
 
+export const currentYear = new Date().getFullYear();
+console.log(currentYear);
+
 export const globalColors = {
   red: "#ab3838",
   white: "#ffffff",
@@ -10,35 +13,36 @@ export const globalColors = {
   black: "#000",
   lightGrey: "#5a6771",
   darkGrey: "#31353a",
+  lightRed: "#b85d5a",
 };
 
 export const payArray = [
-  { name: "boxPage.payRadioBut.cash", check: 1 },
-  { name: "boxPage.payRadioBut.cashless", check: 2 },
+  { name: "boxPage.payRadioBut.cash", check: "cash" },
+  { name: "boxPage.payRadioBut.cashless", check: "cashLess" },
 ];
 
 export const deliveryArray = [
   {
     name: "boxPage.deliveryTo.cherkassy",
-    check: "che",
+    check: "Cherkasy",
     img: "",
     style: "",
   },
   {
     name: "boxPage.deliveryTo.np",
-    check: "np",
+    check: "NovaPochta",
     img: "../assets/novaPochta.png",
     style: "imgNova",
   },
   {
     name: "boxPage.deliveryTo.js",
-    check: "js",
+    check: "Justin",
     img: "../assets/justin.png",
     style: "imgUkr",
   },
   {
     name: "boxPage.deliveryTo.ukr",
-    check: "ukr",
+    check: "UkrPochta",
     img: "../assets/ukrPochta.png",
     style: "imgUkr",
   },
