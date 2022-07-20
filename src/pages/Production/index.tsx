@@ -61,7 +61,7 @@ const Production = () => {
           <div className={classes.leftCarousel}>
             <Carousel autoplay={true}>
               {leftCarousel.map((item) => (
-                <img src={item} alt={item} />
+                <img src={item} key={item} alt={item} />
               ))}
             </Carousel>
           </div>
@@ -84,7 +84,7 @@ const Production = () => {
           <div className={classes.rightCarousel}>
             <Carousel autoplay={true}>
               {rightCarousel.map((item) => (
-                <img src={item} alt={item} />
+                <img src={item} key={item} alt={item} />
               ))}
             </Carousel>
           </div>
@@ -95,7 +95,7 @@ const Production = () => {
           <div className={classes.bottomImg}>
             <Carousel autoplay={true}>
               {carouselBottom.map((item) => (
-                <div className={classes.blockComponent}>
+                <div className={classes.blockComponent} key={item.h}>
                   <h2 className={classes.h2}>{item.h}</h2>
                   <p className={classes.p1}>{item.p1}</p>
                   <p className={classes.p2}>Деталі за телефоном:</p>

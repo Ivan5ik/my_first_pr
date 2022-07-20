@@ -14,6 +14,7 @@ import { RadioGroup } from "../../components/antComponent/radioGroup";
 import { InputPhone } from "../../components/antComponent/inputPhone";
 import { InputEmail } from "../../components/antComponent/inputEmail";
 import { ButAnt } from "../../components/antComponent/buttunAnt";
+
 import useStyles from "./style";
 
 type NotificationType = "success" | "info" | "warning" | "error";
@@ -76,12 +77,13 @@ const Box = () => {
       return openNotificationWithIcon("error", "order isn't add");
     }
 
+    //TODO move all set params to the .env
     emailjs
       .sendForm(
-        "service_ioh0qkq",
-        "template_52tfysg",
+        "service_ioh0qkq", //move
+        "template_52tfysg", //move
         forma.current.children[0],
-        "4axMjG3SDcb_FoRZn"
+        "4axMjG3SDcb_FoRZn" //move
       )
       .then(() => openNotificationWithIcon("success", "email was sent"))
       .catch(() => openNotificationWithIcon("error", "email wasn't sent"));

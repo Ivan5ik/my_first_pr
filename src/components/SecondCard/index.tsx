@@ -12,10 +12,8 @@ interface ISecondCard {
   onClick: any;
 }
 
-const SecondCard: FC<ISecondCard> = (props) => {
+const SecondCard: FC<ISecondCard> = ({ item, onClick }) => {
   const classes = useStyles();
-
-  const { item, onClick } = props;
 
   const [selectValue, setSelectValue] = useState(String(item.count));
 
@@ -34,6 +32,7 @@ const SecondCard: FC<ISecondCard> = (props) => {
     context.setOrder(copyArray);
   }, [selectValue]);
 
+  // TODO DELETE AS DUPLICATE
   const setValue = () => {
     if (item.goods.purchaseType === "1kg") {
       return "1кг";
@@ -43,6 +42,7 @@ const SecondCard: FC<ISecondCard> = (props) => {
     }
   };
 
+  // TODO DELETE AS DUPLICATE
   const getArray = () => {
     if (item.goods.purchaseType === "1kg") {
       return arraySelectGram;

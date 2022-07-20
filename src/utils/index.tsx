@@ -95,7 +95,6 @@ export const basicWords = [
 ];
 
 export const button = { key: "cataloge" };
-// export const moreDetail = { key: "/catalog/:id" };
 
 export const arrayCard: ICard[] = [
   {

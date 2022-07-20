@@ -1,5 +1,5 @@
-import { Form, Radio } from "antd";
 import React, { FC } from "react";
+import { Form, Radio } from "antd";
 import { useTranslation } from "react-i18next";
 
 import { useStyles } from "./style";

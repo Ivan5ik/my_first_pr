@@ -11,10 +11,8 @@ interface ISelect {
   setValue: React.Dispatch<React.SetStateAction<string>>;
 }
 
-const Select: FC<ISelect> = (props) => {
+const Select: FC<ISelect> = ({ selectValue, setValue, optionArray }) => {
   const classes = useStyles();
-
-  const { selectValue, setValue, optionArray } = props;
 
   const getSelect = (v: string) => {
     setValue(v);
@@ -28,7 +26,9 @@ const Select: FC<ISelect> = (props) => {
         onChange={getSelect}
       >
         {optionArray.map((item: any) => (
-          <Option value={item.key}>{item.name}</Option>
+          <Option value={item.key} key={item.key}>
+            {item.name}
+          </Option>
         ))}
       </SelectAnt>
     </div>

@@ -13,7 +13,6 @@ import { arrayCard, button, globalColors, ICard } from "../../utils";
 import { Card } from "../../components/Card";
 import { StoreContext } from "../../store";
 import { InputForBox } from "../../components/InputForBox";
-// import emailjs from "@emailjs/browser";
 
 import useStyles from "./style";
 
@@ -54,12 +53,6 @@ const Main = () => {
     },
   ];
 
-  const context = React.useContext(StoreContext);
-
-  const handleAdd = (item: any) => {
-    context.setOrder([...context.order, item]);
-  };
-
   const handleAllInput = (
     e: React.ChangeEvent<HTMLInputElement>,
     flag: any
@@ -69,19 +62,14 @@ const Main = () => {
     setForm(result);
   };
 
-  // const sendEmail = (e: any) => {
-  //   e.preventDefault();
-  //   emailjs.sendForm("service_1ct1lzp", "template_52tfysg", e.target);
-  // };
-
   return (
     <>
       <div className={classes.root}>
         <div className={classes.coverCarousel}>
           <Fade bottom>
             <Carousel autoplay={true}>
-              {listCarousel.map((item) => (
-                <div className={classes.coverComponent}>
+              {listCarousel.map((item, index) => (
+                <div className={classes.coverComponent} key={index}>
                   <div className={classes.contentStyle}>
                     <h2 className={classes.title}>{item.h}</h2>
                     <p className={classes.description}>{item.p1}</p>
@@ -108,8 +96,8 @@ const Main = () => {
           </Zoom>
 
           <div className={classes.productsList}>
-            {arrayCard.slice(0, 3).map((item: ICard, index) => (
-              <Card item={item} />
+            {arrayCard.slice(0, 3).map((item: ICard) => (
+              <Card item={item} key={item.id} />
             ))}
           </div>
 
@@ -185,7 +173,7 @@ const Main = () => {
               </p>
             </div>
             <Bounce left>
-              <button className={classes.button} onClick={() => {}}>
+              <button className={classes.button}>
                 {t("homePage.form.submit")}
               </button>
             </Bounce>

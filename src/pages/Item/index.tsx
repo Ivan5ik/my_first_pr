@@ -33,6 +33,7 @@ const Item = () => {
     }
   };
 
+  //TODO DELETE
   const getArray = () => {
     if (purchaseType === "1kg") {
       return arraySelectGram;

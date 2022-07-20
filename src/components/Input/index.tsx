@@ -13,7 +13,7 @@ const Input: FC<IInput> = (props) => {
   const { value, setValue } = props;
 
   const getInput = (e: React.ChangeEvent<HTMLInputElement>) =>
-    setValue(e?.target?.value);
+    setValue(e.target.value);
 
   return (
     <div className={classes.root}>

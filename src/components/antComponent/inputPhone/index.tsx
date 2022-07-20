@@ -6,7 +6,7 @@ import { useStyles } from "./style";
 
 interface IInputPhone {
   name: string;
-  onChange: any;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 const InputPhone: FC<IInputPhone> = ({ name, onChange }) => {

@@ -6,9 +6,8 @@ interface IButton {
   onClick: () => void;
 }
 
-const Button: FC<IButton> = (props) => {
+const Button: FC<IButton> = ({ onClick }) => {
   const classes = useStyles();
-  const { onClick } = props;
 
   return (
     <button className={classes.button} onClick={onClick}>

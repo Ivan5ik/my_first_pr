@@ -12,6 +12,7 @@ export default function Header() {
   const classes = useStyles();
 
   const history = useNavigate();
+
   const location = useLocation();
 
   const { t, i18n } = useTranslation();

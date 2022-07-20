@@ -1,5 +1,5 @@
-import { Form, Input } from "antd";
 import React, { FC } from "react";
+import { Form, Input } from "antd";
 
 import { useStyles } from "./style";
 

@@ -10,6 +10,7 @@ export default function Footer() {
   const classes = useStyles();
 
   const history = useNavigate();
+
   const { t } = useTranslation();
 
   return (

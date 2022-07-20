@@ -28,4 +28,5 @@ const InputForBox: FC<IBox> = ({
     />
   );
 };
+
 export { InputForBox };
