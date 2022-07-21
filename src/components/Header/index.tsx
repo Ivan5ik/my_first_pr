@@ -7,6 +7,7 @@ import { useTranslation } from "react-i18next";
 import { navigationMiddleBottom } from "../../routes/routes";
 
 import useStyles from "./style";
+import { phoneNumber } from "../../utils";
 
 export default function Header() {
   const classes = useStyles();
@@ -33,7 +34,7 @@ export default function Header() {
                 href="callto:+380636235535"
                 className={classes.colorWordsAbove}
               >
-                +38(063) 623 55 35
+                `${phoneNumber}`
               </a>
               {/* If we will have three or more languages */}
               {/* {Object.keys(lngs).map((item: any) => ( */}

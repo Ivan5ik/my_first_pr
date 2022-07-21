@@ -160,6 +160,7 @@ const Box = () => {
                       <p className={classes.tarifNova}>{t("boxPage.tarif")}</p>
 
                       <img
+                        alt="photoDelivery"
                         className={
                           classes[
                             getImg(getFieldsValue().radioDelivery)?.style!

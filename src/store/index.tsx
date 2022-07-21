@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 
 export const StoreContext = React.createContext<any>(null);
 
-export default ({ children }: any) => {
+const HandleStore = ({ children }: any) => {
   //TODO ADD TYPE for state
-  const [order, setOrder] = React.useState([]);
+  const [order, setOrder] = useState([]);
 
   return (
     <StoreContext.Provider value={{ order, setOrder }}>
@@ -12,3 +12,4 @@ export default ({ children }: any) => {
     </StoreContext.Provider>
   );
 };
+export default HandleStore;

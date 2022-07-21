@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
-import { basicWords } from "../../utils";
+import { basicWords, phoneNumber } from "../../utils";
 
 import useStyles from "./style";
 
@@ -62,7 +62,7 @@ export default function Footer() {
             </div>
             <div className={classes.contactsLeft}>
               <a href="callto:+380636235535" className={classes.link}>
-                +380 63 623 55 35
+                `${phoneNumber}`
               </a>
             </div>
           </div>

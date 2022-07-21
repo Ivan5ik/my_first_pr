@@ -9,9 +9,14 @@ import Bounce from "react-reveal/Bounce";
 import Zoom from "react-reveal/Zoom";
 import Fade from "react-reveal/Fade";
 
-import { arrayCard, button, globalColors, ICard } from "../../utils";
+import {
+  arrayCard,
+  button,
+  globalColors,
+  ICard,
+  phoneNumber,
+} from "../../utils";
 import { Card } from "../../components/Card";
-import { StoreContext } from "../../store";
 import { InputForBox } from "../../components/InputForBox";
 
 import useStyles from "./style";
@@ -126,7 +131,7 @@ const Main = () => {
             <div className={classes.coverFrom}>
               <PhoneOutlined className={classes.iconAntd} />
               <a className={classes.link} href="tel:+380636235535">
-                +38 (063) 623 55 35
+                `${phoneNumber}`
               </a>
             </div>
             <div className={classes.coverFrom}>
@@ -179,6 +184,7 @@ const Main = () => {
             </Bounce>
           </div>
           <iframe
+            title="mapsForPage"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2438.2258877867034!2d31.94775921557758!3d49.45484517935038!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d14d967aeeebab%3A0xd2d419e06860c48c!2z0JPQtdGA0L7QvdC40LzQvtCy0LrQsCwg0KfQtdGA0LrQsNGB0YHQutCw0Y8g0L7QsdC70LDRgdGC0YwsINCj0LrRgNCw0LjQvdCwLCAxOTYwMQ!5e1!3m2!1sru!2suk!4v1658134401592!5m2!1sru!2suk"
             width="100%"
             height="450px"

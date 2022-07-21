@@ -7,6 +7,7 @@ import Slide from "react-reveal/Slide";
 import { Carousel } from "antd";
 
 import useStyles from "./style";
+import { phoneNumber } from "../../utils";
 
 const Production = () => {
   const classes = useStyles();
@@ -100,7 +101,7 @@ const Production = () => {
                   <p className={classes.p1}>{item.p1}</p>
                   <p className={classes.p2}>Деталі за телефоном:</p>
                   <a href="callto:+380636235535" className={classes.tel}>
-                    +380 63 623 55 35
+                    `${phoneNumber}`
                   </a>
                 </div>
               ))}

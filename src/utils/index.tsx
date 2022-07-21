@@ -5,6 +5,8 @@ export interface IOptionsList {
 
 export const currentYear = new Date().getFullYear();
 
+export const phoneNumber = "+380 63 623 55 35";
+
 export const globalColors = {
   red: "#ab3838",
   white: "#ffffff",

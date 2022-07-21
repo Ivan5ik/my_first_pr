@@ -30,7 +30,7 @@ const SecondCard: FC<ISecondCard> = ({ item, onClick }) => {
     });
 
     context.setOrder(copyArray);
-  }, [selectValue]);
+  }, [selectValue, context, item.goods.id]);
 
   // TODO DELETE AS DUPLICATE
   const setValue = () => {
