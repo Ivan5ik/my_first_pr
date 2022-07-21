@@ -9,7 +9,7 @@ import { Input } from "../../components/Input";
 
 import useStyles from "./style";
 
-const Cataloge = () => {
+const Catalog = () => {
   const classes = useStyles();
 
   const [input, setInput] = useState("");
@@ -25,7 +25,7 @@ const Cataloge = () => {
   return (
     <div className={classes.root}>
       <Zoom cascade>
-        <h1 className={classes.product}>{t("catalogePage.product")}</h1>
+        <h1 className={classes.product}>{t("catalogPage.product")}</h1>
       </Zoom>
       <div className={classes.underProduct}>
         <div className={classes.coverUnderProduct}>
@@ -39,7 +39,7 @@ const Cataloge = () => {
           </div>
         </div>
         <p onClick={setReset} className={classes.reset}>
-          {t("catalogePage.reset")}
+          {t("catalogPage.reset")}
         </p>
       </div>
       <div className={classes.productsList}>
@@ -58,10 +58,10 @@ const Cataloge = () => {
           })
 
           .map((item: ICard) => (
-            <Card item={item} />
+            <Card item={item} key={item.id} />
           ))}
       </div>
     </div>
   );
 };
-export { Cataloge };
+export { Catalog as Cataloge };

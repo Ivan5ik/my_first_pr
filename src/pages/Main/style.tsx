@@ -42,8 +42,10 @@ const useStyles = createUseStyles({
     height: "80vh",
   },
   styleImg: { width: "490px", display: "flex", justifyContent: "center" },
-
-  cataloge: {
+  sectionCard: {
+    background: "#242424",
+  },
+  catalog: {
     background: "#242424",
     width: "100%",
     maxWidth: "980px",
@@ -78,6 +80,9 @@ const useStyles = createUseStyles({
 
   coverButton: {
     paddingBottom: "30px",
+  },
+  mainDiv: {
+    background: globalColors.darkBlack,
   },
   mapPlusForm: {
     display: "flex",

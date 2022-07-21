@@ -21,5 +21,8 @@ const useStyles = createUseStyles({
         height: "37px",
       },
   },
+  selectAnt: {
+    width: "120px",
+  },
 });
 export default useStyles;

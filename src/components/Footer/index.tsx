@@ -30,12 +30,12 @@ export default function Footer() {
               ))}
             </div>
             <div>
-              <p
+              <div
                 className={classes.topAside}
                 onClick={() => window.scrollTo(0, 0)}
               >
                 <p>{t("up")}</p>
-              </p>
+              </div>
             </div>
           </div>
 
@@ -62,7 +62,7 @@ export default function Footer() {
             </div>
             <div className={classes.contactsLeft}>
               <a href="callto:+380636235535" className={classes.link}>
-                `${phoneNumber}`
+                {phoneNumber}
               </a>
             </div>
           </div>

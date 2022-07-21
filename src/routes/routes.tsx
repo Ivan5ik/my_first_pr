@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 import { FireOutlined } from "@ant-design/icons";
 
 import { Box } from "../pages/Box";
-import { Cataloge } from "../pages/Cataloge";
+import { Cataloge } from "../pages/Catalog";
 import { Item } from "../pages/Item";
 import { Main } from "../pages/Main";
 import { Production } from "../pages/Production";

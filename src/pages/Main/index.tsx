@@ -9,13 +9,7 @@ import Bounce from "react-reveal/Bounce";
 import Zoom from "react-reveal/Zoom";
 import Fade from "react-reveal/Fade";
 
-import {
-  arrayCard,
-  button,
-  globalColors,
-  ICard,
-  phoneNumber,
-} from "../../utils";
+import { arrayCard, button, ICard, phoneNumber } from "../../utils";
 import { Card } from "../../components/Card";
 import { InputForBox } from "../../components/InputForBox";
 
@@ -94,8 +88,8 @@ const Main = () => {
           </Fade>
         </div>
       </div>
-      <div style={{ background: "#242424" }}>
-        <div className={classes.cataloge}>
+      <div className={classes.sectionCard}>
+        <div className={classes.catalog}>
           <Zoom cascade>
             <h1 className={classes.product}>{t("homePage.product")}</h1>
           </Zoom>
@@ -118,7 +112,7 @@ const Main = () => {
           </div>
         </div>
       </div>
-      <div style={{ background: globalColors.darkBlack }}>
+      <div className={classes.mainDiv}>
         <div className={classes.mapPlusForm}>
           <div className={classes.form}>
             <div className={classes.coverFrom}>
@@ -131,7 +125,7 @@ const Main = () => {
             <div className={classes.coverFrom}>
               <PhoneOutlined className={classes.iconAntd} />
               <a className={classes.link} href="tel:+380636235535">
-                `${phoneNumber}`
+                {phoneNumber}
               </a>
             </div>
             <div className={classes.coverFrom}>

@@ -1,11 +1,44 @@
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+
 export interface IOptionsList {
   name: string;
   key: string;
 }
 
+// функції для грам
+
+export const getPrice = (purchaseType: any) => {
+  if (purchaseType === "1kg") {
+    return "1кг";
+  }
+  if (purchaseType === "piece") {
+    return "шт";
+  }
+};
+
+export const getArrayForSelect = (purchaseType: string) => {
+  if (purchaseType === "1kg") {
+    return arraySelectGram;
+  }
+  if (purchaseType === "piece") {
+    return arraySelectPiece;
+  }
+};
+
 export const currentYear = new Date().getFullYear();
 
 export const phoneNumber = "+380 63 623 55 35";
+
+export default function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
 
 export const globalColors = {
   red: "#ab3838",
@@ -63,13 +96,13 @@ export const arraySelectPiece: IOptionsList[] = [
 ];
 
 export const arraySelectGram: IOptionsList[] = [
-  { name: "100 гр", key: "1" },
-  { name: "200 гр", key: "2" },
-  { name: "300 гр", key: "3" },
-  { name: "500 гр", key: "5" },
-  { name: "1 кг", key: "10" },
-  { name: "3 кг", key: "40" },
-  { name: "5 кг", key: "50" },
+  { name: `100 гр`, key: "1" },
+  { name: `200 гр`, key: "2" },
+  { name: `300 гр`, key: "3" },
+  { name: `500 гр`, key: "5" },
+  { name: `1 кг`, key: "10" },
+  { name: `3 кг`, key: "40" },
+  { name: `5 кг`, key: "50" },
 ];
 
 export const arrayCategory: IOptionsList[] = [
@@ -820,7 +853,7 @@ export const arrayCard: ICard[] = [
       "Термін  придатності ковбас, запакованих під вакуумом або в модифікованому газовому середовищі в плівку цілими батонами, за температури  не вищої за 6 ℃, не більше 25 діб.",
   },
   {
-    id: "4pn4gbh2-f87f-31t2-d37y-45s64233c3d4",
+    id: "4pn4gbh2-f87f-31t2-d37y-45s64233c3d5",
     name: "Сосиски варені «Міні» вс",
     description: (
       <div>

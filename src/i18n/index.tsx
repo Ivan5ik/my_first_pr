@@ -23,6 +23,13 @@ i18n
     resources: {
       ua: {
         translation: {
+          moreDetailForPhone: "Деталі за телефоном:",
+          toCatalog: "До каталогу",
+          gram: "гр",
+          uan: "грн",
+          moreDetail: "Детальніше",
+          inBox: "В кошик",
+          toOrder: "Оформити замовлення",
           up: "На Гору 🠕",
           delivery: "Оплата і доставка",
           home: "Головна",
@@ -94,7 +101,7 @@ i18n
             yourOrder: "Ваше замовлення",
             total: "Разом",
           },
-          catalogePage: {
+          catalogPage: {
             product: "- Продукція -",
             reset: "Скинути все",
           },
@@ -102,6 +109,13 @@ i18n
       },
       en: {
         translation: {
+          moreDetailForPhone: "Details by phone:",
+          toCatalog: "To catalog",
+          gram: "gram",
+          uan: "uan",
+          moreDetail: "More detail",
+          inBox: "In the basket",
+          toOrder: "to Order",
           up: "Up 🠕",
           delivery: "Payment and delivery",
           home: "Home",
@@ -173,7 +187,7 @@ i18n
             yourOrder: "Your order",
             total: "Total",
           },
-          catalogePage: {
+          catalogPage: {
             product: "- Product -",
             reset: "Reset all",
           },

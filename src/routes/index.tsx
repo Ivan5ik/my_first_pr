@@ -12,8 +12,7 @@ const Route = () => {
     <div className={classes.color}>
       <Routes>
         {routes.map((item) => (
-          // TODO ADD KEY
-          <RouteDOM path={item.path} element={item.component} />
+          <RouteDOM path={item.path} element={item.component} key={item.path} />
         ))}
       </Routes>
     </div>

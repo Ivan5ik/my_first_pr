@@ -1,9 +1,10 @@
 import React, { FC, useEffect, useState } from "react";
 import { CloseOutlined } from "@ant-design/icons";
 
-import { arraySelectGram, arraySelectPiece } from "../../utils";
+import { getArrayForSelect, getPrice } from "../../utils";
 import { Select } from "../Select";
 import { StoreContext } from "../../store";
+import { useTranslation } from "react-i18next";
 
 import { useStyles } from "./style";
 
@@ -15,6 +16,7 @@ interface ISecondCard {
 const SecondCard: FC<ISecondCard> = ({ item, onClick }) => {
   const classes = useStyles();
 
+  const { t } = useTranslation();
   const [selectValue, setSelectValue] = useState(String(item.count));
 
   const total = ((Number(selectValue) * item.goods.price) / 10).toFixed(2);
@@ -30,27 +32,7 @@ const SecondCard: FC<ISecondCard> = ({ item, onClick }) => {
     });
 
     context.setOrder(copyArray);
-  }, [selectValue, context, item.goods.id]);
-
-  // TODO DELETE AS DUPLICATE
-  const setValue = () => {
-    if (item.goods.purchaseType === "1kg") {
-      return "1кг";
-    }
-    if (item.goods.purchaseType === "piece") {
-      return "шт";
-    }
-  };
-
-  // TODO DELETE AS DUPLICATE
-  const getArray = () => {
-    if (item.goods.purchaseType === "1kg") {
-      return arraySelectGram;
-    }
-    if (item.goods.purchaseType === "piece") {
-      return arraySelectPiece;
-    }
-  };
+  }, [selectValue]); // eslint-disable-line
 
   return (
     <div className={classes.blockGoods}>
@@ -70,17 +52,21 @@ const SecondCard: FC<ISecondCard> = ({ item, onClick }) => {
           <div className={classes.coverSelectPlusPrice}>
             <div className={classes.cover}>
               <p className={classes.price}>{item.goods.price}</p>
-              <span className={classes.price}>грн /</span>
-              <p className={classes.purchaseType}>{setValue()}</p>
+              <span className={classes.price}>{t("uan")} /</span>
+              <p className={classes.purchaseType}>
+                {getPrice(item.goods.purchaseType)}
+              </p>
             </div>
             <Select
               selectValue={selectValue}
               setValue={setSelectValue}
-              optionArray={getArray()}
+              optionArray={getArrayForSelect(item.goods.purchaseType)}
             />
           </div>
           <div>
-            <span className={classes.price}>{total} грн</span>
+            <span className={classes.price}>
+              {total} {t("uan")}
+            </span>
           </div>
         </div>
       </div>

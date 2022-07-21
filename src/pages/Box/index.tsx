@@ -13,7 +13,7 @@ import { InputFieldAnt } from "../../components/antComponent/InputFieldAnt";
 import { RadioGroup } from "../../components/antComponent/radioGroup";
 import { InputPhone } from "../../components/antComponent/inputPhone";
 import { InputEmail } from "../../components/antComponent/inputEmail";
-import { ButAnt } from "../../components/antComponent/buttunAnt";
+import { ButAnt } from "../../components/antComponent/buttonAnt";
 
 import useStyles from "./style";
 
@@ -59,7 +59,7 @@ const Box = () => {
   const resultForInputEmail = context.order
     .map(
       (item: { goods: { name: any; price: any }; count: any }) =>
-        `<li key={item.goods.name}>Назва товару: ${item.goods.name}, Грам: ${item.count}00, Ціна:${item.goods.price}</li>`
+        `<li>Назва товару: ${item.goods.name}, Грам: ${item.count}00, Ціна:${item.goods.price}</li>`
     )
     .join();
 
@@ -80,10 +80,10 @@ const Box = () => {
     //TODO move all set params to the .env
     emailjs
       .sendForm(
-        "service_ioh0qkq", //move
-        "template_52tfysg", //move
+        process.env.REACT_APP_TEMPLATE1_KEY!, //move
+        process.env.REACT_APP_TEMPLATE2_KEY!, //move
         forma.current.children[0],
-        "4axMjG3SDcb_FoRZn" //move
+        process.env.REACT_APP_TEMPLATE3_KEY! //move
       )
       .then(() => openNotificationWithIcon("success", "email was sent"))
       .catch(() => openNotificationWithIcon("error", "email wasn't sent"));
@@ -217,7 +217,7 @@ const Box = () => {
               <div>
                 {context.order.map((item: any, index: number) => (
                   <SecondCard
-                    key={item}
+                    key={item.goods.id}
                     item={item}
                     onClick={() => handleDelGoods(index)}
                   />
@@ -229,7 +229,7 @@ const Box = () => {
                   {t("boxPage.total")}
                   <span className={classes.uan}>
                     {total.toFixed(2)}
-                    грн
+                    {t("uan")}
                   </span>
                 </p>
               </div>

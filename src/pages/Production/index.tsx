@@ -5,9 +5,9 @@ import Fade from "react-reveal/Fade";
 import Zoom from "react-reveal/Zoom";
 import Slide from "react-reveal/Slide";
 import { Carousel } from "antd";
+import { phoneNumber } from "../../utils";
 
 import useStyles from "./style";
-import { phoneNumber } from "../../utils";
 
 const Production = () => {
   const classes = useStyles();
@@ -99,9 +99,9 @@ const Production = () => {
                 <div className={classes.blockComponent} key={item.h}>
                   <h2 className={classes.h2}>{item.h}</h2>
                   <p className={classes.p1}>{item.p1}</p>
-                  <p className={classes.p2}>Деталі за телефоном:</p>
+                  <p className={classes.p2}>{t("moreDetailForPhone")}</p>
                   <a href="callto:+380636235535" className={classes.tel}>
-                    `${phoneNumber}`
+                    {phoneNumber}
                   </a>
                 </div>
               ))}

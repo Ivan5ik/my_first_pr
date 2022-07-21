@@ -2,9 +2,10 @@ import React, { FC, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import { Select } from "../Select";
-import { arraySelectGram, arraySelectPiece, ICard } from "../../utils";
+import { getArrayForSelect, ICard, getPrice } from "../../utils";
 import { Button } from "../Button";
 import { StoreContext } from "../../store";
+import { useTranslation } from "react-i18next";
 
 import useStyles from "./style";
 
@@ -19,6 +20,8 @@ const Card: FC<ICardProps> = ({ item }) => {
   const { shortDesc, name, price, purchaseType, imgUrl, id } = item;
   const context = React.useContext(StoreContext);
 
+  const { t } = useTranslation();
+
   const history = useNavigate();
 
   const handleBuy = () => {
@@ -26,24 +29,7 @@ const Card: FC<ICardProps> = ({ item }) => {
       ...context.order,
       { goods: item, count: Number(selectValue) },
     ]);
-  };
-
-  const setValue = () => {
-    if (purchaseType === "1kg") {
-      return "1кг";
-    }
-    if (purchaseType === "piece") {
-      return "шт";
-    }
-  };
-
-  const getArray = () => {
-    if (purchaseType === "1kg") {
-      return arraySelectGram;
-    }
-    if (purchaseType === "piece") {
-      return arraySelectPiece;
-    }
+    localStorage.setItem("arrayOrder", JSON.stringify(context.order));
   };
 
   return (
@@ -57,17 +43,20 @@ const Card: FC<ICardProps> = ({ item }) => {
       <div className={classes.bottom}>
         <div className={classes.pricePlusSelect}>
           <div className={classes.coverPrice}>
-            <p className={classes.price}>{price}грн /</p>
-            <p className={classes.price}> {setValue()}</p>
+            <p className={classes.price}>
+              {price}
+              {t("uan")} /
+            </p>
+            <p className={classes.price}> {getPrice(purchaseType)}</p>
           </div>
 
-          <p>
+          <div>
             <Select
               selectValue={selectValue}
               setValue={setSelectValue}
-              optionArray={getArray()}
+              optionArray={getArrayForSelect(purchaseType)}
             />
-          </p>
+          </div>
         </div>
         <div className={classes.butPlusP}>
           <Button onClick={handleBuy} />
@@ -75,7 +64,7 @@ const Card: FC<ICardProps> = ({ item }) => {
             className={classes.inMoreDetail}
             onClick={() => history(`/catalog/${id}`)}
           >
-            Детальніше
+            {t("moreDetail")}
           </p>
         </div>
       </div>

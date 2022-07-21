@@ -10,7 +10,7 @@ function App() {
   return (
     <div>
       <Header />
-      <div style={{ paddingTop: "97px" }}>
+      <div className="styleApp">
         <Route />
       </div>
       <Footer />

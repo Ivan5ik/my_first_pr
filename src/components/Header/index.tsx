@@ -34,7 +34,7 @@ export default function Header() {
                 href="callto:+380636235535"
                 className={classes.colorWordsAbove}
               >
-                `${phoneNumber}`
+                {phoneNumber}
               </a>
               {/* If we will have three or more languages */}
               {/* {Object.keys(lngs).map((item: any) => ( */}
@@ -50,6 +50,7 @@ export default function Header() {
             <div className={classes.middleBottom}>
               {navigationMiddleBottom.map((item: any) => (
                 <Link
+                  key={item.name}
                   className={
                     classNames({ show: item.path === location.pathname }) ||
                     classes.colorWordsAbove

@@ -21,8 +21,8 @@ const Select: FC<ISelect> = ({ selectValue, setValue, optionArray }) => {
   return (
     <div className={classes.root}>
       <SelectAnt
+        className={classes.selectAnt}
         value={selectValue}
-        style={{ width: 120 }}
         onChange={getSelect}
       >
         {optionArray.map((item: any) => (
