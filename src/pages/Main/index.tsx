@@ -15,6 +15,12 @@ import { InputForBox } from "../../components/InputForBox";
 
 import useStyles from "./style";
 
+interface IForm {
+  name: string;
+  phoneNumber: string;
+  question: string;
+}
+
 const Main = () => {
   const classes = useStyles();
 
@@ -22,7 +28,7 @@ const Main = () => {
 
   const history = useNavigate();
 
-  const [form, setForm] = useState({
+  const [form, setForm] = useState<IForm>({
     name: "",
     phoneNumber: "",
     question: "",
@@ -54,7 +60,7 @@ const Main = () => {
 
   const handleAllInput = (
     e: React.ChangeEvent<HTMLInputElement>,
-    flag: any
+    flag: string
   ) => {
     const result: any = { ...form };
     result[flag] = e.target.value;

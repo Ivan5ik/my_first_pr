@@ -1,14 +1,13 @@
-import React, { useRef } from "react";
+import React, { useMemo, useRef } from "react";
 import { Form, notification } from "antd";
 import { useTranslation } from "react-i18next";
 import Fade from "react-reveal/Fade";
 import emailjs from "@emailjs/browser";
 import { useNavigate } from "react-router-dom";
 
-import { deliveryArray, payArray } from "../../utils";
+import { deliveryArray, ICard, payArray } from "../../utils";
 import { SecondCard } from "../../components/SecondCard";
 import { StoreContext } from "../../store";
-
 import { InputFieldAnt } from "../../components/antComponent/InputFieldAnt";
 import { RadioGroup } from "../../components/antComponent/radioGroup";
 import { InputPhone } from "../../components/antComponent/inputPhone";
@@ -21,6 +20,7 @@ type NotificationType = "success" | "info" | "warning" | "error";
 
 const Box = () => {
   let total = 0;
+  console.log(1);
 
   const classes: any = useStyles();
 
@@ -38,6 +38,8 @@ const Box = () => {
 
   Form.useWatch("radioDelivery", formANT);
 
+  let resultListOrder = context.order;
+
   const handleAllInput = (e: React.ChangeEvent<HTMLInputElement>) => {
     const fields = getFieldsValue();
     setFieldsValue({ ...fields, phone: e.target.value });
@@ -46,19 +48,20 @@ const Box = () => {
   const getImg = (index: string) =>
     deliveryArray.find((item) => index === item.check);
 
-  context.order.forEach((item: any) => {
-    total += Number((item.count * item.goods.price) / 10);
+  resultListOrder.forEach((item: any) => {
+    total += Number((Number(item.count) * Number(item.goods.price)) / 10);
   });
+  console.log("1", context.order);
 
   const handleDelGoods = (index: number) => {
-    const res = [...context.order];
-    res.splice(index, 1);
-    context.setOrder(res);
+    context.order.splice(index, 1);
+    context.setOrder([...context.order]);
+    localStorage.setItem("array", JSON.stringify(context.order));
   };
 
   const resultForInputEmail = context.order
     .map(
-      (item: { goods: { name: any; price: any }; count: any }) =>
+      (item: { goods: { name: string; price: string }; count: number }) =>
         `<li>Назва товару: ${item.goods.name}, Грам: ${item.count}00, Ціна:${item.goods.price}</li>`
     )
     .join();
@@ -77,13 +80,12 @@ const Box = () => {
       return openNotificationWithIcon("error", "order isn't add");
     }
 
-    //TODO move all set params to the .env
     emailjs
       .sendForm(
-        process.env.REACT_APP_TEMPLATE1_KEY!, //move
-        process.env.REACT_APP_TEMPLATE2_KEY!, //move
+        process.env.REACT_APP_TEMPLATE1_KEY!,
+        process.env.REACT_APP_TEMPLATE2_KEY!,
         forma.current.children[0],
-        process.env.REACT_APP_TEMPLATE3_KEY! //move
+        process.env.REACT_APP_TEMPLATE3_KEY!
       )
       .then(() => openNotificationWithIcon("success", "email was sent"))
       .catch(() => openNotificationWithIcon("error", "email wasn't sent"));
@@ -215,7 +217,7 @@ const Box = () => {
                 <p className={classes.goods}>{t("boxPage.goods")}</p>
               </div>
               <div>
-                {context.order.map((item: any, index: number) => (
+                {resultListOrder.map((item: any, index: number) => (
                   <SecondCard
                     key={item.goods.id}
                     item={item}

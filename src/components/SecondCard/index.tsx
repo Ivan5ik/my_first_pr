@@ -10,8 +10,10 @@ import { useStyles } from "./style";
 
 interface ISecondCard {
   item: any;
-  onClick: any;
+  onClick: () => void;
 }
+
+interface IGoodsOrder {}
 
 const SecondCard: FC<ISecondCard> = ({ item, onClick }) => {
   const classes = useStyles();

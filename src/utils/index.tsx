@@ -6,9 +6,16 @@ export interface IOptionsList {
   key: string;
 }
 
+export interface IContextOrder {
+  count: "string";
+  goods: IContextOrderGoods;
+}
+
+export interface IContextOrderGoods {}
+
 // функції для грам
 
-export const getPrice = (purchaseType: any) => {
+export const getPrice = (purchaseType: string) => {
   if (purchaseType === "1kg") {
     return "1кг";
   }
@@ -24,6 +31,7 @@ export const getArrayForSelect = (purchaseType: string) => {
   if (purchaseType === "piece") {
     return arraySelectPiece;
   }
+  return [];
 };
 
 export const currentYear = new Date().getFullYear();
@@ -50,12 +58,24 @@ export const globalColors = {
   lightRed: "#b85d5a",
 };
 
-export const payArray = [
+export interface IPayArray {
+  name: string;
+  check: string;
+}
+
+export const payArray: IPayArray[] = [
   { name: "boxPage.payRadioBut.cash", check: "cash" },
   { name: "boxPage.payRadioBut.cashless", check: "cashLess" },
 ];
 
-export const deliveryArray = [
+export interface IDeliveryArray {
+  name: string;
+  check: string;
+  img: string;
+  style: string;
+}
+
+export const deliveryArray: IDeliveryArray[] = [
   {
     name: "boxPage.deliveryTo.cherkassy",
     check: "Cherkasy",
@@ -115,7 +135,7 @@ export const arrayCategory: IOptionsList[] = [
 export interface ICard {
   id: string;
   name: string;
-  description: any;
+  description: JSX.Element;
   price: number;
   purchaseType: string;
   category: string;

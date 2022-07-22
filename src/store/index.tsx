@@ -1,13 +1,16 @@
 import React, { useState } from "react";
+import { ICard } from "../utils";
 
 export const StoreContext = React.createContext<any>(null);
-interface IOrder {
-  goods: object;
-  count: number;
-}
+// export interface IOrder {
+//   goods: ICard;
+//   count: string;
+// }
 
 const HandleStore = ({ children }: any) => {
-  const [order, setOrder] = useState<IOrder[]>([]);
+  const [order, setOrder] = useState<any>(
+    JSON.parse(localStorage.getItem("array") || "[]")
+  );
 
   return (
     <StoreContext.Provider value={{ order, setOrder }}>

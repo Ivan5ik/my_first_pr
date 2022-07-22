@@ -29,7 +29,15 @@ const Card: FC<ICardProps> = ({ item }) => {
       ...context.order,
       { goods: item, count: Number(selectValue) },
     ]);
-    localStorage.setItem("arrayOrder", JSON.stringify(context.order));
+
+    // resultLocalList.push({ goods: item, count: Number(selectValue) });s
+    localStorage.setItem(
+      "array",
+      JSON.stringify([
+        ...context.order,
+        { goods: item, count: Number(selectValue) },
+      ])
+    );
   };
 
   return (

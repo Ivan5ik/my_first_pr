@@ -1,12 +1,13 @@
 import React, { FC } from "react";
 import { Form, Radio } from "antd";
 import { useTranslation } from "react-i18next";
+import { IDeliveryArray, IPayArray } from "../../../utils";
 
 import { useStyles } from "./style";
 
 interface IInputRadioGroup {
   name: string;
-  array: any;
+  array: IDeliveryArray[] | IPayArray[];
 }
 
 const RadioGroup: FC<IInputRadioGroup> = ({ name, array }) => {
@@ -18,7 +19,7 @@ const RadioGroup: FC<IInputRadioGroup> = ({ name, array }) => {
     <div className={classes.root}>
       <Form.Item name={name}>
         <Radio.Group name={name}>
-          {array.map((item: any) => (
+          {array.map((item: IDeliveryArray | IPayArray) => (
             <Radio key={item.name} value={item.check}>
               {t(item.name)}
             </Radio>
