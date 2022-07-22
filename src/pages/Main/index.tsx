@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Carousel } from "antd";
+import React, { useRef, useState } from "react";
+import { Carousel, Form, notification } from "antd";
 import { useNavigate } from "react-router-dom";
 import { SearchOutlined } from "@ant-design/icons";
 import { PhoneOutlined } from "@ant-design/icons";
@@ -8,12 +8,16 @@ import { useTranslation } from "react-i18next";
 import Bounce from "react-reveal/Bounce";
 import Zoom from "react-reveal/Zoom";
 import Fade from "react-reveal/Fade";
+import emailjs from "@emailjs/browser";
 
 import { arrayCard, button, ICard, phoneNumber } from "../../utils";
 import { Card } from "../../components/Card";
 import { InputForBox } from "../../components/InputForBox";
 
 import useStyles from "./style";
+import { InputFieldAnt } from "../../components/antComponent/InputFieldAnt";
+import { InputPhone } from "../../components/antComponent/inputPhone";
+import { ButAnt } from "../../components/antComponent/buttonAnt";
 
 interface IForm {
   name: string;
@@ -28,11 +32,39 @@ const Main = () => {
 
   const history = useNavigate();
 
-  const [form, setForm] = useState<IForm>({
-    name: "",
-    phoneNumber: "",
-    question: "",
-  });
+  type NotificationType = "success" | "info" | "warning" | "error";
+
+  const forma: any = useRef();
+
+  // const [form, setForm] = useState<IForm>({
+  //   name: "",
+  //   phoneNumber: "",
+  //   question: "",
+  // });
+
+  const openNotificationWithIcon = (
+    type: NotificationType,
+    message: string
+  ) => {
+    notification[type]({
+      message,
+    });
+  };
+
+  const handleResult = () => {
+    const fields = getFieldsValue();
+    console.log();
+
+    emailjs
+      .sendForm(
+        process.env.REACT_APP_TEMPLATEMAIN1_KEY!,
+        process.env.REACT_APP_TEMPLATEMAIN2_KEY!,
+        forma.current.children[0],
+        process.env.REACT_APP_TEMPLATEMAIN3_KEY!
+      )
+      .then(() => openNotificationWithIcon("success", "email was sent"))
+      .catch(() => openNotificationWithIcon("error", "email wasn't sent"));
+  };
 
   const listCarousel = [
     {
@@ -58,13 +90,16 @@ const Main = () => {
     },
   ];
 
-  const handleAllInput = (
-    e: React.ChangeEvent<HTMLInputElement>,
-    flag: string
-  ) => {
-    const result: any = { ...form };
-    result[flag] = e.target.value;
-    setForm(result);
+  const handleAllInput = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const fields = getFieldsValue();
+    setFieldsValue({ ...fields, phoneMain: e.target.value });
+  };
+  const [mainFormANT] = Form.useForm();
+
+  const { getFieldsValue, setFieldsValue } = mainFormANT;
+
+  const onFinishFailed = () => {
+    openNotificationWithIcon("error", "email wasn't sent");
   };
 
   return (
@@ -140,48 +175,37 @@ const Main = () => {
                 order@dymne.com.ua
               </a>
             </div>
+            <div ref={forma}>
+              <Form
+                name="basic"
+                onFinish={handleResult}
+                onFinishFailed={onFinishFailed}
+                autoComplete="off"
+                form={mainFormANT}
+              >
+                <h1 className={classes.question}>
+                  {t("homePage.form.question")}
+                </h1>
+                <div className={classes.coverSize}>
+                  <div className={classes.size}>
+                    <InputFieldAnt name="nameMain" booleanValue={true} />
+                  </div>
+                  <div className={classes.size}>
+                    <InputPhone name="phoneMain" onChange={handleAllInput} />
+                  </div>
+                </div>
+                <p className={classes.location}>
+                  {t("homePage.form.yourQuestion")}
+                </p>
+                <div className={classes.sizeQuestion}>
+                  <InputFieldAnt name="questionMain" booleanValue={true} />
+                </div>
 
-            <h1 className={classes.question}>{t("homePage.form.question")}</h1>
-            <div className={classes.coverSize}>
-              <div className={classes.size}>
-                <InputForBox
-                  onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                    handleAllInput(e, "name")
-                  }
-                  value={form.name}
-                  placeholder={t("homePage.form.yourName")}
-                />
-              </div>
-              <div className={classes.size}>
-                <InputForBox
-                  onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                    handleAllInput(e, "phoneNumber")
-                  }
-                  value={form.phoneNumber}
-                  placeholder={t("homePage.form.yourPhone")}
-                />
-              </div>
+                <Bounce left>
+                  <ButAnt />
+                </Bounce>
+              </Form>
             </div>
-            <p className={classes.location}>
-              {t("homePage.form.yourQuestion")}
-            </p>
-            <div className={classes.sizeQuestion}>
-              <InputForBox
-                onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                  handleAllInput(e, "question")
-                }
-                value={form.question}
-              />
-              <p className={classes.ruleDescription}>
-                {t("homePage.form.decriptionTop")} <br />
-                {t("homePage.form.decriptionBottom")}
-              </p>
-            </div>
-            <Bounce left>
-              <button className={classes.button}>
-                {t("homePage.form.submit")}
-              </button>
-            </Bounce>
           </div>
           <iframe
             title="mapsForPage"

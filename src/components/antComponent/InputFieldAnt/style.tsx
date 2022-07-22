@@ -11,6 +11,9 @@ const useStyles = createUseStyles({
       {
         background: globalColors.darkBlack,
       },
+    "& .ant-form-item-explain-error": {
+      paddingBottom: "15px",
+    },
   },
   inputField: {
     background: globalColors.darkBlack,

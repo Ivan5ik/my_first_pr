@@ -1,4 +1,4 @@
-import React, { useMemo, useRef } from "react";
+import React, { useRef } from "react";
 import { Form, notification } from "antd";
 import { useTranslation } from "react-i18next";
 import Fade from "react-reveal/Fade";
@@ -20,7 +20,6 @@ type NotificationType = "success" | "info" | "warning" | "error";
 
 const Box = () => {
   let total = 0;
-  console.log(1);
 
   const classes: any = useStyles();
 
@@ -51,7 +50,6 @@ const Box = () => {
   resultListOrder.forEach((item: any) => {
     total += Number((Number(item.count) * Number(item.goods.price)) / 10);
   });
-  console.log("1", context.order);
 
   const handleDelGoods = (index: number) => {
     context.order.splice(index, 1);

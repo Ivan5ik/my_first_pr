@@ -20,7 +20,7 @@ const InputPhone: FC<IInputPhone> = ({ name, onChange }) => {
       >
         <InputMask
           className={classes.inputPhone}
-          name="phone"
+          name={name}
           mask="+38(999)999-99-99"
           onChange={onChange}
         />

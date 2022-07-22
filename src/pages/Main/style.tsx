@@ -135,6 +135,7 @@ const useStyles = createUseStyles({
   },
   coverSize: {
     display: "flex",
+    height: "74px",
   },
   sizeQuestion: {
     width: "330px",
