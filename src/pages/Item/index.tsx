@@ -3,55 +3,35 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { Carousel } from "antd";
 
 import { Select } from "../../components/Select";
-import { arrayCard, arraySelectGram, arraySelectPiece } from "../../utils";
+import { arrayCard, getArrayForSelect, getPrice } from "../../utils";
 import { Button } from "../../components/Button";
 import { StoreContext } from "../../store";
+import { useTranslation } from "react-i18next";
 
 import useStyles from "./style";
 
 const Item = () => {
   const classes = useStyles();
-
+  const { t } = useTranslation();
   const history = useLocation();
   const historyRoute = useNavigate();
-
   const [selectValue, setSelectValue] = useState("1");
-
   const [, , itemId] = history.pathname.split("/");
-  console.log(history.pathname.split("/"));
 
   const item = arrayCard.find((item) => item.id === itemId)!;
   const { description, name, price, purchaseType, imgUrl } = item;
   const context = React.useContext(StoreContext);
-
-  const setValue = () => {
-    if (purchaseType === "1kg") {
-      return "100гр";
-    }
-    if (purchaseType === "piece") {
-      return "шт";
-    }
-  };
-
-  const getArray = () => {
-    if (purchaseType === "1kg") {
-      return arraySelectGram;
-    }
-    if (purchaseType === "piece") {
-      return arraySelectPiece;
-    }
-  };
 
   const handleBuy = () => {
     context.setOrder([
       ...context.order,
       {
         goods: item,
-        count: Number(selectValue),
+        count: String(selectValue),
       },
     ]);
+    localStorage.setItem("arrayOrder", JSON.stringify(context.order));
   };
-  console.log("item", context);
 
   return (
     <div>
@@ -63,14 +43,14 @@ const Item = () => {
             onClick={() => historyRoute("/cataloge")}
             className={classes.toCataloge}
           >
-            До каталогу{" "}
+            {t("toCatalog")}
           </div>
         </div>
         <div className={classes.mainContainer}>
           <div className={classes.img}>
             <Carousel>
               {imgUrl.map((item, index) => (
-                <div className={classes.contentStyle}>
+                <div className={classes.contentStyle} key={item}>
                   <img src={item} alt="carousel" className={classes.photo} />
                 </div>
               ))}
@@ -81,17 +61,18 @@ const Item = () => {
               <div className={classes.pricePlusSelect}>
                 <div className={classes.cover}>
                   <p className={classes.price}>{price}</p>
-                  <span className={classes.price}>грн/</span>
-                  <p className={classes.purchaseType}>{setValue()}</p>
+                  <span className={classes.price}>{t("uan")}/</span>
+                  <p className={classes.purchaseType}>
+                    {getPrice(purchaseType)}
+                  </p>
                 </div>
-
-                <p className={classes.selectGram}>
+                <div className={classes.selectGram}>
                   <Select
                     selectValue={selectValue}
                     setValue={setSelectValue}
-                    optionArray={getArray()}
+                    optionArray={getArrayForSelect(purchaseType)}
                   />
-                </p>
+                </div>
                 <div>
                   <Button onClick={handleBuy} />
                 </div>

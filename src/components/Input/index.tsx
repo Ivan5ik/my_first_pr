@@ -1,6 +1,5 @@
 import React, { FC } from "react";
 import { Input as InputAnt } from "antd";
-
 import { useStyles } from "./style";
 
 interface IInput {
@@ -13,9 +12,8 @@ const Input: FC<IInput> = (props) => {
 
   const { value, setValue } = props;
 
-  const getInput = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const getInput = (e: React.ChangeEvent<HTMLInputElement>) =>
     setValue(e.target.value);
-  };
 
   return (
     <div className={classes.root}>

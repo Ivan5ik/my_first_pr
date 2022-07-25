@@ -19,8 +19,6 @@ const useStyles = createUseStyles({
 
   whiteColor: {
     color: globalColors.white,
-    // overflow: "hidden",
-    // height: "105px",
     minHeight: "10px",
   },
   pricePlusSelect: {

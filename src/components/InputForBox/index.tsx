@@ -6,9 +6,15 @@ interface IBox {
   value: string;
   onChange: ChangeEventHandler<HTMLInputElement>;
   placeholder?: string;
+  name?: string;
 }
 
-const InputForBox: FC<IBox> = ({ value, onChange, placeholder = "" }) => {
+const InputForBox: FC<IBox> = ({
+  value,
+  onChange,
+  placeholder = "",
+  name = "",
+}) => {
   const classes = useStyles();
 
   return (
@@ -18,7 +24,9 @@ const InputForBox: FC<IBox> = ({ value, onChange, placeholder = "" }) => {
       placeholder={placeholder}
       value={value}
       onChange={onChange}
+      name={name}
     />
   );
 };
+
 export { InputForBox };

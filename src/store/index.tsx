@@ -1,9 +1,26 @@
-import React from "react";
+import React, { Dispatch, SetStateAction, useState } from "react";
+import { ICard } from "../utils";
 
-export const StoreContext = React.createContext<any>(null);
+type childrenType = {
+  children: React.ReactNode;
+};
+export interface IOrder {
+  goods: ICard;
+  count: string;
+}
 
-export default ({ children }: any) => {
-  const [order, setOrder] = React.useState([]);
+export const StoreContext = React.createContext<{
+  order: IOrder[];
+  setOrder: Dispatch<SetStateAction<IOrder[]>>;
+}>({
+  order: [],
+  setOrder: () => undefined,
+});
+
+const StoreProvider = ({ children }: childrenType) => {
+  const [order, setOrder] = useState<IOrder[]>(
+    JSON.parse(localStorage.getItem("array") || "[]")
+  );
 
   return (
     <StoreContext.Provider value={{ order, setOrder }}>
@@ -11,3 +28,4 @@ export default ({ children }: any) => {
     </StoreContext.Provider>
   );
 };
+export default StoreProvider;

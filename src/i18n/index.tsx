@@ -2,6 +2,7 @@ import i18n from "i18next";
 
 import { initReactI18next } from "react-i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
+import { currentYear } from "../utils";
 
 i18n
   // detect user language
@@ -12,46 +13,55 @@ i18n
   // init i18next
   // for all options read: https://www.i18next.com/overview/configuration-options
   .init({
+    lng: "ua",
     debug: true,
     fallbackLng: "ua",
     interpolation: {
       escapeValue: false, // not needed for react as it escapes by default
     },
+
     resources: {
       ua: {
         translation: {
+          moreDetailForPhone: "Деталі за телефоном:",
+          toCatalog: "До каталогу",
+          gram: "гр",
+          uan: "грн",
+          moreDetail: "Детальніше",
+          inBox: "В кошик",
+          toOrder: "Оформити замовлення",
           up: "На Гору 🠕",
           delivery: "Оплата і доставка",
           home: "Головна",
           product: "Продукція",
           production: "Виробництво",
           basket: "Кошик",
-          license:
-            "© ДИМНЕ М'ЯСО ВІД ТАРАСА. 2022 ВСІ ПРАВА ЗАХИЩЕНІ. ЗРОБЛЕНО BY UniCode",
+          license: `© ТМ «СМАКОВИНКА». ${currentYear} ВСІ ПРАВА ЗАХИЩЕНІ. ЗРОБЛЕНО BY UniCode`,
           address: {
             beforeBr: "Адреса:",
-            afterBr: "вул. Чигоріна 12, офіс 213, м. Київ, Україна",
+            afterBr: "Переулок крайній 1, с. Геронімовка, Україна ",
           },
           addressProduction: {
             beforeBr: "Адреса виробництва:",
-            afterBr: "м. Київ, вул. Зрошувальна 5В",
+            afterBr: "Переулок крайній 1, с. Геронімовка, Україна ",
           },
           productionFooter: "Виробництво",
           productionPage: {
             production: "- Виробництво -",
-            smoking: 'Чим відрізняється правильне копчення від "промислового"?',
+            smoking:
+              "ТМ «Смаковинка» - виробництво, що спеціалізується на виготовлені високоякісної м’ясної продукції.",
             descriptionTop:
-              "Нам уже 5 років і ми побудували наше власне виробництво згідно вимог НАССР в кінці 2019 року. Весною ж 2020 року ми почали його реновацію та доукомплектували його технікою для виробництва ковбас та сосисок, про що так довго мріяли. На сьогодні, у нас присутні усі можливи дозвільні документи на здійснення роботи та проходили аудит українських і міжнародних компаній.",
+              "Також ТМ «Смаковинка»  випускає заморожені напівфабрикати, виготовлені  з якісної сировини та за класичними рецептами.  Асортимент цієї групи товарів нараховує майже 50 найменувань. Своїм споживачам ми пропонуємо пельмені, чебуреки, бендерики, млинці, котлети, голубці, фаршировані перці. Ми постійно намагаємося потішити наших покупців неперевершеним смаком  та відміною якістю.",
             rightTextP:
-              "На самому початку, ми прийняли рішення не йти на компроміси. Ми вибрали шлях виробництва дійсно якісної продукції, розуміючи, що наш клієнт особливий і заслуговує чесну продукцію за чесною ціною. Це означає, що якщо за своєю природою під час приготування м’ясо втрачає частину своєї ваги – то не намагаємося її затримати хімічними сполуками, щоб зменшити її собівартість.",
+              "На сьогоднішній день в нашому асортименті сирокопчені, варено-копчені, напівкопчені та варені ковбаси, сосиски та сардельки, м’ясні делікатеси . Загалом більше 100 найменувань продукції. Завдяки нашим виробничим потужностям, попиту на виготовлену продукцію, іміджу надійного та відповідального партнера, виробництво та  поставки продукції дедалі зростають.",
             leftTextP:
-              "Якщо для дійсно гарного продукту необхідно закупити сировину від “правильних” постачальників, то ми готові платити за неї “більше”, адже на виході отримаємо зовсім інший за смаком продукт. У той час, коли вся м’ясна промисловість націлена на створення якомога дешевого продукту для широкої аудиторії, ми націлені на створення якісного для тих, хто не готовий йти на компроміси.",
+              "Варто зауважити, що виробничі потужності м’ясопереробного підприємства знаходяться в екологічно чистій зоні, за 10 км від міста Черкаси, а м’ясна продукція виготовляється на сучасному обладнанні провідних європейських фірм. Уся сировина, з якої виготовляється наша продукція, попередньо проходить ветеринарний та санітарний контроль.",
           },
           homePage: {
             product: "- Продукція -",
             button: "Переглянути всю продукцію",
             form: {
-              location: "вул. Зрошувальна 5В, м. Київ, Україна ",
+              location: "Переулок крайній 1, с. Геронімовка, Україна ",
               wordDays: "пн.-пт. 9.00 - 18.00 сб.-вс.вихідний",
               question: "ЗАДАЙТЕ ПИТАННЯ ОНЛАЙН",
               yourQuestion: "Ваше запитання",
@@ -91,7 +101,7 @@ i18n
             yourOrder: "Ваше замовлення",
             total: "Разом",
           },
-          catalogePage: {
+          catalogPage: {
             product: "- Продукція -",
             reset: "Скинути все",
           },
@@ -99,6 +109,13 @@ i18n
       },
       en: {
         translation: {
+          moreDetailForPhone: "Details by phone:",
+          toCatalog: "To catalog",
+          gram: "gram",
+          uan: "uan",
+          moreDetail: "More detail",
+          inBox: "In the basket",
+          toOrder: "to Order",
           up: "Up 🠕",
           delivery: "Payment and delivery",
           home: "Home",
@@ -106,33 +123,32 @@ i18n
           product: "Product",
           production: "Production",
           basket: "Basket",
-          license:
-            "© SMOKE MEAT FROM TARAS. 2022 ALL RIGHTS PROTECTED. MADE BY UniCode",
+          license: `© ТМ «SMAKOVINKA». ${currentYear} ALL RIGHTS PROTECTED. MADE BY UniCode`,
           address: {
             beforeBr: "Address:",
-            afterBr: "St Chigorina 12, office 213, Kyiv, Ukraine",
+            afterBr: "per. Extreme 1, Geronimovka, Ukraine",
           },
           addressProduction: {
             beforeBr: "Production address:",
-            afterBr: "Kyiv, Zroshuvalna St, 5в",
+            afterBr: "per. Extreme 1, Geronimovka, Ukraine",
           },
           productionFooter: "Production",
           productionPage: {
             production: "- Production -",
             smoking:
-              'How is proper smoking different from "industrial" smoking?',
+              'TM "Smakovinka" is a production specializing in the production of high-quality meat products.',
             descriptionTop:
-              "We are 5 years old and we have built our own production according to the requirements HACCP at the end of 2019. In the spring of 2020, we began its renovation and completed it with equipment for the production of sausages and frankfurters, what they have been dreaming about for so long. Today, we have everything possible work permits and audited Ukrainian and international companies.",
+              'TM "Smakovinka" also produces frozen semi-finished products made from high-quality raw materials and according to classic recipes. The assortment of this group of goods includes almost 50 items. We offer our customers dumplings, chebureks, benderiki, pancakes, cutlets, cabbage rolls, stuffed peppers. We constantly try to please our customers with unsurpassed taste and excellent quality.',
             rightTextP:
-              "At the very beginning, we decided not to compromise. We chose the path of production of really quality products, realizing that our client is special and deserves honest products at a fair price. This means that if by nature the meat is cooked loses some of your weight - so do not try to keep it chemical compounds to reduce its cost.",
+              "Today, our assortment includes raw-smoked, cooked-smoked, semi-smoked and cooked sausages, sausages and sausages, meat delicacies. In total, there are more than 100 product names. Thanks to our production capacity, the demand for manufactured products, the image of a reliable and responsible partner, the production and deliveries of products continue to grow.",
             leftTextP:
-              'If for a really good product you need to buy raw materials from "Right" suppliers, we are willing to pay for it "more", after all, at the end we get a completely different product to taste. In that a time when the whole meat industry aims to create as much as possible cheap product for a wide audience, we aim to create quality for those who are not willing to compromise.',
+              "It is worth noting that the production facilities of the meat processing enterprise are located in an ecologically clean zone, 10 km from the city of Cherkasy, and meat products are manufactured on modern equipment of leading European companies. All the raw materials from which our products are made undergo preliminary veterinary and sanitary control.",
           },
           homePage: {
             product: "- Product -",
             button: "View all products",
             form: {
-              location: "St Zroshuvalna 5B, Kyiv, Ukraine",
+              location: "per. Extreme 1, Geronimovka, Ukraine",
               wordDays: "Mon-Fri 9.00 - 18.00 Sat-Sun.weekend",
               question: "ASK QUESTIONS ONLINE",
               yourQuestion: "Your question",
@@ -171,7 +187,7 @@ i18n
             yourOrder: "Your order",
             total: "Total",
           },
-          catalogePage: {
+          catalogPage: {
             product: "- Product -",
             reset: "Reset all",
           },

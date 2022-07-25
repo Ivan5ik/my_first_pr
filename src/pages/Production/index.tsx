@@ -5,6 +5,7 @@ import Fade from "react-reveal/Fade";
 import Zoom from "react-reveal/Zoom";
 import Slide from "react-reveal/Slide";
 import { Carousel } from "antd";
+import { phoneNumber } from "../../utils";
 
 import useStyles from "./style";
 
@@ -61,7 +62,7 @@ const Production = () => {
           <div className={classes.leftCarousel}>
             <Carousel autoplay={true}>
               {leftCarousel.map((item) => (
-                <img src={item} alt={item} />
+                <img src={item} key={item} alt={item} />
               ))}
             </Carousel>
           </div>
@@ -84,7 +85,7 @@ const Production = () => {
           <div className={classes.rightCarousel}>
             <Carousel autoplay={true}>
               {rightCarousel.map((item) => (
-                <img src={item} alt={item} />
+                <img src={item} key={item} alt={item} />
               ))}
             </Carousel>
           </div>
@@ -95,12 +96,12 @@ const Production = () => {
           <div className={classes.bottomImg}>
             <Carousel autoplay={true}>
               {carouselBottom.map((item) => (
-                <div className={classes.blockComponent}>
+                <div className={classes.blockComponent} key={item.h}>
                   <h2 className={classes.h2}>{item.h}</h2>
                   <p className={classes.p1}>{item.p1}</p>
-                  <p className={classes.p2}>Деталі за телефоном:</p>
+                  <p className={classes.p2}>{t("moreDetailForPhone")}</p>
                   <a href="callto:+380636235535" className={classes.tel}>
-                    +380 63 623 55 35
+                    {phoneNumber}
                   </a>
                 </div>
               ))}

@@ -7,11 +7,13 @@ import { useTranslation } from "react-i18next";
 import { navigationMiddleBottom } from "../../routes/routes";
 
 import useStyles from "./style";
+import { phoneNumber } from "../../utils";
 
 export default function Header() {
   const classes = useStyles();
 
   const history = useNavigate();
+
   const location = useLocation();
 
   const { t, i18n } = useTranslation();
@@ -32,7 +34,7 @@ export default function Header() {
                 href="callto:+380636235535"
                 className={classes.colorWordsAbove}
               >
-                +38(063) 623 55 35
+                {phoneNumber}
               </a>
               {/* If we will have three or more languages */}
               {/* {Object.keys(lngs).map((item: any) => ( */}
@@ -44,11 +46,11 @@ export default function Header() {
               >
                 {i18n.language === "ua" ? "УКРАЇНСЬКА" : "ENGLISH"}
               </p>
-              {/* ))} */}
             </div>
             <div className={classes.middleBottom}>
               {navigationMiddleBottom.map((item: any) => (
                 <Link
+                  key={item.name}
                   className={
                     classNames({ show: item.path === location.pathname }) ||
                     classes.colorWordsAbove

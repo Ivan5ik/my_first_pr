@@ -1,59 +1,96 @@
-import React, { useState } from "react";
-import { Radio } from "antd";
+import React, { useRef } from "react";
+import { Form, notification } from "antd";
 import { useTranslation } from "react-i18next";
 import Fade from "react-reveal/Fade";
+import emailjs from "@emailjs/browser";
+import { useNavigate } from "react-router-dom";
 
-import { InputForBox } from "../../components/InputForBox";
 import { deliveryArray, payArray } from "../../utils";
 import { SecondCard } from "../../components/SecondCard";
-import { StoreContext } from "../../store";
+import { IOrder, StoreContext } from "../../store";
+import { InputFieldAnt } from "../../components/antComponent/InputFieldAnt";
+import { RadioGroup } from "../../components/antComponent/radioGroup";
+import { InputPhone } from "../../components/antComponent/inputPhone";
+import { InputEmail } from "../../components/antComponent/inputEmail";
+import { ButAnt } from "../../components/antComponent/buttonAnt";
 
 import useStyles from "./style";
 
+type NotificationType = "success" | "info" | "warning" | "error";
+
 const Box = () => {
+  let total = 0;
+
   const classes: any = useStyles();
 
-  const [form, setForm] = useState({
-    name: "",
-    phoneNumber: "",
-    mail: "",
-    inputCity: "",
-    inputAdress: "",
-    note: "",
-  });
-
-  const context = React.useContext(StoreContext);
-  console.log(context);
-
-  const [delivery, setDelivery] = useState("che");
-  const [pay, setPay] = useState();
-
-  const handleAllInput = (
-    e: React.ChangeEvent<HTMLInputElement>,
-    flag: string
-  ) => {
-    const result: any = { ...form };
-    result[flag] = e.target.value;
-    setForm(result);
-  };
-
-  const getImg = (index: string) => {
-    const picture = deliveryArray.find((item) => index === item.check);
-    return picture;
-  };
-
-  let total = 0;
-  context.order.forEach((item: any) => {
-    total += Number((item.count * item.goods.price) / 10);
-    console.log(item, total);
-  });
+  const [formANT] = Form.useForm();
 
   const { t } = useTranslation();
 
+  const { getFieldsValue, setFieldsValue } = formANT;
+
+  const historyRoute = useNavigate();
+
+  const forma: any = useRef();
+
+  const context = React.useContext(StoreContext);
+
+  Form.useWatch("radioDelivery", formANT);
+
+  let resultListOrder = context.order;
+
+  const handleAllInput = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const fields = getFieldsValue();
+    setFieldsValue({ ...fields, phone: e.target.value });
+  };
+
+  const getImg = (index: string) =>
+    deliveryArray.find((item) => index === item.check);
+
+  resultListOrder.forEach((item: IOrder) => {
+    total += Number((Number(item.count) * Number(item.goods.price)) / 10);
+  });
+
   const handleDelGoods = (index: number) => {
-    const res = [...context.order];
-    res.splice(index, 1);
-    context.setOrder(res);
+    context.order.splice(index, 1);
+    context.setOrder([...context.order]);
+    localStorage.setItem("array", JSON.stringify(context.order));
+  };
+
+  const resultForInputEmail = context.order
+    .map(
+      (item) =>
+        `<li>Назва товару: ${item.goods.name}, Грам: ${item.count}00, Ціна:${item.goods.price}</li>`
+    )
+    .join();
+
+  const openNotificationWithIcon = (
+    type: NotificationType,
+    message: string
+  ) => {
+    notification[type]({
+      message,
+    });
+  };
+
+  const handleResult = () => {
+    if (context.order.length === 0) {
+      return openNotificationWithIcon("error", "order isn't add");
+    }
+
+    emailjs
+      .sendForm(
+        process.env.REACT_APP_TEMPLATE1_KEY!,
+        process.env.REACT_APP_TEMPLATE2_KEY!,
+        forma.current.children[0],
+        process.env.REACT_APP_TEMPLATE3_KEY!
+      )
+      .then(() => openNotificationWithIcon("success", "email was sent"))
+      .catch(() => openNotificationWithIcon("error", "email wasn't sent"));
+  };
+
+  const onFinishFailed = () => {
+    openNotificationWithIcon("error", "email wasn't sent");
   };
 
   return (
@@ -61,160 +98,146 @@ const Box = () => {
       <h1 className={classes.product}>- {t("boxPage.order")} -</h1>
       <div className={classes.underName}>
         <span className={classes.symbol}> {"<"}</span>
-        <a href="mailto:tparandii@gmail.com" className={classes.toCataloge}>
+        <div
+          onClick={() => historyRoute("/cataloge")}
+          className={classes.toCataloge}
+        >
           {t("boxPage.toCataloge")}
-        </a>
+        </div>
       </div>
-
-      <div className={classes.coverOrder}>
-        <div className={classes.orderLeft}>
-          <div>
-            <p className={classes.yourContactData}>
-              {t("boxPage.contactData")}
-            </p>
-            <div className={classes.yourData}>
-              <p className={classes.paragraphName}>{t("boxPage.name")}</p>
-              <div className={classes.root}>
-                <InputForBox
-                  onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                    handleAllInput(e, "name")
-                  }
-                  value={form.name}
-                />
-              </div>
-            </div>
-            <div className={classes.yourData}>
-              <p className={classes.paragraphName}>{t("boxPage.phone")}</p>
-              <div className={classes.root}>
-                <InputForBox
-                  placeholder={"+38 (___) ___-__-__"}
-                  onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                    handleAllInput(e, "phoneNumber")
-                  }
-                  value={form.phoneNumber}
-                />
-              </div>
-            </div>
-            <div className={classes.yourData}>
-              <p className={classes.paragraphName}>{t("boxPage.email")}</p>
-              <div className={classes.root}>
-                <InputForBox
-                  onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                    handleAllInput(e, "mail")
-                  }
-                  value={form.mail}
-                />
-              </div>
-            </div>
-          </div>
-
-          <div className={classes.delivery}>
-            <div className={classes.deliveryTo}>
-              <p className={classes.paragraphDelivery}>
-                {t("boxPage.delivery")}
-              </p>
-              <div className={classes.coverForAntRadio}>
-                <Radio.Group
-                  onChange={(e) => setDelivery(e.target.value)}
-                  value={delivery}
-                >
-                  {deliveryArray.map((item) => (
-                    <Radio className={classes.radioButton} value={item.check}>
-                      {t(item.name)}
-                    </Radio>
-                  ))}
-                </Radio.Group>
-              </div>
-            </div>
-            <div className={classes.dataDelivery}>
+      <div ref={forma}>
+        <Form
+          name="basic"
+          initialValues={{ radioDelivery: "NovaPochta", pay: "cash" }}
+          onFinish={handleResult}
+          onFinishFailed={onFinishFailed}
+          autoComplete="off"
+          form={formANT}
+        >
+          <div ref={forma} className={classes.coverOrder}>
+            <div className={classes.orderLeft}>
               <div>
-                <div className={classes.coverCity}>
-                  <p className={classes.city}>{t("boxPage.city")}</p>
+                <p className={classes.yourContactData}>
+                  {t("boxPage.contactData")}
+                </p>
+                <div className={classes.yourData}>
+                  <p className={classes.paragraphName}>{t("boxPage.name")}</p>
                   <div className={classes.root}>
-                    <InputForBox
-                      onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                        handleAllInput(e, "inputCity")
-                      }
-                      value={form.inputCity}
-                    />
+                    <InputFieldAnt name="name" booleanValue={true} />
                   </div>
                 </div>
-                <div className={classes.underCity}>
-                  <p className={classes.tarifNova}>{t("boxPage.tarif")}</p>
+                <div className={classes.yourData}>
+                  <p className={classes.paragraphName}>{t("boxPage.phone")}</p>
+                  <div className={classes.root}>
+                    <InputPhone name="phone" onChange={handleAllInput} />
+                  </div>
+                </div>
+                <div className={classes.yourData}>
+                  <p className={classes.paragraphName}>{t("boxPage.email")}</p>
+                  <div className={classes.root}>
+                    <InputEmail name="email" />
+                  </div>
+                </div>
+              </div>
+              <div className={classes.delivery}>
+                <div className={classes.deliveryTo}>
+                  <p className={classes.paragraphDelivery}>
+                    {t("boxPage.delivery")}
+                  </p>
+                  <div className={classes.coverForAntRadio}>
+                    <RadioGroup name="radioDelivery" array={deliveryArray} />
+                  </div>
+                </div>
+                <div>
+                  <div>
+                    <div className={classes.coverCity}>
+                      <p className={classes.city}>{t("boxPage.city")}</p>
+                      <div className={classes.root}>
+                        <InputFieldAnt name="city" booleanValue={true} />
+                      </div>
+                    </div>
+                    <div className={classes.underCity}>
+                      <p className={classes.tarifNova}>{t("boxPage.tarif")}</p>
+                      <img
+                        alt="photoDelivery"
+                        className={
+                          classes[
+                            getImg(getFieldsValue().radioDelivery)?.style!
+                          ]
+                        }
+                        src={getImg(getFieldsValue().radioDelivery)?.img!}
+                      />
+                    </div>
+                    <div className={classes.coverAdress}>
+                      <p className={classes.address}>{t("boxPage.address")}</p>
+                      <div className={classes.root}>
+                        <InputFieldAnt name="address" booleanValue={true} />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className={classes.note}>
+                <div className={classes.coverNote}>
+                  <p className={classes.noteP}>{t("boxPage.note")}</p>
+                  <div className={classes.root}>
+                    <InputFieldAnt name="note" booleanValue={false} />
+                  </div>
+                </div>
 
-                  <img
-                    className={classes[getImg(delivery)?.style!]}
-                    src={getImg(delivery)?.img!}
+                <div className={classes.coverPay}>
+                  <p className={classes.payP}>{t("boxPage.pay")}</p>
+                  <div className={classes.coverForAntRadio}>
+                    <RadioGroup name="pay" array={payArray} />
+                  </div>
+                </div>
+              </div>
+              <input
+                type="hidden"
+                name="template"
+                value={resultForInputEmail}
+              />
+              <input
+                type="hidden"
+                name="date"
+                value={new Date().toLocaleString()}
+              />
+              <input
+                type="hidden"
+                name="id"
+                value={Math.round(Math.random() * 1000000)}
+              />
+            </div>
+
+            <div className={classes.orderRight}>
+              <div className={classes.top}>
+                <p className={classes.goods}>{t("boxPage.goods")}</p>
+              </div>
+              <div>
+                {resultListOrder.map((item: IOrder, index: number) => (
+                  <SecondCard
+                    key={item.goods.id}
+                    item={item}
+                    onClick={() => handleDelGoods(index)}
                   />
-                </div>
-                <div className={classes.coverAdress}>
-                  <p className={classes.adress}>{t("boxPage.address")}</p>
-                  <div className={classes.root}>
-                    <InputForBox
-                      onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                        handleAllInput(e, "inputAdress")
-                      }
-                      value={form.inputAdress}
-                    />
-                  </div>
-                </div>
+                ))}
               </div>
-            </div>
-          </div>
-          <div className={classes.note}>
-            <div className={classes.coverNote}>
-              <p className={classes.noteP}>{t("boxPage.note")}</p>
-              <div className={classes.root}>
-                <InputForBox
-                  onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                    handleAllInput(e, "note")
-                  }
-                  value={form.note}
-                />
-              </div>
-            </div>
-
-            <div className={classes.coverPay}>
-              <p className={classes.payP}>{t("boxPage.pay")}</p>
-              <div className={classes.coverForAntRadio}>
-                <Radio.Group
-                  onChange={(e) => setPay(e.target.value)}
-                  value={pay}
-                >
-                  {payArray.map((item) => (
-                    <Radio className={classes.radioButton} value={item.check}>
-                      {t(item.name)}
-                    </Radio>
-                  ))}
-                </Radio.Group>
+              <div className={classes.bottom}>
+                <p className={classes.yourOrder}>{t("boxPage.yourOrder")}</p>
+                <p className={classes.total}>
+                  {t("boxPage.total")}
+                  <span className={classes.uan}>
+                    {total.toFixed(2)}
+                    {t("uan")}
+                  </span>
+                </p>
               </div>
             </div>
           </div>
           <Fade bottom>
-            <button className={classes.button}>{t("boxPage.toOrder")}</button>
+            <ButAnt />
           </Fade>
-        </div>
-
-        <div className={classes.orderRight}>
-          <div className={classes.top}>
-            <p className={classes.goods}>{t("boxPage.goods")}</p>
-          </div>
-          <div>
-            {context.order.map((item: any, index: number) => (
-              <SecondCard item={item} onClick={() => handleDelGoods(index)} />
-            ))}
-          </div>
-          <div className={classes.bottom}>
-            <p className={classes.yourOrder}>{t("boxPage.yourOrder")}</p>
-            <p className={classes.total}>
-              {t("boxPage.total")}
-              <span className={classes.uan}>
-                {total.toFixed(2)}
-                грн
-              </span>
-            </p>
-          </div>
-        </div>
+        </Form>
       </div>
     </div>
   );

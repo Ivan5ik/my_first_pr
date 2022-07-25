@@ -1,4 +1,5 @@
 import React, { FC } from "react";
+import { useTranslation } from "react-i18next";
 
 import useStyles from "./style";
 
@@ -6,13 +7,13 @@ interface IButton {
   onClick: () => void;
 }
 
-const Button: FC<IButton> = (props) => {
+const Button: FC<IButton> = ({ onClick }) => {
   const classes = useStyles();
-  const { onClick } = props;
+  const { t } = useTranslation();
 
   return (
     <button className={classes.button} onClick={onClick}>
-      В кошик
+      {t("inBox")}
     </button>
   );
 };

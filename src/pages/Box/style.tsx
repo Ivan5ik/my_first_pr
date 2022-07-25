@@ -24,6 +24,7 @@ const useStyles = createUseStyles({
     textAlign: "center",
   },
   toCataloge: {
+    cursor: "pointer",
     color: globalColors.white,
     fontSize: "18px",
     marginLeft: "22px",
@@ -123,7 +124,7 @@ const useStyles = createUseStyles({
     width: "75%",
   },
   city: { width: "26%", padding: "0px 10px 0px 0px" },
-  adress: { width: "26%", padding: "0px 10px 0px 0px" },
+  address: { width: "26%", padding: "0px 10px 0px 0px" },
   coverCity: {
     marginBottom: "0px",
 
@@ -142,6 +143,7 @@ const useStyles = createUseStyles({
     fontSize: "14px",
   },
   underCity: {
+    paddingBottom: "5px",
     paddingTop: "2px",
     display: "flex",
     paddingLeft: "120px",
@@ -172,7 +174,6 @@ const useStyles = createUseStyles({
   },
 
   coverPay: {
-    marginBottom: "30px",
     color: globalColors.white,
     fontSize: "16px",
     display: "flex",
