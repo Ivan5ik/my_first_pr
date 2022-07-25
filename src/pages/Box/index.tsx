@@ -5,9 +5,9 @@ import Fade from "react-reveal/Fade";
 import emailjs from "@emailjs/browser";
 import { useNavigate } from "react-router-dom";
 
-import { deliveryArray, ICard, payArray } from "../../utils";
+import { deliveryArray, payArray } from "../../utils";
 import { SecondCard } from "../../components/SecondCard";
-import { StoreContext } from "../../store";
+import { IOrder, StoreContext } from "../../store";
 import { InputFieldAnt } from "../../components/antComponent/InputFieldAnt";
 import { RadioGroup } from "../../components/antComponent/radioGroup";
 import { InputPhone } from "../../components/antComponent/inputPhone";
@@ -47,7 +47,7 @@ const Box = () => {
   const getImg = (index: string) =>
     deliveryArray.find((item) => index === item.check);
 
-  resultListOrder.forEach((item: any) => {
+  resultListOrder.forEach((item: IOrder) => {
     total += Number((Number(item.count) * Number(item.goods.price)) / 10);
   });
 
@@ -59,7 +59,7 @@ const Box = () => {
 
   const resultForInputEmail = context.order
     .map(
-      (item: { goods: { name: string; price: string }; count: number }) =>
+      (item) =>
         `<li>Назва товару: ${item.goods.name}, Грам: ${item.count}00, Ціна:${item.goods.price}</li>`
     )
     .join();
@@ -148,7 +148,7 @@ const Box = () => {
                     <RadioGroup name="radioDelivery" array={deliveryArray} />
                   </div>
                 </div>
-                <div className={classes.dataDelivery}>
+                <div>
                   <div>
                     <div className={classes.coverCity}>
                       <p className={classes.city}>{t("boxPage.city")}</p>
@@ -158,7 +158,6 @@ const Box = () => {
                     </div>
                     <div className={classes.underCity}>
                       <p className={classes.tarifNova}>{t("boxPage.tarif")}</p>
-
                       <img
                         alt="photoDelivery"
                         className={
@@ -215,7 +214,7 @@ const Box = () => {
                 <p className={classes.goods}>{t("boxPage.goods")}</p>
               </div>
               <div>
-                {resultListOrder.map((item: any, index: number) => (
+                {resultListOrder.map((item: IOrder, index: number) => (
                   <SecondCard
                     key={item.goods.id}
                     item={item}

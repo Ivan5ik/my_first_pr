@@ -27,7 +27,7 @@ const Item = () => {
       ...context.order,
       {
         goods: item,
-        count: Number(selectValue),
+        count: String(selectValue),
       },
     ]);
     localStorage.setItem("arrayOrder", JSON.stringify(context.order));

@@ -64,4 +64,4 @@ const Catalog = () => {
     </div>
   );
 };
-export { Catalog as Cataloge };
+export { Catalog };

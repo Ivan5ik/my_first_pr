@@ -3,17 +3,15 @@ import { CloseOutlined } from "@ant-design/icons";
 
 import { getArrayForSelect, getPrice } from "../../utils";
 import { Select } from "../Select";
-import { StoreContext } from "../../store";
+import { IOrder, StoreContext } from "../../store";
 import { useTranslation } from "react-i18next";
 
 import { useStyles } from "./style";
 
 interface ISecondCard {
-  item: any;
+  item: IOrder;
   onClick: () => void;
 }
-
-interface IGoodsOrder {}
 
 const SecondCard: FC<ISecondCard> = ({ item, onClick }) => {
   const classes = useStyles();

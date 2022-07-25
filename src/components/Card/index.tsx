@@ -27,7 +27,7 @@ const Card: FC<ICardProps> = ({ item }) => {
   const handleBuy = () => {
     context.setOrder([
       ...context.order,
-      { goods: item, count: Number(selectValue) },
+      { goods: item, count: String(selectValue) },
     ]);
 
     // resultLocalList.push({ goods: item, count: Number(selectValue) });s

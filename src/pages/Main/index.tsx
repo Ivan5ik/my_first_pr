@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import { Carousel, Form, notification } from "antd";
 import { useNavigate } from "react-router-dom";
 import { SearchOutlined } from "@ant-design/icons";
@@ -12,18 +12,11 @@ import emailjs from "@emailjs/browser";
 
 import { arrayCard, button, ICard, phoneNumber } from "../../utils";
 import { Card } from "../../components/Card";
-import { InputForBox } from "../../components/InputForBox";
 
 import useStyles from "./style";
 import { InputFieldAnt } from "../../components/antComponent/InputFieldAnt";
 import { InputPhone } from "../../components/antComponent/inputPhone";
 import { ButAnt } from "../../components/antComponent/buttonAnt";
-
-interface IForm {
-  name: string;
-  phoneNumber: string;
-  question: string;
-}
 
 const Main = () => {
   const classes = useStyles();
@@ -34,13 +27,7 @@ const Main = () => {
 
   type NotificationType = "success" | "info" | "warning" | "error";
 
-  const forma: any = useRef();
-
-  // const [form, setForm] = useState<IForm>({
-  //   name: "",
-  //   phoneNumber: "",
-  //   question: "",
-  // });
+  const forma = useRef<any>(null);
 
   const openNotificationWithIcon = (
     type: NotificationType,
@@ -52,9 +39,6 @@ const Main = () => {
   };
 
   const handleResult = () => {
-    const fields = getFieldsValue();
-    console.log();
-
     emailjs
       .sendForm(
         process.env.REACT_APP_TEMPLATEMAIN1_KEY!,

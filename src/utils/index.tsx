@@ -13,8 +13,6 @@ export interface IContextOrder {
 
 export interface IContextOrderGoods {}
 
-// функції для грам
-
 export const getPrice = (purchaseType: string) => {
   if (purchaseType === "1kg") {
     return "1кг";
