@@ -5,6 +5,7 @@ import Fade from "react-reveal/Fade";
 import Zoom from "react-reveal/Zoom";
 import Slide from "react-reveal/Slide";
 import { Carousel } from "antd";
+
 import { phoneNumber } from "../../utils";
 
 import useStyles from "./style";

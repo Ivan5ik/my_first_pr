@@ -7,16 +7,22 @@ import { useNavigate } from "react-router-dom";
 
 import { deliveryArray, payArray } from "../../utils";
 import { SecondCard } from "../../components/SecondCard";
-import { IOrder, StoreContext } from "../../store";
+import { IOrder /*StoreContext*/ } from "../../store";
 import { InputFieldAnt } from "../../components/antComponent/InputFieldAnt";
 import { RadioGroup } from "../../components/antComponent/radioGroup";
 import { InputPhone } from "../../components/antComponent/inputPhone";
 import { InputEmail } from "../../components/antComponent/inputEmail";
 import { ButAnt } from "../../components/antComponent/buttonAnt";
+import { useDispatch, useSelector } from "react-redux";
+import { order, setOrder } from "../../store/boxSlice";
 
 import useStyles from "./style";
 
 type NotificationType = "success" | "info" | "warning" | "error";
+
+interface RootState {
+  orderBox: order;
+}
 
 const Box = () => {
   let total = 0;
@@ -32,12 +38,13 @@ const Box = () => {
   const historyRoute = useNavigate();
 
   const forma: any = useRef();
+  const dispatch = useDispatch();
 
-  const context = React.useContext(StoreContext);
+  const storeOrder = useSelector((state: RootState) => state.orderBox.order);
 
   Form.useWatch("radioDelivery", formANT);
 
-  let resultListOrder = context.order;
+  let resultListOrder = storeOrder;
 
   const handleAllInput = (e: React.ChangeEvent<HTMLInputElement>) => {
     const fields = getFieldsValue();
@@ -52,14 +59,16 @@ const Box = () => {
   });
 
   const handleDelGoods = (index: number) => {
-    context.order.splice(index, 1);
-    context.setOrder([...context.order]);
-    localStorage.setItem("array", JSON.stringify(context.order));
+    const delList = [...storeOrder];
+    delList.splice(index, 1);
+    dispatch(setOrder(delList));
+
+    localStorage.setItem("array", JSON.stringify(delList));
   };
 
-  const resultForInputEmail = context.order
+  const resultForInputEmail = storeOrder
     .map(
-      (item) =>
+      (item: IOrder) =>
         `<li>Назва товару: ${item.goods.name}, Грам: ${item.count}00, Ціна:${item.goods.price}</li>`
     )
     .join();
@@ -74,7 +83,7 @@ const Box = () => {
   };
 
   const handleResult = () => {
-    if (context.order.length === 0) {
+    if (storeOrder.length === 0) {
       return openNotificationWithIcon("error", "order isn't add");
     }
 

@@ -41,8 +41,8 @@ export default function Footer() {
 
           <div className={classes.contacts}>
             <div className={classes.contactsRight}>
-              <a className={classes.link} href="mailto:tparandii@gmail.com">
-                TPARANDII@GMAIL.COM
+              <a className={classes.link} href="mailto:smak39617824@gmail.com">
+                SMAK39617824@GMAIL.COM
               </a>
             </div>
             <div className={classes.contactsMain}>

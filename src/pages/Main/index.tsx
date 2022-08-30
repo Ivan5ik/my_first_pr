@@ -12,11 +12,11 @@ import emailjs from "@emailjs/browser";
 
 import { arrayCard, button, ICard, phoneNumber } from "../../utils";
 import { Card } from "../../components/Card";
-
-import useStyles from "./style";
 import { InputFieldAnt } from "../../components/antComponent/InputFieldAnt";
 import { InputPhone } from "../../components/antComponent/inputPhone";
 import { ButAnt } from "../../components/antComponent/buttonAnt";
+
+import useStyles from "./style";
 
 const Main = () => {
   const classes = useStyles();
@@ -155,8 +155,8 @@ const Main = () => {
             </div>
             <div className={classes.coverFrom}>
               <MailOutlined className={classes.iconAntd} />
-              <a className={classes.link} href="mailto:order@dymne.com.ua">
-                order@dymne.com.ua
+              <a className={classes.link} href="mailto:smak39617824@gmail.com">
+                SMAK39617824@GMAIL.COM
               </a>
             </div>
             <div ref={forma}>

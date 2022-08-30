@@ -1,10 +1,12 @@
 import React, { FC, useEffect, useState } from "react";
 import { CloseOutlined } from "@ant-design/icons";
+import { useDispatch, useSelector } from "react-redux";
 
 import { getArrayForSelect, getPrice } from "../../utils";
 import { Select } from "../Select";
-import { IOrder, StoreContext } from "../../store";
+import { IOrder } from "../../store";
 import { useTranslation } from "react-i18next";
+import { order, setOrder } from "../../store/boxSlice";
 
 import { useStyles } from "./style";
 
@@ -12,26 +14,30 @@ interface ISecondCard {
   item: IOrder;
   onClick: () => void;
 }
-
+interface RootState {
+  orderBox: order;
+}
 const SecondCard: FC<ISecondCard> = ({ item, onClick }) => {
   const classes = useStyles();
+  const storeOrder = useSelector((state: RootState) => state.orderBox.order);
 
   const { t } = useTranslation();
   const [selectValue, setSelectValue] = useState(String(item.count));
 
   const total = ((Number(selectValue) * item.goods.price) / 10).toFixed(2);
 
-  const context = React.useContext(StoreContext);
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    const copyArray = [...context.order];
-    copyArray.forEach((card) => {
+    const copyArray = JSON.parse(JSON.stringify(storeOrder));
+    copyArray.forEach((card: IOrder) => {
       if (card.goods.id === item.goods.id) {
         card.count = selectValue;
       }
     });
 
-    context.setOrder(copyArray);
+    dispatch(setOrder(copyArray));
+    localStorage.setItem("array", JSON.stringify(copyArray));
   }, [selectValue]); // eslint-disable-line
 
   return (

@@ -4,10 +4,10 @@ import { useNavigate } from "react-router-dom";
 import classNames from "classnames";
 import { useTranslation } from "react-i18next";
 
-import { navigationMiddleBottom } from "../../routes/routes";
+import { navigationMiddleBottom, phoneNumber } from "../../utils";
+import { IRoutes } from "../../routes/routes";
 
 import useStyles from "./style";
-import { phoneNumber } from "../../utils";
 
 export default function Header() {
   const classes = useStyles();
@@ -23,7 +23,7 @@ export default function Header() {
       <div className={classes.above}>
         <div className={classes.cover}>
           <img
-            src="../assets/photo.png"
+            src="../assets/logoSmakovynka.png"
             onClick={() => history("/")}
             className={classes.img}
             alt="logo"
@@ -31,7 +31,7 @@ export default function Header() {
           <div className={classes.nav}>
             <div className={classes.middleTop}>
               <a
-                href="callto:+380636235535"
+                href="callto:+380673055924"
                 className={classes.colorWordsAbove}
               >
                 {phoneNumber}
@@ -48,7 +48,7 @@ export default function Header() {
               </p>
             </div>
             <div className={classes.middleBottom}>
-              {navigationMiddleBottom.map((item: any) => (
+              {navigationMiddleBottom.map((item: IRoutes) => (
                 <Link
                   key={item.name}
                   className={
@@ -57,7 +57,7 @@ export default function Header() {
                   }
                   to={String(item.path)}
                 >
-                  {t(item.name)}
+                  {t(item.name !== undefined ? item.name : "")}
                   <p className={classes.antIcon}>{item.component}</p>
                 </Link>
               ))}

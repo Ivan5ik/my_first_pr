@@ -1,15 +1,18 @@
 import React, { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { Carousel } from "antd";
+import { useDispatch, useSelector } from "react-redux";
 
 import { Select } from "../../components/Select";
 import { arrayCard, getArrayForSelect, getPrice } from "../../utils";
 import { Button } from "../../components/Button";
-import { StoreContext } from "../../store";
 import { useTranslation } from "react-i18next";
+import { order, setOrder } from "../../store/boxSlice";
 
 import useStyles from "./style";
-
+interface RootState {
+  orderBox: order;
+}
 const Item = () => {
   const classes = useStyles();
   const { t } = useTranslation();
@@ -20,17 +23,22 @@ const Item = () => {
 
   const item = arrayCard.find((item) => item.id === itemId)!;
   const { description, name, price, purchaseType, imgUrl } = item;
-  const context = React.useContext(StoreContext);
+  const dispatch = useDispatch();
+
+  const storeOrder = useSelector((state: RootState) => state.orderBox.order);
 
   const handleBuy = () => {
-    context.setOrder([
-      ...context.order,
-      {
-        goods: item,
-        count: String(selectValue),
-      },
-    ]);
-    localStorage.setItem("arrayOrder", JSON.stringify(context.order));
+    const arrayList = [...storeOrder];
+
+    arrayList.push({ goods: item, count: String(selectValue) });
+    dispatch(setOrder(arrayList));
+    localStorage.setItem(
+      "arrayOrder",
+      JSON.stringify([
+        ...storeOrder,
+        { goods: item, count: String(selectValue) },
+      ])
+    );
   };
 
   return (

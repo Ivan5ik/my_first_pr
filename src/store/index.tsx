@@ -1,31 +1,18 @@
-import React, { Dispatch, SetStateAction, useState } from "react";
 import { ICard } from "../utils";
+import { configureStore } from "@reduxjs/toolkit";
+import boxSlice from "./boxSlice";
 
-type childrenType = {
-  children: React.ReactNode;
-};
 export interface IOrder {
   goods: ICard;
   count: string;
 }
 
-export const StoreContext = React.createContext<{
-  order: IOrder[];
-  setOrder: Dispatch<SetStateAction<IOrder[]>>;
-}>({
-  order: [],
-  setOrder: () => undefined,
+const configStore = configureStore({
+  reducer: {
+    orderBox: boxSlice,
+  },
 });
 
-const StoreProvider = ({ children }: childrenType) => {
-  const [order, setOrder] = useState<IOrder[]>(
-    JSON.parse(localStorage.getItem("array") || "[]")
-  );
-
-  return (
-    <StoreContext.Provider value={{ order, setOrder }}>
-      {children}
-    </StoreContext.Provider>
-  );
-};
-export default StoreProvider;
+export default configStore;
+export type RootState = ReturnType<typeof configStore.getState>;
+export type AppDispatch = typeof configStore.dispatch;

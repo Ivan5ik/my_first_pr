@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import { IRoutes } from "../routes/routes";
 
 export interface IOptionsList {
   name: string;
@@ -34,7 +35,7 @@ export const getArrayForSelect = (purchaseType: string) => {
 
 export const currentYear = new Date().getFullYear();
 
-export const phoneNumber = "+380 63 623 55 35";
+export const phoneNumber = "+380 (67) 305 59 24";
 
 export default function ScrollToTop() {
   const { pathname } = useLocation();
@@ -141,6 +142,14 @@ export interface ICard {
   imgUrl: string[];
   shortDesc: string;
 }
+
+export const navigationMiddleBottom: IRoutes[] = [
+  { name: "home", path: "/" },
+  { name: "product", path: "/cataloge" },
+  { name: "production", path: "/production" },
+  { name: "basket", path: "/box" },
+];
+
 export const basicWords = [
   { title: "home", key: "/" },
   { title: "product", key: "/cataloge" },

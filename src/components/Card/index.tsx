@@ -1,41 +1,46 @@
 import React, { FC, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { useTranslation } from "react-i18next";
 
 import { Select } from "../Select";
 import { getArrayForSelect, ICard, getPrice } from "../../utils";
 import { Button } from "../Button";
-import { StoreContext } from "../../store";
-import { useTranslation } from "react-i18next";
+import { order, setOrder } from "../../store/boxSlice";
 
 import useStyles from "./style";
 
 interface ICardProps {
   item: ICard;
 }
-
+interface RootState {
+  orderBox: order;
+}
 const Card: FC<ICardProps> = ({ item }) => {
   const classes = useStyles();
-
   const [selectValue, setSelectValue] = useState("1");
   const { shortDesc, name, price, purchaseType, imgUrl, id } = item;
-  const context = React.useContext(StoreContext);
+
+  const dispatch = useDispatch();
+  const date = new Date();
+  console.log(typeof date);
 
   const { t } = useTranslation();
-
   const history = useNavigate();
 
-  const handleBuy = () => {
-    context.setOrder([
-      ...context.order,
-      { goods: item, count: String(selectValue) },
-    ]);
+  const storeOrder = useSelector((state: RootState) => state.orderBox.order);
 
-    // resultLocalList.push({ goods: item, count: Number(selectValue) });s
+  const handleBuy = () => {
+    const arrayList = [...storeOrder];
+
+    arrayList.push({ goods: item, count: String(selectValue) });
+    dispatch(setOrder(arrayList));
+
     localStorage.setItem(
       "array",
       JSON.stringify([
-        ...context.order,
-        { goods: item, count: Number(selectValue) },
+        ...storeOrder,
+        { goods: item, count: String(selectValue) },
       ])
     );
   };
