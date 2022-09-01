@@ -101,7 +101,7 @@ const Production = () => {
                   <h2 className={classes.h2}>{item.h}</h2>
                   <p className={classes.p1}>{item.p1}</p>
                   <p className={classes.p2}>{t("moreDetailForPhone")}</p>
-                  <a href="callto:+380636235535" className={classes.tel}>
+                  <a href="callto:+380673055924" className={classes.tel}>
                     {phoneNumber}
                   </a>
                 </div>

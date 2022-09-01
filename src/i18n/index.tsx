@@ -30,7 +30,7 @@ i18n
           moreDetail: "Детальніше",
           inBox: "В кошик",
           toOrder: "Оформити замовлення",
-          up: "На Гору 🠕",
+          up: "На Гору ",
           delivery: "Оплата і доставка",
           home: "Головна",
           product: "Продукція",
@@ -116,7 +116,7 @@ i18n
           moreDetail: "More detail",
           inBox: "In the basket",
           toOrder: "to Order",
-          up: "Up 🠕",
+          up: "Up",
           delivery: "Payment and delivery",
           home: "Home",
 

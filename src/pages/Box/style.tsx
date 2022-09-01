@@ -149,6 +149,7 @@ const useStyles = createUseStyles({
     paddingLeft: "120px",
     justifyContent: "space-between",
   },
+  imgCherkasy: { width: "50px", height: "44px" },
   imgNova: {
     width: "160px",
     height: "30px",

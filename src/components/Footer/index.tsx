@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-
+import ArrowUpOutlined from "@ant-design/icons/ArrowUpOutlined";
 import { basicWords, phoneNumber } from "../../utils";
 
 import useStyles from "./style";
@@ -14,7 +14,7 @@ export default function Footer() {
   const { t } = useTranslation();
 
   return (
-    <div>
+    <div className={classes.root}>
       <div className={classes.footer}>
         <div className={classes.container}>
           <div className={classes.top}>
@@ -22,7 +22,7 @@ export default function Footer() {
               {basicWords.map((item) => (
                 <div
                   key={item.title}
-                  className={classes.link}
+                  className={"link"}
                   onClick={() => history(item.key)}
                 >
                   {t(item.title)}
@@ -34,14 +34,16 @@ export default function Footer() {
                 className={classes.topAside}
                 onClick={() => window.scrollTo(0, 0)}
               >
-                <p>{t("up")}</p>
+                <div>
+                  {t("up")} <ArrowUpOutlined />
+                </div>
               </div>
             </div>
           </div>
 
           <div className={classes.contacts}>
             <div className={classes.contactsRight}>
-              <a className={classes.link} href="mailto:smak39617824@gmail.com">
+              <a className={"linkGmail"} href="mailto:smak39617824@gmail.com">
                 SMAK39617824@GMAIL.COM
               </a>
             </div>
@@ -61,7 +63,7 @@ export default function Footer() {
               </div>
             </div>
             <div className={classes.contactsLeft}>
-              <a href="callto:+380636235535" className={classes.link}>
+              <a href="callto:+380(67)3055924" className={"link"}>
                 {phoneNumber}
               </a>
             </div>

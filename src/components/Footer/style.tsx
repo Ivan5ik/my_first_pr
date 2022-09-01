@@ -9,6 +9,24 @@ const pallet = {
   fontSize: "18px",
 };
 const useStyles = createUseStyles({
+  root: {
+    "& .link, .linkGmail": {
+      display: "block",
+      color: globalColors.white,
+
+      "&:hover": {
+        cursor: "pointer",
+        color: globalColors.red,
+        transition: "all 0.3s",
+      },
+    },
+    "& .link": {
+      fontSize: pallet.fontSize,
+    },
+    "& .linkGmail": {
+      fontSize: "15px",
+    },
+  },
   footer: {
     width: "100%",
     height: "538px",
@@ -53,16 +71,6 @@ const useStyles = createUseStyles({
     display: "flex",
     justifyContent: "space-between",
     width: "768px",
-  },
-  link: {
-    display: "block",
-    color: globalColors.white,
-    fontSize: pallet.fontSize,
-    "&:hover": {
-      cursor: "pointer",
-      color: globalColors.red,
-      transition: "all 0.3s",
-    },
   },
 
   topAside: {

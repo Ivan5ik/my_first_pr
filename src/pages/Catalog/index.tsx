@@ -30,13 +30,11 @@ const Catalog = () => {
       <div className={classes.underProduct}>
         <div className={classes.coverUnderProduct}>
           <Input value={input} setValue={setInput} />
-          <div>
-            <Select
-              selectValue={selectValue}
-              setValue={setSelectValue}
-              optionArray={arrayCategory}
-            />
-          </div>
+          <Select
+            selectValue={selectValue}
+            setValue={setSelectValue}
+            optionArray={arrayCategory}
+          />
         </div>
         <p onClick={setReset} className={classes.reset}>
           {t("catalogPage.reset")}

@@ -149,7 +149,7 @@ const Main = () => {
             </div>
             <div className={classes.coverFrom}>
               <PhoneOutlined className={classes.iconAntd} />
-              <a className={classes.link} href="tel:+380636235535">
+              <a className={classes.link} href="tel:+380673055924">
                 {phoneNumber}
               </a>
             </div>

@@ -8,9 +8,19 @@ const useStyles = createUseStyles({
     width: "100%",
     maxWidth: "980px",
     margin: "0px auto",
+
     "& .ant-input .inputAnt": {
-      height: "37px",
+      height: "90%",
     },
+    "& .ant-input": {
+      height: "90%",
+    },
+  },
+  antInput: {
+    // height: "100%",
+  },
+  antSelect: {
+    height: "100%",
   },
   product: {
     color: globalColors.white,

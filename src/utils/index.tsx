@@ -35,7 +35,7 @@ export const getArrayForSelect = (purchaseType: string) => {
 
 export const currentYear = new Date().getFullYear();
 
-export const phoneNumber = "+380 (67) 305 59 24";
+export const phoneNumber = "+380 63 623 55 35";
 
 export default function ScrollToTop() {
   const { pathname } = useLocation();
@@ -78,8 +78,8 @@ export const deliveryArray: IDeliveryArray[] = [
   {
     name: "boxPage.deliveryTo.cherkassy",
     check: "Cherkasy",
-    img: "",
-    style: "",
+    img: "../assets/imgCherkassy.png",
+    style: "imgCherkasy",
   },
   {
     name: "boxPage.deliveryTo.np",
