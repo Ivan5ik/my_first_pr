@@ -81,14 +81,79 @@ const useStyles = createUseStyles({
   coverButton: {
     paddingBottom: "30px",
   },
-  mainDiv: {
+  video: {
+    // width: "100px",
+    width: "100%",
+    height: "100%",
+  },
+  container: {
+    display: "flex",
+    justifyContent: "center",
+    width: "980px",
+    margin: "0px auto",
     background: globalColors.darkBlack,
+  },
+  mainDiv: {
+    background: "#242424",
+  },
+
+  // buttons: {
+  // "& button": {
+  //   background: "none",
+  //   border: "0",
+  //   outline: "0",
+  //   cursor: "pointer",
+  // },
+  // "& button::before": {
+  //   content: '"\f144"',
+  //   fontFamily: "Font Awesome 5 Free",
+  //   width: "30px",
+  //   height: "30px",
+  //   display: "inline-block",
+  //   fontSize: "28px",
+  //   color: "white",
+  // },
+  // },
+  play: {
+    color: "white",
+    margin: "3px 0px 3px 3px",
+    width: "27px",
+    height: "20px",
+    "& svg": {
+      width: "27px",
+      height: "20px",
+    },
   },
   mapPlusForm: {
     display: "flex",
     width: "980px",
     margin: "0px auto",
     padding: "40px 0 40px 0",
+  },
+  cVideo: {
+    position: "relative",
+    width: "100%",
+    overflow: "hidden",
+    cursor: "pointer",
+
+    "&:hover .controls": {
+      transform: "translateY(0%)",
+      transition: "0.5s",
+    },
+    "& .controls": {
+      display: "flex",
+      position: "absolute",
+      top: "524px",
+      height: "34px",
+      width: "100%",
+      flexWrap: "wrap",
+      background: "rgba(0,0,0,0.7)",
+      transform: "translateY(98%)",
+    },
+    //   // transform: "translateY(0%)",
+    //   // transition: "all 0.3s",
+    // },
+    // background: globalColors.darkBlack,
   },
   form: {
     width: "380px",
@@ -144,6 +209,17 @@ const useStyles = createUseStyles({
     color: globalColors.lightGrey,
     fontSize: "10px",
     margin: "2px 0 15px 0",
+  },
+  orangeBar: {
+    height: "2px",
+    // top: "0px",
+    // left: "0px",
+    width: "100%",
+    background: "black",
+  },
+  orangeJuice: {
+    height: "2px",
+    backgroundColor: globalColors.red,
   },
 });
 export default useStyles;

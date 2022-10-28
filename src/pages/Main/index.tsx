@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Carousel, Form, notification } from "antd";
 import { useNavigate } from "react-router-dom";
 import { SearchOutlined } from "@ant-design/icons";
@@ -9,6 +9,7 @@ import Bounce from "react-reveal/Bounce";
 import Zoom from "react-reveal/Zoom";
 import Fade from "react-reveal/Fade";
 import emailjs from "@emailjs/browser";
+import { PlayCircleOutlined, PauseCircleOutlined } from "@ant-design/icons";
 
 import { arrayCard, button, ICard, phoneNumber } from "../../utils";
 import { Card } from "../../components/Card";
@@ -28,6 +29,25 @@ const Main = () => {
   type NotificationType = "success" | "info" | "warning" | "error";
 
   const forma = useRef<any>(null);
+
+  const myVideo: any = useRef();
+  let orangeJuicee: any = useRef();
+  // let res = "0%";
+  const [autoplay, setAutoplay] = useState(false);
+
+  useEffect(() => {
+    if (autoplay) {
+      myVideo.current.play();
+    } else {
+      myVideo.current.pause();
+    }
+  }, [autoplay]);
+
+  myVideo?.current?.addEventListener("timeupdate", function () {
+    const juicePos = myVideo.current?.currentTime / myVideo.current?.duration;
+
+    orangeJuicee.current.style.width = juicePos * 100 + "%";
+  });
 
   const openNotificationWithIcon = (
     type: NotificationType,
@@ -134,6 +154,27 @@ const Main = () => {
                 {t("homePage.button")}
               </button>
             </Fade>
+          </div>
+        </div>
+      </div>
+      <div className={classes.container}>
+        <div className={classes.cVideo}>
+          <video
+            ref={myVideo}
+            className={classes.video}
+            src="../../assets/video.MP4"
+          />
+          <div className="controls">
+            <div className={classes.orangeBar}>
+              <div ref={orangeJuicee} className={classes.orangeJuice}></div>
+            </div>
+            <div onClick={() => setAutoplay(!autoplay)}>
+              {autoplay ? (
+                <PauseCircleOutlined className={classes.play} />
+              ) : (
+                <PlayCircleOutlined className={classes.play} />
+              )}
+            </div>
           </div>
         </div>
       </div>

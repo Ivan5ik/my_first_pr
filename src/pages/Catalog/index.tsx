@@ -21,6 +21,7 @@ const Catalog = () => {
   };
 
   const { t } = useTranslation();
+  console.log(arrayCard);
 
   return (
     <div className={classes.root}>
@@ -40,6 +41,7 @@ const Catalog = () => {
           {t("catalogPage.reset")}
         </p>
       </div>
+
       <div className={classes.productsList}>
         {arrayCard
           .filter((item) =>

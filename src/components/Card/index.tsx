@@ -23,7 +23,6 @@ const Card: FC<ICardProps> = ({ item }) => {
 
   const dispatch = useDispatch();
   const date = new Date();
-  console.log(typeof date);
 
   const { t } = useTranslation();
   const history = useNavigate();
