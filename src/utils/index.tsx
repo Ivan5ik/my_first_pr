@@ -434,7 +434,7 @@ export const arrayCard: ICard[] = [
     ),
     price: 265.05,
     purchaseType: "1kg",
-    category: "vuribKovbas",
+    category: "sosyska",
     hot: false,
     imgUrl: ["../assets/mislivski_kovbasky_0312.JPG"],
     shortDesc:
@@ -521,7 +521,7 @@ export const arrayCard: ICard[] = [
     ),
     price: 134.42,
     purchaseType: "1kg",
-    category: "vuribKovbas",
+    category: "sosyska",
     hot: false,
     imgUrl: ["../assets/dachni.JPG"],
     shortDesc:
@@ -552,7 +552,7 @@ export const arrayCard: ICard[] = [
     ),
     price: 124.84,
     purchaseType: "1kg",
-    category: "vuribKovbas",
+    category: "sosyska",
     hot: false,
     imgUrl: ["../assets/kovbaska_shashlichna_0310.JPG"],
     shortDesc:
@@ -737,7 +737,7 @@ export const arrayCard: ICard[] = [
     ),
     price: 154.75,
     purchaseType: "1kg",
-    category: "vuribKovbas",
+    category: "sosyska",
     hot: false,
     imgUrl: ["../assets/syrny_palichki_0313.JPG"],
     shortDesc:
@@ -766,7 +766,7 @@ export const arrayCard: ICard[] = [
     ),
     price: 355.87,
     purchaseType: "1kg",
-    category: "vuribKovbas",
+    category: "rawSmoked",
     hot: false,
     imgUrl: [
       "../assets/kovbaskyFranc_0014.JPG",
@@ -798,7 +798,7 @@ export const arrayCard: ICard[] = [
     ),
     price: 323.52,
     purchaseType: "1kg",
-    category: "sausage",
+    category: "pork",
     hot: false,
     imgUrl: [
       "../assets/zelc_0017.JPG",
@@ -864,7 +864,7 @@ export const arrayCard: ICard[] = [
     ),
     price: 323.52,
     purchaseType: "1kg",
-    category: "sausage",
+    category: "vuribKovbas",
     hot: false,
     imgUrl: [
       "../assets/ukrainian.JPG",
@@ -967,7 +967,7 @@ export const arrayCard: ICard[] = [
     ),
     price: 323.52,
     purchaseType: "1kg",
-    category: "sausage",
+    category: "chpk",
     hot: false,
     imgUrl: ["../assets/likarska_smakovynka0259.JPG"],
     shortDesc:
@@ -999,7 +999,7 @@ export const arrayCard: ICard[] = [
     ),
     price: 390.0,
     purchaseType: "1kg",
-    category: "vuribKovbas",
+    category: "rawSmoked",
     hot: false,
     imgUrl: ["../assets/imperatorska.jpg"],
     shortDesc:
@@ -1030,7 +1030,7 @@ export const arrayCard: ICard[] = [
     ),
     price: 402.0,
     purchaseType: "1kg",
-    category: "vuribKovbas",
+    category: "rawSmoked",
     hot: false,
     imgUrl: ["../assets/gubernatorska.jpg"],
     shortDesc:
@@ -1060,7 +1060,7 @@ export const arrayCard: ICard[] = [
     ),
     price: 131.24,
     purchaseType: "1kg",
-    category: "chpk",
+    category: "vuribKovbas",
     hot: false,
     imgUrl: ["../assets/videnska_9993.JPG"],
     shortDesc:
@@ -1118,7 +1118,7 @@ export const arrayCard: ICard[] = [
     ),
     price: 185.87,
     purchaseType: "1kg",
-    category: "sausage",
+    category: "pork",
     hot: false,
     imgUrl: ["../assets/byzhenina_9995.JPG"],
     shortDesc:
@@ -1661,7 +1661,7 @@ export const arrayCard: ICard[] = [
     ),
     price: 174.65,
     purchaseType: "1kg",
-    category: "sosyska",
+    category: "chpk",
     hot: false,
     imgUrl: ["../assets/sausage_school2_0295.JPG"],
     shortDesc:
@@ -1690,7 +1690,7 @@ export const arrayCard: ICard[] = [
     ),
     price: 260.1,
     purchaseType: "1kg",
-    category: "semiFinished",
+    category: "pork",
     hot: false,
     imgUrl: [
       "../assets/rylet_0260.JPG",
@@ -1924,7 +1924,7 @@ export const arrayCard: ICard[] = [
     ),
     price: 178.65,
     purchaseType: "1kg",
-    category: "vuribKovbas",
+    category: "pork",
     hot: false,
     imgUrl: ["../assets/na_drovah_0309.JPG"],
     shortDesc:
@@ -3451,7 +3451,7 @@ export const arrayCard: ICard[] = [
     ),
     price: 408.0,
     purchaseType: "1kg",
-    category: "vuribKovbas",
+    category: "chpk",
     hot: false,
     imgUrl: ["../assets/new_years_eve.jpg"],
     shortDesc:
@@ -3505,7 +3505,7 @@ export const arrayCard: ICard[] = [
     ),
     price: 128.85,
     purchaseType: "1kg",
-    category: "sausage",
+    category: "chicken",
     hot: false,
     imgUrl: ["../assets/kurka_kopchena.jpg"],
     shortDesc:
