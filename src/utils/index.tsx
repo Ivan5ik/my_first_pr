@@ -1,6 +1,6 @@
-import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
-import { IRoutes } from "../routes/routes";
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+import { IRoutes } from '../routes/routes';
 
 export interface IOptionsList {
   name: string;
@@ -8,26 +8,26 @@ export interface IOptionsList {
 }
 
 export interface IContextOrder {
-  count: "string";
+  count: 'string';
   goods: IContextOrderGoods;
 }
 
 export interface IContextOrderGoods {}
 
 export const getPrice = (purchaseType: string) => {
-  if (purchaseType === "1kg") {
-    return "1кг";
+  if (purchaseType === '1kg') {
+    return '1кг';
   }
-  if (purchaseType === "piece") {
-    return "шт";
+  if (purchaseType === 'piece') {
+    return 'шт';
   }
 };
 
 export const getArrayForSelect = (purchaseType: string) => {
-  if (purchaseType === "1kg") {
+  if (purchaseType === '1kg') {
     return arraySelectGram;
   }
-  if (purchaseType === "piece") {
+  if (purchaseType === 'piece') {
     return arraySelectPiece;
   }
   return [];
@@ -35,7 +35,7 @@ export const getArrayForSelect = (purchaseType: string) => {
 
 export const currentYear = new Date().getFullYear();
 
-export const phoneNumber = "+380 63 623 55 35";
+export const phoneNumber = '+380 63 623 55 35';
 
 export default function ScrollToTop() {
   const { pathname } = useLocation();
@@ -48,13 +48,13 @@ export default function ScrollToTop() {
 }
 
 export const globalColors = {
-  red: "#ab3838",
-  white: "#ffffff",
-  darkBlack: "#1f1f1f",
-  black: "#000",
-  lightGrey: "#5a6771",
-  darkGrey: "#31353a",
-  lightRed: "#b85d5a",
+  red: '#ab3838',
+  white: '#ffffff',
+  darkBlack: '#1f1f1f',
+  black: '#000',
+  lightGrey: '#5a6771',
+  darkGrey: '#31353a',
+  lightRed: '#b85d5a',
 };
 
 export interface IPayArray {
@@ -63,8 +63,8 @@ export interface IPayArray {
 }
 
 export const payArray: IPayArray[] = [
-  { name: "boxPage.payRadioBut.cash", check: "cash" },
-  { name: "boxPage.payRadioBut.cashless", check: "cashLess" },
+  { name: 'boxPage.payRadioBut.cash', check: 'cash' },
+  { name: 'boxPage.payRadioBut.cashless', check: 'cashLess' },
 ];
 
 export interface IDeliveryArray {
@@ -76,64 +76,64 @@ export interface IDeliveryArray {
 
 export const deliveryArray: IDeliveryArray[] = [
   {
-    name: "boxPage.deliveryTo.cherkassy",
-    check: "Cherkasy",
-    img: "../assets/imgCherkassy.png",
-    style: "imgCherkasy",
+    name: 'boxPage.deliveryTo.cherkassy',
+    check: 'Cherkasy',
+    img: '../assets/imgCherkassy.png',
+    style: 'imgCherkasy',
   },
   {
-    name: "boxPage.deliveryTo.np",
-    check: "NovaPochta",
-    img: "../assets/novaPochta.png",
-    style: "imgNova",
+    name: 'boxPage.deliveryTo.np',
+    check: 'NovaPochta',
+    img: '../assets/novaPochta.png',
+    style: 'imgNova',
   },
   {
-    name: "boxPage.deliveryTo.js",
-    check: "Justin",
-    img: "../assets/justin.png",
-    style: "imgUkr",
+    name: 'boxPage.deliveryTo.js',
+    check: 'Justin',
+    img: '../assets/justin.png',
+    style: 'imgUkr',
   },
   {
-    name: "boxPage.deliveryTo.ukr",
-    check: "UkrPochta",
-    img: "../assets/ukrPochta.png",
-    style: "imgUkr",
+    name: 'boxPage.deliveryTo.ukr',
+    check: 'UkrPochta',
+    img: '../assets/ukrPochta.png',
+    style: 'imgUkr',
   },
 ];
 
 export const arraySelectPiece: IOptionsList[] = [
-  { name: "1 шт", key: "1" },
-  { name: "2 шт", key: "2" },
-  { name: "3 шт ", key: "3" },
-  { name: "4 шт ", key: "4" },
-  { name: "5 шт ", key: "5" },
-  { name: "6 шт ", key: "6" },
-  { name: "7 шт ", key: "7" },
-  { name: "8 шт ", key: "8" },
-  { name: "9 шт ", key: "9" },
-  { name: "10 шт ", key: "10" },
+  { name: '1 шт', key: '1' },
+  { name: '2 шт', key: '2' },
+  { name: '3 шт ', key: '3' },
+  { name: '4 шт ', key: '4' },
+  { name: '5 шт ', key: '5' },
+  { name: '6 шт ', key: '6' },
+  { name: '7 шт ', key: '7' },
+  { name: '8 шт ', key: '8' },
+  { name: '9 шт ', key: '9' },
+  { name: '10 шт ', key: '10' },
 ];
 
 export const arraySelectGram: IOptionsList[] = [
-  { name: `100 гр`, key: "1" },
-  { name: `200 гр`, key: "2" },
-  { name: `300 гр`, key: "3" },
-  { name: `500 гр`, key: "5" },
-  { name: `1 кг`, key: "10" },
-  { name: `3 кг`, key: "40" },
-  { name: `5 кг`, key: "50" },
+  { name: `100 гр`, key: '1' },
+  { name: `200 гр`, key: '2' },
+  { name: `300 гр`, key: '3' },
+  { name: `500 гр`, key: '5' },
+  { name: `1 кг`, key: '10' },
+  { name: `3 кг`, key: '40' },
+  { name: `5 кг`, key: '50' },
 ];
 
 export const arrayCategory: IOptionsList[] = [
-  { name: "Категорія", key: "category" },
-  { name: "Сосиски,сардельки", key: "sosyska" },
-  { name: "Ковбаси варені", key: "varena" },
-  { name: "Ковбасні вироби", key: "vuribKovbas" },
-  { name: "Напівфабрикати", key: "semiFinished" },
-  { name: "Продукція чпк", key: "chpk" },
-  { name: "Вироби з курятини", key: "chicken" },
-  { name: "Вироби зі свинини", key: "pork" },
-  { name: "Сирокопчені ковбаси", key: "rawSmoked" },
+  { name: 'Категорія', key: 'category' },
+  { name: 'Сосиски,сардельки', key: 'sosyska' },
+  { name: 'Ковбаси варені', key: 'varena' },
+  { name: 'Ковбасні вироби', key: 'vuribKovbas' },
+  { name: 'Напівфабрикати', key: 'semiFinished' },
+  { name: 'Продукція чпк', key: 'chpk' },
+  { name: 'Вироби з курятини', key: 'chicken' },
+  { name: 'Вироби зі свинини', key: 'pork' },
+  { name: 'Сирокопчені ковбаси', key: 'rawSmoked' },
 ];
 
 export interface ICard {
@@ -149,24 +149,24 @@ export interface ICard {
 }
 
 export const navigationMiddleBottom: IRoutes[] = [
-  { name: "home", path: "/" },
-  { name: "product", path: "/cataloge" },
-  { name: "production", path: "/production" },
-  { name: "basket", path: "/box" },
+  { name: 'home', path: '/' },
+  { name: 'product', path: '/cataloge' },
+  { name: 'production', path: '/production' },
+  { name: 'basket', path: '/box' },
 ];
 
 export const basicWords = [
-  { title: "home", key: "/" },
-  { title: "product", key: "/cataloge" },
-  { title: "productionFooter", key: "/production" },
+  { title: 'home', key: '/' },
+  { title: 'product', key: '/cataloge' },
+  { title: 'productionFooter', key: '/production' },
 ];
 
-export const button = { key: "cataloge" };
+export const button = { key: 'cataloge' };
 
 export const arrayCard: ICard[] = [
   {
-    id: "9ca8bad4-e31a-4ac9-b28e-97d92893f7d3",
-    name: "Ковбаса напівкопчена «Салямі Київська»",
+    id: '9ca8bad4-e31a-4ac9-b28e-97d92893f7d3',
+    name: 'Ковбаса напівкопчена «Салямі Київська»',
     description: (
       <div>
         Склад: яловичина знежилована 1 сорту, свинина знежилована напівжирна,
@@ -188,17 +188,17 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 147.97,
-    purchaseType: "1kg",
-    category: "rawSmoked",
+    purchaseType: '1kg',
+    category: 'rawSmoked',
     hot: false,
-    imgUrl: ["../assets/salamyKievski_0156.JPG"],
+    imgUrl: ['../assets/salamyKievski_0156.JPG'],
     shortDesc:
-      "Термін  придатності за температури від -7 ℃ до -9 ℃ не більше 3-х місяців Термін  придатності ковбас, запакованих під вакуумом або в модифікованому газовому середовищі в плівку цілими батонами, за температури, не вищої за 6 ℃, не більше 25 діб.",
+      'Термін  придатності за температури від -7 ℃ до -9 ℃ не більше 3-х місяців Термін  придатності ковбас, запакованих під вакуумом або в модифікованому газовому середовищі в плівку цілими батонами, за температури, не вищої за 6 ℃, не більше 25 діб.',
   },
 
   {
-    id: "9ca8bad4-e31a-4ac9-b28e-94d92893f7d3",
-    name: "Сардельки «Докторські»",
+    id: '9ca8bad4-e31a-4ac9-b28e-94d92893f7d3',
+    name: 'Сардельки «Докторські»',
     description: (
       <div>
         Склад: яловичина знежилована 1сорту, свинина знежилована напівжирна,
@@ -219,16 +219,16 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 150.31,
-    purchaseType: "1kg",
-    category: "anchovies",
+    purchaseType: '1kg',
+    category: 'sosyska',
     hot: false,
-    imgUrl: ["../assets/sardelkiMalyatko_0159.JPG"],
+    imgUrl: ['../assets/sardelkiMalyatko_0159.JPG'],
     shortDesc:
-      "Термін  придатності сардельок запакованих під вакуумом, або в модифікованому газовому середовищі в термозсідальні газонепроникні полімерні матеріали за температури від 0 ℃ до 6 ℃ не більше 20 діб.",
+      'Термін  придатності сардельок запакованих під вакуумом, або в модифікованому газовому середовищі в термозсідальні газонепроникні полімерні матеріали за температури від 0 ℃ до 6 ℃ не більше 20 діб.',
   },
   {
-    id: "9cb8bad4-e53a-5po9-w28e-94d92893f7d3",
-    name: "Сардельки з сиром",
+    id: '9cb8bad4-e53a-5po9-w28e-94d92893f7d3',
+    name: 'Сардельки з сиром',
     description: (
       <div>
         Склад: свинина знежилована напівжирна; м'ясо птиці; сир
@@ -249,16 +249,16 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 153.89,
-    purchaseType: "1kg",
-    category: "anchovies",
+    purchaseType: '1kg',
+    category: 'sosyska',
     hot: false,
-    imgUrl: ["../assets/sardelka_with_cheese0308.JPG"],
+    imgUrl: ['../assets/sardelka_with_cheese0308.JPG'],
     shortDesc:
-      "Термін придатності сардельок запакованих під вакуумом, або в модифікованому газовому середовищі в термозсідальні газонепроникні полімерні матеріали за температури від 0 ℃ до 6 ℃ не більше 20 діб.",
+      'Термін придатності сардельок запакованих під вакуумом, або в модифікованому газовому середовищі в термозсідальні газонепроникні полімерні матеріали за температури від 0 ℃ до 6 ℃ не більше 20 діб.',
   },
   {
-    id: "9cb8bad4-e31a-4jj9-q28e-94d92893f7d3",
-    name: "Сосиски варені «Ніжні»",
+    id: '9cb8bad4-e31a-4jj9-q28e-94d92893f7d3',
+    name: 'Сосиски варені «Ніжні»',
     description: (
       <div>
         Склад: яловичина знежилована вс; яловичина знежилована 1с; свинина
@@ -279,16 +279,16 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 93.29,
-    purchaseType: "1kg",
-    category: "sausage",
+    purchaseType: '1kg',
+    category: 'sosyska',
     hot: false,
-    imgUrl: ["../assets/nizhni_9991.JPG"],
+    imgUrl: ['../assets/nizhni_9991.JPG'],
     shortDesc:
-      "Термін придатності сардельок запакованих під вакуумом, або в модифікованому газовому середовищі в термозсідальні газонепроникні полімерні  матеріали за температури від 0 ℃ до 6 ℃ не більше 20 діб",
+      'Термін придатності сардельок запакованих під вакуумом, або в модифікованому газовому середовищі в термозсідальні газонепроникні полімерні  матеріали за температури від 0 ℃ до 6 ℃ не більше 20 діб',
   },
   {
-    id: "9cb8bad4-e41a-4nb7-b28e-94d92893f7d3",
-    name: "Сосиски варені з сиром",
+    id: '9cb8bad4-e41a-4nb7-b28e-94d92893f7d3',
+    name: 'Сосиски варені з сиром',
     description: (
       <div>
         Склад: яловичина знежилована 1с; свинина знежилована напівжирна; сир
@@ -309,16 +309,16 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 120.74,
-    purchaseType: "1kg",
-    category: "sausage",
+    purchaseType: '1kg',
+    category: 'sosyska',
     hot: false,
-    imgUrl: ["../assets/sausageMini_0163.JPG"],
+    imgUrl: ['../assets/sausageMini_0163.JPG'],
     shortDesc:
-      "Термін придатності сардельок запакованих під вакуумом, або в модифікованому газовому середовищі в термозсідальні газонепроникні полімерні  матеріали за температури від 0 ℃ до 6 ℃ не більше 15 діб. ",
+      'Термін придатності сардельок запакованих під вакуумом, або в модифікованому газовому середовищі в термозсідальні газонепроникні полімерні  матеріали за температури від 0 ℃ до 6 ℃ не більше 15 діб. ',
   },
   {
-    id: "9nb8ddd3-e41a-4nb7-b28e-94y91873g5d3",
-    name: "Сосиски «Молочні»",
+    id: '9nb8ddd3-e41a-4nb7-b28e-94y91873g5d3',
+    name: 'Сосиски «Молочні»',
     description: (
       <div>
         Склад: яловичина знежилована 1с; свинина знежилована жирна; молоко
@@ -338,16 +338,16 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 157.2,
-    purchaseType: "1kg",
-    category: "sausage",
+    purchaseType: '1kg',
+    category: 'chpk',
     hot: false,
-    imgUrl: ["../assets/sausage_milk_9992.JPG"],
+    imgUrl: ['../assets/sausage_milk_9992.JPG'],
     shortDesc:
-      "Термін  придатності сардельок запакованих під вакуумом, або в модифікованому газовому середовищі в термозсідальні газонепроникні полімерні  матеріали за температури від 0 ℃ до 6 ℃ не більше 12 діб. ",
+      'Термін  придатності сардельок запакованих під вакуумом, або в модифікованому газовому середовищі в термозсідальні газонепроникні полімерні  матеріали за температури від 0 ℃ до 6 ℃ не більше 12 діб. ',
   },
   {
-    id: "9cb8bbd3-e41b-4nb7-b48a-94d51873g7d3",
-    name: "Сосиски варені «Шкільні»",
+    id: '9cb8bbd3-e41b-4nb7-b48a-94d51873g7d3',
+    name: 'Сосиски варені «Шкільні»',
     description: (
       <div>
         Склад: яловичина знежилована вс; свинина знежилована напівжирна; молоко
@@ -368,20 +368,20 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 181.82,
-    purchaseType: "1kg",
-    category: "anchovies",
+    purchaseType: '1kg',
+    category: 'sosyska',
     hot: false,
     imgUrl: [
-      "../assets/sausage_school2_0295.JPG",
-      "../assets/sausage_school_0262.JPG",
+      '../assets/sausage_school2_0295.JPG',
+      '../assets/sausage_school_0262.JPG',
     ],
     shortDesc:
-      "Термін  придатності сардельок запакованих під вакуумом, або в модифікованому газовому середовищі в термозсідальні газонепроникні полімерні  матеріали за температури від 0 ℃ до 6 ℃ не більше 12 діб. ",
+      'Термін  придатності сардельок запакованих під вакуумом, або в модифікованому газовому середовищі в термозсідальні газонепроникні полімерні  матеріали за температури від 0 ℃ до 6 ℃ не більше 12 діб. ',
   },
 
   {
-    id: "9cb8bbd3-e41b-5bv1-b48a-94d51873g5d5",
-    name: "Сосиски ЧПК «Шкільні»",
+    id: '9cb8bbd3-e41b-5bv1-b48a-94d51873g5d5',
+    name: 'Сосиски ЧПК «Шкільні»',
     description: (
       <div>
         Склад: яловичина знежилована вс; свинина знежилована напівжирна; молоко
@@ -402,17 +402,17 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 158.77,
-    purchaseType: "1kg",
-    category: "anchovies",
+    purchaseType: '1kg',
+    category: 'chpk',
     hot: false,
-    imgUrl: ["../assets/school_CHPK_0292.JPG"],
+    imgUrl: ['../assets/school_CHPK_0292.JPG'],
     shortDesc:
-      "Термін  придатності сардельок запакованих під вакуумом, або в модифікованому газовому середовищі в термозсідальні газонепроникні полімерні  матеріали за температури від 0 ℃ до 6 ℃ не більше 12 діб. ",
+      'Термін  придатності сардельок запакованих під вакуумом, або в модифікованому газовому середовищі в термозсідальні газонепроникні полімерні  матеріали за температури від 0 ℃ до 6 ℃ не більше 12 діб. ',
   },
 
   {
-    id: "9cb8bbd3-e45b-4fb7-k46k-94k53843g7k3",
-    name: "Ковбаски «Мисливські»",
+    id: '9cb8bbd3-e45b-4fb7-k46k-94k53843g7k3',
+    name: 'Ковбаски «Мисливські»',
     description: (
       <div>
         Склад: яловичина знежилована 1 с; свинина знежилована нежирна; свинина
@@ -433,16 +433,16 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 265.05,
-    purchaseType: "1kg",
-    category: "sausage",
+    purchaseType: '1kg',
+    category: 'sausage',
     hot: false,
-    imgUrl: ["../assets/mislivski_kovbasky_0312.JPG"],
+    imgUrl: ['../assets/mislivski_kovbasky_0312.JPG'],
     shortDesc:
-      "Термін  придатності ковбасок запакованих під вакуумом, або в модифікованому газовому середовищі в термозсідальні газонепроникні полімерні  матеріали за температури від 0 ℃ до 6 ℃ не більше 25 діб. ",
+      'Термін  придатності ковбасок запакованих під вакуумом, або в модифікованому газовому середовищі в термозсідальні газонепроникні полімерні  матеріали за температури від 0 ℃ до 6 ℃ не більше 25 діб. ',
   },
   {
-    id: "9ca7bbc3-r45b-4fb7-r47a-94n53543g3d3",
-    name: "Крило куряче варено-копчене три фаланги",
+    id: '9ca7bbc3-r45b-4fb7-r47a-94n53543g3d3',
+    name: 'Крило куряче варено-копчене три фаланги',
     description: (
       <div>
         Склад: крило куряче.Інгредієнти: сіль кухонна харчова; регулятор кольору
@@ -461,16 +461,16 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 174.75,
-    purchaseType: "1kg",
-    category: "sausage",
+    purchaseType: '1kg',
+    category: 'sausage',
     hot: false,
-    imgUrl: ["../assets/krylo_0300.JPG"],
+    imgUrl: ['../assets/krylo_0300.JPG'],
     shortDesc:
-      "Термін  придатності продукту  запакованого під вакуумом, або в модифікованому газовому середовищі в термозсідальні газонепроникні полімерні  матеріали за температури від 0 ℃ до 6 ℃ не більше 17 діб. ",
+      'Термін  придатності продукту  запакованого під вакуумом, або в модифікованому газовому середовищі в термозсідальні газонепроникні полімерні  матеріали за температури від 0 ℃ до 6 ℃ не більше 17 діб. ',
   },
   {
-    id: "9ca7bvc3-r44m-5tb8-m45h-94j53543g3d3",
-    name: "Гомілка куряча варено-копчена",
+    id: '9ca7bvc3-r44m-5tb8-m45h-94j53543g3d3',
+    name: 'Гомілка куряча варено-копчена',
     description: (
       <div>
         Склад: гомілка курячаІнгредієнти: сіль кухонна харчова; регулятор
@@ -489,16 +489,16 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 166.11,
-    purchaseType: "1kg",
-    category: "sausage",
+    purchaseType: '1kg',
+    category: 'sausage',
     hot: false,
-    imgUrl: ["../assets/homilka_kyrka0304.JPG"],
+    imgUrl: ['../assets/homilka_kyrka0304.JPG'],
     shortDesc:
-      "Термін  придатності продукту  запакованого під вакуумом, або в модифікованому газовому середовищі в термозсідальні газонепроникні полімерні  матеріали за температури від 0 ℃ до 6 ℃ не більше 17 діб. ",
+      'Термін  придатності продукту  запакованого під вакуумом, або в модифікованому газовому середовищі в термозсідальні газонепроникні полімерні  матеріали за температури від 0 ℃ до 6 ℃ не більше 17 діб. ',
   },
   {
-    id: "9ca4bbn3-r45b-4lb4-m75j-95n53543g3d3",
-    name: "Ковбаски «Дачні» напівкопчені",
+    id: '9ca4bbn3-r45b-4lb4-m75j-95n53543g3d3',
+    name: 'Ковбаски «Дачні» напівкопчені',
     description: (
       <div>
         Склад: свинина знежилована напівжирна; м'ясо птиці; філе птиці; сало
@@ -520,16 +520,16 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 134.42,
-    purchaseType: "1kg",
-    category: "sausage",
+    purchaseType: '1kg',
+    category: 'sausage',
     hot: false,
-    imgUrl: ["../assets/dachni.JPG"],
+    imgUrl: ['../assets/dachni.JPG'],
     shortDesc:
-      "Термін  придатності продукту  запакованого під вакуумом, або в модифікованому газовому середовищі в термозсідальні газонепроникні полімерні  матеріали за температури від 0 ℃ до 6 ℃ не більше 17 діб. ",
+      'Термін  придатності продукту  запакованого під вакуумом, або в модифікованому газовому середовищі в термозсідальні газонепроникні полімерні  матеріали за температури від 0 ℃ до 6 ℃ не більше 17 діб. ',
   },
   {
-    id: "9ca7bbn3-r45b-4lb7-m45s-94n63543m3d3",
-    name: "Ковбаски «Шашличні» ",
+    id: '9ca7bbn3-r45b-4lb7-m45s-94n63543m3d3',
+    name: 'Ковбаски «Шашличні» ',
     description: (
       <div>
         Склад: свинина знежилована напівжирна; яловичина знежилована 1с; м'ясо
@@ -551,12 +551,12 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 124.84,
-    purchaseType: "1kg",
-    category: "sausage",
+    purchaseType: '1kg',
+    category: 'sausage',
     hot: false,
-    imgUrl: ["../assets/kovbaska_shashlichna_0310.JPG"],
+    imgUrl: ['../assets/kovbaska_shashlichna_0310.JPG'],
     shortDesc:
-      "Термін  придатності продукту  запакованого під вакуумом, або в модифікованому газовому середовищі в термозсідальні газонепроникні полімерні  матеріали за температури від 0 ℃ до 6 ℃ не більше 25 діб. ",
+      'Термін  придатності продукту  запакованого під вакуумом, або в модифікованому газовому середовищі в термозсідальні газонепроникні полімерні  матеріали за температури від 0 ℃ до 6 ℃ не більше 25 діб. ',
   },
   // {
   //   id: "9ca7bbn3-r45x-4lc7-m45s-94n63743h3d3",
@@ -612,15 +612,15 @@ export const arrayCard: ICard[] = [
   //   ),
   //   price: 128.62,
   //   purchaseType: "1kg",
-  //   category: "sausage",
+  //   category: "sosyska",
   //   hot: false,
   //   imgUrl: ["../assets/shpikachka.jpg"],
   //   shortDesc:
   //     "Термін  придатності сардельок запакованих під вакуумом, або в модифікованому газовому середовищі в термозсідальні газонепроникні полімерні  матеріали за температури від 0 ℃ до 6 ℃ не більше 20 діб.",
   // },
   {
-    id: "9pf7tsg9-r85j-43c0-m45d-03n63543c3d3",
-    name: "Сосиски з скоринкою",
+    id: '9pf7tsg9-r85j-43c0-m45d-03n63543c3d3',
+    name: 'Сосиски з скоринкою',
     description: (
       <div>
         Склад: яловичина знежилована вс; свинина знежилована нежирна; свинина
@@ -641,19 +641,19 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 176.52,
-    purchaseType: "1kg",
-    category: "sausage",
+    purchaseType: '1kg',
+    category: 'sosyska',
     hot: false,
     imgUrl: [
-      "../assets/sausageWithSkorinka_0009.JPG",
-      "../assets/sausageWithSkorinka2_0261.JPG",
+      '../assets/sausageWithSkorinka_0009.JPG',
+      '../assets/sausageWithSkorinka2_0261.JPG',
     ],
     shortDesc:
-      "Термін  придатності продукту  запакованого під вакуумом, або в модифікованому газовому середовищі в термозсідальні газонепроникні полімерні  матеріали за температури від 0 ℃ до 6 ℃ не більше 25 діб. ",
+      'Термін  придатності продукту  запакованого під вакуумом, або в модифікованому газовому середовищі в термозсідальні газонепроникні полімерні  матеріали за температури від 0 ℃ до 6 ℃ не більше 25 діб. ',
   },
   {
-    id: "9pn7tbg9-r85y-45c0-m45d-03n63543c3d3",
-    name: "Ковбаса «Елітна» напівкопчена",
+    id: '9pn7tbg9-r85y-45c0-m45d-03n63543c3d3',
+    name: 'Ковбаса «Елітна» напівкопчена',
     description: (
       <div>
         Склад: яловичина знежилована вс; свинина знежилована нежирна; свинина
@@ -674,12 +674,12 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 194.17,
-    purchaseType: "1kg",
-    category: "sausage",
+    purchaseType: '1kg',
+    category: 'sausage',
     hot: false,
-    imgUrl: ["../assets/kovbasa_elitna0307.JPG"],
+    imgUrl: ['../assets/kovbasa_elitna0307.JPG'],
     shortDesc:
-      "Термін  придатності продукту  запакованого під вакуумом, або в модифікованому газовому середовищі в термозсідальні газонепроникні полімерні  матеріали за температури від 0 ℃ до 6 ℃ не більше 25 діб. ",
+      'Термін  придатності продукту  запакованого під вакуумом, або в модифікованому газовому середовищі в термозсідальні газонепроникні полімерні  матеріали за температури від 0 ℃ до 6 ℃ не більше 25 діб. ',
   },
   // {
   //   id: "9pn7tbg9-r85f-45c0-m67d-23d63543c3d3",
@@ -713,8 +713,8 @@ export const arrayCard: ICard[] = [
   //     "Термін  придатності продукту  запакованого під вакуумом, або в модифікованому газовому середовищі в термозсідальні газонепроникні полімерні  матеріали за температури від 0 ℃ до 6 ℃ не більше 25 діб. ",
   // },
   {
-    id: "9pn7tbg3-r85f-45c0-m67d-23s63233c3d3",
-    name: "Ковбаски «Сирні палички» напівкопчені",
+    id: '9pn7tbg3-r85f-45c0-m67d-23s63233c3d3',
+    name: 'Ковбаски «Сирні палички» напівкопчені',
     description: (
       <div>
         Склад: яловичина знежилована 1с; свинина знежилована напівжирна; м'ясо
@@ -736,16 +736,16 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 154.75,
-    purchaseType: "1kg",
-    category: "sausage",
+    purchaseType: '1kg',
+    category: 'sausage',
     hot: false,
-    imgUrl: ["../assets/syrny_palichki_0313.JPG"],
+    imgUrl: ['../assets/syrny_palichki_0313.JPG'],
     shortDesc:
-      "Термін  придатності продукту  запакованого під вакуумом, або в модифікованому газовому середовищі в термозсідальні газонепроникні полімерні  матеріали за температури від 0 ℃ до 6 ℃ не більше 25 діб.",
+      'Термін  придатності продукту  запакованого під вакуумом, або в модифікованому газовому середовищі в термозсідальні газонепроникні полімерні  матеріали за температури від 0 ℃ до 6 ℃ не більше 25 діб.',
   },
   {
-    id: "9pn7gbg3-r85f-35c2-m67d-23s65233c3d3",
-    name: "Ковбаски «Французькі» сирокопчені",
+    id: '9pn7gbg3-r85f-35c2-m67d-23s65233c3d3',
+    name: 'Ковбаски «Французькі» сирокопчені',
     description: (
       <div>
         Склад: яловичина знежилована вс; філе птиці; шпик хребтовий.Інгредієнти:
@@ -765,19 +765,19 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 355.87,
-    purchaseType: "1kg",
-    category: "sausage",
+    purchaseType: '1kg',
+    category: 'sausage',
     hot: false,
     imgUrl: [
-      "../assets/kovbaskyFranc_0014.JPG",
-      "../assets/zelc_kovbaskyFranc_rylet.JPG",
+      '../assets/kovbaskyFranc_0014.JPG',
+      '../assets/zelc_kovbaskyFranc_rylet.JPG',
     ],
     shortDesc:
-      "Термін придатності за температури від -2 ℃ до -4 ℃ не більше 6-и  місяців, за температури від -7 ℃ до -9 ℃ не більше 9-и  місяців",
+      'Термін придатності за температури від -2 ℃ до -4 ℃ не більше 6-и  місяців, за температури від -7 ℃ до -9 ℃ не більше 9-и  місяців',
   },
   {
-    id: "3pg5gmg3-r85f-35c2-m67d-23s65233c3d3",
-    name: "Зельц «Язиковий»",
+    id: '3pg5gmg3-r85f-35c2-m67d-23s65233c3d3',
+    name: 'Зельц «Язиковий»',
     description: (
       <div>
         Склад: яловичина знежилована вс; філе птиці; шпик хребтовий.Інгредієнти:
@@ -797,19 +797,19 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 323.52,
-    purchaseType: "1kg",
-    category: "sausage",
+    purchaseType: '1kg',
+    category: 'sausage',
     hot: false,
     imgUrl: [
-      "../assets/zelc_0017.JPG",
-      "../assets/zelc_kovbaskyFranc_rylet.JPG",
+      '../assets/zelc_0017.JPG',
+      '../assets/zelc_kovbaskyFranc_rylet.JPG',
     ],
     shortDesc:
-      "Термін придатності за температури від -2 ℃ до -4 ℃ не більше 6-и  місяців, за температури від -7 ℃ до -9 ℃ не більше 9-и  місяців",
+      'Термін придатності за температури від -2 ℃ до -4 ℃ не більше 6-и  місяців, за температури від -7 ℃ до -9 ℃ не більше 9-и  місяців',
   },
   {
-    id: "3pg5gmg4-r85g-35c1-m67s-23s67233c3d3",
-    name: "Сенатор",
+    id: '3pg5gmg4-r85g-35c1-m67s-23s67233c3d3',
+    name: 'Сенатор',
     description: (
       <div>
         Склад: яловичина знежилована вс; філе птиці; шпик хребтовий.Інгредієнти:
@@ -829,21 +829,21 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 280.8,
-    purchaseType: "1kg",
-    category: "sausage",
+    purchaseType: '1kg',
+    category: 'sausage',
     hot: false,
     imgUrl: [
-      "../assets/senator_0018.JPG",
-      "../assets/senator2_0147.JPG",
-      "../assets/tsarsky_senator_venecia2_0141.JPG",
-      "../assets/tsarsky_senator_venecia0138.JPG",
+      '../assets/senator_0018.JPG',
+      '../assets/senator2_0147.JPG',
+      '../assets/tsarsky_senator_venecia2_0141.JPG',
+      '../assets/tsarsky_senator_venecia0138.JPG',
     ],
     shortDesc:
-      "Термін придатності за температури від -2 ℃ до -4 ℃ не більше 6-и  місяців, за температури від -7 ℃ до -9 ℃ не більше 9-и  місяців",
+      'Термін придатності за температури від -2 ℃ до -4 ℃ не більше 6-и  місяців, за температури від -7 ℃ до -9 ℃ не більше 9-и  місяців',
   },
   {
-    id: "3pg5gmg3-r71g-15c1-m67s-13s63233c3c3",
-    name: "Українська",
+    id: '3pg5gmg3-r71g-15c1-m67s-13s63233c3c3',
+    name: 'Українська',
     description: (
       <div>
         Склад: яловичина знежилована вс; філе птиці; шпик хребтовий.Інгредієнти:
@@ -863,21 +863,21 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 323.52,
-    purchaseType: "1kg",
-    category: "sausage",
+    purchaseType: '1kg',
+    category: 'sausage',
     hot: false,
     imgUrl: [
-      "../assets/ukrainian.JPG",
-      "../assets/ua2_0132.JPG",
-      "../assets/ua3_9984.JPG",
+      '../assets/ukrainian.JPG',
+      '../assets/ua2_0132.JPG',
+      '../assets/ua3_9984.JPG',
     ],
     shortDesc:
-      "Термін придатності за температури від -2 ℃ до -4 ℃ не більше 6-и  місяців, за температури від -7 ℃ до -9 ℃ не більше 9-и  місяців",
+      'Термін придатності за температури від -2 ℃ до -4 ℃ не більше 6-и  місяців, за температури від -7 ℃ до -9 ℃ не більше 9-и  місяців',
   },
 
   {
-    id: "3pg3gmg7-r71g-91c1-m55s-13s63233c3c3",
-    name: "Ковбаса варена «Любительська»",
+    id: '3pg3gmg7-r71g-91c1-m55s-13s63233c3c3',
+    name: 'Ковбаса варена «Любительська»',
     description: (
       <div>
         Склад: яловичина знежилована вс; філе птиці; шпик хребтовий.Інгредієнти:
@@ -897,22 +897,22 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 168.55,
-    purchaseType: "1kg",
-    category: "sausage",
+    purchaseType: '1kg',
+    category: 'sausage',
     hot: false,
     imgUrl: [
-      "../assets/ua.JPG",
-      "../assets/ua2_0132.JPG",
-      "../assets/ua3_9984.JPG",
-      "../assets/tsarsky_senator_venecia0138.JPG",
+      '../assets/ua.JPG',
+      '../assets/ua2_0132.JPG',
+      '../assets/ua3_9984.JPG',
+      '../assets/tsarsky_senator_venecia0138.JPG',
     ],
     shortDesc:
-      "Термін придатності за температури від -2 ℃ до -4 ℃ не більше 6-и  місяців, за температури від -7 ℃ до -9 ℃ не більше 9-и  місяців",
+      'Термін придатності за температури від -2 ℃ до -4 ℃ не більше 6-и  місяців, за температури від -7 ℃ до -9 ℃ не більше 9-и  місяців',
   },
 
   {
-    id: "3pg5gmg3-r31g-15c5-g65s-13s62233c3c3",
-    name: "Лікарська",
+    id: '3pg5gmg3-r31g-15c5-g65s-13s62233c3c3',
+    name: 'Лікарська',
     description: (
       <div>
         Склад: яловичина знежилована вс; філе птиці; шпик хребтовий.Інгредієнти:
@@ -932,21 +932,21 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 183.83,
-    purchaseType: "1kg",
-    category: "sausage",
+    purchaseType: '1kg',
+    category: 'sausage',
     hot: false,
     imgUrl: [
-      "../assets/likarska_0139.JPG",
-      "../assets/likarska2_0143.JPG",
-      "../assets/likarska3_144.JPG",
-      "../assets/likarska4_0160.JPG",
+      '../assets/likarska_0139.JPG',
+      '../assets/likarska2_0143.JPG',
+      '../assets/likarska3_144.JPG',
+      '../assets/likarska4_0160.JPG',
     ],
     shortDesc:
-      "Термін придатності за температури від -2 ℃ до -4 ℃ не більше 6-и  місяців, за температури від -7 ℃ до -9 ℃ не більше 9-и  місяців",
+      'Термін придатності за температури від -2 ℃ до -4 ℃ не більше 6-и  місяців, за температури від -7 ℃ до -9 ℃ не більше 9-и  місяців',
   },
   {
-    id: "6pg1gmg2-r51g-45c5-h65s-37s62233c3c2",
-    name: "Ковбаса лікарська",
+    id: '6pg1gmg2-r51g-45c5-h65s-37s62233c3c2',
+    name: 'Ковбаса лікарська',
     description: (
       <div>
         Склад: яловичина знежилована вс; філе птиці; шпик хребтовий.Інгредієнти:
@@ -966,16 +966,16 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 323.52,
-    purchaseType: "1kg",
-    category: "sausage",
+    purchaseType: '1kg',
+    category: 'sausage',
     hot: false,
-    imgUrl: ["../assets/likarska_smakovynka0259.JPG"],
+    imgUrl: ['../assets/likarska_smakovynka0259.JPG'],
     shortDesc:
-      "Термін придатності за температури від -2 ℃ до -4 ℃ не більше 6-и  місяців, за температури від -7 ℃ до -9 ℃ не більше 9-и  місяців",
+      'Термін придатності за температури від -2 ℃ до -4 ℃ не більше 6-и  місяців, за температури від -7 ℃ до -9 ℃ не більше 9-и  місяців',
   },
   {
-    id: "9pn7gbg3-r83f-35d2-m87d-23s65233c3d3",
-    name: "Ковбаса «Імператорська» вс сирокопчена",
+    id: '9pn7gbg3-r83f-35d2-m87d-23s65233c3d3',
+    name: 'Ковбаса «Імператорська» вс сирокопчена',
     description: (
       <div>
         Склад: яловичина знежилована 1с; свинина знежилована нежирна; шпик
@@ -998,16 +998,16 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 390.0,
-    purchaseType: "1kg",
-    category: "sausage",
+    purchaseType: '1kg',
+    category: 'sausage',
     hot: false,
-    imgUrl: ["../assets/imperatorska.jpg"],
+    imgUrl: ['../assets/imperatorska.jpg'],
     shortDesc:
-      "Термін придатності за температури від -2 ℃ до -4 ℃ не більше 6-и  місяців, за температури від -7 ℃ до -9 ℃ не більше 9-и  місяців",
+      'Термін придатності за температури від -2 ℃ до -4 ℃ не більше 6-и  місяців, за температури від -7 ℃ до -9 ℃ не більше 9-и  місяців',
   },
   {
-    id: "9pn7gbg3-f82f-35t2-m87d-43s65233c3d3",
-    name: "Ковбаса «Губернаторська» сирокопчена",
+    id: '9pn7gbg3-f82f-35t2-m87d-43s65233c3d3',
+    name: 'Ковбаса «Губернаторська» сирокопчена',
     description: (
       <div>
         Склад: свинина знежилована нежирна; свинина знежилована напівжирна.
@@ -1029,16 +1029,16 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 402.0,
-    purchaseType: "1kg",
-    category: "sausage",
+    purchaseType: '1kg',
+    category: 'sausage',
     hot: false,
-    imgUrl: ["../assets/gubernatorska.jpg"],
+    imgUrl: ['../assets/gubernatorska.jpg'],
     shortDesc:
-      "Термін  придатності за температури до 150 С, та відносній вологості від 75%  до 78%, 4 місяці, за температури від -2 ℃ до -4 ℃ не більше 6-и  місяців, за температури від -7 ℃ до -9 ℃ не більше 9-и  місяців",
+      'Термін  придатності за температури до 150 С, та відносній вологості від 75%  до 78%, 4 місяці, за температури від -2 ℃ до -4 ℃ не більше 6-и  місяців, за температури від -7 ℃ до -9 ℃ не більше 9-и  місяців',
   },
   {
-    id: "9pn7gbg2-f82f-31t2-m87d-45s65233c3d4",
-    name: "Ковбаса салямі «Віденська» напівкопчена",
+    id: '9pn7gbg2-f82f-31t2-m87d-45s65233c3d4',
+    name: 'Ковбаса салямі «Віденська» напівкопчена',
     description: (
       <div>
         Склад: яловичина знежилована 1 сорту; свинина знежилована напівжирна;
@@ -1059,12 +1059,12 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 131.24,
-    purchaseType: "1kg",
-    category: "sausage",
+    purchaseType: '1kg',
+    category: 'chpk',
     hot: false,
-    imgUrl: ["../assets/videnska_9993.JPG"],
+    imgUrl: ['../assets/videnska_9993.JPG'],
     shortDesc:
-      "Термін  придатності ковбас, запакованих під вакуумом або в модифікованому газовому середовищі в плівку цілими батонами, за температури, не вищої за 6 ℃, не більше 25 діб.",
+      'Термін  придатності ковбас, запакованих під вакуумом або в модифікованому газовому середовищі в плівку цілими батонами, за температури, не вищої за 6 ℃, не більше 25 діб.',
   },
   // {
   //   id: "9pn4gbh2-f82f-31t2-d37d-45s65213c3d4",
@@ -1096,8 +1096,8 @@ export const arrayCard: ICard[] = [
   //     "Термін  придатності ковбас, запакованих під вакуумом або в модифікованому газовому середовищі в плівку цілими батонами, за температури  не вищої за 6 ℃, не більше 25 діб.",
   // },
   {
-    id: "9kk4gbh2-f82f-31t2-d37d-25s75213c3d3",
-    name: "Буженина «ПО УКРАЇНСЬКІ»",
+    id: '9kk4gbh2-f82f-31t2-d37d-25s75213c3d3',
+    name: 'Буженина «ПО УКРАЇНСЬКІ»',
     description: (
       <div>
         Склад: свинина знежилована напівжирнаІнгредієнти: сіль кухонна харчова,
@@ -1117,16 +1117,16 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 185.87,
-    purchaseType: "1kg",
-    category: "sausage",
+    purchaseType: '1kg',
+    category: 'sausage',
     hot: false,
-    imgUrl: ["../assets/byzhenina_9995.JPG"],
+    imgUrl: ['../assets/byzhenina_9995.JPG'],
     shortDesc:
-      "Термін  придатності ковбас, запакованих під вакуумом або в модифікованому газовому середовищі в плівку цілими батонами, за температури  не вищої за 6 ℃, не більше 25 діб.",
+      'Термін  придатності ковбас, запакованих під вакуумом або в модифікованому газовому середовищі в плівку цілими батонами, за температури  не вищої за 6 ℃, не більше 25 діб.',
   },
   {
-    id: "4pn4gbh2-f87f-31t2-d37y-45s64233c3d4",
-    name: "Ковбаса «Краковецька»  напівкопчена",
+    id: '4pn4gbh2-f87f-31t2-d37y-45s64233c3d4',
+    name: 'Ковбаса «Краковецька»  напівкопчена',
     description: (
       <div>
         Склад: свинина знежилована напівжирнаІнгредієнти: сіль кухонна харчова,
@@ -1146,16 +1146,16 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 125.07,
-    purchaseType: "1kg",
-    category: "sausage",
+    purchaseType: '1kg',
+    category: 'sausage',
     hot: false,
-    imgUrl: ["../assets/krakovetska_0299.JPG"],
+    imgUrl: ['../assets/krakovetska_0299.JPG'],
     shortDesc:
-      "Термін  придатності ковбас, запакованих під вакуумом або в модифікованому газовому середовищі в плівку цілими батонами, за температури  не вищої за 6 ℃, не більше 25 діб.",
+      'Термін  придатності ковбас, запакованих під вакуумом або в модифікованому газовому середовищі в плівку цілими батонами, за температури  не вищої за 6 ℃, не більше 25 діб.',
   },
   {
-    id: "4pn4gbh2-f87f-31t2-d37y-45s64233c3d5",
-    name: "Сосиски варені «Міні»",
+    id: '4pn4gbh2-f87f-31t2-d37y-45s64233c3d5',
+    name: 'Сосиски варені «Міні»',
     description: (
       <div>
         Склад: яловичина знежилована вс; яловичина знежилована 1с; свинина
@@ -1177,15 +1177,15 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 170.85,
-    purchaseType: "1kg",
-    category: "sausage",
+    purchaseType: '1kg',
+    category: 'sosyska',
     hot: false,
-    imgUrl: ["../assets/sausageMini_0163.JPG"],
+    imgUrl: ['../assets/sausageMini_0163.JPG'],
     shortDesc:
-      "Термін  придатності сардельок запакованих під вакуумом, або в модифікованому газовому середовищі в термозсідальні газонепроникні полімерні  матеріали за температури від 0 ℃ до 6 ℃ не більше 20 діб. ",
+      'Термін  придатності сардельок запакованих під вакуумом, або в модифікованому газовому середовищі в термозсідальні газонепроникні полімерні  матеріали за температури від 0 ℃ до 6 ℃ не більше 20 діб. ',
   },
   {
-    id: "2gg4ggg2-f87f-31t2-d37y-45s64233c3d5",
+    id: '2gg4ggg2-f87f-31t2-d37y-45s64233c3d5',
     name: "Олів'є",
     description: (
       <div>
@@ -1208,16 +1208,16 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 87.55,
-    purchaseType: "1kg",
-    category: "sausage",
+    purchaseType: '1kg',
+    category: 'sausage',
     hot: false,
-    imgUrl: ["../assets/olivye_0301.JPG"],
+    imgUrl: ['../assets/olivye_0301.JPG'],
     shortDesc:
-      "Термін  придатності сардельок запакованих під вакуумом, або в модифікованому газовому середовищі в термозсідальні газонепроникні полімерні  матеріали за температури від 0 ℃ до 6 ℃ не більше 20 діб. ",
+      'Термін  придатності сардельок запакованих під вакуумом, або в модифікованому газовому середовищі в термозсідальні газонепроникні полімерні  матеріали за температури від 0 ℃ до 6 ℃ не більше 20 діб. ',
   },
 
   {
-    id: "2gg4ggg7-f55f-31h2-d37y-45s64233c3d5",
+    id: '2gg4ggg7-f55f-31h2-d37y-45s64233c3d5',
     name: "Олів'є 0,600 гр",
     description: (
       <div>
@@ -1240,16 +1240,16 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 87.55,
-    purchaseType: "0,600kg",
-    category: "sausage",
+    purchaseType: '0,600kg',
+    category: 'sausage',
     hot: false,
-    imgUrl: ["../assets/olivye_0301.JPG"],
+    imgUrl: ['../assets/olivye_0301.JPG'],
     shortDesc:
-      "Термін  придатності сардельок запакованих під вакуумом, або в модифікованому газовому середовищі в термозсідальні газонепроникні полімерні  матеріали за температури від 0 ℃ до 6 ℃ не більше 20 діб. ",
+      'Термін  придатності сардельок запакованих під вакуумом, або в модифікованому газовому середовищі в термозсідальні газонепроникні полімерні  матеріали за температури від 0 ℃ до 6 ℃ не більше 20 діб. ',
   },
   {
-    id: "4tf4gxh2-f97f-21t1-d37y-45s64233c3d5",
-    name: "Ковбаса любительска",
+    id: '4tf4gxh2-f97f-21t1-d37y-45s64233c3d5',
+    name: 'Ковбаса любительска',
     description: (
       <div>
         Склад: яловичина знежилована вс; яловичина знежилована 1с; свинина
@@ -1271,16 +1271,16 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 0.0,
-    purchaseType: "1kg",
-    category: "sausage",
+    purchaseType: '1kg',
+    category: 'sausage',
     hot: false,
-    imgUrl: ["../assets/kovbasa_lyubytelska_0296.JPG"],
+    imgUrl: ['../assets/kovbasa_lyubytelska_0296.JPG'],
     shortDesc:
-      "Термін  придатності сардельок запакованих під вакуумом, або в модифікованому газовому середовищі в термозсідальні газонепроникні полімерні  матеріали за температури від 0 ℃ до 6 ℃ не більше 20 діб. ",
+      'Термін  придатності сардельок запакованих під вакуумом, або в модифікованому газовому середовищі в термозсідальні газонепроникні полімерні  матеріали за температури від 0 ℃ до 6 ℃ не більше 20 діб. ',
   },
   {
-    id: "4pn4gbb2-f87d-33f2-d35y-25s63233c3d5",
-    name: "Щоковина свиняча",
+    id: '4pn4gbb2-f87d-33f2-d35y-25s63233c3d5',
+    name: 'Щоковина свиняча',
     description: (
       <div>
         Склад: яловичина знежилована вс; яловичина знежилована 1с; свинина
@@ -1302,16 +1302,16 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 154.4,
-    purchaseType: "1kg",
-    category: "sausage",
+    purchaseType: '1kg',
+    category: 'sausage',
     hot: false,
-    imgUrl: ["../assets/shchokovyna_0164.JPG"],
+    imgUrl: ['../assets/shchokovyna_0164.JPG'],
     shortDesc:
-      "Термін  придатності сардельок запакованих під вакуумом, або в модифікованому газовому середовищі в термозсідальні газонепроникні полімерні  матеріали за температури від 0 ℃ до 6 ℃ не більше 20 діб. ",
+      'Термін  придатності сардельок запакованих під вакуумом, або в модифікованому газовому середовищі в термозсідальні газонепроникні полімерні  матеріали за температури від 0 ℃ до 6 ℃ не більше 20 діб. ',
   },
   {
-    id: "4pn4gfh2-f85f-31t2-d27y-45s64233c3d3",
-    name: "Сардельки варені «Елітні»",
+    id: '4pn4gfh2-f85f-31t2-d27y-45s64233c3d3',
+    name: 'Сардельки варені «Елітні»',
     description: (
       <div>
         Склад: яловичина знежилована 1с; свинина знежилована нежирна; свинина
@@ -1332,16 +1332,16 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 156.29,
-    purchaseType: "1kg",
-    category: "sausage",
+    purchaseType: '1kg',
+    category: 'sosyska',
     hot: false,
-    imgUrl: ["../assets/elitni0297.JPG"],
+    imgUrl: ['../assets/elitni0297.JPG'],
     shortDesc:
-      "Термін  придатності сардельок запакованих під вакуумом, або в модифікованому газовому середовищі в термозсідальні газонепроникні полімерні  матеріали за температури від 0 ℃ до 6 ℃ не більше 20 діб. ",
+      'Термін  придатності сардельок запакованих під вакуумом, або в модифікованому газовому середовищі в термозсідальні газонепроникні полімерні  матеріали за температури від 0 ℃ до 6 ℃ не більше 20 діб. ',
   },
   {
-    id: "4pr4tbb3-f57d-33f2-d35y-25s63233c3d5",
-    name: "Ковбаса варена до чаю",
+    id: '4pr4tbb3-f57d-33f2-d35y-25s63233c3d5',
+    name: 'Ковбаса варена до чаю',
     description: (
       <div>
         Склад: яловичина знежилована вс; яловичина знежилована 1с; свинина
@@ -1363,16 +1363,16 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 87.42,
-    purchaseType: "1kg",
-    category: "sausage",
+    purchaseType: '1kg',
+    category: 'sausage',
     hot: false,
-    imgUrl: ["../assets/toTea_0257.JPG"],
+    imgUrl: ['../assets/toTea_0257.JPG'],
     shortDesc:
-      "Термін  придатності сардельок запакованих під вакуумом, або в модифікованому газовому середовищі в термозсідальні газонепроникні полімерні  матеріали за температури від 0 ℃ до 6 ℃ не більше 20 діб. ",
+      'Термін  придатності сардельок запакованих під вакуумом, або в модифікованому газовому середовищі в термозсідальні газонепроникні полімерні  матеріали за температури від 0 ℃ до 6 ℃ не більше 20 діб. ',
   },
   {
-    id: "2pr4tbb5-f57d-77m2-d35y-25f63233c3n5",
-    name: "Ковбаса варена до чаю 0,600гр",
+    id: '2pr4tbb5-f57d-77m2-d35y-25f63233c3n5',
+    name: 'Ковбаса варена до чаю 0,600гр',
     description: (
       <div>
         Склад: яловичина знежилована вс; яловичина знежилована 1с; свинина
@@ -1394,16 +1394,16 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 87.42,
-    purchaseType: "0,600kg",
-    category: "sausage",
+    purchaseType: '0,600kg',
+    category: 'sausage',
     hot: false,
-    imgUrl: ["../assets/toTea_0257.JPG"],
+    imgUrl: ['../assets/toTea_0257.JPG'],
     shortDesc:
-      "Термін  придатності сардельок запакованих під вакуумом, або в модифікованому газовому середовищі в термозсідальні газонепроникні полімерні  матеріали за температури від 0 ℃ до 6 ℃ не більше 20 діб. ",
+      'Термін  придатності сардельок запакованих під вакуумом, або в модифікованому газовому середовищі в термозсідальні газонепроникні полімерні  матеріали за температури від 0 ℃ до 6 ℃ не більше 20 діб. ',
   },
   {
-    id: "4pr4tbb3-f57d-33h2-d36y-32s44233c3f5",
-    name: "Теляча",
+    id: '4pr4tbb3-f57d-33h2-d36y-32s44233c3f5',
+    name: 'Теляча',
     description: (
       <div>
         Склад: яловичина знежилована вс; яловичина знежилована 1с; свинина
@@ -1425,17 +1425,17 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 87.2,
-    purchaseType: "1kg",
-    category: "sausage",
+    purchaseType: '1kg',
+    category: 'sausage',
     hot: false,
-    imgUrl: ["../assets/telyacha_0258.JPG"],
+    imgUrl: ['../assets/telyacha_0258.JPG'],
     shortDesc:
-      "Термін  придатності сардельок запакованих під вакуумом, або в модифікованому газовому середовищі в термозсідальні газонепроникні полімерні  матеріали за температури від 0 ℃ до 6 ℃ не більше 20 діб. ",
+      'Термін  придатності сардельок запакованих під вакуумом, або в модифікованому газовому середовищі в термозсідальні газонепроникні полімерні  матеріали за температури від 0 ℃ до 6 ℃ не більше 20 діб. ',
   },
 
   {
-    id: "4pr4tnn3-f57k-33h2-d36y-32k44233c3f5",
-    name: "Теляча  0,600гр",
+    id: '4pr4tnn3-f57k-33h2-d36y-32k44233c3f5',
+    name: 'Теляча  0,600гр',
     description: (
       <div>
         Склад: яловичина знежилована вс; яловичина знежилована 1с; свинина
@@ -1457,16 +1457,16 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 87.2,
-    purchaseType: "0,60kg",
-    category: "sausage",
+    purchaseType: '0,60kg',
+    category: 'sausage',
     hot: false,
-    imgUrl: ["../assets/telyacha_0258.JPG"],
+    imgUrl: ['../assets/telyacha_0258.JPG'],
     shortDesc:
-      "Термін  придатності сардельок запакованих під вакуумом, або в модифікованому газовому середовищі в термозсідальні газонепроникні полімерні  матеріали за температури від 0 ℃ до 6 ℃ не більше 20 діб. ",
+      'Термін  придатності сардельок запакованих під вакуумом, або в модифікованому газовому середовищі в термозсідальні газонепроникні полімерні  матеріали за температури від 0 ℃ до 6 ℃ не більше 20 діб. ',
   },
   {
-    id: "1pr4tbb7-f37d-55h5-d36y-32s44233c3f5",
-    name: "Теляча з вершками",
+    id: '1pr4tbb7-f37d-55h5-d36y-32s44233c3f5',
+    name: 'Теляча з вершками',
     description: (
       <div>
         Склад: яловичина знежилована вс; яловичина знежилована 1с; свинина
@@ -1488,16 +1488,16 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 98.05,
-    purchaseType: "1kg",
-    category: "sausage",
+    purchaseType: '1kg',
+    category: 'sausage',
     hot: false,
-    imgUrl: ["../assets/telyacha_vershky_0298.JPG"],
+    imgUrl: ['../assets/telyacha_vershky_0298.JPG'],
     shortDesc:
-      "Термін  придатності сардельок запакованих під вакуумом, або в модифікованому газовому середовищі в термозсідальні газонепроникні полімерні  матеріали за температури від 0 ℃ до 6 ℃ не більше 20 діб. ",
+      'Термін  придатності сардельок запакованих під вакуумом, або в модифікованому газовому середовищі в термозсідальні газонепроникні полімерні  матеріали за температури від 0 ℃ до 6 ℃ не більше 20 діб. ',
   },
   {
-    id: "4pn2gfh5-f35f-38t2-d23y-45s54233c3d3",
-    name: "Сардельки «Ювілейні» варені",
+    id: '4pn2gfh5-f35f-38t2-d23y-45s54233c3d3',
+    name: 'Сардельки «Ювілейні» варені',
     description: (
       <div>
         Склад: яловичина знежилована 1с; свинина знежилована напівжирна; шпик
@@ -1517,16 +1517,16 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 109.12,
-    purchaseType: "1kg",
-    category: "sausage",
+    purchaseType: '1kg',
+    category: 'sosyska',
     hot: false,
-    imgUrl: ["../assets/sardelkiYouVilei_0155.JPG"],
+    imgUrl: ['../assets/sardelkiYouVilei_0155.JPG'],
     shortDesc:
-      "Термін  придатності за температури, від 0 ℃ до 6 ℃, та відносній вологості від 75%  до 78%, не більше ніж 3 доби.",
+      'Термін  придатності за температури, від 0 ℃ до 6 ℃, та відносній вологості від 75%  до 78%, не більше ніж 3 доби.',
   },
   {
-    id: "4fd2gfh5-f35f-38t2-d43y-45s54233c3d3",
-    name: "Ковбаса «Краківська» напівкопчена",
+    id: '4fd2gfh5-f35f-38t2-d43y-45s54233c3d3',
+    name: 'Ковбаса «Краківська» напівкопчена',
     description: (
       <div>
         Склад: яловичина знежилована 1с; свинина знежилована напівжирна; свинина
@@ -1544,16 +1544,16 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 242.55,
-    purchaseType: "1kg",
-    category: "sausage",
+    purchaseType: '1kg',
+    category: 'chpk',
     hot: false,
-    imgUrl: ["../assets/krakivska_9987.JPG"],
+    imgUrl: ['../assets/krakivska_9987.JPG'],
     shortDesc:
-      "Термін  придатності: за температури від 0 ℃ до 6 ℃, та відносній вологості 75% до 78 % не більше 15 діб.",
+      'Термін  придатності: за температури від 0 ℃ до 6 ℃, та відносній вологості 75% до 78 % не більше 15 діб.',
   },
   {
-    id: "4fd2gfh3-f35f-38t2-y42y-45s54233f5d3",
-    name: "Ковбаса варена «Дитяча вершкова» ",
+    id: '4fd2gfh3-f35f-38t2-y42y-45s54233f5d3',
+    name: 'Ковбаса варена «Дитяча вершкова» ',
     description: (
       <div>
         Склад: яловичина знежилована вс; свинина знежилована напівжирна; яйця
@@ -1573,16 +1573,16 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 173.99,
-    purchaseType: "1kg",
-    category: "sausage",
+    purchaseType: '1kg',
+    category: 'chpk',
     hot: false,
-    imgUrl: ["../assets/dytyacha_vershkova_0293.JPG"],
+    imgUrl: ['../assets/dytyacha_vershkova_0293.JPG'],
     shortDesc:
-      "Термін  придатності за температури, від 0 ℃ до 6 ℃, та відносній вологості від 75%  до 78%, не більше ніж 3 доби.",
+      'Термін  придатності за температури, від 0 ℃ до 6 ℃, та відносній вологості від 75%  до 78%, не більше ніж 3 доби.',
   },
   {
-    id: "5fd2wjk3-f35n-33t2-y42y-45s54235f5d3",
-    name: "Сосиски «Філейні» варені",
+    id: '5fd2wjk3-f35n-33t2-y42y-45s54235f5d3',
+    name: 'Сосиски «Філейні» варені',
     description: (
       <div>
         Склад: свинина знежилована нежирна; філе птиці; свинина знежилована
@@ -1602,16 +1602,16 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 135.91,
-    purchaseType: "1kg",
-    category: "sausage",
+    purchaseType: '1kg',
+    category: 'sosyska',
     hot: false,
-    imgUrl: ["../assets/sausageFileini_0161.JPG"],
+    imgUrl: ['../assets/sausageFileini_0161.JPG'],
     shortDesc:
-      "Термін  придатності за температури, від 0 ℃ до 6 ℃, та відносній вологості від 75%  до 78%, не більше ніж 3 доби.",
+      'Термін  придатності за температури, від 0 ℃ до 6 ℃, та відносній вологості від 75%  до 78%, не більше ніж 3 доби.',
   },
   {
-    id: "5fd2wjk5-f34n-55t2-y55y-45s54235f5d3",
-    name: "Сардельки соковиті",
+    id: '5fd2wjk5-f34n-55t2-y55y-45s54235f5d3',
+    name: 'Сардельки соковиті',
     description: (
       <div>
         Склад: свинина знежилована нежирна; філе птиці; свинина знежилована
@@ -1631,16 +1631,16 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 141.48,
-    purchaseType: "1kg",
-    category: "sausage",
+    purchaseType: '1kg',
+    category: 'sosyska',
     hot: false,
-    imgUrl: ["../assets/sardelki_sokovyty_0294.JPG"],
+    imgUrl: ['../assets/sardelki_sokovyty_0294.JPG'],
     shortDesc:
-      "Термін  придатності за температури, від 0 ℃ до 6 ℃, та відносній вологості від 75%  до 78%, не більше ніж 3 доби.",
+      'Термін  придатності за температури, від 0 ℃ до 6 ℃, та відносній вологості від 75%  до 78%, не більше ніж 3 доби.',
   },
   {
-    id: "2fd3wjk4-g14n-55h2-y55y-45s54235f5d3",
-    name: "Сосиски шкільні",
+    id: '2fd3wjk4-g14n-55h2-y55y-45s54235f5d3',
+    name: 'Сосиски шкільні',
     description: (
       <div>
         Склад: свинина знежилована нежирна; філе птиці; свинина знежилована
@@ -1660,16 +1660,16 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 174.65,
-    purchaseType: "1kg",
-    category: "sausage",
+    purchaseType: '1kg',
+    category: 'sosyska',
     hot: false,
-    imgUrl: ["../assets/sausage_school2_0295.JPG"],
+    imgUrl: ['../assets/sausage_school2_0295.JPG'],
     shortDesc:
-      "Термін  придатності за температури, від 0 ℃ до 6 ℃, та відносній вологості від 75%  до 78%, не більше ніж 3 доби.",
+      'Термін  придатності за температури, від 0 ℃ до 6 ℃, та відносній вологості від 75%  до 78%, не більше ніж 3 доби.',
   },
   {
-    id: "5fd2wvk3-f35n-33r2-y22y-45s54235n5d7",
-    name: "Рулет святковий",
+    id: '5fd2wvk3-f35n-33r2-y22y-45s54235n5d7',
+    name: 'Рулет святковий',
     description: (
       <div>
         Склад: свинина знежилована нежирна; філе птиці; свинина знежилована
@@ -1689,20 +1689,20 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 260.1,
-    purchaseType: "1kg",
-    category: "sausage",
+    purchaseType: '1kg',
+    category: 'semiFinished',
     hot: false,
     imgUrl: [
-      "../assets/rylet_0260.JPG",
-      "../assets/zelc_kovbaskyFranc_rylet.JPG",
+      '../assets/rylet_0260.JPG',
+      '../assets/zelc_kovbaskyFranc_rylet.JPG',
     ],
     shortDesc:
-      "Термін  придатності за температури, від 0 ℃ до 6 ℃, та відносній вологості від 75%  до 78%, не більше ніж 3 доби.",
+      'Термін  придатності за температури, від 0 ℃ до 6 ℃, та відносній вологості від 75%  до 78%, не більше ніж 3 доби.',
   },
 
   {
-    id: "7fd2wvk3-f33n-55r2-y77y-45s54235n5d7",
-    name: "Рулет курячий «Черепашка» ",
+    id: '7fd2wvk3-f33n-55r2-y77y-45s54235n5d7',
+    name: 'Рулет курячий «Черепашка» ',
     description: (
       <div>
         Склад: свинина знежилована нежирна; філе птиці; свинина знежилована
@@ -1722,20 +1722,20 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 222.0,
-    purchaseType: "1kg",
-    category: "sausage",
+    purchaseType: '1kg',
+    category: 'semiFinished',
     hot: false,
     imgUrl: [
-      "../assets/rylet_0260.JPG",
-      "../assets/zelc_kovbaskyFranc_rylet.JPG",
+      '../assets/rylet_0260.JPG',
+      '../assets/zelc_kovbaskyFranc_rylet.JPG',
     ],
     shortDesc:
-      "Термін  придатності за температури, від 0 ℃ до 6 ℃, та відносній вологості від 75%  до 78%, не більше ніж 3 доби.",
+      'Термін  придатності за температури, від 0 ℃ до 6 ℃, та відносній вологості від 75%  до 78%, не більше ніж 3 доби.',
   },
 
   {
-    id: "5fd2wjk2-f35n-33t2-y42f-43s54225f5d3",
-    name: "Сардельки варені «Малятко»",
+    id: '5fd2wjk2-f35n-33t2-y42f-43s54225f5d3',
+    name: 'Сардельки варені «Малятко»',
     description: (
       <div>
         Склад: яловичина знежилована вс; яловичина знежилована 1с; м'ясо птиці;
@@ -1755,16 +1755,16 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 110.46,
-    purchaseType: "1kg",
-    category: "sausage",
+    purchaseType: '1kg',
+    category: 'sosyska',
     hot: false,
-    imgUrl: ["../assets/sardelkiMalyatko_0159.JPG"],
+    imgUrl: ['../assets/sardelkiMalyatko_0159.JPG'],
     shortDesc:
-      "Термін  придатності за температури, від 0 ℃ до 6 ℃, та відносній вологості від 75%  до 78%, не більше ніж 3 доби.",
+      'Термін  придатності за температури, від 0 ℃ до 6 ℃, та відносній вологості від 75%  до 78%, не більше ніж 3 доби.',
   },
   {
-    id: "5fd2rjk2-f35n-33k2-y42f-43s54225p5d3",
-    name: "Салямі «Угорська» ",
+    id: '5fd2rjk2-f35n-33k2-y42f-43s54225p5d3',
+    name: 'Салямі «Угорська» ',
     description: (
       <div>
         Склад: яловичина знежилована вс; яловичина знежилована 1 сорту, свинина
@@ -1782,16 +1782,16 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 162.7,
-    purchaseType: "1kg",
-    category: "sausage",
+    purchaseType: '1kg',
+    category: 'sausage',
     hot: false,
-    imgUrl: ["../assets/hungary_9985.JPG"],
+    imgUrl: ['../assets/hungary_9985.JPG'],
     shortDesc:
-      "Термін  придатності: за температури від 0 ℃ до 6 ℃, та відносній вологості 75% до 78 % не більше 15 діб.",
+      'Термін  придатності: за температури від 0 ℃ до 6 ℃, та відносній вологості 75% до 78 % не більше 15 діб.',
   },
   {
-    id: "4fd5ffj4-f23f-38t2-d43y-15s14233c3d3",
-    name: "Салямі фінська",
+    id: '4fd5ffj4-f23f-38t2-d43y-15s14233c3d3',
+    name: 'Салямі фінська',
     description: (
       <div>
         Склад: яловичина знежилована 1с; свинина знежилована напівжирна; свинина
@@ -1809,16 +1809,16 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 175.06,
-    purchaseType: "1kg",
-    category: "sausage",
+    purchaseType: '1kg',
+    category: 'chpk',
     hot: false,
-    imgUrl: ["../assets/salyami_9988.JPG"],
+    imgUrl: ['../assets/salyami_9988.JPG'],
     shortDesc:
-      "Термін  придатності: за температури від 0 ℃ до 6 ℃, та відносній вологості 75% до 78 % не більше 15 діб.",
+      'Термін  придатності: за температури від 0 ℃ до 6 ℃, та відносній вологості 75% до 78 % не більше 15 діб.',
   },
   {
-    id: "5fd2rjk2-f95n-33w9-y42f-43s63255p5d3",
-    name: "Ковбаса «Дрогобицька» напівкопчена",
+    id: '5fd2rjk2-f95n-33w9-y42f-43s63255p5d3',
+    name: 'Ковбаса «Дрогобицька» напівкопчена',
     description: (
       <div>
         Склад: свинина знежилована нежирнаІнгредієнти: сіль кухонна харчова;
@@ -1837,16 +1837,16 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 330.35,
-    purchaseType: "1kg",
-    category: "sausage",
+    purchaseType: '1kg',
+    category: 'chpk',
     hot: false,
-    imgUrl: ["../assets/drogobytska0010.JPG"],
+    imgUrl: ['../assets/drogobytska0010.JPG'],
     shortDesc:
-      "Термін  придатності: за температури від 0 ℃ до 6 ℃, та відносній вологості 75% до 78 % не більше 15 діб.",
+      'Термін  придатності: за температури від 0 ℃ до 6 ℃, та відносній вологості 75% до 78 % не більше 15 діб.',
   },
   {
-    id: "5fd2rjk2-g95n-33h9-y42h-43x63255p2d3",
-    name: "Сервелат",
+    id: '5fd2rjk2-g95n-33h9-y42h-43x63255p2d3',
+    name: 'Сервелат',
     description: (
       <div>
         Склад: свинина знежилована нежирнаІнгредієнти: сіль кухонна харчова;
@@ -1865,16 +1865,16 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 264.31,
-    purchaseType: "1kg",
-    category: "sausage",
+    purchaseType: '1kg',
+    category: 'sausage',
     hot: false,
-    imgUrl: ["../assets/servelat_9989.JPG"],
+    imgUrl: ['../assets/servelat_9989.JPG'],
     shortDesc:
-      "Термін  придатності: за температури від 0 ℃ до 6 ℃, та відносній вологості 75% до 78 % не більше 15 діб.",
+      'Термін  придатності: за температури від 0 ℃ до 6 ℃, та відносній вологості 75% до 78 % не більше 15 діб.',
   },
   {
-    id: "5wd2njk2-g95n-33b9-k42h-23x63255p2d3",
-    name: "Баликова",
+    id: '5wd2njk2-g95n-33b9-k42h-23x63255p2d3',
+    name: 'Баликова',
     description: (
       <div>
         Склад: свинина знежилована нежирнаІнгредієнти: сіль кухонна харчова;
@@ -1893,16 +1893,16 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 183.71,
-    purchaseType: "1kg",
-    category: "sausage",
+    purchaseType: '1kg',
+    category: 'sausage',
     hot: false,
-    imgUrl: ["../assets/balikova_9990.JPG"],
+    imgUrl: ['../assets/balikova_9990.JPG'],
     shortDesc:
-      "Термін  придатності: за температури від 0 ℃ до 6 ℃, та відносній вологості 75% до 78 % не більше 15 діб.",
+      'Термін  придатності: за температури від 0 ℃ до 6 ℃, та відносній вологості 75% до 78 % не більше 15 діб.',
   },
   {
-    id: "5fd2bjk2-f95n-33v2-y42f-43s63255p5d3",
-    name: "Ковбаса «Домашня на дровах» напівкопчена",
+    id: '5fd2bjk2-f95n-33v2-y42f-43s63255p5d3',
+    name: 'Ковбаса «Домашня на дровах» напівкопчена',
     description: (
       <div>
         Склад: свинина знежилована нежирна; свинина знежилована напівжирна; шпик
@@ -1923,12 +1923,12 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 178.65,
-    purchaseType: "1kg",
-    category: "sausage",
+    purchaseType: '1kg',
+    category: 'sausage',
     hot: false,
-    imgUrl: ["../assets/na_drovah_0309.JPG"],
+    imgUrl: ['../assets/na_drovah_0309.JPG'],
     shortDesc:
-      "Термін  придатності: за температури від 0 ℃ до 6 ℃, та відносній вологості 75% до 78 % не більше 15 діб.",
+      'Термін  придатності: за температури від 0 ℃ до 6 ℃, та відносній вологості 75% до 78 % не більше 15 діб.',
   },
   // {
   //   id: "5fd2bjk2-f95n-33h4-y42f-43s63255t5d3",
@@ -1953,15 +1953,15 @@ export const arrayCard: ICard[] = [
   //   ),
   //   price: 122.0,
   //   purchaseType: "1kg",
-  //   category: "sausage",
+  //   category: "sosyska",
   //   hot: false,
   //   imgUrl: ["../assets/karapyz.jpg"],
   //   shortDesc:
   //     "Термін  придатності за температури, від 0 ℃ до 6 ℃, та відносній вологості від 75%  до 78%, не більше ніж 3 доби.",
   // },
   {
-    id: "3fx2bjk2-r95n-33h4-y52f-43s63255t5d3",
-    name: "Млинці з м’ясом курячим",
+    id: '3fx2bjk2-r95n-33h4-y52f-43s63255t5d3',
+    name: 'Млинці з м’ясом курячим',
     description: (
       <div>
         Млинці з м’ясом курячим: тісто: борошно, вода питна, молоко
@@ -1974,16 +1974,16 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 89.09,
-    purchaseType: "1kg",
-    category: "blinchik",
+    purchaseType: '1kg',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/blinchikWithChicken.jpg"],
+    imgUrl: ['../assets/blinchikWithChicken.jpg'],
     shortDesc:
-      "Начинка: філе куряче варене, цибуля ріпчаста смажена, жир курячий топлений, шкварки з шкірки курячої, сіль кухонна, спеції.",
+      'Начинка: філе куряче варене, цибуля ріпчаста смажена, жир курячий топлений, шкварки з шкірки курячої, сіль кухонна, спеції.',
   },
   {
-    id: "2fx2bjk2-r25n-33h4-y52f-43s62255t5d3",
-    name: "Млинці з м’ясом курячим",
+    id: '2fx2bjk2-r25n-33h4-y52f-43s62255t5d3',
+    name: 'Млинці з м’ясом курячим',
     description: (
       <div>
         Млинці з м’ясом курячим: тісто: борошно, вода питна, молоко
@@ -1996,16 +1996,16 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 54.13,
-    purchaseType: "0.400kg",
-    category: "blinchik",
+    purchaseType: '0.400kg',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/blinchikWithChicken.jpg"],
+    imgUrl: ['../assets/blinchikWithChicken.jpg'],
     shortDesc:
-      "Начинка: філе куряче варене, цибуля ріпчаста смажена, жир курячий топлений, шкварки з шкірки курячої, сіль кухонна, спеції.",
+      'Начинка: філе куряче варене, цибуля ріпчаста смажена, жир курячий топлений, шкварки з шкірки курячої, сіль кухонна, спеції.',
   },
   {
-    id: "3fx3bjk2-r94n-43b4-y29f-43s63255t5d3",
-    name: "Млинці з сиром та родзинками",
+    id: '3fx3bjk2-r94n-43b4-y29f-43s63255t5d3',
+    name: 'Млинці з сиром та родзинками',
     description: (
       <div>
         Млинці з сиром та родзинками : тісто: борошно, вода питна, молоко
@@ -2018,16 +2018,16 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 75.53,
-    purchaseType: "1kg",
-    category: "blinchik",
+    purchaseType: '1kg',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/blinchikWithCheese.jpg"],
+    imgUrl: ['../assets/blinchikWithCheese.jpg'],
     shortDesc:
-      "Начинка: сир кис , цукор білий кристалічний, ванілін, сіль кухонна, вода питна.",
+      'Начинка: сир кис , цукор білий кристалічний, ванілін, сіль кухонна, вода питна.',
   },
   {
-    id: "4fx3bjk2-r94n-43b4-y19f-43s63255y5d3",
-    name: "Млинці з сиром та родзинками",
+    id: '4fx3bjk2-r94n-43b4-y19f-43s63255y5d3',
+    name: 'Млинці з сиром та родзинками',
     description: (
       <div>
         Млинці з сиром та родзинками : тісто: борошно, вода питна, молоко
@@ -2040,16 +2040,16 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 47.5,
-    purchaseType: "0.400kg",
-    category: "blinchik",
+    purchaseType: '0.400kg',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/blinchikWithCheese.jpg"],
+    imgUrl: ['../assets/blinchikWithCheese.jpg'],
     shortDesc:
-      "Начинка: сир кис , цукор білий кристалічний, ванілін, сіль кухонна, вода питна.",
+      'Начинка: сир кис , цукор білий кристалічний, ванілін, сіль кухонна, вода питна.',
   },
   {
-    id: "4fx3byk2-r94n-43b3-y19f-43s63255i5d3",
-    name: "Млинці з сиром та родзинками",
+    id: '4fx3byk2-r94n-43b3-y19f-43s63255i5d3',
+    name: 'Млинці з сиром та родзинками',
     description: (
       <div>
         Млинці з сиром та родзинками : тісто: борошно, вода питна, молоко
@@ -2062,16 +2062,16 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 69.96,
-    purchaseType: "0.600kg",
-    category: "blinchik",
+    purchaseType: '0.600kg',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/blinchikWithCheese.jpg"],
+    imgUrl: ['../assets/blinchikWithCheese.jpg'],
     shortDesc:
-      "Начинка: сир кис , цукор білий кристалічний, ванілін, сіль кухонна, вода питна.",
+      'Начинка: сир кис , цукор білий кристалічний, ванілін, сіль кухонна, вода питна.',
   },
   {
-    id: "3fx3bjk2-g31n-43c4-y24n-43s63255t5d3",
-    name: "Бендерики курині",
+    id: '3fx3bjk2-g31n-43c4-y24n-43s63255t5d3',
+    name: 'Бендерики курині',
     description: (
       <div>
         Бендерики курині: тісто: борошно, вода питна, молоко пастеризоване 2,5%,
@@ -2084,16 +2084,16 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 67.64,
-    purchaseType: "1kg",
-    category: "bend",
+    purchaseType: '1kg',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/bendChicken.jpg"],
+    imgUrl: ['../assets/bendChicken.jpg'],
     shortDesc:
       "Начинка: м'ясо птиці, шкірка куряча, цибуля ріпчаста, текстурат соєвий харчовий, борошно соєве харчове, сіль харчова, спеції.",
   },
   {
-    id: "3qx3bhk2-g31n-13c4-y24n-43s63255y4d3",
-    name: "Венеція",
+    id: '3qx3bhk2-g31n-13c4-y24n-43s63255y4d3',
+    name: 'Венеція',
     description: (
       <div>
         Бендерики курині: тісто: борошно, вода питна, молоко пастеризоване 2,5%,
@@ -2106,23 +2106,23 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 284.7,
-    purchaseType: "1kg",
-    category: "bend",
+    purchaseType: '1kg',
+    category: 'bend',
     hot: false,
     imgUrl: [
-      "../assets/venecia1_0011.JPG",
-      "../assets/venecia2_0012.JPG",
-      "../assets/venecia3_0015.JPG",
-      "../assets/venecia4_0142.JPG",
-      "../assets/tsarsky_senator_venecia0138.JPG",
-      "../assets/tsarsky_senator_venecia2_0141.JPG",
+      '../assets/venecia1_0011.JPG',
+      '../assets/venecia2_0012.JPG',
+      '../assets/venecia3_0015.JPG',
+      '../assets/venecia4_0142.JPG',
+      '../assets/tsarsky_senator_venecia0138.JPG',
+      '../assets/tsarsky_senator_venecia2_0141.JPG',
     ],
     shortDesc:
       "Начинка: м'ясо птиці, шкірка куряча, цибуля ріпчаста, текстурат соєвий харчовий, борошно соєве харчове, сіль харчова, спеції.",
   },
   {
-    id: "3ks3bjk2-h11n-52c4-y24n-43s63255t5d3",
-    name: "Бендерики свин. – ялов.",
+    id: '3ks3bjk2-h11n-52c4-y24n-43s63255t5d3',
+    name: 'Бендерики свин. – ялов.',
     description: (
       <div>
         Бендерики свин. – ялов.: тісто: борошно, вода питна, молоко
@@ -2135,16 +2135,16 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 79.81,
-    purchaseType: "1kg",
-    category: "bend",
+    purchaseType: '1kg',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/bendSvinina.jpg"],
+    imgUrl: ['../assets/bendSvinina.jpg'],
     shortDesc:
       "Начинка: м'ясо свинини та яловичини напівжирне, шкірка куряча, цибуля ріпчаста, борошно соєве харчове, сіль кухонна,спеції.",
   },
   {
-    id: "3ks3tjk2-h12x-52c4-y25g-43s63255t5d3",
-    name: "Царська",
+    id: '3ks3tjk2-h12x-52c4-y25g-43s63255t5d3',
+    name: 'Царська',
     description: (
       <div>
         Бендерики свин. – ялов.: тісто: борошно, вода питна, молоко
@@ -2158,21 +2158,21 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 278.1,
-    purchaseType: "1kg",
-    category: "bend",
+    purchaseType: '1kg',
+    category: 'bend',
     hot: false,
     imgUrl: [
-      "../assets/tsarska0013.JPG",
-      "../assets/tsarska2_0140.JPG",
-      "../assets/tsarsky_senator_venecia0138.JPG",
-      "../assets/tsarsky_senator_venecia2_0141.JPG",
+      '../assets/tsarska0013.JPG',
+      '../assets/tsarska2_0140.JPG',
+      '../assets/tsarsky_senator_venecia0138.JPG',
+      '../assets/tsarsky_senator_venecia2_0141.JPG',
     ],
     shortDesc:
       "Начинка: м'ясо свинини та яловичини напівжирне, шкірка куряча, цибуля ріпчаста, борошно соєве харчове, сіль кухонна,спеції.",
   },
   {
-    id: "3ks3bjk2-y41n-52c4-y24n-43f27215t5d3",
-    name: "Бендерики з грибами",
+    id: '3ks3bjk2-y41n-52c4-y24n-43f27215t5d3',
+    name: 'Бендерики з грибами',
     description: (
       <div>
         Бендерики з грибами: тісто: борошно, вода питна, молоко пастеризоване
@@ -2186,17 +2186,17 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 96.65,
-    purchaseType: "1kg",
-    category: "bend",
+    purchaseType: '1kg',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/bandWithMushrooms.jpg"],
+    imgUrl: ['../assets/bandWithMushrooms.jpg'],
     shortDesc:
-      "Начинка: гриби печериці, цибуля ріпчаста смажена, сіль кухонна, борошно манне екструдоване, жир курячий топлений, перець чорний мелений, приправа до грибів.",
+      'Начинка: гриби печериці, цибуля ріпчаста смажена, сіль кухонна, борошно манне екструдоване, жир курячий топлений, перець чорний мелений, приправа до грибів.',
   },
 
   {
-    id: "3kw5pvk5-s42f-72c7-y24n-33f27175r5d3",
-    name: "Вареники з картоплею та цибулею",
+    id: '3kw5pvk5-s42f-72c7-y24n-33f27175r5d3',
+    name: 'Вареники з картоплею та цибулею',
     description: (
       <div>
         Тісто: борошно пшеничне вищого ґатунку, сироватка пастеризована, сода
@@ -2207,16 +2207,16 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 47.41,
-    purchaseType: "1kg",
-    category: "varenyk",
+    purchaseType: '1kg',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/varenykWithPotato.jpg"],
+    imgUrl: ['../assets/varenykWithPotato.jpg'],
     shortDesc:
-      "Начинка: картопля варена, цибуля ріпчастасмажена, сіль кухонна, жир курячий топлений, перець чорний мелений, часник сухий мелений.",
+      'Начинка: картопля варена, цибуля ріпчастасмажена, сіль кухонна, жир курячий топлений, перець чорний мелений, часник сухий мелений.',
   },
   {
-    id: "3hw5pxu5-s42f-71d7-y24n-38f57175r5d3",
-    name: "Вареники з картоплею та печінкою",
+    id: '3hw5pxu5-s42f-71d7-y24n-38f57175r5d3',
+    name: 'Вареники з картоплею та печінкою',
     description: (
       <div>
         Вареники з карт. – печінкою: тісто: борошно пшеничне вищого ґатунку,
@@ -2229,16 +2229,16 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 78.2,
-    purchaseType: "1kg",
-    category: "varenyk",
+    purchaseType: '1kg',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/varenykWithPotatoAndLiver.jpg"],
+    imgUrl: ['../assets/varenykWithPotatoAndLiver.jpg'],
     shortDesc:
-      "Начинка: картопля варена, печінка куряча варена, цибуля ріпчаста смажена, жир курячий топлений,сіль кухонна, перець чорний мелений",
+      'Начинка: картопля варена, печінка куряча варена, цибуля ріпчаста смажена, жир курячий топлений,сіль кухонна, перець чорний мелений',
   },
   {
-    id: "5hw5pxu1-s52f-72d7-y54n-35f57175r5r3",
-    name: "Вареники з лівером ",
+    id: '5hw5pxu1-s52f-72d7-y54n-35f57175r5r3',
+    name: 'Вареники з лівером ',
     description: (
       <div>
         Вареники з лівером: тісто: борошно пшеничне вищого ґатунку, сироватка
@@ -2251,16 +2251,16 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 71.27,
-    purchaseType: "1kg",
-    category: "varenyk",
+    purchaseType: '1kg',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/varenykWithPotatoAndLiver.jpg"],
+    imgUrl: ['../assets/varenykWithPotatoAndLiver.jpg'],
     shortDesc:
-      "Начинка: картопля варена, печінка куряча варена, цибуля ріпчаста смажена, жир курячий топлений,сіль кухонна, перець чорний мелений",
+      'Начинка: картопля варена, печінка куряча варена, цибуля ріпчаста смажена, жир курячий топлений,сіль кухонна, перець чорний мелений',
   },
   {
-    id: "4hf4pxu1-s52f-72s7-w54n-35f57175r5r3",
-    name: "Варенички з картоплею та шкварками",
+    id: '4hf4pxu1-s52f-72s7-w54n-35f57175r5r3',
+    name: 'Варенички з картоплею та шкварками',
     description: (
       <div>
         Вареники з лівером: тісто: борошно пшеничне вищого ґатунку, сироватка
@@ -2273,17 +2273,17 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 54.14,
-    purchaseType: "1kg",
-    category: "varenyk",
+    purchaseType: '1kg',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/varenykWithPotatoAndLiver.jpg"],
+    imgUrl: ['../assets/varenykWithPotatoAndLiver.jpg'],
     shortDesc:
-      "Начинка: картопля варена, печінка куряча варена, цибуля ріпчаста смажена, жир курячий топлений,сіль кухонна, перець чорний мелений",
+      'Начинка: картопля варена, печінка куряча варена, цибуля ріпчаста смажена, жир курячий топлений,сіль кухонна, перець чорний мелений',
   },
 
   {
-    id: "3hw3pku2-t42j-21t4-y34n-35f55375k5d3",
-    name: "Вареники з печінкою",
+    id: '3hw3pku2-t42j-21t4-y34n-35f55375k5d3',
+    name: 'Вареники з печінкою',
     description: (
       <div>
         Вареники з печінкою: тісто: борошно пшеничне вищого ґатунку, сироватка
@@ -2295,17 +2295,17 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 71.09,
-    purchaseType: "1kg",
-    category: "varenyk",
+    purchaseType: '1kg',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/varenykWithLiver.jpg"],
+    imgUrl: ['../assets/varenykWithLiver.jpg'],
     shortDesc:
-      "Начинка: печінка куряча арена, цибуля ріпчаста смажена, шкварки з шкірки курячої, жир курячий топлений, сіль кухонна, перець чорний мелений.",
+      'Начинка: печінка куряча арена, цибуля ріпчаста смажена, шкварки з шкірки курячої, жир курячий топлений, сіль кухонна, перець чорний мелений.',
   },
 
   {
-    id: "3hw5pxu2-s42d-31t6-j74n-35f55375k5d3",
-    name: "Вареники з м’ясом вареним",
+    id: '3hw5pxu2-s42d-31t6-j74n-35f55375k5d3',
+    name: 'Вареники з м’ясом вареним',
     description: (
       <div>
         Вареники з м’ясом : тісто: борошно пшеничне вищого ґатунку, сироватка
@@ -2318,17 +2318,17 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 85.09,
-    purchaseType: "1kg",
-    category: "varenyk",
+    purchaseType: '1kg',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/varenykWithMeat.jpg"],
+    imgUrl: ['../assets/varenykWithMeat.jpg'],
     shortDesc:
       "Начинка: м'ясо птиці варене, цибуляріпчаста смажена, шкварки з шкірки курячої, сіль кухонна, жир курячий топлений, перець чорний мелений.",
   },
 
   {
-    id: "9hw5pxu2-s42d-31g6-j74n-35f55375k5d3",
-    name: "Вареники з м’ясом вареним",
+    id: '9hw5pxu2-s42d-31g6-j74n-35f55375k5d3',
+    name: 'Вареники з м’ясом вареним',
     description: (
       <div>
         Вареники з м’ясом : тісто: борошно пшеничне вищого ґатунку, сироватка
@@ -2341,17 +2341,17 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 43.8,
-    purchaseType: "0.400kg",
-    category: "varenyk",
+    purchaseType: '0.400kg',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/varenykWithMeat.jpg"],
+    imgUrl: ['../assets/varenykWithMeat.jpg'],
     shortDesc:
       "Начинка: м'ясо птиці варене, цибуляріпчаста смажена, шкварки з шкірки курячої, сіль кухонна, жир курячий топлений, перець чорний мелений.",
   },
 
   {
-    id: "3hw5hxu2-s42f-35k7-y37n-35w55275k4d3",
-    name: "Вареники з капустою",
+    id: '3hw5hxu2-s42f-35k7-y37n-35w55275k4d3',
+    name: 'Вареники з капустою',
     description: (
       <div>
         Вареники з капустою: тісто: борошно пшеничне вищого ґатунку, сироватка
@@ -2365,16 +2365,16 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 46.64,
-    purchaseType: "1kg",
-    category: "varenyk",
+    purchaseType: '1kg',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/varenykWithCabbage.jpg"],
+    imgUrl: ['../assets/varenykWithCabbage.jpg'],
     shortDesc:
-      "Начинка: капуста смажена, цибуля ріпчаста смажена, морква смажена, жир курячий топлений, сіль кухонна, томатна паста, борошно манне екструдоване, перець чорний мелений, прправа «Вегетта»",
+      'Начинка: капуста смажена, цибуля ріпчаста смажена, морква смажена, жир курячий топлений, сіль кухонна, томатна паста, борошно манне екструдоване, перець чорний мелений, прправа «Вегетта»',
   },
   {
-    id: "3hq3hxu2-s42f-34k5-y37n-35w55275k4d3",
-    name: "Вареники з сиром та родзинками",
+    id: '3hq3hxu2-s42f-34k5-y37n-35w55275k4d3',
+    name: 'Вареники з сиром та родзинками',
     description: (
       <div>
         Вареники з сиром та родзинками: тісто: борошно пшеничне вищого ґатунку,
@@ -2387,16 +2387,16 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 66.88,
-    purchaseType: "1kg",
-    category: "varenyk",
+    purchaseType: '1kg',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/varenykWithCheese.jpg"],
+    imgUrl: ['../assets/varenykWithCheese.jpg'],
     shortDesc:
-      "Начинка: сир кисломолочний 9%, родзинки без кісточок, цукор білий кристалічний, ванілін, борошно манне екструдоване, сіль кухонна.",
+      'Начинка: сир кисломолочний 9%, родзинки без кісточок, цукор білий кристалічний, ванілін, борошно манне екструдоване, сіль кухонна.',
   },
   {
-    id: "8hq3hxu1-s42f-34k5-y35n-35w55275k4d3",
-    name: "Вареники з сиром та родзинками",
+    id: '8hq3hxu1-s42f-34k5-y35n-35w55275k4d3',
+    name: 'Вареники з сиром та родзинками',
     description: (
       <div>
         Вареники з сиром та родзинками: тісто: борошно пшеничне вищого ґатунку,
@@ -2408,17 +2408,17 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 36.0,
-    purchaseType: "0.400kg",
-    category: "varenyk",
+    purchaseType: '0.400kg',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/varenykWithCheese.jpg"],
+    imgUrl: ['../assets/varenykWithCheese.jpg'],
     shortDesc:
-      "Начинка: сир кисломолочний 9%, родзинки без кісточок, цукор білий кристалічний, ванілін, борошно манне екструдоване, сіль кухонна.",
+      'Начинка: сир кисломолочний 9%, родзинки без кісточок, цукор білий кристалічний, ванілін, борошно манне екструдоване, сіль кухонна.',
   },
 
   {
-    id: "3hq3hxw2-s42t-34k3-y37n-37w45255t4p3",
-    name: "Котлети «Київські»",
+    id: '3hq3hxw2-s42t-34k3-y37n-37w45255t4p3',
+    name: 'Котлети «Київські»',
     description: (
       <div>
         Котлети «Київські»: філе куряче, шкірка куряча, цибуля ріпчаста, хліб
@@ -2427,17 +2427,17 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 88.86,
-    purchaseType: "1kg",
-    category: "cutlet",
+    purchaseType: '1kg',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/kotletKiev.jpg"],
+    imgUrl: ['../assets/kotletKiev.jpg'],
     shortDesc:
-      "Котлети «Київські»: філе куряче, шкірка куряча, цибуля ріпчаста, хліб білий не нижче 1-го ґатунку, крупа манна, вода питна, сіль кухонна, спеції, масло вершкове, сухарі панірувальні.",
+      'Котлети «Київські»: філе куряче, шкірка куряча, цибуля ріпчаста, хліб білий не нижче 1-го ґатунку, крупа манна, вода питна, сіль кухонна, спеції, масло вершкове, сухарі панірувальні.',
   },
 
   {
-    id: "3hw3hdw2-s42n-34l3-y37n-37g45255t4p3",
-    name: "Котлети «Смаковинка»",
+    id: '3hw3hdw2-s42n-34l3-y37n-37g45255t4p3',
+    name: 'Котлети «Смаковинка»',
     description: (
       <div>
         Котлети «Смаковинка»: філе куряче, шкірка куряча, цибуля ріпчаста, хліб
@@ -2446,16 +2446,16 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 80.78,
-    purchaseType: "1kg",
-    category: "cutlet",
+    purchaseType: '1kg',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/nemaPhoto.jpg"],
+    imgUrl: ['../assets/nemaPhoto.jpg'],
     shortDesc:
-      "Котлети «Смаковинка»: філе куряче, шкірка куряча, цибуля ріпчаста, хліб білий не нижче 1-го ґатунку, крупа манна, вода питна, сіль кухонна, спеції, сир твердий, сухарі панірувальні.",
+      'Котлети «Смаковинка»: філе куряче, шкірка куряча, цибуля ріпчаста, хліб білий не нижче 1-го ґатунку, крупа манна, вода питна, сіль кухонна, спеції, сир твердий, сухарі панірувальні.',
   },
   {
-    id: "3hw1hdw5-g23n-32m7-b37m-37g45175t4m3",
-    name: "Котлети «Селянські»",
+    id: '3hw1hdw5-g23n-32m7-b37m-37g45175t4m3',
+    name: 'Котлети «Селянські»',
     description: (
       <div>
         Котлети «Селянські»: м'ясо птиці, шкірка куряча, цибуля ріпчаста, хліб
@@ -2464,16 +2464,16 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 82.93,
-    purchaseType: "1kg",
-    category: "cutlet",
+    purchaseType: '1kg',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/kotletaVillage.jpg"],
+    imgUrl: ['../assets/kotletaVillage.jpg'],
     shortDesc:
       "Котлети «Селянські»: м'ясо птиці, шкірка куряча, цибуля ріпчаста, хліб білий не нижче 1-го ґатунку, вода питна, крупа манна, сіль кухонна, спеції, сухарі панірувальні. ",
   },
   {
-    id: "5hy1yyy5-g23n-32m7-b37m-37g45175t4m3",
-    name: "Котлети «Смачні»",
+    id: '5hy1yyy5-g23n-32m7-b37m-37g45175t4m3',
+    name: 'Котлети «Смачні»',
     description: (
       <div>
         Котлети «Смачні»: м'ясо птиці, м'ясо механічної обвалки, шкірка куряча,
@@ -2482,17 +2482,17 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 74.05,
-    purchaseType: "1kg",
-    category: "cutlet",
+    purchaseType: '1kg',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/nemaPhoto.jpg"],
+    imgUrl: ['../assets/nemaPhoto.jpg'],
     shortDesc:
       "Котлети «Смачні»: м'ясо птиці, м'ясо механічної обвалки, шкірка куряча, цибуля ріпчаста, хліб білий не нижче 1-го ґатунку, вода питна, текстурат соєвий, сіль кухонна, спеції, сухарі панірувальні.",
   },
 
   {
-    id: "5hy1yyy5-g15n-35b7-b35b-37g45175t4m3",
-    name: "Котлети «Лагідні»",
+    id: '5hy1yyy5-g15n-35b7-b35b-37g45175t4m3',
+    name: 'Котлети «Лагідні»',
     description: (
       <div>
         Котлети «Лагідні»: м'ясо птиці, м'ясо механічної обвалки, шкірка куряча,
@@ -2501,17 +2501,17 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 73.63,
-    purchaseType: "1kg",
-    category: "cutlet",
+    purchaseType: '1kg',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/kotletLagidna.jpg"],
+    imgUrl: ['../assets/kotletLagidna.jpg'],
     shortDesc:
       "Котлети «Лагідні»: м'ясо птиці, м'ясо механічної обвалки, шкірка куряча, цибуля ріпчаста, вода питна,  хліб білий не нижче 1-го ґатунку, крупа манна, текстурат соєвий, сіль кухонна, спеції, сухарі панірувальні.",
   },
 
   {
-    id: "1hy1yyy5-g15n-35b7-b35b-37g45175t4m3",
-    name: "Котлети «Лагідні»",
+    id: '1hy1yyy5-g15n-35b7-b35b-37g45175t4m3',
+    name: 'Котлети «Лагідні»',
     description: (
       <div>
         Котлети «Лагідні»: м'ясо птиці, м'ясо механічної обвалки, шкірка куряча,
@@ -2520,17 +2520,17 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 33.6,
-    purchaseType: "0.400kg",
-    category: "kotleta",
+    purchaseType: '0.400kg',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/kotletLagidna.jpg"],
+    imgUrl: ['../assets/kotletLagidna.jpg'],
     shortDesc:
       "Котлети «Лагідні»: м'ясо птиці, м'ясо механічної обвалки, шкірка куряча, цибуля ріпчаста, вода питна,  хліб білий не нижче 1-го ґатунку, крупа манна, текстурат соєвий, сіль кухонна, спеції, сухарі панірувальні.",
   },
 
   {
-    id: "5hy1tyt5-h15n-37b7-w35b-37g45175t4m3",
-    name: "Котлети для гамбургера ялового",
+    id: '5hy1tyt5-h15n-37b7-w35b-37g45175t4m3',
+    name: 'Котлети для гамбургера ялового',
     description: (
       <div>
         Котлети для гамбургера ялового: м'ясо яловичини 1-го ґатунку, жир
@@ -2538,10 +2538,10 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 163.99,
-    purchaseType: "1kg",
-    category: "cutlet",
+    purchaseType: '1kg',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/kotletaForGambyrgYalovych.jpg"],
+    imgUrl: ['../assets/kotletaForGambyrgYalovych.jpg'],
     shortDesc:
       "Котлети для гамбургера ялового: м'ясо яловичини 1-го ґатунку, жир яловий, сіль кухонна, перець чорний мелений",
   },
@@ -2557,7 +2557,7 @@ export const arrayCard: ICard[] = [
   //   ),
   //   price: 124.6,
   //   purchaseType: "1kg",
-  //   category: "kotleta",
+  //   category: "semiFinished",
   //   hot: false,
   //   imgUrl: ["../assets/kotletaForGambyrgYalovych.jpg"],
   //   shortDesc:
@@ -2575,7 +2575,7 @@ export const arrayCard: ICard[] = [
   //   ),
   //   price: 146.89,
   //   purchaseType: "1kg",
-  //   category: "kotleta",
+  //   category: "semiFinished",
   //   hot: false,
   //   imgUrl: ["../assets/kotletaForGambyrgYalovych.jpg"],
   //   shortDesc:
@@ -2583,25 +2583,25 @@ export const arrayCard: ICard[] = [
   // },
 
   {
-    id: "3ry1opp5-h33y-40b0-y57b-37j45175t4m3",
-    name: "Котлети «Дієтичні»",
+    id: '3ry1opp5-h33y-40b0-y57b-37j45175t4m3',
+    name: 'Котлети «Дієтичні»',
     description: (
       <div>
         Котлети «Дієтичні»: філе куряче, шпиг несолоний, сіль кухонна, спеції
       </div>
     ),
     price: 0.0,
-    purchaseType: "1kg",
-    category: "kotleta",
+    purchaseType: '1kg',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/kotletDietary.jpg"],
+    imgUrl: ['../assets/kotletDietary.jpg'],
     shortDesc:
-      "Котлети «Дієтичні»: філе куряче, шпиг несолоний, сіль кухонна, спеції",
+      'Котлети «Дієтичні»: філе куряче, шпиг несолоний, сіль кухонна, спеції',
   },
 
   {
-    id: "3ry1ppp5-h12j-40b0-y43b-37j45175t4m3",
-    name: "Пельмені «Гаврилівські»",
+    id: '3ry1ppp5-h12j-40b0-y43b-37j45175t4m3',
+    name: 'Пельмені «Гаврилівські»',
     description: (
       <div>
         Пельмені «Гаврилівські»: тісто: борошно пшеничне вищого ґатунку, вода
@@ -2614,16 +2614,16 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 89.09,
-    purchaseType: "1kg",
-    category: "dumplings",
+    purchaseType: '1kg',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/dumplingsGavril.jpg"],
+    imgUrl: ['../assets/dumplingsGavril.jpg'],
     shortDesc:
       "Начинка: м'ясо птиці, шкірка куряча, м'ясо механічної обвалки, текстурат соєвий харчовий, борошно соєве харчове, цибуля ріпчаста, спеції, сіль кухонна",
   },
   {
-    id: "5ry2pnt5-h12j-40b0-w45b-37j45175t4m3",
-    name: "Пельмені «Сибірські»",
+    id: '5ry2pnt5-h12j-40b0-w45b-37j45175t4m3',
+    name: 'Пельмені «Сибірські»',
     description: (
       <div>
         Пельмені «Сибірські»: тісто: борошно пшеничне вищого ґатунку, вода
@@ -2636,15 +2636,15 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 72.77,
-    purchaseType: "1kg",
-    category: "dumplings",
+    purchaseType: '1kg',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/nemaPhoto.jpg"],
+    imgUrl: ['../assets/nemaPhoto.jpg'],
     shortDesc:
       "Начинка: м'ясо механічної обвалки, шкірка куряча, текстурат соєвий харчовий, борошно соєве харчове, борошно манне екструдоване, цибуля ріпчаста, спеції, сіль кухонна",
   },
   {
-    id: "5gg2pnt5-g12j-40b0-w45b-37b45175n4m3",
+    id: '5gg2pnt5-g12j-40b0-w45b-37b45175n4m3',
     name: "Пельмені  з м'яса яловичини",
     description: (
       <div>
@@ -2658,16 +2658,16 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 111.96,
-    purchaseType: "1kg",
-    category: "dumplings",
+    purchaseType: '1kg',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/nemaPhoto.jpg"],
+    imgUrl: ['../assets/nemaPhoto.jpg'],
     shortDesc:
       "Начинка: м'ясо механічної обвалки, шкірка куряча, текстурат соєвий харчовий, борошно соєве харчове, борошно манне екструдоване, цибуля ріпчаста, спеції, сіль кухонна",
   },
 
   {
-    id: "5gg2pnt2-g12j-40b0-w15b-37b45175n4m3",
+    id: '5gg2pnt2-g12j-40b0-w15b-37b45175n4m3',
     name: "Пельмені  з м'яса яловичини 0,600гр ",
     description: (
       <div>
@@ -2681,17 +2681,17 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 76.09,
-    purchaseType: "1kg",
-    category: "dumplings",
+    purchaseType: '1kg',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/nemaPhoto.jpg"],
+    imgUrl: ['../assets/nemaPhoto.jpg'],
     shortDesc:
       "Начинка: м'ясо механічної обвалки, шкірка куряча, текстурат соєвий харчовий, борошно соєве харчове, борошно манне екструдоване, цибуля ріпчаста, спеції, сіль кухонна",
   },
 
   {
-    id: "5gg2yut3-h12j-20b0-w45b-37j45175t4m3",
-    name: "Пельмені «Елітні»",
+    id: '5gg2yut3-h12j-20b0-w45b-37j45175t4m3',
+    name: 'Пельмені «Елітні»',
     description: (
       <div>
         Пельмені «Елітні»: тісто: борошно пшеничне вищого ґатунку, вода питна,
@@ -2703,17 +2703,17 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 88.64,
-    purchaseType: "1kg",
-    category: "dumplings",
+    purchaseType: '1kg',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/dumplElitni.jpg"],
+    imgUrl: ['../assets/dumplElitni.jpg'],
     shortDesc:
-      "Начинка: філе куряче, шкірка куряча, шпиг несолоний, цибуля ріпчаста, спеції, сіль кухонна",
+      'Начинка: філе куряче, шкірка куряча, шпиг несолоний, цибуля ріпчаста, спеції, сіль кухонна',
   },
 
   {
-    id: "5ff5yut1-h00j-20b0-w45b-37j45175t4m3",
-    name: "Пельмені «Морозівські»",
+    id: '5ff5yut1-h00j-20b0-w45b-37j45175t4m3',
+    name: 'Пельмені «Морозівські»',
     description: (
       <div>
         Пельмені «Морозівські»: тісто: борошно пшеничне вищого ґатунку, вода
@@ -2725,17 +2725,17 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 87.19,
-    purchaseType: "1kg",
-    category: "dumplings",
+    purchaseType: '1kg',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/dumplMoroz.jpg"],
+    imgUrl: ['../assets/dumplMoroz.jpg'],
     shortDesc:
       "Начинка: свинина напівжирна, м'ясо яловичини 1-го ґатунку, шкірка куряча, цибуля ріпчаста, борошно соєве харчове, сіль кухонна, спеції.",
   },
 
   {
-    id: "5dd5yut1-h00j-20g0-q45b-37j45175t4m3",
-    name: "Пельмені «Домашні»",
+    id: '5dd5yut1-h00j-20g0-q45b-37j45175t4m3',
+    name: 'Пельмені «Домашні»',
     description: (
       <div>
         Пельмені «Домашні»: тісто: борошно пшеничне вищого ґатунку, вода питна,
@@ -2747,17 +2747,17 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 103.51,
-    purchaseType: "1kg",
-    category: "dumplings",
+    purchaseType: '1kg',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/dumplMoroz.jpg"],
+    imgUrl: ['../assets/dumplMoroz.jpg'],
     shortDesc:
       "Начинка: свинина напівжирна, м'ясо яловичини 1-го ґатунку, шкірка куряча, цибуля ріпчаста, борошно соєве харчове, сіль кухонна, спеції.",
   },
 
   {
-    id: "1dd5yut1-h10j-20g0-q45b-37j45175p4m3",
-    name: "Пельмені «Домашні»",
+    id: '1dd5yut1-h10j-20g0-q45b-37j45175p4m3',
+    name: 'Пельмені «Домашні»',
     description: (
       <div>
         Пельмені «Домашні»: тісто: борошно пшеничне вищого ґатунку, вода питна,
@@ -2769,17 +2769,17 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 52.8,
-    purchaseType: "0.400kg",
-    category: "dumplings",
+    purchaseType: '0.400kg',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/dumplMoroz.jpg"],
+    imgUrl: ['../assets/dumplMoroz.jpg'],
     shortDesc:
       "Начинка: свинина напівжирна, м'ясо яловичини 1-го ґатунку, шкірка куряча, цибуля ріпчаста, борошно соєве харчове, сіль кухонна, спеції.",
   },
 
   {
-    id: "1ff5yut1-h00j-20g0-w45b-37j45125t4m3",
-    name: "Пельмені «Морозівські»",
+    id: '1ff5yut1-h00j-20g0-w45b-37j45125t4m3',
+    name: 'Пельмені «Морозівські»',
     description: (
       <div>
         Пельмені «Морозівські»: тісто: борошно пшеничне вищого ґатунку, вода
@@ -2791,17 +2791,17 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 46.8,
-    purchaseType: "0.400kg",
-    category: "dumplings",
+    purchaseType: '0.400kg',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/dumplMoroz.jpg"],
+    imgUrl: ['../assets/dumplMoroz.jpg'],
     shortDesc:
       "Начинка: свинина напівжирна, м'ясо яловичини 1-го ґатунку, шкірка куряча, цибуля ріпчаста, борошно соєве харчове, сіль кухонна, спеції.",
   },
 
   {
-    id: "5ff5yut1-h00j-20b0-w52j-57j45175t4m3",
-    name: "Пельмені «З м’яса свинини та яловичини»",
+    id: '5ff5yut1-h00j-20b0-w52j-57j45175t4m3',
+    name: 'Пельмені «З м’яса свинини та яловичини»',
     description: (
       <div>
         Пельмені «З м’яса свинини та яловичини»: тісто: борошно пшеничне вищого
@@ -2813,17 +2813,17 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 111.08,
-    purchaseType: "1kg",
-    category: "dumplings",
+    purchaseType: '1kg',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/nemaPhoto.jpg"],
+    imgUrl: ['../assets/nemaPhoto.jpg'],
     shortDesc:
       "Начинка: свинина напівжирна, м'ясо яловичини 1-го ґатунку, шкірка куряча, цибуля ріпчаста, сіль кухонна, спеції",
   },
 
   {
-    id: "2cc5yut1-j00j-40b0-w52j-57j45175t4m3",
-    name: "Пельмені «Козацькі»",
+    id: '2cc5yut1-j00j-40b0-w52j-57j45175t4m3',
+    name: 'Пельмені «Козацькі»',
     description: (
       <div>
         Пельмені «З м’яса свинини та яловичини»: тісто: борошно пшеничне вищого
@@ -2835,17 +2835,17 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 71.75,
-    purchaseType: "1kg",
-    category: "dumplings",
+    purchaseType: '1kg',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/nemaPhoto.jpg"],
+    imgUrl: ['../assets/nemaPhoto.jpg'],
     shortDesc:
       "Начинка: свинина напівжирна, м'ясо яловичини 1-го ґатунку, шкірка куряча, цибуля ріпчаста, сіль кухонна, спеції",
   },
 
   {
-    id: "4cc3yut1-j00j-40b0-w52j-57j45175t4m3",
-    name: "Пельмені «Козацькі» 0,400гр",
+    id: '4cc3yut1-j00j-40b0-w52j-57j45175t4m3',
+    name: 'Пельмені «Козацькі» 0,400гр',
     description: (
       <div>
         Пельмені «З м’яса свинини та яловичини»: тісто: борошно пшеничне вищого
@@ -2857,17 +2857,17 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 34.8,
-    purchaseType: "0.400kg",
-    category: "dumplings",
+    purchaseType: '0.400kg',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/nemaPhoto.jpg"],
+    imgUrl: ['../assets/nemaPhoto.jpg'],
     shortDesc:
       "Начинка: свинина напівжирна, м'ясо яловичини 1-го ґатунку, шкірка куряча, цибуля ріпчаста, сіль кухонна, спеції",
   },
 
   {
-    id: "4cc3yut1-j55j-40b0-w52j-57j45175t4m3",
-    name: "Пельмені «Козацькі» 0,600гр",
+    id: '4cc3yut1-j55j-40b0-w52j-57j45175t4m3',
+    name: 'Пельмені «Козацькі» 0,600гр',
     description: (
       <div>
         Пельмені «З м’яса свинини та яловичини»: тісто: борошно пшеничне вищого
@@ -2879,17 +2879,17 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 54.3,
-    purchaseType: "0.600kg",
-    category: "dumplings",
+    purchaseType: '0.600kg',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/nemaPhoto.jpg"],
+    imgUrl: ['../assets/nemaPhoto.jpg'],
     shortDesc:
       "Начинка: свинина напівжирна, м'ясо яловичини 1-го ґатунку, шкірка куряча, цибуля ріпчаста, сіль кухонна, спеції",
   },
 
   {
-    id: "4ff3yut1-j55j-40b0-w52n-57j45175t4m3",
-    name: "Хінкалі",
+    id: '4ff3yut1-j55j-40b0-w52n-57j45175t4m3',
+    name: 'Хінкалі',
     description: (
       <div>
         Тісто: борошно пшеничне вищого ґатунку, вода питна, олія соняшникова
@@ -2903,17 +2903,17 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 107.44,
-    purchaseType: "1kg",
-    category: "semiFinishedProduct",
+    purchaseType: '1kg',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/nemaPhoto.jpg"],
+    imgUrl: ['../assets/nemaPhoto.jpg'],
     shortDesc:
       "Начинка: свинина напівжирна, м'ясо яловичини 1-го ґатунку, шкірка куряча, цибуля ріпчаста, сіль кухонна, спеції",
   },
 
   {
-    id: "4ff3yug1-j33j-25b0-w52n-57j45175t4m3",
-    name: "Тефтелі з моцарелою",
+    id: '4ff3yug1-j33j-25b0-w52n-57j45175t4m3',
+    name: 'Тефтелі з моцарелою',
     description: (
       <div>
         Склад:,крупа рисова варена, м`ясо свинини, шпиг несолоний, цибуля
@@ -2925,17 +2925,17 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 68.43,
-    purchaseType: "1kg",
-    category: "semiFinishedProduct",
+    purchaseType: '1kg',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/nemaPhoto.jpg"],
+    imgUrl: ['../assets/nemaPhoto.jpg'],
     shortDesc:
       "Начинка: свинина напівжирна, м'ясо яловичини 1-го ґатунку, шкірка куряча, цибуля ріпчаста, сіль кухонна, спеції",
   },
 
   {
-    id: "3cc3yut1-j00b-70h0-w72j-57j45175t4m3",
-    name: "Пельмені «Святкові»",
+    id: '3cc3yut1-j00b-70h0-w72j-57j45175t4m3',
+    name: 'Пельмені «Святкові»',
     description: (
       <div>
         Пельмені «З м’яса свинини та яловичини»: тісто: борошно пшеничне вищого
@@ -2947,17 +2947,17 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 87.67,
-    purchaseType: "1kg",
-    category: "dumplings",
+    purchaseType: '1kg',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/nemaPhoto.jpg"],
+    imgUrl: ['../assets/nemaPhoto.jpg'],
     shortDesc:
       "Начинка: свинина напівжирна, м'ясо яловичини 1-го ґатунку, шкірка куряча, цибуля ріпчаста, сіль кухонна, спеції",
   },
 
   {
-    id: "5ff5yuq1-h33j-20b0-w52j-57j23175t4m3",
-    name: "Пельмені «Черкаські преміум»",
+    id: '5ff5yuq1-h33j-20b0-w52j-57j23175t4m3',
+    name: 'Пельмені «Черкаські преміум»',
     description: (
       <div>
         Пельмені «Черкаські преміум»: тісто: борошно пшеничне вищого ґатунку,
@@ -2970,16 +2970,16 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 119.56,
-    purchaseType: "1kg",
-    category: "dumplings",
+    purchaseType: '1kg',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/dumplChePremium_1.jpg", "dumplChePremium_2.jpg"],
+    imgUrl: ['../assets/dumplChePremium_1.jpg', 'dumplChePremium_2.jpg'],
     shortDesc:
       "Начинка: м'ясо яловичини 1-го ґатунку, свинина напівжирна, шпиг несолоний, цибуля ріпчаста, сіль кухонна, цукор білий кристалічний, спеції",
   },
   {
-    id: "3ff5yuq1-h55n-20n0-n52j-57j23175t4m3",
-    name: "Пельмені Cоковиті свинні",
+    id: '3ff5yuq1-h55n-20n0-n52j-57j23175t4m3',
+    name: 'Пельмені Cоковиті свинні',
     description: (
       <div>
         Пельмені Cоковиті свинні: тісто: борошно пшеничне вищого ґатунку, вода
@@ -2992,17 +2992,17 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 70.41,
-    purchaseType: "1kg",
-    category: "dumplings",
+    purchaseType: '1kg',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/dumplChePremium_1.jpg", "dumplChePremium_2.jpg"],
+    imgUrl: ['../assets/dumplChePremium_1.jpg', 'dumplChePremium_2.jpg'],
     shortDesc:
       "Начинка: м'ясо яловичини 1-го ґатунку, свинина напівжирна, шпиг несолоний, цибуля ріпчаста, сіль кухонна, цукор білий кристалічний, спеції",
   },
 
   {
-    id: "3jj5yuj1-h77n-40n0-n72j-57j33175t4m5",
-    name: "Пельмені Фірмові",
+    id: '3jj5yuj1-h77n-40n0-n72j-57j33175t4m5',
+    name: 'Пельмені Фірмові',
     description: (
       <div>
         Пельмені Cоковиті свинні: тісто: борошно пшеничне вищого ґатунку, вода
@@ -3015,17 +3015,17 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 69.94,
-    purchaseType: "1kg",
-    category: "dumplings",
+    purchaseType: '1kg',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/dumplChePremium_1.jpg", "dumplChePremium_2.jpg"],
+    imgUrl: ['../assets/dumplChePremium_1.jpg', 'dumplChePremium_2.jpg'],
     shortDesc:
       "Начинка: м'ясо яловичини 1-го ґатунку, свинина напівжирна, шпиг несолоний, цибуля ріпчаста, сіль кухонна, цукор білий кристалічний, спеції",
   },
 
   {
-    id: "3jj5yuj1-h55n-40n0-n72j-57j33175t4m5",
-    name: "Пельмені Фірмові 0,600 гр",
+    id: '3jj5yuj1-h55n-40n0-n72j-57j33175t4m5',
+    name: 'Пельмені Фірмові 0,600 гр',
     description: (
       <div>
         Пельмені Cоковиті свинні: тісто: борошно пшеничне вищого ґатунку, вода
@@ -3038,17 +3038,17 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 58.47,
-    purchaseType: "1kg",
-    category: "dumplings",
+    purchaseType: '1kg',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/dumplChePremium_1.jpg", "dumplChePremium_2.jpg"],
+    imgUrl: ['../assets/dumplChePremium_1.jpg', 'dumplChePremium_2.jpg'],
     shortDesc:
       "Начинка: м'ясо яловичини 1-го ґатунку, свинина напівжирна, шпиг несолоний, цибуля ріпчаста, сіль кухонна, цукор білий кристалічний, спеції",
   },
 
   {
-    id: "1jj5yuj1-h11n-10n0-n12j-57j33175t4m5",
-    name: "Пельмені Байрактарчики (курячі)",
+    id: '1jj5yuj1-h11n-10n0-n12j-57j33175t4m5',
+    name: 'Пельмені Байрактарчики (курячі)',
     description: (
       <div>
         Пельмені Байрактарчики (курячі): тісто: борошно пшеничне вищого ґатунку,
@@ -3061,17 +3061,17 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 63.91,
-    purchaseType: "1kg",
-    category: "dumplings",
+    purchaseType: '1kg',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/dumplChePremium_1.jpg", "dumplChePremium_2.jpg"],
+    imgUrl: ['../assets/dumplChePremium_1.jpg', 'dumplChePremium_2.jpg'],
     shortDesc:
       "Начинка: м'ясо яловичини 1-го ґатунку, свинина напівжирна, шпиг несолоний, цибуля ріпчаста, сіль кухонна, цукор білий кристалічний, спеції",
   },
 
   {
-    id: "9jj5yuj1-h11n-60n0-n12j-54j33175t4m5",
-    name: "Пельмені Байрактарчики (курячі)",
+    id: '9jj5yuj1-h11n-60n0-n12j-54j33175t4m5',
+    name: 'Пельмені Байрактарчики (курячі)',
     description: (
       <div>
         Пельмені Байрактарчики (курячі): тісто: борошно пшеничне вищого ґатунку,
@@ -3084,17 +3084,17 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 53.15,
-    purchaseType: "0.600kg",
-    category: "dumplings",
+    purchaseType: '0.600kg',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/dumplChePremium_1.jpg", "dumplChePremium_2.jpg"],
+    imgUrl: ['../assets/dumplChePremium_1.jpg', 'dumplChePremium_2.jpg'],
     shortDesc:
       "Начинка: м'ясо яловичини 1-го ґатунку, свинина напівжирна, шпиг несолоний, цибуля ріпчаста, сіль кухонна, цукор білий кристалічний, спеції",
   },
 
   {
-    id: "1jj5yuj1-y11k-10n0-n55d-27j33175t4m5",
-    name: "Пельмені Веселка",
+    id: '1jj5yuj1-y11k-10n0-n55d-27j33175t4m5',
+    name: 'Пельмені Веселка',
     description: (
       <div>
         Пельмені Веселка: тісто: борошно пшеничне вищого ґатунку, вода питна,
@@ -3107,17 +3107,17 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 63.38,
-    purchaseType: "1kg",
-    category: "dumplings",
+    purchaseType: '1kg',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/dumplChePremium_1.jpg", "dumplChePremium_2.jpg"],
+    imgUrl: ['../assets/dumplChePremium_1.jpg', 'dumplChePremium_2.jpg'],
     shortDesc:
       "Начинка: м'ясо яловичини 1-го ґатунку, свинина напівжирна, шпиг несолоний, цибуля ріпчаста, сіль кухонна, цукор білий кристалічний, спеції",
   },
 
   {
-    id: "1jj5yuj1-y11k-10l0-b55d-27n33175t4m5",
-    name: "Пельмені Веселка 0,600гр",
+    id: '1jj5yuj1-y11k-10l0-b55d-27n33175t4m5',
+    name: 'Пельмені Веселка 0,600гр',
     description: (
       <div>
         Пельмені Веселка: тісто: борошно пшеничне вищого ґатунку, вода питна,
@@ -3130,17 +3130,17 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 85.14,
-    purchaseType: "1kg",
-    category: "dumplings",
+    purchaseType: '1kg',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/dumplChePremium_1.jpg", "dumplChePremium_2.jpg"],
+    imgUrl: ['../assets/dumplChePremium_1.jpg', 'dumplChePremium_2.jpg'],
     shortDesc:
       "Начинка: м'ясо яловичини 1-го ґатунку, свинина напівжирна, шпиг несолоний, цибуля ріпчаста, сіль кухонна, цукор білий кристалічний, спеції",
   },
 
   {
-    id: "7ff5yuq1-h13j-20y0-w52j-57j23175t4m3",
-    name: "Пельмені «Черкаські преміум»",
+    id: '7ff5yuq1-h13j-20y0-w52j-57j23175t4m3',
+    name: 'Пельмені «Черкаські преміум»',
     description: (
       <div>
         Пельмені «Черкаські преміум»: тісто: борошно пшеничне вищого ґатунку,
@@ -3153,17 +3153,17 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 82.0,
-    purchaseType: "0.400kg",
-    category: "dumplings",
+    purchaseType: '0.400kg',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/dumplChePremium_1.jpg", "dumplChePremium_2.jpg"],
+    imgUrl: ['../assets/dumplChePremium_1.jpg', 'dumplChePremium_2.jpg'],
     shortDesc:
       "Начинка: м'ясо яловичини 1-го ґатунку, свинина напівжирна, шпиг несолоний, цибуля ріпчаста, сіль кухонна, цукор білий кристалічний, спеції",
   },
 
   {
-    id: "7ff5yuq1-q13j-60y0-w52j-57j23175t4u3",
-    name: "Пельмені «Черкаські преміум»",
+    id: '7ff5yuq1-q13j-60y0-w52j-57j23175t4u3',
+    name: 'Пельмені «Черкаські преміум»',
     description: (
       <div>
         Пельмені «Черкаські преміум»: тісто: борошно пшеничне вищого ґатунку,
@@ -3176,17 +3176,17 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 83.55,
-    purchaseType: "0.600kg",
-    category: "dumplings",
+    purchaseType: '0.600kg',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/dumplChePremium_1.jpg", "dumplChePremium_2.jpg"],
+    imgUrl: ['../assets/dumplChePremium_1.jpg', 'dumplChePremium_2.jpg'],
     shortDesc:
       "Начинка: м'ясо яловичини 1-го ґатунку, свинина напівжирна, шпиг несолоний, цибуля ріпчаста, сіль кухонна, цукор білий кристалічний, спеції",
   },
 
   {
-    id: "5ff5yuq1-h33j-10k0-w31j-89j23175t4m3",
-    name: "Манти",
+    id: '5ff5yuq1-h33j-10k0-w31j-89j23175t4m3',
+    name: 'Манти',
     description: (
       <div>
         Манти: тісто: борошно пшеничне вищого ґатунку, вода питна, поліпшувач
@@ -3198,16 +3198,16 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 65.24,
-    purchaseType: "1kg",
-    category: "semiFinishedProduct",
+    purchaseType: '1kg',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/nemaPhoto.jpg"],
+    imgUrl: ['../assets/nemaPhoto.jpg'],
     shortDesc:
       "Начинка: м'ясо яловичини 1-го ґатунку, свинина напівжирна, шпиг несолоний, цибуля ріпчаста, сіль кухонна, цукор білий кристалічний, спеції",
   },
   {
-    id: "1ff5yuq1-h33j-11k0-w31j-89j23175t4m1",
-    name: "Манти",
+    id: '1ff5yuq1-h33j-11k0-w31j-89j23175t4m1',
+    name: 'Манти',
     description: (
       <div>
         Манти: тісто: борошно пшеничне вищого ґатунку, вода питна, поліпшувач
@@ -3219,17 +3219,17 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 33.6,
-    purchaseType: "0.400kg",
-    category: "dumplings",
+    purchaseType: '0.400kg',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/nemaPhoto.jpg"],
+    imgUrl: ['../assets/nemaPhoto.jpg'],
     shortDesc:
       "Начинка: м'ясо яловичини 1-го ґатунку, свинина напівжирна, шпиг несолоний, цибуля ріпчаста, сіль кухонна, цукор білий кристалічний, спеції",
   },
 
   {
-    id: "5bb2yuq3-h23k-10k0-w31j-89j23175t4m3",
-    name: "Чебуреки",
+    id: '5bb2yuq3-h23k-10k0-w31j-89j23175t4m3',
+    name: 'Чебуреки',
     description: (
       <div>
         Чебуреки: тісто: борошно пшеничне вищого ґатунку, вода питна, олія
@@ -3241,17 +3241,17 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 77.64,
-    purchaseType: "1kg",
-    category: "semiFinishedProduct",
+    purchaseType: '1kg',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/cheb.jpg"],
+    imgUrl: ['../assets/cheb.jpg'],
     shortDesc:
-      "Начинка: свинина напівжирна, шкірка куряча, цибуля ріпчаста, сіль харчова, спеції.",
+      'Начинка: свинина напівжирна, шкірка куряча, цибуля ріпчаста, сіль харчова, спеції.',
   },
 
   {
-    id: "5bb2yuq3-h23k-10k3-n31j-90j22175t4k3",
-    name: "Голубці з рисом та м’ясом",
+    id: '5bb2yuq3-h23k-10k3-n31j-90j22175t4k3',
+    name: 'Голубці з рисом та м’ясом',
     description: (
       <div>
         Голубці з рисом та м’ясом: листок парений заморожений.
@@ -3262,17 +3262,17 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 68.23,
-    purchaseType: "1kg",
-    category: "semiFinishedProduct",
+    purchaseType: '1kg',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/nemaPhoto.jpg"],
+    imgUrl: ['../assets/nemaPhoto.jpg'],
     shortDesc:
       "Начинка: м'ясо яловичини 1-го ґатунку, свинина напівжирна, шкіра куряча,шпиг неслоний, цибуля ріпчаста смажена, морква свіжа смажена, вода питна, крупа рисова, жир курячий топлений, сіль кухонна, спеції",
   },
 
   {
-    id: "5nn2ynn3-h45n-10k3-n31j-90j22175t4k3",
-    name: "Перець з рисом та мясом",
+    id: '5nn2ynn3-h45n-10k3-n31j-90j22175t4k3',
+    name: 'Перець з рисом та мясом',
     description: (
       <div>
         Склад: перець чищений заморожений.
@@ -3283,17 +3283,17 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 100.86,
-    purchaseType: "1kg",
-    category: "semiFinishedProduct",
+    purchaseType: '1kg',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/nemaPhoto.jpg"],
+    imgUrl: ['../assets/nemaPhoto.jpg'],
     shortDesc:
       "Начинка: м'ясо яловичини 1-го ґатунку, свинина напівжирна, шкіра куряча, шпиг неслоний, цибуля ріпчаста смажена, морква свіжа смажена, вода питна, крупа рисова, жир курячий топлений, сіль кухонна, спеції.",
   },
 
   {
-    id: "5nn2yjj3-h45n-10k5-n34j-90j42173t4k3",
-    name: "Манники з сиром та родзинками",
+    id: '5nn2yjj3-h45n-10k5-n34j-90j42173t4k3',
+    name: 'Манники з сиром та родзинками',
     description: (
       <div>
         Тісто, молоко пастеризоване 2,5 %, вода питна, крупа манна, цукор білий
@@ -3305,17 +3305,17 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 75.42,
-    purchaseType: "1kg",
-    category: "semiFinishedProduct",
+    purchaseType: '1kg',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/nemaPhoto.jpg"],
+    imgUrl: ['../assets/nemaPhoto.jpg'],
     shortDesc:
-      "Начинка: сир кисломолочний 9 %, родзинки без кісточок, цукор білий кристалічний, вода питна, ванілін, сіль кухонна.",
+      'Начинка: сир кисломолочний 9 %, родзинки без кісточок, цукор білий кристалічний, вода питна, ванілін, сіль кухонна.',
   },
 
   {
-    id: "5nn2yjj3-h32n-10k5-n34j-90j42173t4k3",
-    name: "Манники з сиром та родзинками",
+    id: '5nn2yjj3-h32n-10k5-n34j-90j42173t4k3',
+    name: 'Манники з сиром та родзинками',
     description: (
       <div>
         Тісто, молоко пастеризоване 2,5 %, вода питна, крупа манна, цукор білий
@@ -3326,17 +3326,17 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 32.4,
-    purchaseType: "0.400kg",
-    category: "mannik",
+    purchaseType: '0.400kg',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/nemaPhoto.jpg"],
+    imgUrl: ['../assets/nemaPhoto.jpg'],
     shortDesc:
-      "Начинка: сир кисломолочний 9 %, родзинки без кісточок, цукор білий кристалічний, вода питна, ванілін, сіль кухонна.",
+      'Начинка: сир кисломолочний 9 %, родзинки без кісточок, цукор білий кристалічний, вода питна, ванілін, сіль кухонна.',
   },
 
   {
-    id: "1nn2yjj3-h12n-10k5-n34j-90j42171t4k3",
-    name: "Манники з сиром та родзинками",
+    id: '1nn2yjj3-h12n-10k5-n34j-90j42171t4k3',
+    name: 'Манники з сиром та родзинками',
     description: (
       <div>
         Тісто, молоко пастеризоване 2,5 %, вода питна, крупа манна, цукор білий
@@ -3347,17 +3347,17 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 55.85,
-    purchaseType: "0.600kg",
-    category: "mannik",
+    purchaseType: '0.600kg',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/nemaPhoto.jpg"],
+    imgUrl: ['../assets/nemaPhoto.jpg'],
     shortDesc:
-      "Начинка: сир кисломолочний 9 %, родзинки без кісточок, цукор білий кристалічний, вода питна, ванілін, сіль кухонна.",
+      'Начинка: сир кисломолочний 9 %, родзинки без кісточок, цукор білий кристалічний, вода питна, ванілін, сіль кухонна.',
   },
 
   {
-    id: "1fd2bjk2-q95n-22f2-y42f-43u63255p5d3",
-    name: "Ковбаса «Смерть москалям»",
+    id: '1fd2bjk2-q95n-22f2-y42f-43u63255p5d3',
+    name: 'Ковбаса «Смерть москалям»',
     description: (
       <div>
         Склад: 70% яловичина знежилована; 30% сало хребтове.
@@ -3372,16 +3372,16 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 212.81,
-    purchaseType: "1kg",
-    category: "sausage",
+    purchaseType: '1kg',
+    category: 'sausage',
     hot: false,
-    imgUrl: ["../assets/death_moskals.jpg"],
-    shortDesc: "Склад: 70% яловичина знежилована; 30% сало хребтове.",
+    imgUrl: ['../assets/death_moskals.jpg'],
+    shortDesc: 'Склад: 70% яловичина знежилована; 30% сало хребтове.',
   },
 
   {
-    id: "1fd2bjk2-p95n-22f1-y42f-43u13255p5d3",
-    name: "Ковбаса «Домашня»",
+    id: '1fd2bjk2-p95n-22f1-y42f-43u13255p5d3',
+    name: 'Ковбаса «Домашня»',
     description: (
       <div>
         100% свинина напівжирна. Інгредієнти:сіль кухонна харчова,перець чорний
@@ -3395,17 +3395,17 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 253.28,
-    purchaseType: "1kg",
-    category: "sausage",
+    purchaseType: '1kg',
+    category: 'sausage',
     hot: false,
-    imgUrl: ["../assets/domashnia.jpg"],
+    imgUrl: ['../assets/domashnia.jpg'],
     shortDesc:
-      "Строк придатності: за температури від 0С до 6С та відносній вологостівід 75% до 78% не більше 3 діб. Упакованих під вакуумом в газонепроникну плівку не більше 21 доби.",
+      'Строк придатності: за температури від 0С до 6С та відносній вологостівід 75% до 78% не більше 3 діб. Упакованих під вакуумом в газонепроникну плівку не більше 21 доби.',
   },
 
   {
-    id: "9fd2kjk2-p95n-33k1-y42f-41u13255p5d3",
-    name: "Ковбаса «Черкаська»",
+    id: '9fd2kjk2-p95n-33k1-y42f-41u13255p5d3',
+    name: 'Ковбаса «Черкаська»',
     description: (
       <div>
         Склад: м’ясна сировина 96%, сіль харчова, перець чорний мелений, цукор
@@ -3422,17 +3422,17 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 180.0,
-    purchaseType: "1kg",
-    category: "sausage",
+    purchaseType: '1kg',
+    category: 'chpk',
     hot: false,
-    imgUrl: ["../assets/сherkasskaya.jpg"],
+    imgUrl: ['../assets/сherkasskaya.jpg'],
     shortDesc:
-      "Термін придатності ковбас, запакованих під вакуумом або в модифікованому газовому середовищі в плівку цілими батонами, за температури, не вищої за 6 ℃, не більше 25 діб.",
+      'Термін придатності ковбас, запакованих під вакуумом або в модифікованому газовому середовищі в плівку цілими батонами, за температури, не вищої за 6 ℃, не більше 25 діб.',
   },
 
   {
-    id: "5fd2bjk2-f95n-22f2-y42f-43s63255p5d3",
-    name: "Ковбаса «Різдвяна»",
+    id: '5fd2bjk2-f95n-22f2-y42f-43s63255p5d3',
+    name: 'Ковбаса «Різдвяна»',
     description: (
       <div>
         Склад: 50% свинина знежилована нежирна; 35% м’ясо птиці, 15% сало
@@ -3450,17 +3450,17 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 408.0,
-    purchaseType: "1kg",
-    category: "sausage",
+    purchaseType: '1kg',
+    category: 'sausage',
     hot: false,
-    imgUrl: ["../assets/new_years_eve.jpg"],
+    imgUrl: ['../assets/new_years_eve.jpg'],
     shortDesc:
-      "Склад: 50% свинина знежилована нежирна; 35% м’ясо птиці, 15% сало хребтове.",
+      'Склад: 50% свинина знежилована нежирна; 35% м’ясо птиці, 15% сало хребтове.',
   },
 
   {
-    id: "1nn2yjj3-h52n-10k5-n34j-10j42171t4k3",
-    name: "Сосиски варені «Зі скоринкою",
+    id: '1nn2yjj3-h52n-10k5-n34j-10j42171t4k3',
+    name: 'Сосиски варені «Зі скоринкою',
     description: (
       <div>
         Склад: 60% свинина знежилована напівжирна; 30% яловичина знежилована 1с;
@@ -3477,17 +3477,17 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 86.14,
-    purchaseType: "1kg",
-    category: "sausage",
+    purchaseType: '1kg',
+    category: 'sosyska',
     hot: false,
-    imgUrl: ["../assets/sosiski_zi_skorinkou.jpg"],
+    imgUrl: ['../assets/sosiski_zi_skorinkou.jpg'],
     shortDesc:
       "Склад: 60% свинина знежилована напівжирна; 30% яловичина знежилована 1с; 10% м'ясо птиці.",
   },
 
   {
-    id: "5nn2yjj3-k52n-10k5-n34j-10i41171t4k3",
-    name: "Курка копчена",
+    id: '5nn2yjj3-k52n-10k5-n34j-10i41171t4k3',
+    name: 'Курка копчена',
     description: (
       <div>
         Склад: тушка куряча
@@ -3504,11 +3504,11 @@ export const arrayCard: ICard[] = [
       </div>
     ),
     price: 128.85,
-    purchaseType: "1kg",
-    category: "sausage",
+    purchaseType: '1kg',
+    category: 'sausage',
     hot: false,
-    imgUrl: ["../assets/kurka_kopchena.jpg"],
+    imgUrl: ['../assets/kurka_kopchena.jpg'],
     shortDesc:
-      "Термін придатності за температури, від 00С до 60С, та відносній вологості від 70% до 80%, не більше ніж 5 діб.",
+      'Термін придатності за температури, від 00С до 60С, та відносній вологості від 70% до 80%, не більше ніж 5 діб.',
   },
 ];
