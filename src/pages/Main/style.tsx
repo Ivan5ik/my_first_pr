@@ -17,7 +17,12 @@ const useStyles = createUseStyles({
   contentStyle: {
     width: "490px",
   },
-  photo: { maxWidth: "490px", display: "block" },
+  photo: {
+    maxWidth: "490px",
+    display: "block",
+    borderRadius: "10px",
+    height: "500px",
+  },
 
   description: {
     color: globalColors.white,

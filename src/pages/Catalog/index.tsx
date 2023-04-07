@@ -21,7 +21,8 @@ const Catalog = () => {
   };
 
   const { t } = useTranslation();
-  console.log(arrayCard);
+
+  console.log(selectValue, "selectValue");
 
   return (
     <div className={classes.root}>
