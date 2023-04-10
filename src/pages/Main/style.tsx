@@ -8,11 +8,26 @@ const useStyles = createUseStyles({
     backgroundRepeat: "no-repeat",
     backgroundSize: "100%",
     color: globalColors.white,
-    height: "90vh",
+    height: "100%",
     width: "100%",
-    "& .ant-carousel .slick-dots": {
-      zIndex: "1",
-    },
+    // "& .ant-carousel .slick-dots": {
+    //   zIndex: "1",
+    // },
+    padding: "100px 0px 100px 0px",
+  },
+
+  wrapperVideo: {
+    display: "flex",
+    justifyContent: "center",
+    backgroundImage: "url(../assets/headerBack.png)",
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "cover",
+    height: "900px",
+    alignItems: "center",
+  },
+
+  containerVideo: {
+    width: "980px",
   },
   contentStyle: {
     width: "490px",
@@ -44,7 +59,7 @@ const useStyles = createUseStyles({
     display: "flex !important",
     minHeight: "10px",
     alignItems: "center",
-    height: "80vh",
+    padding: "100px 0px 100px 0px",
   },
   styleImg: { width: "490px", display: "flex", justifyContent: "center" },
   sectionCard: {
@@ -136,6 +151,7 @@ const useStyles = createUseStyles({
     padding: "40px 0 40px 0",
   },
   cVideo: {
+    display: "block",
     position: "relative",
     width: "100%",
     overflow: "hidden",
