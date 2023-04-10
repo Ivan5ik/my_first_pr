@@ -1,14 +1,14 @@
-import React from 'react';
-import { DownCircleOutlined } from '@ant-design/icons';
-import { useTranslation } from 'react-i18next';
-import Fade from 'react-reveal/Fade';
-import Zoom from 'react-reveal/Zoom';
-import Slide from 'react-reveal/Slide';
-import { Carousel } from 'antd';
+import React from "react";
+import { DownCircleOutlined } from "@ant-design/icons";
+import { useTranslation } from "react-i18next";
+import Fade from "react-reveal/Fade";
+import Zoom from "react-reveal/Zoom";
+import Slide from "react-reveal/Slide";
+import { Carousel } from "antd";
 
-import { phoneNumber } from '../../utils';
+import { phoneNumber } from "../../utils";
 
-import useStyles from './style';
+import useStyles from "./style";
 
 const Production = () => {
   const classes = useStyles();
@@ -17,23 +17,23 @@ const Production = () => {
 
   const carouselBottom = [
     {
-      h: '- Консалтинг з копчення -',
+      h: "- Консалтинг з копчення -",
       p1: 'Провівши більше 6 000 годин за процесом копчення на дубових дровах і працюючи на всіх типах коптильних камер які були в Україні, навчаючись в кращих пітмастеров США і Скандинавії ми часто отримуємо запити на постановку процесу копчення в ресторанах і на виробництвах.Ми готові допомогти вам підібрати коптильню, налаштувати процеси, навчити ваш персонал, відпрацювати до 10 страв, прописати покроковий Cookbook цих страв і проконсультувати по "ходових" позицій і шляхах продажу на ринку.На сьогодні ми працювали з такими ресторанами, як "Мафія", "This is Pivbar", "Свиня на сіні" (Одеса), "Sho". Запускали повноцінні виробництва в Україні, Молдові, Грузії, Казахстані.',
     },
     {
-      h: '- Консалтинг для ресторанів -',
-      p1: 'Якщо ти ресторатор і бажаєш коптити м\'ясо у себе, ми допоможемо обрати оптимальне обладнання відповідно до бюджету та площі, зробити так, щоб ваша кухня не "задихалася" у диму, навчити персонал та швидко запустити нові страви у меню.Усі наші 6 000 годин копчення надаються вам у вигляді конкретних відповідей на поставлені задачі.',
+      h: "- Адреси наших магазинів -",
+      p1: "Вулиця Припортова, за зупинкою «Черемушки»,вулиця  Вячеслава Чорновола, 156. Ринок на Шкільній,вулиця Онопрієнка, 2. На розі вулиць Юрія Іллєнко (колишня вулиця Горького) та Толстого. На розі вулиць Тараскова та Героїв Майдану (колишня вулиця Гайдара). На розі вулиць Пастерівська та Капітана Пилипенка. Вулиця  Грушевського (колишня вулиця Котовського), поблизу  будинку №95. Вулиця Симиренківській (колишня вулиця Рябоконя), 29. Вулиця Добровольського, біля будинку №15. Площа 700-річчя. Вулиці Перемоги,6. Черкаський район, село Свидівок, вулиця Шевченка (центр села, біля сільської ради).Черкаський район, село Геронимівка, вулиця Благовісна (центр села). На розі вулиць проспект Хімвків, (колишня вулиця Рози Люксембург).",
     },
   ];
 
   const leftCarousel = [
-    '../assets/new_carosuel_left_1.jpg',
-    '../assets/new_carosuel_left_2.jpg',
-    '../assets/new_carosuel_left_3.jpg',
+    "../assets/new_carosuel_left_1.jpg",
+    "../assets/new_carosuel_left_2.jpg",
+    "../assets/new_carosuel_left_3.jpg",
   ];
   const rightCarousel = [
-    '../assets/new_carousel_right_1.jpg',
-    '../assets/new_carousel_right_2.jpg',
+    "../assets/new_carousel_right_1.jpg",
+    "../assets/new_carousel_right_2.jpg",
   ];
 
   return (
@@ -42,8 +42,8 @@ const Production = () => {
         <div className={classes.coverHeader}>
           <Fade top cascade>
             <div>
-              <h1 className={classes.h1}>{t('productionPage.smoking')}</h1>
-              <p className={classes.p}>{t('productionPage.descriptionTop')}</p>
+              <h1 className={classes.h1}>{t("productionPage.smoking")}</h1>
+              <p className={classes.p}>{t("productionPage.descriptionTop")}</p>
             </div>
           </Fade>
         </div>
@@ -56,7 +56,7 @@ const Production = () => {
       </div>
       <div className={classes.middle}>
         <Zoom cascade>
-          <h1 className={classes.product}>{t('productionPage.production')}</h1>
+          <h1 className={classes.product}>{t("productionPage.production")}</h1>
         </Zoom>
         <div className={classes.carouselTop}>
           <div className={classes.leftCarousel}>
@@ -69,7 +69,7 @@ const Production = () => {
           <div className={classes.rightText}>
             <Slide right>
               <p className={classes.rightTextP}>
-                {t('productionPage.rightTextP')}
+                {t("productionPage.rightTextP")}
               </p>
             </Slide>
           </div>
@@ -78,7 +78,7 @@ const Production = () => {
           <div className={classes.leftText}>
             <Slide left>
               <p className={classes.leftTextP}>
-                {t('productionPage.leftTextP')}
+                {t("productionPage.leftTextP")}
               </p>
             </Slide>
           </div>
@@ -99,8 +99,8 @@ const Production = () => {
                 <div className={classes.blockComponent} key={item.h}>
                   <h2 className={classes.h2}>{item.h}</h2>
                   <p className={classes.p1}>{item.p1}</p>
-                  <p className={classes.p2}>{t('moreDetailForPhone')}</p>
-                  <a href='callto:+380673055924' className={classes.tel}>
+                  <p className={classes.p2}>{t("moreDetailForPhone")}</p>
+                  <a href="callto:+380673055924" className={classes.tel}>
                     {phoneNumber}
                   </a>
                 </div>

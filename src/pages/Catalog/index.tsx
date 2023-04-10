@@ -45,9 +45,6 @@ const Catalog = () => {
 
       <div className={classes.productsList}>
         {arrayCard
-          .filter((item) =>
-            item.name.toLowerCase().includes(input.toLowerCase())
-          )
           .filter((item) => {
             if ("category" === selectValue) {
               return true;
@@ -57,6 +54,9 @@ const Catalog = () => {
                 .includes(selectValue.toLowerCase());
             }
           })
+          .filter((item) =>
+            item.name.toLowerCase().includes(input.toLowerCase())
+          )
 
           .map((item: ICard) => (
             <Card item={item} key={item.id} />
