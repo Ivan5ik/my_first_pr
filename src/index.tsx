@@ -6,7 +6,6 @@ import store from "./store";
 
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import StoreProvider from "./store";
 import "./i18n";
 import ScrollToTop from "./utils/const";
 
