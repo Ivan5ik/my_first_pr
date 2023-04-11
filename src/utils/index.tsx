@@ -30,7 +30,7 @@ export const getArrayForSelect = (purchaseType: string) => {
   // if (purchaseType === "1kg") {
   //   return arraySelectGram;
   // }
-  if (purchaseType === "piece") {
+  if (purchaseType === "piece" || "1count") {
     return arraySelectPiece;
   }
   return [];
