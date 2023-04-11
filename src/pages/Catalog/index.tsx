@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Zoom from "react-reveal/Zoom";
 import { useTranslation } from "react-i18next";
 
@@ -8,21 +8,26 @@ import { Select } from "../../components/Select";
 import { Input } from "../../components/Input";
 
 import useStyles from "./style";
+import { useDebounce } from "../../utils/hooks";
 
 const Catalog = () => {
   const classes = useStyles();
-
-  const [input, setInput] = useState("");
+  const { t } = useTranslation();
+  const [inputValue, setInputValue] = useState("");
+  const [searchTerm, setSearchTerm] = useState("");
   const [selectValue, setSelectValue] = useState("category");
 
   const setReset = () => {
-    setInput("");
+    setSearchTerm("");
+    setInputValue("");
     setSelectValue("category");
   };
 
-  const { t } = useTranslation();
+  const debouncedSearchTerm = useDebounce(inputValue, 1000);
 
-  console.log(selectValue, "selectValue");
+  useEffect(() => {
+    setSearchTerm(debouncedSearchTerm);
+  }, [debouncedSearchTerm]);
 
   return (
     <div className={classes.root}>
@@ -31,7 +36,7 @@ const Catalog = () => {
       </Zoom>
       <div className={classes.underProduct}>
         <div className={classes.coverUnderProduct}>
-          <Input value={input} setValue={setInput} />
+          <Input value={inputValue} setValue={setInputValue} />
           <Select
             selectValue={selectValue}
             setValue={setSelectValue}
@@ -55,7 +60,7 @@ const Catalog = () => {
             }
           })
           .filter((item) =>
-            item.name.toLowerCase().includes(input.toLowerCase())
+            item.name.toLowerCase().includes(searchTerm.toLowerCase())
           )
 
           .map((item: ICard) => (
