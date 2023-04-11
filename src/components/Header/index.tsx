@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import classNames from "classnames";
 import { useTranslation } from "react-i18next";
 
-import { navigationMiddleBottom, phoneNumber } from "../../utils";
+import { navigationMiddleBottom, phoneNumber } from "../../utils/const";
 import { IRoutes } from "../../routes/routes";
 
 import useStyles from "./style";

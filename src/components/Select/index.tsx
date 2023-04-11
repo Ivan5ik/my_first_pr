@@ -2,7 +2,7 @@ import React, { FC } from "react";
 import { Select as SelectAnt } from "antd";
 
 import useStyles from "./style";
-import { IOptionsList } from "../../utils";
+import { IOptionsList } from "../../types";
 
 const { Option } = SelectAnt;
 

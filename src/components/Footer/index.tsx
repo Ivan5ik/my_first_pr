@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import ArrowUpOutlined from "@ant-design/icons/ArrowUpOutlined";
-import { basicWords, phoneNumber } from "../../utils";
+import { basicWords, phoneNumber } from "../../utils/const";
 
 import useStyles from "./style";
 

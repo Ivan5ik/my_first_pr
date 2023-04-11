@@ -8,7 +8,7 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import StoreProvider from "./store";
 import "./i18n";
-import ScrollToTop from "./utils";
+import ScrollToTop from "./utils/const";
 
 import "./index.css";
 

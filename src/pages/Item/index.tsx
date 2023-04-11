@@ -4,7 +4,7 @@ import { Carousel } from "antd";
 import { useDispatch, useSelector } from "react-redux";
 
 import { Select } from "../../components/Select";
-import { arrayCard, getArrayForSelect, getPrice } from "../../utils";
+import { arrayCard, getArrayForSelect, getPrice } from "../../utils/const";
 import { Button } from "../../components/Button";
 import { useTranslation } from "react-i18next";
 import { order, setOrder } from "../../store/boxSlice";

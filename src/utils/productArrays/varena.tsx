@@ -1,4 +1,4 @@
-import { ICard } from "..";
+import { ICard } from "../../types";
 
 export const varena: ICard[] = [
   {

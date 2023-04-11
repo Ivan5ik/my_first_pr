@@ -1,5 +1,5 @@
 import { createUseStyles } from "react-jss";
-import { globalColors } from "../../utils";
+import { globalColors } from "../../utils/const";
 
 const useStyles = createUseStyles({
   name: {
