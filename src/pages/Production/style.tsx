@@ -4,14 +4,25 @@ import { globalColors } from "../../utils/const";
 
 const useStyles = createUseStyles({
   root: {
-    backgroundImage: "url(../assets/avatarmanuFacture.jpg)",
+    backgroundImage: "url(../assets/avatarmanuFacture_1.jpg)",
     backgroundRepeat: "no-repeat",
+    // backgroundColor: "rgba(0,0,0,0.5)",
     backgroundSize: "100%",
-    height: "90vh",
+    height: "72vh",
     width: "100%",
     display: "flex",
     flexDirection: "column",
     justifyContent: "space-between",
+    "&:after": {
+      content: "",
+      width: "100%",
+      height: "100%",
+      position: "absolute",
+      top: 0,
+      left: 0,
+      background: "rgba(0,0,0,0.5) !important",
+      zIndex: "2",
+    },
   },
   coverHeader: {
     paddingTop: "20vh",

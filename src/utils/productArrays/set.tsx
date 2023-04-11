@@ -11,7 +11,7 @@ export const set: ICard[] = [
     purchaseType: "1count",
     category: "set",
     hot: false,
-    imgUrl: ["../assets/avatar3.JPG"],
+    imgUrl: ["../assets/avatar3.jpg"],
     shortDesc: "Склад: Домашня 0.450-0.520 Українська 0.4 Краківська 0.5",
     weight: 1,
   },
@@ -28,7 +28,8 @@ export const set: ICard[] = [
     purchaseType: "1count",
     category: "set",
     hot: false,
-    imgUrl: ["../assets/avatar2.JPG"],
+    imgUrl: ["../assets/avatar2.jpg"],
+
     shortDesc:
       "Склад: Домашня 0.450-0.520 Українська 0.4 Краківська 0.5 Дрогобицька 0.470 Святковий рулет 0.350",
     weight: 1,
@@ -46,7 +47,7 @@ export const set: ICard[] = [
     purchaseType: "1count",
     category: "set",
     hot: false,
-    imgUrl: ["../assets/avatar1.JPG"],
+    imgUrl: ["../assets/avatar1.jpg"],
     shortDesc:
       "Склад: Домашня 0.450-0.520 Українська 0.4 Краківська 0.5 Дрогобицька 0.470 Святковий рулет 0.350 Балик дарницький 0.350 Імператор 0.3",
     weight: 1,

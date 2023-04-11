@@ -6,8 +6,6 @@ import Zoom from "react-reveal/Zoom";
 import Slide from "react-reveal/Slide";
 import { Carousel } from "antd";
 
-import { phoneNumber } from "../../utils/const";
-
 import useStyles from "./style";
 
 const Production = () => {
