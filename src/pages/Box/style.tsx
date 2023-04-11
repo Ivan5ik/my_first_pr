@@ -122,6 +122,11 @@ const useStyles = createUseStyles({
   },
   coverForAntRadio: {
     width: "75%",
+    "& .ant-input": {
+      backgroundColor: "rgb(245 245 245 / 0%)",
+      color: "white",
+      borderBottom: "none",
+    },
   },
   city: { width: "26%", padding: "0px 10px 0px 0px" },
   address: { width: "26%", padding: "0px 10px 0px 0px" },
