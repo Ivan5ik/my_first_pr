@@ -9,7 +9,33 @@ import { semiFinished } from "../productArrays/semiFinished";
 import { sosyska } from "../productArrays/sosyska";
 import { varena } from "../productArrays/varena";
 import { vuribKovbas } from "../productArrays/vuribKovbas";
+import { set } from "../productArrays/set";
 import { ICard, IDeliveryArray, IOptionsList, IPayArray } from "../../types";
+
+export const arrayCard: ICard[] = [
+  ...set,
+  ...chpk,
+  ...vuribKovbas,
+  ...varena,
+  ...sosyska,
+  ...rawSmoked,
+  ...pork,
+  ...chicken,
+  ...semiFinished,
+];
+
+export const arrayCategory: IOptionsList[] = [
+  { name: "Категорія", key: "category" },
+  { name: "Сосиски,сардельки", key: "sosyska" },
+  { name: "Ковбаси варені", key: "varena" },
+  { name: "Ковбасні вироби", key: "vuribKovbas" },
+  { name: "Напівфабрикати", key: "semiFinished" },
+  { name: "Продукція чпк", key: "chpk" },
+  { name: "Вироби з курятини", key: "chicken" },
+  { name: "Вироби зі свинини", key: "pork" },
+  { name: "Сирокопчені ковбаси", key: "rawSmoked" },
+  { name: "Набори", key: "set" },
+];
 
 export const getPrice = (purchaseType: string) => {
   // if (purchaseType === "1kg") {
@@ -112,18 +138,6 @@ export const arraySelectGram: IOptionsList[] = [
   { name: `5 кг`, key: "50" },
 ];
 
-export const arrayCategory: IOptionsList[] = [
-  { name: "Категорія", key: "category" },
-  { name: "Сосиски,сардельки", key: "sosyska" },
-  { name: "Ковбаси варені", key: "varena" },
-  { name: "Ковбасні вироби", key: "vuribKovbas" },
-  { name: "Напівфабрикати", key: "semiFinished" },
-  { name: "Продукція чпк", key: "chpk" },
-  { name: "Вироби з курятини", key: "chicken" },
-  { name: "Вироби зі свинини", key: "pork" },
-  { name: "Сирокопчені ковбаси", key: "rawSmoked" },
-];
-
 export const navigationMiddleBottom: IRoutes[] = [
   { name: "home", path: "/" },
   { name: "product", path: "/cataloge" },
@@ -138,14 +152,3 @@ export const basicWords = [
 ];
 
 export const button = { key: "cataloge" };
-
-export const arrayCard: ICard[] = [
-  ...chpk,
-  ...vuribKovbas,
-  ...varena,
-  ...sosyska,
-  ...rawSmoked,
-  ...pork,
-  ...chicken,
-  ...semiFinished,
-];

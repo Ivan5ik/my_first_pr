@@ -23,7 +23,6 @@ const Card: FC<ICardProps> = ({ item }) => {
   const { shortDesc, name, price, purchaseType, imgUrl, id } = item;
 
   const dispatch = useDispatch();
-  const date = new Date();
 
   const { t } = useTranslation();
   const history = useNavigate();
