@@ -4,7 +4,7 @@ import { globalColors } from "../../utils/const";
 
 const useStyles = createUseStyles({
   root: {
-    backgroundImage: "url(../assets/production.png)",
+    backgroundImage: "url(../assets/avatarmanuFacture.jpg)",
     backgroundRepeat: "no-repeat",
     backgroundSize: "100%",
     height: "90vh",
@@ -98,6 +98,7 @@ const useStyles = createUseStyles({
     width: "100%",
     background: "#242424",
     paddingTop: "50px",
+    paddingBottom: "50px",
   },
   bottomContent: {
     width: "980px",
@@ -105,8 +106,8 @@ const useStyles = createUseStyles({
   },
   bottomImg: {
     padding: "37px 125px",
-    height: "530px",
-    backgroundImage: "url(../assets/carousel-bottom.png)",
+    height: "430px",
+    backgroundImage: "url(../assets/konsaltyng.jpg)",
     backgroundRepeat: "no-repeat",
     backgroundSize: "100%",
   },

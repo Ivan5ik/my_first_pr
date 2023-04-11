@@ -61,7 +61,7 @@ export const getArrayForSelect = (purchaseType: string) => {
 
 export const currentYear = new Date().getFullYear();
 
-export const phoneNumber = "+380 63 623 55 35";
+export const phoneNumber = "+380 67 556 47 07";
 
 export default function ScrollToTop() {
   const { pathname } = useLocation();
