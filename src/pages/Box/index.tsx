@@ -46,6 +46,8 @@ const Box = () => {
 
   let resultListOrder = storeOrder;
 
+  console.log("storeOrder", storeOrder);
+
   const handleAllInput = (e: React.ChangeEvent<HTMLInputElement>) => {
     const fields = getFieldsValue();
     setFieldsValue({ ...fields, phone: e.target.value });
@@ -55,7 +57,13 @@ const Box = () => {
     deliveryArray.find((item) => index === item.check);
 
   resultListOrder.forEach((item: IOrder) => {
-    total += Number((Number(item.count) * Number(item.goods.price)) / 10);
+    if (item.goods.purchaseType === "1count") {
+      total += Number(item.count) * item.goods.price;
+    } else {
+      total += Number(item.count) * item.goods.weight * item.goods.price;
+    }
+
+    // total += Number((Number(item.count) * Number(item.goods.price)) / 10);
   });
 
   const handleDelGoods = (index: number) => {

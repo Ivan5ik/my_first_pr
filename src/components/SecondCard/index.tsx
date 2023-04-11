@@ -24,7 +24,10 @@ const SecondCard: FC<ISecondCard> = ({ item, onClick }) => {
   const { t } = useTranslation();
   const [selectValue, setSelectValue] = useState(String(item.count));
 
-  const total = ((Number(selectValue) * item.goods.price) / 10).toFixed(2);
+  const total =
+    item.goods.purchaseType === "1count"
+      ? (Number(selectValue) * item.goods.price).toFixed(2)
+      : (Number(selectValue) * item.goods.weight * item.goods.price).toFixed(2);
 
   const dispatch = useDispatch();
 
