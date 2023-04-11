@@ -1,9 +1,9 @@
 import React, { FC } from "react";
 import { Form, Radio } from "antd";
 import { useTranslation } from "react-i18next";
-import { IDeliveryArray, IPayArray } from "../../../utils";
 
 import { useStyles } from "./style";
+import { IDeliveryArray, IPayArray } from "../../../types";
 
 interface IInputRadioGroup {
   name: string;

@@ -1,6 +1,6 @@
-import { ICard } from "../utils";
 import { configureStore } from "@reduxjs/toolkit";
 import boxSlice from "./boxSlice";
+import { ICard } from "../types";
 
 export interface IOrder {
   goods: ICard;

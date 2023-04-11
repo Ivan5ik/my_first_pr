@@ -1,39 +1,15 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import { IRoutes } from "../routes/routes";
-import { chicken } from "./productArrays/chicken";
-import { chpk } from "./productArrays/chpk";
-import { pork } from "./productArrays/pork";
-import { rawSmoked } from "./productArrays/rawSmoked";
-import { semiFinished } from "./productArrays/semiFinished";
-import { sosyska } from "./productArrays/sosyska";
-import { varena } from "./productArrays/varena";
-import { vuribKovbas } from "./productArrays/vuribKovbas";
-
-export interface ICard {
-  id: string;
-  name: string;
-  description: JSX.Element;
-  price: number;
-  purchaseType: string;
-  category: string;
-  hot: boolean;
-  imgUrl: string[];
-  shortDesc: string;
-  weight: number;
-}
-
-export interface IOptionsList {
-  name: string;
-  key: string;
-}
-
-export interface IContextOrder {
-  count: "string";
-  goods: IContextOrderGoods;
-}
-
-export interface IContextOrderGoods {}
+import { IRoutes } from "../../routes/routes";
+import { chicken } from "../productArrays/chicken";
+import { chpk } from "../productArrays/chpk";
+import { pork } from "../productArrays/pork";
+import { rawSmoked } from "../productArrays/rawSmoked";
+import { semiFinished } from "../productArrays/semiFinished";
+import { sosyska } from "../productArrays/sosyska";
+import { varena } from "../productArrays/varena";
+import { vuribKovbas } from "../productArrays/vuribKovbas";
+import { ICard, IDeliveryArray, IOptionsList, IPayArray } from "../../types";
 
 export const getPrice = (purchaseType: string) => {
   // if (purchaseType === "1kg") {
@@ -81,22 +57,10 @@ export const globalColors = {
   lightRed: "#b85d5a",
 };
 
-export interface IPayArray {
-  name: string;
-  check: string;
-}
-
 export const payArray: IPayArray[] = [
   { name: "boxPage.payRadioBut.cash", check: "cash" },
   { name: "boxPage.payRadioBut.cashless", check: "cashLess" },
 ];
-
-export interface IDeliveryArray {
-  name: string;
-  check: string;
-  img: string;
-  style: string;
-}
 
 export const deliveryArray: IDeliveryArray[] = [
   {
@@ -175,7 +139,7 @@ export const basicWords = [
 
 export const button = { key: "cataloge" };
 
-export const arrayCard = [
+export const arrayCard: ICard[] = [
   ...chpk,
   ...vuribKovbas,
   ...varena,

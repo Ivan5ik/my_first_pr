@@ -4,11 +4,12 @@ import { useDispatch, useSelector } from "react-redux";
 import { useTranslation } from "react-i18next";
 
 import { Select } from "../Select";
-import { getArrayForSelect, ICard, getPrice } from "../../utils";
+import { getArrayForSelect, getPrice } from "../../utils/const";
 import { Button } from "../Button";
 import { order, setOrder } from "../../store/boxSlice";
 
 import useStyles from "./style";
+import { ICard } from "../../types";
 
 interface ICardProps {
   item: ICard;

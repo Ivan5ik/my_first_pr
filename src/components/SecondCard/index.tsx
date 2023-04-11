@@ -2,7 +2,7 @@ import React, { FC, useEffect, useState } from "react";
 import { CloseOutlined } from "@ant-design/icons";
 import { useDispatch, useSelector } from "react-redux";
 
-import { getArrayForSelect, getPrice } from "../../utils";
+import { getArrayForSelect, getPrice } from "../../utils/const";
 import { Select } from "../Select";
 import { IOrder } from "../../store";
 import { useTranslation } from "react-i18next";

@@ -5,7 +5,7 @@ import Fade from "react-reveal/Fade";
 import emailjs from "@emailjs/browser";
 import { useNavigate } from "react-router-dom";
 
-import { deliveryArray, payArray } from "../../utils";
+import { deliveryArray, payArray } from "../../utils/const";
 import { SecondCard } from "../../components/SecondCard";
 import { IOrder /*StoreContext*/ } from "../../store";
 import { InputFieldAnt } from "../../components/antComponent/InputFieldAnt";

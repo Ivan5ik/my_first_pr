@@ -11,13 +11,14 @@ import Fade from "react-reveal/Fade";
 import emailjs from "@emailjs/browser";
 import { PlayCircleOutlined, PauseCircleOutlined } from "@ant-design/icons";
 
-import { arrayCard, button, ICard, phoneNumber } from "../../utils";
+import { arrayCard, button, phoneNumber } from "../../utils/const";
 import { Card } from "../../components/Card";
 import { InputFieldAnt } from "../../components/antComponent/InputFieldAnt";
 import { InputPhone } from "../../components/antComponent/inputPhone";
 import { ButAnt } from "../../components/antComponent/buttonAnt";
 
 import useStyles from "./style";
+import { ICard } from "../../types";
 
 const Main = () => {
   const classes = useStyles();
