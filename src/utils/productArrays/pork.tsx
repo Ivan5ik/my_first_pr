@@ -1,15 +1,4 @@
-export interface ICard {
-  id: string;
-  name: string;
-  description: JSX.Element;
-  price: number;
-  purchaseType: string;
-  category: string;
-  hot: boolean;
-  imgUrl: string[];
-  shortDesc: string;
-  weight: number;
-}
+import { ICard } from "..";
 
 export const pork: ICard[] = [
   {
