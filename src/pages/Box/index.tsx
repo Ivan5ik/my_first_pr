@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 import { deliveryArray, payArray } from "../../utils";
 import { SecondCard } from "../../components/SecondCard";
 import { IOrder /*StoreContext*/ } from "../../store";
-import { InputFieldAnt } from "../../components/antComponent/InputFieldAnt";
+
 import { RadioGroup } from "../../components/antComponent/radioGroup";
 import { InputPhone } from "../../components/antComponent/inputPhone";
 import { InputEmail } from "../../components/antComponent/inputEmail";
@@ -17,6 +17,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { order, setOrder } from "../../store/boxSlice";
 
 import useStyles from "./style";
+import { InputFieldAnt } from "../../components/antComponent/InputFieldAnt";
+import { SimpleText } from "../../components/antComponent/SimpleText";
 
 type NotificationType = "success" | "info" | "warning" | "error";
 
@@ -42,11 +44,9 @@ const Box = () => {
 
   const storeOrder = useSelector((state: RootState) => state.orderBox.order);
 
-  Form.useWatch("radioDelivery", formANT);
+  const delivery = Form.useWatch("radioDelivery", formANT);
 
   let resultListOrder = storeOrder;
-
-  console.log("storeOrder", storeOrder);
 
   const handleAllInput = (e: React.ChangeEvent<HTMLInputElement>) => {
     const fields = getFieldsValue();
@@ -62,8 +62,6 @@ const Box = () => {
     } else {
       total += Number(item.count) * item.goods.weight * item.goods.price;
     }
-
-    // total += Number((Number(item.count) * Number(item.goods.price)) / 10);
   });
 
   const handleDelGoods = (index: number) => {
@@ -90,10 +88,16 @@ const Box = () => {
     });
   };
 
-  const handleResult = () => {
+  const handleResult = (values: any) => {
     if (storeOrder.length === 0) {
       return openNotificationWithIcon("error", "order isn't add");
     }
+    setFieldsValue({
+      ...values,
+      pay: delivery === "Cherkasy" ? "Готівка" : "Безготівкова",
+    });
+
+    console.log("values", values);
 
     emailjs
       .sendForm(
@@ -125,7 +129,13 @@ const Box = () => {
       <div ref={forma}>
         <Form
           name="basic"
-          initialValues={{ radioDelivery: "NovaPochta", pay: "cash" }}
+          initialValues={{
+            radioDelivery: "NovaPochta",
+            pay:
+              getFieldsValue().radioDelivery === "Cherkasy"
+                ? "Готівка"
+                : "Безготівкова",
+          }}
           onFinish={handleResult}
           onFinishFailed={onFinishFailed}
           autoComplete="off"
@@ -205,7 +215,12 @@ const Box = () => {
                 <div className={classes.coverPay}>
                   <p className={classes.payP}>{t("boxPage.pay")}</p>
                   <div className={classes.coverForAntRadio}>
-                    <RadioGroup name="pay" array={payArray} />
+                    <SimpleText
+                      name="test"
+                      value={
+                        delivery === "Cherkasy" ? "Готівка" : "Безготівкова"
+                      }
+                    />
                   </div>
                 </div>
               </div>
