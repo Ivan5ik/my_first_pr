@@ -63,6 +63,12 @@ export default function Header() {
               ))}
             </div>
           </div>
+          <img
+            src="../assets/chpk_logo.png"
+            onClick={() => history("/")}
+            className={classes.img}
+            alt="logo"
+          />
         </div>
       </div>
     </div>
