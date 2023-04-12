@@ -66,7 +66,7 @@ const useStyles = createUseStyles({
     },
   },
   img: {
-    width: "90px",
+    width: "100px",
     height: "75px",
     display: "block",
     cursor: "pointer",
