@@ -16,6 +16,7 @@ const Catalog = () => {
   const { t } = useTranslation();
   const [inputValue, setInputValue] = useState("");
   const [searchTerm, setSearchTerm] = useState("");
+  const [test, setTest] = useState<ICard[]>([]);
   const [selectValue, setSelectValue] = useState("category");
 
   const setReset = () => {
@@ -29,6 +30,26 @@ const Catalog = () => {
   useEffect(() => {
     setSearchTerm(debouncedSearchTerm);
   }, [debouncedSearchTerm]);
+
+  console.log("selectValue", selectValue);
+
+  useEffect(() => {
+    const mytateArray = arrayCard
+      .filter((item) => {
+        if ("category" === selectValue) {
+          return true;
+        } else {
+          return item.category
+            .toLowerCase()
+            .includes(selectValue.toLowerCase());
+        }
+      })
+      .filter((item) =>
+        item.name.toLowerCase().includes(searchTerm.toLowerCase())
+      );
+
+    setTest(mytateArray);
+  }, [searchTerm, selectValue]);
 
   return (
     <div className={classes.root}>
@@ -50,26 +71,15 @@ const Catalog = () => {
       </div>
 
       <div className={classes.productsList}>
-        {arrayCard
-          .filter((item) => {
-            if ("category" === selectValue) {
-              return true;
-            } else {
-              return item.category
-                .toLowerCase()
-                .includes(selectValue.toLowerCase());
-            }
-          })
-          .filter((item) =>
-            item.name.toLowerCase().includes(searchTerm.toLowerCase())
-          )
+        {test.map((item: ICard) => {
+          return <Card item={item} key={item.id} />;
+        })}
 
-          .map((item: ICard) => (
-            <Card item={item} key={item.id} />
-          ))}
-        <div className={classes.middleWare}>
-          <p>За даним пошуком товар не знайдено...</p>
-        </div>
+        {test.length === 0 && (
+          <div className={classes.middleWare}>
+            <p>За даним пошуком товар не знайдено...</p>
+          </div>
+        )}
       </div>
     </div>
   );

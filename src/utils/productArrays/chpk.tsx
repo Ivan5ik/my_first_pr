@@ -233,8 +233,8 @@ export const chpk: ICard[] = [
     weight: 0.5,
   },
   {
-    id: "9pn7gbg2-f82f-31t2-m87d-45s65233c3d4",
-    name: "Ковбаса ЧПК салямі «Віденська» ~0.450кг",
+    id: "9pn7gbg1-f82f-31t2-m87d-45s65233c3d4",
+    name: "Ковбаса ЧПК салямі «Віденська» ~0.4500sкг",
     description: (
       <div>
         Склад: яловичина знежилована 1 сорту; свинина знежилована напівжирна;
@@ -256,7 +256,7 @@ export const chpk: ICard[] = [
     ),
     price: 207.1,
     purchaseType: "piece",
-    category: "vuribKovbas",
+    category: "chpk",
     hot: false,
     imgUrl: ["../assets/videnska_9993.JPG"],
     shortDesc:

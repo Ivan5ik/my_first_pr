@@ -97,8 +97,6 @@ const Box = () => {
       pay: delivery === "Cherkasy" ? "Готівка" : "Безготівкова",
     });
 
-    console.log("values", values);
-
     emailjs
       .sendForm(
         process.env.REACT_APP_TEMPLATE1_KEY!,
