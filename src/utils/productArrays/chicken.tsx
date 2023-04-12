@@ -22,7 +22,7 @@ export const chicken: ICard[] = [
       </div>
     ),
     price: 174.75,
-    purchaseType: "1count",
+    purchaseType: "piece",
     category: "chicken",
     hot: false,
     imgUrl: ["../assets/krylo_0300.JPG"],

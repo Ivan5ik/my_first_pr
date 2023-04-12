@@ -8,7 +8,7 @@ export const set: ICard[] = [
       <div>Склад: Домашня 0.450-0.520 Українська 0.4 Краківська 0.5</div>
     ),
     price: 450.0,
-    purchaseType: "1count",
+    purchaseType: "piece",
     category: "set",
     hot: false,
     imgUrl: ["../assets/avatar3.jpg"],
@@ -25,7 +25,7 @@ export const set: ICard[] = [
       </div>
     ),
     price: 650.0,
-    purchaseType: "1count",
+    purchaseType: "piece",
     category: "set",
     hot: false,
     imgUrl: ["../assets/avatar2.jpg"],
@@ -44,7 +44,7 @@ export const set: ICard[] = [
       </div>
     ),
     price: 850.0,
-    purchaseType: "1count",
+    purchaseType: "piece",
     category: "set",
     hot: false,
     imgUrl: ["../assets/avatar1.jpg"],
