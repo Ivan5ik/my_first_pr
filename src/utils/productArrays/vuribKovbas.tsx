@@ -25,7 +25,7 @@ export const vuribKovbas: ICard[] = [
       </div>
     ),
     price: 147.97,
-    purchaseType: "1count",
+    purchaseType: "piece",
     category: "vuribKovbas",
     hot: false,
     imgUrl: ["../assets/salamyKievski_0156.JPG"],
@@ -121,7 +121,7 @@ export const vuribKovbas: ICard[] = [
       </div>
     ),
     price: 131.24,
-    purchaseType: "1count",
+    purchaseType: "piece",
     category: "vuribKovbas",
     hot: false,
     imgUrl: ["../assets/videnska_9993.JPG"],
@@ -179,7 +179,7 @@ export const vuribKovbas: ICard[] = [
       </div>
     ),
     price: 162.7,
-    purchaseType: "1count",
+    purchaseType: "piece",
     category: "vuribKovbas",
     hot: false,
     imgUrl: ["../assets/hungary_9985.JPG"],
@@ -208,7 +208,7 @@ export const vuribKovbas: ICard[] = [
       </div>
     ),
     price: 264.31,
-    purchaseType: "1count",
+    purchaseType: "piece",
     category: "vuribKovbas",
     hot: false,
     imgUrl: ["../assets/servelat_9989.JPG"],
@@ -237,7 +237,7 @@ export const vuribKovbas: ICard[] = [
       </div>
     ),
     price: 183.71,
-    purchaseType: "1count",
+    purchaseType: "piece",
     category: "vuribKovbas",
     hot: false,
     imgUrl: ["../assets/balikova_9990.JPG"],
@@ -262,7 +262,7 @@ export const vuribKovbas: ICard[] = [
       </div>
     ),
     price: 212.81,
-    purchaseType: "1count",
+    purchaseType: "piece",
     category: "vuribKovbas",
     hot: false,
     imgUrl: ["../assets/death_moskals.jpg"],

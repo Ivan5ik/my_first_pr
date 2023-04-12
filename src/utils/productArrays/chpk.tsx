@@ -24,7 +24,7 @@ export const chpk: ICard[] = [
       </div>
     ),
     price: 158.77,
-    purchaseType: "1count",
+    purchaseType: "piece",
     category: "chpk",
     hot: false,
     imgUrl: ["../assets/school_CHPK_0292.JPG"],
@@ -110,7 +110,7 @@ export const chpk: ICard[] = [
       </div>
     ),
     price: 175.06,
-    purchaseType: "1count",
+    purchaseType: "piece",
     category: "chpk",
     hot: false,
     imgUrl: ["../assets/salyami_9988.JPG"],
@@ -139,7 +139,7 @@ export const chpk: ICard[] = [
       </div>
     ),
     price: 330.35,
-    purchaseType: "1count",
+    purchaseType: "piece",
     category: "chpk",
     hot: false,
     imgUrl: ["../assets/drogobytska0010.JPG"],
@@ -224,7 +224,7 @@ export const chpk: ICard[] = [
       </div>
     ),
     price: 157.2,
-    purchaseType: "1count",
+    purchaseType: "piece",
     category: "chpk",
     hot: false,
     imgUrl: ["../assets/sausage_milk_9992.JPG"],
@@ -255,7 +255,7 @@ export const chpk: ICard[] = [
       </div>
     ),
     price: 207.1,
-    purchaseType: "1count",
+    purchaseType: "piece",
     category: "vuribKovbas",
     hot: false,
     imgUrl: ["../assets/videnska_9993.JPG"],

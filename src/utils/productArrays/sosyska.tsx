@@ -54,7 +54,7 @@ export const sosyska: ICard[] = [
       </div>
     ),
     price: 150.31,
-    purchaseType: "1count",
+    purchaseType: "piece",
     category: "sosyska",
     hot: false,
     imgUrl: ["../assets/sardelkiMalyatko_0159.JPG"],
@@ -85,7 +85,7 @@ export const sosyska: ICard[] = [
       </div>
     ),
     price: 153.89,
-    purchaseType: "1count",
+    purchaseType: "piece",
     category: "sosyska",
     hot: false,
     imgUrl: ["../assets/sardelka_with_cheese0308.JPG"],
@@ -116,7 +116,7 @@ export const sosyska: ICard[] = [
       </div>
     ),
     price: 93.29,
-    purchaseType: "1count",
+    purchaseType: "piece",
     category: "sosyska",
     hot: false,
     imgUrl: ["../assets/nizhni_9991.JPG"],
@@ -147,7 +147,7 @@ export const sosyska: ICard[] = [
       </div>
     ),
     price: 120.74,
-    purchaseType: "1count",
+    purchaseType: "piece",
     category: "sosyska",
     hot: false,
     imgUrl: ["../assets/sausageMini_0163.JPG"],
@@ -178,7 +178,7 @@ export const sosyska: ICard[] = [
       </div>
     ),
     price: 181.82,
-    purchaseType: "1count",
+    purchaseType: "piece",
     category: "sosyska",
     hot: false,
     imgUrl: [
@@ -276,7 +276,7 @@ export const sosyska: ICard[] = [
       </div>
     ),
     price: 124.84,
-    purchaseType: "1count",
+    purchaseType: "piece",
     category: "sosyska",
     hot: false,
     imgUrl: ["../assets/kovbaska_shashlichna_0310.JPG"],
@@ -374,7 +374,7 @@ export const sosyska: ICard[] = [
       </div>
     ),
     price: 170.85,
-    purchaseType: "1count",
+    purchaseType: "piece",
     category: "sosyska",
     hot: false,
     imgUrl: ["../assets/sausageMini_0163.JPG"],
@@ -405,7 +405,7 @@ export const sosyska: ICard[] = [
       </div>
     ),
     price: 156.29,
-    purchaseType: "1count",
+    purchaseType: "piece",
     category: "sosyska",
     hot: false,
     imgUrl: ["../assets/elitni0297.JPG"],
@@ -435,7 +435,7 @@ export const sosyska: ICard[] = [
       </div>
     ),
     price: 109.12,
-    purchaseType: "1count",
+    purchaseType: "piece",
     category: "sosyska",
     hot: false,
     imgUrl: ["../assets/sardelkiYouVilei_0155.JPG"],
@@ -495,7 +495,7 @@ export const sosyska: ICard[] = [
       </div>
     ),
     price: 141.48,
-    purchaseType: "1count",
+    purchaseType: "piece",
     category: "sosyska",
     hot: false,
     imgUrl: ["../assets/sardelki_sokovyty_0294.JPG"],
@@ -525,7 +525,7 @@ export const sosyska: ICard[] = [
       </div>
     ),
     price: 110.46,
-    purchaseType: "1count",
+    purchaseType: "piece",
     category: "sosyska",
     hot: false,
     imgUrl: ["../assets/sardelkiMalyatko_0159.JPG"],
@@ -582,7 +582,7 @@ export const sosyska: ICard[] = [
       </div>
     ),
     price: 122.0,
-    purchaseType: "1count",
+    purchaseType: "piece",
     category: "sosyska",
     hot: false,
     imgUrl: ["../assets/karapyz.jpg"],

@@ -23,7 +23,7 @@ export const varena: ICard[] = [
       </div>
     ),
     price: 168.55,
-    purchaseType: "1count",
+    purchaseType: "piece",
     category: "varena",
     hot: false,
     imgUrl: ["../assets/kovbasa_lyubytelska_0296.JPG"],
@@ -53,7 +53,7 @@ export const varena: ICard[] = [
       </div>
     ),
     price: 183.83,
-    purchaseType: "1count",
+    purchaseType: "piece",
     category: "varena",
     hot: false,
     imgUrl: [
@@ -91,7 +91,7 @@ export const varena: ICard[] = [
       </div>
     ),
     price: 87.55,
-    purchaseType: "1count",
+    purchaseType: "piece",
     category: "varena",
     hot: false,
     imgUrl: ["../assets/olivye_0301.JPG"],
@@ -123,7 +123,7 @@ export const varena: ICard[] = [
       </div>
     ),
     price: 87.55,
-    purchaseType: "1count",
+    purchaseType: "piece",
     category: "varena",
     hot: false,
     imgUrl: ["../assets/olivye_0301.JPG"],
@@ -156,7 +156,7 @@ export const varena: ICard[] = [
       </div>
     ),
     price: 87.42,
-    purchaseType: "1count",
+    purchaseType: "piece",
     category: "varena",
     hot: false,
     imgUrl: ["../assets/toTea_0257.JPG"],
@@ -188,7 +188,7 @@ export const varena: ICard[] = [
       </div>
     ),
     price: 87.42,
-    purchaseType: "1count",
+    purchaseType: "piece",
     category: "varena",
     hot: false,
     imgUrl: ["../assets/toTea_0257.JPG"],
@@ -220,7 +220,7 @@ export const varena: ICard[] = [
       </div>
     ),
     price: 87.2,
-    purchaseType: "1count",
+    purchaseType: "piece",
     category: "varena",
     hot: false,
     imgUrl: ["../assets/telyacha_0258.JPG"],
@@ -252,7 +252,7 @@ export const varena: ICard[] = [
       </div>
     ),
     price: 87.2,
-    purchaseType: "1count",
+    purchaseType: "piece",
     category: "varena",
     hot: false,
     imgUrl: ["../assets/telyacha_0258.JPG"],
@@ -284,7 +284,7 @@ export const varena: ICard[] = [
       </div>
     ),
     price: 98.05,
-    purchaseType: "1count",
+    purchaseType: "piece",
     category: "varena",
     hot: false,
     imgUrl: ["../assets/telyacha_vershky_0298.JPG"],

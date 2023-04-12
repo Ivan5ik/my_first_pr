@@ -23,7 +23,7 @@ export const rawSmoked: ICard[] = [
       </div>
     ),
     price: 355.87,
-    purchaseType: "1count",
+    purchaseType: "piece",
     category: "rawSmoked",
     hot: false,
     imgUrl: ["../assets/kovbaskyFranc_0014.JPG"],
@@ -53,7 +53,7 @@ export const rawSmoked: ICard[] = [
       </div>
     ),
     price: 280.8,
-    purchaseType: "1count",
+    purchaseType: "piece",
     category: "rawSmoked",
     hot: false,
     imgUrl: ["../assets/senator_0018.JPG", "../assets/senator2_0147.JPG"],
@@ -141,7 +141,7 @@ export const rawSmoked: ICard[] = [
       </div>
     ),
     price: 284.7,
-    purchaseType: "1count",
+    purchaseType: "piece",
     category: "rawSmoked",
     hot: false,
     imgUrl: [
@@ -169,7 +169,7 @@ export const rawSmoked: ICard[] = [
       </div>
     ),
     price: 278.1,
-    purchaseType: "1count",
+    purchaseType: "piece",
     category: "rawSmoked",
     hot: false,
     imgUrl: ["../assets/tsarska0013.JPG", "../assets/tsarska2_0140.JPG"],

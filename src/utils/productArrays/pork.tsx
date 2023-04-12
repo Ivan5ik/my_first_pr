@@ -85,7 +85,7 @@ export const pork: ICard[] = [
       </div>
     ),
     price: 154.4,
-    purchaseType: "1count",
+    purchaseType: "piece",
     category: "pork",
     hot: false,
     imgUrl: ["../assets/shchokovyna_0164.JPG"],
@@ -115,7 +115,7 @@ export const pork: ICard[] = [
       </div>
     ),
     price: 260.1,
-    purchaseType: "1count",
+    purchaseType: "piece",
     category: "pork",
     hot: false,
     imgUrl: ["../assets/rylet_0260.JPG"],
