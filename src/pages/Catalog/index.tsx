@@ -67,6 +67,9 @@ const Catalog = () => {
           .map((item: ICard) => (
             <Card item={item} key={item.id} />
           ))}
+        <div className={classes.middleWare}>
+          <p>За даним пошуком товар не знайдено...</p>
+        </div>
       </div>
     </div>
   );

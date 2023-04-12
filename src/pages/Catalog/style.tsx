@@ -28,6 +28,17 @@ const useStyles = createUseStyles({
     paddingTop: "25px",
     textAlign: "center",
   },
+  middleWare: {
+    width: "100%",
+    height: "calc(100vh - 810px);",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    "& p": {
+      fontSize: "23px",
+      color: "white",
+    },
+  },
   underProduct: {
     display: "flex",
     justifyContent: "space-between",
