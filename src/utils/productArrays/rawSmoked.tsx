@@ -3,7 +3,7 @@ import { ICard } from "../../types";
 export const rawSmoked: ICard[] = [
   {
     id: "9pn7gbg3-r85f-35c2-m67d-23s65233c3d3",
-    name: "Ковбаски «Французькі» сирокопчені",
+    name: "Ковбаски «Французькі» ~0.350кг",
     description: (
       <div>
         Склад: яловичина знежилована вс; філе птиці; шпик хребтовий.Інгредієнти:
@@ -23,20 +23,17 @@ export const rawSmoked: ICard[] = [
       </div>
     ),
     price: 355.87,
-    purchaseType: "piece",
+    purchaseType: "1count",
     category: "rawSmoked",
     hot: false,
-    imgUrl: [
-      "../assets/kovbaskyFranc_0014.JPG",
-      "../assets/zelc_kovbaskyFranc_rylet.JPG",
-    ],
+    imgUrl: ["../assets/kovbaskyFranc_0014.JPG"],
     shortDesc:
       "Термін придатності за температури від -2 ℃ до -4 ℃ не більше 6-и  місяців, за температури від -7 ℃ до -9 ℃ не більше 9-и  місяців",
-    weight: 1,
+    weight: 0.35,
   },
   {
     id: "3pg5gmg4-r85g-35c1-m67s-23s67233c3d3",
-    name: "Сенатор",
+    name: "Сенатор ~0.3кг",
     description: (
       <div>
         Склад: яловичина знежилована вс; філе птиці; шпик хребтовий.Інгредієнти:
@@ -56,18 +53,13 @@ export const rawSmoked: ICard[] = [
       </div>
     ),
     price: 280.8,
-    purchaseType: "piece",
+    purchaseType: "1count",
     category: "rawSmoked",
     hot: false,
-    imgUrl: [
-      "../assets/senator_0018.JPG",
-      "../assets/senator2_0147.JPG",
-      "../assets/tsarsky_senator_venecia2_0141.JPG",
-      "../assets/tsarsky_senator_venecia0138.JPG",
-    ],
+    imgUrl: ["../assets/senator_0018.JPG", "../assets/senator2_0147.JPG"],
     shortDesc:
       "Термін придатності за температури від -2 ℃ до -4 ℃ не більше 6-и  місяців, за температури від -7 ℃ до -9 ℃ не більше 9-и  місяців",
-    weight: 1,
+    weight: 0.3,
   },
   {
     id: "9pn7gbg3-r83f-35d2-m87d-23s65233c3d3",
@@ -136,7 +128,7 @@ export const rawSmoked: ICard[] = [
   },
   {
     id: "3qx3bhk2-g31n-13c4-y24n-43s63255y4d3",
-    name: "Венеція",
+    name: "Венеція ~0.3кг",
     description: (
       <div>
         Бендерики курині: тісто: борошно, вода питна, молоко пастеризоване 2,5%,
@@ -149,24 +141,21 @@ export const rawSmoked: ICard[] = [
       </div>
     ),
     price: 284.7,
-    purchaseType: "piece",
+    purchaseType: "1count",
     category: "rawSmoked",
     hot: false,
     imgUrl: [
       "../assets/venecia3_0015.JPG",
       "../assets/venecia1_0011.JPG",
       "../assets/venecia2_0012.JPG",
-      "../assets/venecia4_0142.JPG",
-      "../assets/tsarsky_senator_venecia0138.JPG",
-      "../assets/tsarsky_senator_venecia2_0141.JPG",
     ],
     shortDesc:
       "Начинка: м'ясо птиці, шкірка куряча, цибуля ріпчаста, текстурат соєвий харчовий, борошно соєве харчове, сіль харчова, спеції.",
-    weight: 1,
+    weight: 0.3,
   },
   {
     id: "3ks3tjk2-h12x-52c4-y25g-43s63255t5d3",
-    name: "Царська",
+    name: "Царська ~0.3кг",
     description: (
       <div>
         Бендерики свин. – ялов.: тісто: борошно, вода питна, молоко
@@ -180,17 +169,12 @@ export const rawSmoked: ICard[] = [
       </div>
     ),
     price: 278.1,
-    purchaseType: "piece",
+    purchaseType: "1count",
     category: "rawSmoked",
     hot: false,
-    imgUrl: [
-      "../assets/tsarska0013.JPG",
-      "../assets/tsarska2_0140.JPG",
-      "../assets/tsarsky_senator_venecia0138.JPG",
-      "../assets/tsarsky_senator_venecia2_0141.JPG",
-    ],
+    imgUrl: ["../assets/tsarska0013.JPG", "../assets/tsarska2_0140.JPG"],
     shortDesc:
       "Начинка: м'ясо свинини та яловичини напівжирне, шкірка куряча, цибуля ріпчаста, борошно соєве харчове, сіль кухонна,спеції.",
-    weight: 1,
+    weight: 0.3,
   },
 ];

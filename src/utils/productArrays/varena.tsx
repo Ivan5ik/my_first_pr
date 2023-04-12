@@ -3,7 +3,7 @@ import { ICard } from "../../types";
 export const varena: ICard[] = [
   {
     id: "3pg3gmg7-r71g-91c1-m55s-13s63233c3c3",
-    name: "Ковбаса варена «Любительська»",
+    name: "Ковбаса варена «Любительська» ~0.5кг",
     description: (
       <div>
         Склад: яловичина знежилована вс; філе птиці; шпик хребтовий.Інгредієнти:
@@ -23,23 +23,17 @@ export const varena: ICard[] = [
       </div>
     ),
     price: 168.55,
-    purchaseType: "piece",
+    purchaseType: "1count",
     category: "varena",
     hot: false,
-    imgUrl: [
-      "../assets/kovbasa_lyubytelska_0296.JPG",
-      "../assets/ua.JPG",
-      "../assets/ua2_0132.JPG",
-      "../assets/ua3_9984.JPG",
-      "../assets/tsarsky_senator_venecia0138.JPG",
-    ],
+    imgUrl: ["../assets/kovbasa_lyubytelska_0296.JPG"],
     shortDesc:
       "Термін придатності за температури від -2 ℃ до -4 ℃ не більше 6-и  місяців, за температури від -7 ℃ до -9 ℃ не більше 9-и  місяців",
-    weight: 1,
+    weight: 0.5,
   },
   {
     id: "3pg5gmg3-r31g-15c5-g65s-13s62233c3c3",
-    name: "Лікарська",
+    name: "Лікарська ~0.500кг",
     description: (
       <div>
         Склад: яловичина знежилована вс; філе птиці; шпик хребтовий.Інгредієнти:
@@ -59,7 +53,7 @@ export const varena: ICard[] = [
       </div>
     ),
     price: 183.83,
-    purchaseType: "piece",
+    purchaseType: "1count",
     category: "varena",
     hot: false,
     imgUrl: [
@@ -71,11 +65,11 @@ export const varena: ICard[] = [
     ],
     shortDesc:
       "Термін придатності за температури від -2 ℃ до -4 ℃ не більше 6-и  місяців, за температури від -7 ℃ до -9 ℃ не більше 9-и  місяців",
-    weight: 1,
+    weight: 0.5,
   },
   {
     id: "2gg4ggg2-f87f-31t2-d37y-45s64233c3d5",
-    name: "Олів'є",
+    name: "Олів'є ~1.500кг",
     description: (
       <div>
         Склад: яловичина знежилована вс; яловичина знежилована 1с; свинина
@@ -97,17 +91,17 @@ export const varena: ICard[] = [
       </div>
     ),
     price: 87.55,
-    purchaseType: "piece",
+    purchaseType: "1count",
     category: "varena",
     hot: false,
     imgUrl: ["../assets/olivye_0301.JPG"],
     shortDesc:
       "Термін  придатності сардельок запакованих під вакуумом, або в модифікованому газовому середовищі в термозсідальні газонепроникні полімерні  матеріали за температури від 0 ℃ до 6 ℃ не більше 20 діб. ",
-    weight: 1,
+    weight: 1.5,
   },
   {
-    id: "2gg4ggg7-f55f-31h2-d37y-45s64233c3d5",
-    name: "Олів'є 0,600 гр",
+    id: "2gg4ggg2-f87f-32t2-d37y-45q64233c3d5",
+    name: "Олів'є ~0.600кг",
     description: (
       <div>
         Склад: яловичина знежилована вс; яловичина знежилована 1с; свинина
@@ -129,17 +123,18 @@ export const varena: ICard[] = [
       </div>
     ),
     price: 87.55,
-    purchaseType: "0,600kg",
+    purchaseType: "1count",
     category: "varena",
     hot: false,
     imgUrl: ["../assets/olivye_0301.JPG"],
     shortDesc:
       "Термін  придатності сардельок запакованих під вакуумом, або в модифікованому газовому середовищі в термозсідальні газонепроникні полімерні  матеріали за температури від 0 ℃ до 6 ℃ не більше 20 діб. ",
-    weight: 1,
+    weight: 0.6,
   },
+
   {
     id: "4pr4tbb3-f57d-33f2-d35y-25s63233c3d5",
-    name: "Ковбаса варена до чаю",
+    name: "Ковбаса варена до чаю ~1.500кг",
     description: (
       <div>
         Склад: яловичина знежилована вс; яловичина знежилована 1с; свинина
@@ -161,17 +156,17 @@ export const varena: ICard[] = [
       </div>
     ),
     price: 87.42,
-    purchaseType: "piece",
+    purchaseType: "1count",
     category: "varena",
     hot: false,
     imgUrl: ["../assets/toTea_0257.JPG"],
     shortDesc:
       "Термін  придатності сардельок запакованих під вакуумом, або в модифікованому газовому середовищі в термозсідальні газонепроникні полімерні  матеріали за температури від 0 ℃ до 6 ℃ не більше 20 діб. ",
-    weight: 1,
+    weight: 1.5,
   },
   {
     id: "2pr4tbb5-f57d-77m2-d35y-25f63233c3n5",
-    name: "Ковбаса варена до чаю 0,600гр",
+    name: "Ковбаса варена до чаю 0.600гр",
     description: (
       <div>
         Склад: яловичина знежилована вс; яловичина знежилована 1с; свинина
@@ -193,17 +188,17 @@ export const varena: ICard[] = [
       </div>
     ),
     price: 87.42,
-    purchaseType: "0,600kg",
+    purchaseType: "1count",
     category: "varena",
     hot: false,
     imgUrl: ["../assets/toTea_0257.JPG"],
     shortDesc:
       "Термін  придатності сардельок запакованих під вакуумом, або в модифікованому газовому середовищі в термозсідальні газонепроникні полімерні  матеріали за температури від 0 ℃ до 6 ℃ не більше 20 діб. ",
-    weight: 1,
+    weight: 0.6,
   },
   {
     id: "4pr4tbb3-f57d-33h2-d36y-32s44233c3f5",
-    name: "Теляча",
+    name: "Теляча ~1.500кг",
     description: (
       <div>
         Склад: яловичина знежилована вс; яловичина знежилована 1с; свинина
@@ -225,17 +220,17 @@ export const varena: ICard[] = [
       </div>
     ),
     price: 87.2,
-    purchaseType: "piece",
+    purchaseType: "1count",
     category: "varena",
     hot: false,
     imgUrl: ["../assets/telyacha_0258.JPG"],
     shortDesc:
       "Термін  придатності сардельок запакованих під вакуумом, або в модифікованому газовому середовищі в термозсідальні газонепроникні полімерні  матеріали за температури від 0 ℃ до 6 ℃ не більше 20 діб. ",
-    weight: 1,
+    weight: 1.5,
   },
   {
     id: "4pr4tnn3-f57k-33h2-d36y-32k44233c3f5",
-    name: "Теляча  0,600гр",
+    name: "Теляча ~0.600гр",
     description: (
       <div>
         Склад: яловичина знежилована вс; яловичина знежилована 1с; свинина
@@ -257,17 +252,17 @@ export const varena: ICard[] = [
       </div>
     ),
     price: 87.2,
-    purchaseType: "0,60kg",
+    purchaseType: "1count",
     category: "varena",
     hot: false,
     imgUrl: ["../assets/telyacha_0258.JPG"],
     shortDesc:
       "Термін  придатності сардельок запакованих під вакуумом, або в модифікованому газовому середовищі в термозсідальні газонепроникні полімерні  матеріали за температури від 0 ℃ до 6 ℃ не більше 20 діб. ",
-    weight: 1,
+    weight: 0.6,
   },
   {
     id: "1pr4tbb7-f37d-55h5-d36y-32s44233c3f5",
-    name: "Теляча з вершками",
+    name: "Теляча з вершками ~0.500кг",
     description: (
       <div>
         Склад: яловичина знежилована вс; яловичина знежилована 1с; свинина
@@ -289,12 +284,12 @@ export const varena: ICard[] = [
       </div>
     ),
     price: 98.05,
-    purchaseType: "piece",
+    purchaseType: "1count",
     category: "varena",
     hot: false,
     imgUrl: ["../assets/telyacha_vershky_0298.JPG"],
     shortDesc:
       "Термін  придатності сардельок запакованих під вакуумом, або в модифікованому газовому середовищі в термозсідальні газонепроникні полімерні  матеріали за температури від 0 ℃ до 6 ℃ не більше 20 діб. ",
-    weight: 1,
+    weight: 0.5,
   },
 ];
