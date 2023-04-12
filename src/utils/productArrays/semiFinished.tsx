@@ -1042,7 +1042,7 @@ export const semiFinished: ICard[] = [
     purchaseType: "0.600kg",
     category: "1count",
     hot: false,
-    imgUrl: ["../assets/nemaPhoto.jpg"],
+    imgUrl: ["../assets/mannik_sir_rodzinka.jpg"],
     shortDesc:
       "Начинка: сир кисломолочний 9 %, родзинки без кісточок, цукор білий кристалічний, вода питна, ванілін, сіль кухонна.",
     weight: 0.6,
