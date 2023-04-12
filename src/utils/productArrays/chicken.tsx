@@ -3,7 +3,7 @@ import { ICard } from "../../types";
 export const chicken: ICard[] = [
   {
     id: "9ca7bbc3-r45b-4fb7-r47a-94n53543g3d3",
-    name: "Крило куряче варено-копчене три фаланги",
+    name: "Крило куряче варено-копчене три фаланги ~0.5кг",
     description: (
       <div>
         Склад: крило куряче.Інгредієнти: сіль кухонна харчова; регулятор кольору
@@ -22,13 +22,13 @@ export const chicken: ICard[] = [
       </div>
     ),
     price: 174.75,
-    purchaseType: "piece",
+    purchaseType: "1count",
     category: "chicken",
     hot: false,
     imgUrl: ["../assets/krylo_0300.JPG"],
     shortDesc:
       "Термін  придатності продукту  запакованого під вакуумом, або в модифікованому газовому середовищі в термозсідальні газонепроникні полімерні  матеріали за температури від 0 ℃ до 6 ℃ не більше 17 діб. ",
-    weight: 1,
+    weight: 0.5,
   },
   {
     id: "9ca7bvc3-r44m-5tb8-m45h-94j53543g3d3",
@@ -84,10 +84,7 @@ export const chicken: ICard[] = [
     purchaseType: "piece",
     category: "chicken",
     hot: false,
-    imgUrl: [
-      "../assets/rylet_0260.JPG",
-      "../assets/zelc_kovbaskyFranc_rylet.JPG",
-    ],
+    imgUrl: ["../assets/rylet_0260.JPG"],
     shortDesc:
       "Термін  придатності за температури, від 0 ℃ до 6 ℃, та відносній вологості від 75%  до 78%, не більше ніж 3 доби.",
     weight: 1,
