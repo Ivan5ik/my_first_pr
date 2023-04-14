@@ -46,9 +46,16 @@ const Card: FC<ICardProps> = ({ item }) => {
 
   return (
     <div className={classes.card}>
-      <div onClick={() => history(`/catalog/${id}`)} className={classes.top}>
-        <img className={classes.imgOfCard} alt="imgOfCard" src={imgUrl[0]} />
-        <h1 className={classes.whiteColor}>{name}</h1>
+      <div className={classes.top}>
+        <img
+          onClick={() => history(`/catalog/${id}`)}
+          className={classes.imgOfCard}
+          alt="imgOfCard"
+          src={imgUrl[0]}
+        />
+        <h1 onClick={() => history(`/catalog/${id}`)} className={classes.title}>
+          {name}
+        </h1>
         <p className={classes.whiteColor}>{shortDesc}</p>
       </div>
 

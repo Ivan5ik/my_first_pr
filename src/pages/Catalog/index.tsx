@@ -31,8 +31,6 @@ const Catalog = () => {
     setSearchTerm(debouncedSearchTerm);
   }, [debouncedSearchTerm]);
 
-  console.log("selectValue", selectValue);
-
   useEffect(() => {
     const mytateArray = arrayCard
       .filter((item) => {

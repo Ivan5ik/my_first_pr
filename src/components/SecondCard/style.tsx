@@ -20,9 +20,10 @@ const useStyles = createUseStyles({
     display: "flex",
   },
   imgGoods: {
-    height: "110px",
+    height: "150px",
     width: "160px",
     marginRight: "25px",
+    objectFit: "cover",
   },
   rightTop: {
     display: "flex",
