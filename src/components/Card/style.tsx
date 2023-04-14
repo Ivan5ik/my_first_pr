@@ -21,9 +21,15 @@ const useStyles = createUseStyles({
     color: globalColors.white,
     minHeight: "10px",
   },
+  title: {
+    color: globalColors.white,
+    fontSize: "25px",
+    cursor: "pointer",
+  },
   pricePlusSelect: {
     display: "flex",
     justifyContent: "space-between",
+    marginBottom: "5px",
   },
   price: {
     color: globalColors.white,
@@ -44,7 +50,13 @@ const useStyles = createUseStyles({
   top: { display: "flex", flexDirection: "column" },
   bottom: { display: "flex", flexDirection: "column" },
   imgOfCard: {
-    "&:hover": { border: `1px solid ${globalColors.red}`, cursor: "pointer" },
+    height: "250px",
+    objectFit: "cover",
+    transition: "all 0.3s",
+    "&:hover": {
+      cursor: "pointer",
+      transform: "scale(0.97)",
+    },
   },
   coverPrice: {
     display: "flex",

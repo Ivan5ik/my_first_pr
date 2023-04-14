@@ -6,8 +6,7 @@ const useStyles = createUseStyles({
   root: {
     backgroundImage: "url(../assets/avatarmanuFacture_1.jpg)",
     backgroundRepeat: "no-repeat",
-    // backgroundColor: "rgba(0,0,0,0.5)",
-    backgroundSize: "100%",
+    backgroundSize: "100% 100%",
     height: "72vh",
     width: "100%",
     display: "flex",

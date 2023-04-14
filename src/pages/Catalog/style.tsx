@@ -14,10 +14,8 @@ const useStyles = createUseStyles({
     },
     "& .ant-input": {
       height: "90%",
+      marginLeft: "0",
     },
-  },
-  antInput: {
-    // height: "100%",
   },
   antSelect: {
     height: "100%",
