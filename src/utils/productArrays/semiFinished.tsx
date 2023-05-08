@@ -1,9 +1,9 @@
-import { ICard } from "../../types";
+import { ICard } from '../../types';
 
 export const semiFinished: ICard[] = [
   {
-    id: "3fx2bjk2-r95n-33h4-y52f-43s63255t5d3",
-    name: "Млинці з м’ясом курячим 4кг",
+    id: '3fx2bjk2-r95n-33h4-y52f-43s63255t5d3',
+    name: 'Млинці з м’ясом курячим 4кг',
     description: (
       <div>
         Млинці з м’ясом курячим: тісто: борошно, вода питна, молоко
@@ -16,17 +16,17 @@ export const semiFinished: ICard[] = [
       </div>
     ),
     price: 89.09,
-    purchaseType: "piece",
-    category: "semiFinished",
+    purchaseType: 'piece',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/blinchikWithChicken.jpg"],
+    imgUrl: ['../assets/blinchikWithChicken.jpg'],
     shortDesc:
-      "Начинка: філе куряче варене, цибуля ріпчаста смажена, жир курячий топлений, шкварки з шкірки курячої, сіль кухонна, спеції.",
+      'Начинка: філе куряче варене, цибуля ріпчаста смажена, жир курячий топлений, шкварки з шкірки курячої, сіль кухонна, спеції.',
     weight: 4,
   },
   {
-    id: "3fx3bjk2-r94n-43b4-y29f-43s63255t5d3",
-    name: "Млинці з сиром та родзинками 4кг",
+    id: '3fx3bjk2-r94n-43b4-y29f-43s63255t5d3',
+    name: 'Млинці з сиром та родзинками 4кг',
     description: (
       <div>
         Млинці з сиром та родзинками : тісто: борошно, вода питна, молоко
@@ -39,17 +39,17 @@ export const semiFinished: ICard[] = [
       </div>
     ),
     price: 75.53,
-    purchaseType: "piece",
-    category: "semiFinished",
+    purchaseType: 'piece',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/blinchikWithCheese.jpg"],
+    imgUrl: ['../assets/blinchikWithCheese.jpg'],
     shortDesc:
-      "Начинка: сир кис , цукор білий кристалічний, ванілін, сіль кухонна, вода питна.",
+      'Начинка: сир кис , цукор білий кристалічний, ванілін, сіль кухонна, вода питна.',
     weight: 4,
   },
   {
-    id: "4fx3byk2-r94n-43b3-y19f-43s63255i5d3",
-    name: "Млинці з сиром та родзинками ~0.600кг",
+    id: '4fx3byk2-r94n-43b3-y19f-43s63255i5d3',
+    name: 'Млинці з сиром та родзинками ~0.600кг',
     description: (
       <div>
         Млинці з сиром та родзинками : тісто: борошно, вода питна, молоко
@@ -62,17 +62,17 @@ export const semiFinished: ICard[] = [
       </div>
     ),
     price: 69.96,
-    purchaseType: "1count",
-    category: "semiFinished",
+    purchaseType: '1count',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/blinchikWithRodzynka.jpg"],
+    imgUrl: ['../assets/blinchikWithRodzynka.jpg'],
     shortDesc:
-      "Начинка: сир кис , цукор білий кристалічний, ванілін, сіль кухонна, вода питна.",
+      'Начинка: сир кис , цукор білий кристалічний, ванілін, сіль кухонна, вода питна.',
     weight: 0.6,
   },
   {
-    id: "3fx3bjk2-g31n-43c4-y24n-43s63255t5d3",
-    name: "Бендерики курині 4кг",
+    id: '3fx3bjk2-g31n-43c4-y24n-43s63255t5d3',
+    name: 'Бендерики курині 4кг',
     description: (
       <div>
         Бендерики курині: тісто: борошно, вода питна, молоко пастеризоване 2,5%,
@@ -85,18 +85,18 @@ export const semiFinished: ICard[] = [
       </div>
     ),
     price: 67.64,
-    purchaseType: "piece",
-    category: "semiFinished",
+    purchaseType: 'piece',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/banderyk.jpg"],
+    imgUrl: ['../assets/banderyk.jpg'],
     shortDesc:
       "Начинка: м'ясо птиці, шкірка куряча, цибуля ріпчаста, текстурат соєвий харчовий, борошно соєве харчове, сіль харчова, спеції.",
     weight: 4,
   },
 
   {
-    id: "3ks3bjk2-h11n-52c4-y24n-43s63255t5d3",
-    name: "Бендерики свин. – ялов. 4кг",
+    id: '3ks3bjk2-h11n-52c4-y24n-43s63255t5d3',
+    name: 'Бендерики свин. – ялов. 4кг',
     description: (
       <div>
         Бендерики свин. – ялов.: тісто: борошно, вода питна, молоко
@@ -109,18 +109,18 @@ export const semiFinished: ICard[] = [
       </div>
     ),
     price: 79.81,
-    purchaseType: "piece",
-    category: "semiFinished",
+    purchaseType: 'piece',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/banderyk.jpg"],
+    imgUrl: ['../assets/banderyk.jpg'],
     shortDesc:
       "Начинка: м'ясо свинини та яловичини напівжирне, шкірка куряча, цибуля ріпчаста, борошно соєве харчове, сіль кухонна,спеції.",
     weight: 4,
   },
 
   {
-    id: "3ks3bjk2-y41n-52c4-y24n-43f27215t5d3",
-    name: "Бендерики з грибами 4кг",
+    id: '3ks3bjk2-y41n-52c4-y24n-43f27215t5d3',
+    name: 'Бендерики з грибами 4кг',
     description: (
       <div>
         Бендерики з грибами: тісто: борошно, вода питна, молоко пастеризоване
@@ -134,18 +134,18 @@ export const semiFinished: ICard[] = [
       </div>
     ),
     price: 96.65,
-    purchaseType: "piece",
-    category: "semiFinished",
+    purchaseType: 'piece',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/banderyk.jpg"],
+    imgUrl: ['../assets/banderyk.jpg'],
     shortDesc:
-      "Начинка: гриби печериці, цибуля ріпчаста смажена, сіль кухонна, борошно манне екструдоване, жир курячий топлений, перець чорний мелений, приправа до грибів.",
+      'Начинка: гриби печериці, цибуля ріпчаста смажена, сіль кухонна, борошно манне екструдоване, жир курячий топлений, перець чорний мелений, приправа до грибів.',
     weight: 4,
   },
 
   {
-    id: "3kw5pvk5-s42f-72c7-y24n-33f27175r5d3",
-    name: "Вареники з картоплею та цибулею 5 кг",
+    id: '3kw5pvk5-s42f-72c7-y24n-33f27175r5d3',
+    name: 'Вареники з картоплею та цибулею 5 кг',
     description: (
       <div>
         Тісто: борошно пшеничне вищого ґатунку, сироватка пастеризована, сода
@@ -156,17 +156,17 @@ export const semiFinished: ICard[] = [
       </div>
     ),
     price: 47.41,
-    purchaseType: "piece",
-    category: "semiFinished",
+    purchaseType: 'piece',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/varenykWithPotato.jpg"],
+    imgUrl: ['../assets/varenykWithPotato.jpg'],
     shortDesc:
-      "Начинка: картопля варена, цибуля ріпчастасмажена, сіль кухонна, жир курячий топлений, перець чорний мелений, часник сухий мелений.",
+      'Начинка: картопля варена, цибуля ріпчастасмажена, сіль кухонна, жир курячий топлений, перець чорний мелений, часник сухий мелений.',
     weight: 5,
   },
   {
-    id: "3hw5pxu5-s42f-71d7-y24n-38f57175r5d3",
-    name: "Вареники з картоплею та печінкою 5кг",
+    id: '3hw5pxu5-s42f-71d7-y24n-38f57175r5d3',
+    name: 'Вареники з картоплею та печінкою 5кг',
     description: (
       <div>
         Вареники з карт. – печінкою: тісто: борошно пшеничне вищого ґатунку,
@@ -179,17 +179,17 @@ export const semiFinished: ICard[] = [
       </div>
     ),
     price: 78.2,
-    purchaseType: "piece",
-    category: "semiFinished",
+    purchaseType: 'piece',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/varenykWithPotatoAndLiver.jpg"],
+    imgUrl: ['../assets/varenykWithPotatoAndLiver.jpg'],
     shortDesc:
-      "Начинка: картопля варена, печінка куряча варена, цибуля ріпчаста смажена, жир курячий топлений,сіль кухонна, перець чорний мелений",
+      'Начинка: картопля варена, печінка куряча варена, цибуля ріпчаста смажена, жир курячий топлений,сіль кухонна, перець чорний мелений',
     weight: 5,
   },
   {
-    id: "5hw5pxu1-s52f-72d7-y54n-35f57175r5r3",
-    name: "Вареники з лівером 5кг",
+    id: '5hw5pxu1-s52f-72d7-y54n-35f57175r5r3',
+    name: 'Вареники з лівером 5кг',
     description: (
       <div>
         Вареники з лівером: тісто: борошно пшеничне вищого ґатунку, сироватка
@@ -202,17 +202,17 @@ export const semiFinished: ICard[] = [
       </div>
     ),
     price: 71.27,
-    purchaseType: "piece",
-    category: "semiFinished",
+    purchaseType: 'piece',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/varenykWithPotatoAndLiver.jpg"],
+    imgUrl: ['../assets/varenykWithPotatoAndLiver.jpg'],
     shortDesc:
-      "Начинка: картопля варена, печінка куряча варена, цибуля ріпчаста смажена, жир курячий топлений,сіль кухонна, перець чорний мелений",
+      'Начинка: картопля варена, печінка куряча варена, цибуля ріпчаста смажена, жир курячий топлений,сіль кухонна, перець чорний мелений',
     weight: 5,
   },
   {
-    id: "4hf4pxu1-s52f-72s7-w54n-35f57175r5r3",
-    name: "Варенички з картоплею та шкварками 5кг",
+    id: '4hf4pxu1-s52f-72s7-w54n-35f57175r5r3',
+    name: 'Варенички з картоплею та шкварками 5кг',
     description: (
       <div>
         Вареники з лівером: тісто: борошно пшеничне вищого ґатунку, сироватка
@@ -225,18 +225,18 @@ export const semiFinished: ICard[] = [
       </div>
     ),
     price: 54.14,
-    purchaseType: "piece",
-    category: "semiFinished",
+    purchaseType: 'piece',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/varenykWithPotatoAndLiver.jpg"],
+    imgUrl: ['../assets/varenykWithPotatoAndLiver.jpg'],
     shortDesc:
-      "Начинка: картопля варена, печінка куряча варена, цибуля ріпчаста смажена, жир курячий топлений,сіль кухонна, перець чорний мелений",
+      'Начинка: картопля варена, печінка куряча варена, цибуля ріпчаста смажена, жир курячий топлений,сіль кухонна, перець чорний мелений',
     weight: 5,
   },
 
   {
-    id: "3hw3pku2-t42j-21t4-y34n-35f55375k5d3",
-    name: "Вареники з печінкою 5кг",
+    id: '3hw3pku2-t42j-21t4-y34n-35f55375k5d3',
+    name: 'Вареники з печінкою 5кг',
     description: (
       <div>
         Вареники з печінкою: тісто: борошно пшеничне вищого ґатунку, сироватка
@@ -248,18 +248,18 @@ export const semiFinished: ICard[] = [
       </div>
     ),
     price: 71.09,
-    purchaseType: "piece",
-    category: "semiFinished",
+    purchaseType: 'piece',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/varenykWithLiver.jpg"],
+    imgUrl: ['../assets/varenykWithLiver.jpg'],
     shortDesc:
-      "Начинка: печінка куряча арена, цибуля ріпчаста смажена, шкварки з шкірки курячої, жир курячий топлений, сіль кухонна, перець чорний мелений.",
+      'Начинка: печінка куряча арена, цибуля ріпчаста смажена, шкварки з шкірки курячої, жир курячий топлений, сіль кухонна, перець чорний мелений.',
     weight: 5,
   },
 
   {
-    id: "3hw5pxu2-s42d-31t6-j74n-35f55375k5d3",
-    name: "Вареники з м’ясом вареним 5кг",
+    id: '3hw5pxu2-s42d-31t6-j74n-35f55375k5d3',
+    name: 'Вареники з м’ясом вареним 5кг',
     description: (
       <div>
         Вареники з м’ясом : тісто: борошно пшеничне вищого ґатунку, сироватка
@@ -272,18 +272,18 @@ export const semiFinished: ICard[] = [
       </div>
     ),
     price: 85.09,
-    purchaseType: "piece",
-    category: "semiFinished",
+    purchaseType: 'piece',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/varenykWithMeat.jpg"],
+    imgUrl: ['../assets/varenykWithMeat.jpg'],
     shortDesc:
       "Начинка: м'ясо птиці варене, цибуляріпчаста смажена, шкварки з шкірки курячої, сіль кухонна, жир курячий топлений, перець чорний мелений.",
     weight: 5,
   },
 
   {
-    id: "3hw5hxu2-s42f-35k7-y37n-35w55275k4d3",
-    name: "Вареники з капустою 5 кг",
+    id: '3hw5hxu2-s42f-35k7-y37n-35w55275k4d3',
+    name: 'Вареники з капустою 5 кг',
     description: (
       <div>
         Вареники з капустою: тісто: борошно пшеничне вищого ґатунку, сироватка
@@ -297,17 +297,17 @@ export const semiFinished: ICard[] = [
       </div>
     ),
     price: 46.64,
-    purchaseType: "piece",
-    category: "semiFinished",
+    purchaseType: 'piece',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/varenykWithPotatoAndLiver.jpg"],
+    imgUrl: ['../assets/varenykWithPotatoAndLiver.jpg'],
     shortDesc:
-      "Начинка: капуста смажена, цибуля ріпчаста смажена, морква смажена, жир курячий топлений, сіль кухонна, томатна паста, борошно манне екструдоване, перець чорний мелений, прправа «Вегетта»",
+      'Начинка: капуста смажена, цибуля ріпчаста смажена, морква смажена, жир курячий топлений, сіль кухонна, томатна паста, борошно манне екструдоване, перець чорний мелений, прправа «Вегетта»',
     weight: 5,
   },
   {
-    id: "3hq3hxu2-s42f-34k5-y37n-35w55275k4d3",
-    name: "Вареники з сиром та родзинками 5 кг",
+    id: '3hq3hxu2-s42f-34k5-y37n-35w55275k4d3',
+    name: 'Вареники з сиром та родзинками 5 кг',
     description: (
       <div>
         Вареники з сиром та родзинками: тісто: борошно пшеничне вищого ґатунку,
@@ -320,18 +320,18 @@ export const semiFinished: ICard[] = [
       </div>
     ),
     price: 66.88,
-    purchaseType: "piece",
-    category: "semiFinished",
+    purchaseType: 'piece',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/varenykWithCheese.jpg"],
+    imgUrl: ['../assets/varenykWithCheese.jpg'],
     shortDesc:
-      "Начинка: сир кисломолочний 9%, родзинки без кісточок, цукор білий кристалічний, ванілін, борошно манне екструдоване, сіль кухонна.",
+      'Начинка: сир кисломолочний 9%, родзинки без кісточок, цукор білий кристалічний, ванілін, борошно манне екструдоване, сіль кухонна.',
     weight: 5,
   },
 
   {
-    id: "3hq3hxw2-s42t-34k3-y37n-37w45255t4p3",
-    name: "Котлети «Київські» 4кг",
+    id: '3hq3hxw2-s42t-34k3-y37n-37w45255t4p3',
+    name: 'Котлети «Київські» 4кг',
     description: (
       <div>
         Котлети «Київські»: філе куряче, шкірка куряча, цибуля ріпчаста, хліб
@@ -340,18 +340,18 @@ export const semiFinished: ICard[] = [
       </div>
     ),
     price: 88.86,
-    purchaseType: "piece",
-    category: "semiFinished",
+    purchaseType: 'piece',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/kotletaKiev.jpg"],
+    imgUrl: ['../assets/kotletaKiev.jpg'],
     shortDesc:
-      "Котлети «Київські»: філе куряче, шкірка куряча, цибуля ріпчаста, хліб білий не нижче 1-го ґатунку, крупа манна, вода питна, сіль кухонна, спеції, масло вершкове, сухарі панірувальні.",
+      'Котлети «Київські»: філе куряче, шкірка куряча, цибуля ріпчаста, хліб білий не нижче 1-го ґатунку, крупа манна, вода питна, сіль кухонна, спеції, масло вершкове, сухарі панірувальні.',
     weight: 4,
   },
 
   {
-    id: "3hw3hdw2-s42n-34l3-y37n-37g45255t4p3",
-    name: "Котлети «Смаковинка» 4кг",
+    id: '3hw3hdw2-s42n-34l3-y37n-37g45255t4p3',
+    name: 'Котлети «Смаковинка» 4кг',
     description: (
       <div>
         Котлети «Смаковинка»: філе куряче, шкірка куряча, цибуля ріпчаста, хліб
@@ -360,17 +360,17 @@ export const semiFinished: ICard[] = [
       </div>
     ),
     price: 80.78,
-    purchaseType: "piece",
-    category: "semiFinished",
+    purchaseType: 'piece',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/defaultKotleta.jpg"],
+    imgUrl: ['../assets/defaultKotleta.jpg'],
     shortDesc:
-      "Котлети «Смаковинка»: філе куряче, шкірка куряча, цибуля ріпчаста, хліб білий не нижче 1-го ґатунку, крупа манна, вода питна, сіль кухонна, спеції, сир твердий, сухарі панірувальні.",
+      'Котлети «Смаковинка»: філе куряче, шкірка куряча, цибуля ріпчаста, хліб білий не нижче 1-го ґатунку, крупа манна, вода питна, сіль кухонна, спеції, сир твердий, сухарі панірувальні.',
     weight: 4,
   },
   {
-    id: "3hw1hdw5-g23n-32m7-b37m-37g45175t4m3",
-    name: "Котлети «Селянські» 4кг",
+    id: '3hw1hdw5-g23n-32m7-b37m-37g45175t4m3',
+    name: 'Котлети «Селянські» 4кг',
     description: (
       <div>
         Котлети «Селянські»: м'ясо птиці, шкірка куряча, цибуля ріпчаста, хліб
@@ -379,17 +379,17 @@ export const semiFinished: ICard[] = [
       </div>
     ),
     price: 82.93,
-    purchaseType: "piece",
-    category: "semiFinished",
+    purchaseType: 'piece',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/defaultKotleta.jpg"],
+    imgUrl: ['../assets/defaultKotleta.jpg'],
     shortDesc:
       "Котлети «Селянські»: м'ясо птиці, шкірка куряча, цибуля ріпчаста, хліб білий не нижче 1-го ґатунку, вода питна, крупа манна, сіль кухонна, спеції, сухарі панірувальні. ",
     weight: 4,
   },
   {
-    id: "5hy1yyy5-g23n-32m7-b37m-37g45175t4m3",
-    name: "Котлети «Смачні» 4кг",
+    id: '5hy1yyy5-g23n-32m7-b37m-37g45175t4m3',
+    name: 'Котлети «Смачні» 4кг',
     description: (
       <div>
         Котлети «Смачні»: м'ясо птиці, м'ясо механічної обвалки, шкірка куряча,
@@ -398,18 +398,18 @@ export const semiFinished: ICard[] = [
       </div>
     ),
     price: 74.05,
-    purchaseType: "piece",
-    category: "semiFinished",
+    purchaseType: 'piece',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/defaultKotleta.jpg"],
+    imgUrl: ['../assets/defaultKotleta.jpg'],
     shortDesc:
       "Котлети «Смачні»: м'ясо птиці, м'ясо механічної обвалки, шкірка куряча, цибуля ріпчаста, хліб білий не нижче 1-го ґатунку, вода питна, текстурат соєвий, сіль кухонна, спеції, сухарі панірувальні.",
     weight: 4,
   },
 
   {
-    id: "5hy1yyy5-g15n-35b7-b35b-37g45175t4m3",
-    name: "Котлети «Лагідні» 4кг",
+    id: '5hy1yyy5-g15n-35b7-b35b-37g45175t4m3',
+    name: 'Котлети «Лагідні» 4кг',
     description: (
       <div>
         Котлети «Лагідні»: м'ясо птиці, м'ясо механічної обвалки, шкірка куряча,
@@ -418,18 +418,18 @@ export const semiFinished: ICard[] = [
       </div>
     ),
     price: 73.63,
-    purchaseType: "piece",
-    category: "semiFinished",
+    purchaseType: 'piece',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/defaultKotleta.jpg"],
+    imgUrl: ['../assets/defaultKotleta.jpg'],
     shortDesc:
       "Котлети «Лагідні»: м'ясо птиці, м'ясо механічної обвалки, шкірка куряча, цибуля ріпчаста, вода питна,  хліб білий не нижче 1-го ґатунку, крупа манна, текстурат соєвий, сіль кухонна, спеції, сухарі панірувальні.",
     weight: 4,
   },
 
   {
-    id: "5hy1tyt5-h15n-37b7-w35b-37g45175t4m3",
-    name: "Котлети для гамбургера ялового 4кг",
+    id: '5hy1tyt5-h15n-37b7-w35b-37g45175t4m3',
+    name: 'Котлети для гамбургера ялового 4кг',
     description: (
       <div>
         Котлети для гамбургера ялового: м'ясо яловичини 1-го ґатунку, жир
@@ -437,17 +437,76 @@ export const semiFinished: ICard[] = [
       </div>
     ),
     price: 163.99,
-    purchaseType: "piece",
-    category: "semiFinished",
+    purchaseType: 'piece',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/defaultKotleta.jpg"],
+    imgUrl: ['../assets/defaultKotleta.jpg'],
     shortDesc:
       "Котлети для гамбургера ялового: м'ясо яловичини 1-го ґатунку, жир яловий, сіль кухонна, перець чорний мелений",
     weight: 4,
   },
   {
-    id: "3ry1ppp5-h12j-40b0-y43b-37j45175t4m3",
-    name: "Пельмені «Гаврилівські» 5кг",
+    id: '5hy1tyt5-h15n-37b7-w22b-27g45175t4m3',
+    name: 'Котлети лагідні курячі 0.400kg',
+    description: (
+      <div>
+        Лагідні курячі - курячі (м’ясорослинні): м'ясо птиці, шкірка куряча,
+        хліб білий, крупа манна, спеції, сіль кухонна.
+      </div>
+    ),
+    price: 33.6,
+    purchaseType: '1count',
+    category: 'semiFinished',
+    hot: false,
+    imgUrl: ['../assets/kotletLagidni.jpg'],
+    shortDesc:
+      "Лагідні курячі - курячі (м’ясорослинні): м'ясо птиці, шкірка куряча, хліб білий, крупа манна, спеції, сіль кухонна.",
+    weight: 0.4,
+  },
+
+  {
+    id: '5ty1tyt5-h15n-37v7-w22y-27c45175t5m3',
+    name: "Вареники з м'ясом вареним 0.400kg",
+    description: (
+      <div>
+        Вареники з : м`ясом вареним (м'ясо птиці варене, шкварки курячі, овочі
+        смажені, перець чорний мелений, спеції, сіль кухонна).Тісто: борошно
+        пшеничне вищого ґатунку, сироватка пастеризована, сода харчова,
+        поліпшувач тіста, сіль кухонна;
+      </div>
+    ),
+    price: 34.8,
+    purchaseType: '1count',
+    category: 'semiFinished',
+    hot: false,
+    imgUrl: ['../assets/varenykWithMeatt.jpg'],
+    shortDesc:
+      "Вареники з : м`ясом вареним (м'ясо птиці варене, шкварки курячі, овочі смажені, перець чорний мелений, спеції, сіль кухонна).",
+    weight: 0.4,
+  },
+
+  {
+    id: '5ty1tyt5-n15n-77v7-w47y-27n45175t5m3',
+    name: 'Вареники з сиром та родзинками 0.400kg',
+    description: (
+      <div>
+        Вареники з : сиром та родзинками (сир кисломолочний 9%, родзинки без
+        кісточки, цукор, ванілін).
+      </div>
+    ),
+    price: 66.88,
+    purchaseType: 'piece',
+    category: 'semiFinished',
+    hot: false,
+    imgUrl: ['../assets/varenykWithCheeseAndD.jpg'],
+    shortDesc:
+      'Вареники з : сиром та родзинками (сир кисломолочний 9%, родзинки без кісточки, цукор, ванілін).',
+    weight: 0.4,
+  },
+
+  {
+    id: '3ry1ppp5-h12j-40b0-y43b-37j45175t4m3',
+    name: 'Пельмені «Гаврилівські» 5кг',
     description: (
       <div>
         Пельмені «Гаврилівські»: тісто: борошно пшеничне вищого ґатунку, вода
@@ -460,17 +519,17 @@ export const semiFinished: ICard[] = [
       </div>
     ),
     price: 89.09,
-    purchaseType: "piece",
-    category: "semiFinished",
+    purchaseType: 'piece',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/dump5kg.jpg"],
+    imgUrl: ['../assets/dump5kg.jpg'],
     shortDesc:
       "Начинка: м'ясо птиці, шкірка куряча, м'ясо механічної обвалки, текстурат соєвий харчовий, борошно соєве харчове, цибуля ріпчаста, спеції, сіль кухонна",
     weight: 5,
   },
   {
-    id: "5ry2pnt5-h12j-40b0-w45b-37j45175t4m3",
-    name: "Пельмені «Сибірські» 5кг",
+    id: '5ry2pnt5-h12j-40b0-w45b-37j45175t4m3',
+    name: 'Пельмені «Сибірські» 5кг',
     description: (
       <div>
         Пельмені «Сибірські»: тісто: борошно пшеничне вищого ґатунку, вода
@@ -483,16 +542,16 @@ export const semiFinished: ICard[] = [
       </div>
     ),
     price: 72.77,
-    purchaseType: "piece",
-    category: "semiFinished",
+    purchaseType: 'piece',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/dump5kg.jpg"],
+    imgUrl: ['../assets/dump5kg.jpg'],
     shortDesc:
       "Начинка: м'ясо механічної обвалки, шкірка куряча, текстурат соєвий харчовий, борошно соєве харчове, борошно манне екструдоване, цибуля ріпчаста, спеції, сіль кухонна",
     weight: 5,
   },
   {
-    id: "5gg2pnt5-g12j-40b0-w45b-37b45175n4m3",
+    id: '5gg2pnt5-g12j-40b0-w45b-37b45175n4m3',
     name: "Пельмені  з м'яса яловичини 5кг",
     description: (
       <div>
@@ -506,18 +565,18 @@ export const semiFinished: ICard[] = [
       </div>
     ),
     price: 111.96,
-    purchaseType: "piece",
-    category: "semiFinished",
+    purchaseType: 'piece',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/dump5kg.jpg"],
+    imgUrl: ['../assets/dump5kg.jpg'],
     shortDesc:
       "Начинка: м'ясо механічної обвалки, шкірка куряча, текстурат соєвий харчовий, борошно соєве харчове, борошно манне екструдоване, цибуля ріпчаста, спеції, сіль кухонна",
     weight: 5,
   },
 
   {
-    id: "5gg2yut3-h12j-20b0-w45b-37j45175t4m3",
-    name: "Пельмені «Елітні» 5кг",
+    id: '5gg2yut3-h12j-20b0-w45b-37j45175t4m3',
+    name: 'Пельмені «Елітні» 5кг',
     description: (
       <div>
         Пельмені «Елітні»: тісто: борошно пшеничне вищого ґатунку, вода питна,
@@ -529,18 +588,18 @@ export const semiFinished: ICard[] = [
       </div>
     ),
     price: 88.64,
-    purchaseType: "piece",
-    category: "semiFinished",
+    purchaseType: 'piece',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/dump5kg.jpg"],
+    imgUrl: ['../assets/dump5kg.jpg'],
     shortDesc:
-      "Начинка: філе куряче, шкірка куряча, шпиг несолоний, цибуля ріпчаста, спеції, сіль кухонна",
+      'Начинка: філе куряче, шкірка куряча, шпиг несолоний, цибуля ріпчаста, спеції, сіль кухонна',
     weight: 5,
   },
 
   {
-    id: "5ff5yut1-h00j-20b0-w45b-37j45175t4m3",
-    name: "Пельмені «Морозівські» 5кг",
+    id: '5ff5yut1-h00j-20b0-w45b-37j45175t4m3',
+    name: 'Пельмені «Морозівські» 5кг',
     description: (
       <div>
         Пельмені «Морозівські»: тісто: борошно пшеничне вищого ґатунку, вода
@@ -552,18 +611,18 @@ export const semiFinished: ICard[] = [
       </div>
     ),
     price: 87.19,
-    purchaseType: "piece",
-    category: "semiFinished",
+    purchaseType: 'piece',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/dump5kg.jpg"],
+    imgUrl: ['../assets/dump5kg.jpg'],
     shortDesc:
       "Начинка: свинина напівжирна, м'ясо яловичини 1-го ґатунку, шкірка куряча, цибуля ріпчаста, борошно соєве харчове, сіль кухонна, спеції.",
     weight: 5,
   },
 
   {
-    id: "5dd5yut1-h00j-20g0-q45b-37j45175t4m3",
-    name: "Пельмені «Домашні» 5кг",
+    id: '5dd5yut1-h00j-20g0-q45b-37j45175t4m3',
+    name: 'Пельмені «Домашні» 5кг',
     description: (
       <div>
         Пельмені «Домашні»: тісто: борошно пшеничне вищого ґатунку, вода питна,
@@ -575,18 +634,18 @@ export const semiFinished: ICard[] = [
       </div>
     ),
     price: 103.51,
-    purchaseType: "piece",
-    category: "semiFinished",
+    purchaseType: 'piece',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/dump5kg.jpg"],
+    imgUrl: ['../assets/dump5kg.jpg'],
     shortDesc:
       "Начинка: свинина напівжирна, м'ясо яловичини 1-го ґатунку, шкірка куряча, цибуля ріпчаста, борошно соєве харчове, сіль кухонна, спеції.",
     weight: 5,
   },
 
   {
-    id: "1dd5yut1-h10j-20g0-q45b-37j45175p4m3",
-    name: "Пельмені «Домашні» ~ 0.400kg",
+    id: '5dd5yut1-h00j-20g0-q45b-37j45175t4m3',
+    name: 'Пельмені «Домашні» 0.4kg',
     description: (
       <div>
         Пельмені «Домашні»: тісто: борошно пшеничне вищого ґатунку, вода питна,
@@ -598,18 +657,41 @@ export const semiFinished: ICard[] = [
       </div>
     ),
     price: 52.8,
-    purchaseType: "1count",
-    category: "semiFinished",
+    purchaseType: '1count',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/dumpHome400.jpg"],
+    imgUrl: ['../assets/dumpNewHome.jpg', '../assets/dump5kg.jpg'],
     shortDesc:
       "Начинка: свинина напівжирна, м'ясо яловичини 1-го ґатунку, шкірка куряча, цибуля ріпчаста, борошно соєве харчове, сіль кухонна, спеції.",
     weight: 0.4,
   },
 
   {
-    id: "1ff5yut1-h00j-20g0-w45b-37j45125t4m3",
-    name: "Пельмені «Морозівські» ~ 0.400kg",
+    id: '1dd5yut1-n10n-20n0-q45n-37j45175p4m3',
+    name: 'Пельмені «Домашні» ~ 0.400kg',
+    description: (
+      <div>
+        Пельмені «Домашні»: тісто: борошно пшеничне вищого ґатунку, вода питна,
+        поліпшувач тіста, олія рафінована, яєчний порошок (меланж), цукор білий
+        кристалічний, сіль кухонна.
+        <br />
+        Начинка: свинина напівжирна, м'ясо яловичини 1-го ґатунку, шкірка
+        куряча, цибуля ріпчаста, борошно соєве харчове, сіль кухонна, спеції.
+      </div>
+    ),
+    price: 52.8,
+    purchaseType: '1count',
+    category: 'semiFinished',
+    hot: false,
+    imgUrl: ['../assets/dumpHome400.jpg'],
+    shortDesc:
+      "Начинка: свинина напівжирна, м'ясо яловичини 1-го ґатунку, шкірка куряча, цибуля ріпчаста, борошно соєве харчове, сіль кухонна, спеції.",
+    weight: 0.4,
+  },
+
+  {
+    id: '1ff5yut1-h00j-20g0-w45b-37j45125t4m3',
+    name: 'Пельмені «Морозівські» ~ 0.400kg',
     description: (
       <div>
         Пельмені «Морозівські»: тісто: борошно пшеничне вищого ґатунку, вода
@@ -621,18 +703,18 @@ export const semiFinished: ICard[] = [
       </div>
     ),
     price: 46.8,
-    purchaseType: "1count",
-    category: "semiFinished",
+    purchaseType: '1count',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/dumplMoroz.jpg"],
+    imgUrl: ['../assets/moroz.jpg', '../assets/dumplMoroz.jpg'],
     shortDesc:
       "Начинка: свинина напівжирна, м'ясо яловичини 1-го ґатунку, шкірка куряча, цибуля ріпчаста, борошно соєве харчове, сіль кухонна, спеції.",
     weight: 0.4,
   },
 
   {
-    id: "5ff5yut1-h00j-20b0-w52j-57j45175t4m3",
-    name: "Пельмені «З м’яса свинини та яловичини» 5кг",
+    id: '5ff5yut1-h00j-20b0-w52j-57j45175t4m3',
+    name: 'Пельмені «З м’яса свинини та яловичини» 5кг',
     description: (
       <div>
         Пельмені «З м’яса свинини та яловичини»: тісто: борошно пшеничне вищого
@@ -644,18 +726,18 @@ export const semiFinished: ICard[] = [
       </div>
     ),
     price: 111.08,
-    purchaseType: "piece",
-    category: "semiFinished",
+    purchaseType: 'piece',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/dump5kg.jpg"],
+    imgUrl: ['../assets/dump5kg.jpg'],
     shortDesc:
       "Начинка: свинина напівжирна, м'ясо яловичини 1-го ґатунку, шкірка куряча, цибуля ріпчаста, сіль кухонна, спеції",
     weight: 5,
   },
 
   {
-    id: "2cc5yut1-j00j-40b0-w52j-57j45175t4m3",
-    name: "Пельмені «Козацькі» 5кг",
+    id: '2cc5yut1-j00j-40b0-w52j-57j45175t4m3',
+    name: 'Пельмені «Козацькі» 5кг',
     description: (
       <div>
         Пельмені «З м’яса свинини та яловичини»: тісто: борошно пшеничне вищого
@@ -667,18 +749,18 @@ export const semiFinished: ICard[] = [
       </div>
     ),
     price: 71.75,
-    purchaseType: "piece",
-    category: "semiFinished",
+    purchaseType: 'piece',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/dump5kg.jpg"],
+    imgUrl: ['../assets/dump5kg.jpg'],
     shortDesc:
       "Начинка: свинина напівжирна, м'ясо яловичини 1-го ґатунку, шкірка куряча, цибуля ріпчаста, сіль кухонна, спеції",
     weight: 5,
   },
 
   {
-    id: "4cc3yut1-j00j-40b0-w52j-57j45175t4m3",
-    name: "Пельмені «Козацькі» 0.400гр",
+    id: '4cc3yut1-j00j-40b0-w52j-57j45175t4m3',
+    name: 'Пельмені «Козацькі» 0.400гр',
     description: (
       <div>
         Пельмені «З м’яса свинини та яловичини»: тісто: борошно пшеничне вищого
@@ -690,18 +772,18 @@ export const semiFinished: ICard[] = [
       </div>
     ),
     price: 34.8,
-    purchaseType: "1count",
-    category: "semiFinished",
+    purchaseType: '1count',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/nemaPhoto.jpg"],
+    imgUrl: ['../assets/nemaPhoto.jpg'],
     shortDesc:
       "Начинка: свинина напівжирна, м'ясо яловичини 1-го ґатунку, шкірка куряча, цибуля ріпчаста, сіль кухонна, спеції",
     weight: 0.4,
   },
 
   {
-    id: "4ff3yut1-j55j-40b0-w52n-57j45175t4m3",
-    name: "Хінкалі 5кг",
+    id: '4ff3yut1-j55j-40b0-w52n-57j45175t4m3',
+    name: 'Хінкалі 5кг',
     description: (
       <div>
         Тісто: борошно пшеничне вищого ґатунку, вода питна, олія соняшникова
@@ -715,18 +797,18 @@ export const semiFinished: ICard[] = [
       </div>
     ),
     price: 107.44,
-    purchaseType: "piece",
-    category: "semiFinished",
+    purchaseType: 'piece',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/nemaPhoto.jpg"],
+    imgUrl: ['../assets/nemaPhoto.jpg'],
     shortDesc:
       "Начинка: свинина напівжирна, м'ясо яловичини 1-го ґатунку, шкірка куряча, цибуля ріпчаста, сіль кухонна, спеції",
     weight: 5,
   },
 
   {
-    id: "4ff3yug1-j33j-25b0-w52n-57j45175t4m3",
-    name: "Тефтелі з моцарелою 5кг",
+    id: '4ff3yug1-j33j-25b0-w52n-57j45175t4m3',
+    name: 'Тефтелі з моцарелою 5кг',
     description: (
       <div>
         Склад:,крупа рисова варена, м`ясо свинини, шпиг несолоний, цибуля
@@ -738,18 +820,18 @@ export const semiFinished: ICard[] = [
       </div>
     ),
     price: 68.43,
-    purchaseType: "piece",
-    category: "semiFinished",
+    purchaseType: 'piece',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/teftel_masarela.jpg"],
+    imgUrl: ['../assets/teftel_masarela.jpg'],
     shortDesc:
       "Начинка: свинина напівжирна, м'ясо яловичини 1-го ґатунку, шкірка куряча, цибуля ріпчаста, сіль кухонна, спеції",
     weight: 5,
   },
 
   {
-    id: "3cc3yut1-j00b-70h0-w72j-57j45175t4m3",
-    name: "Пельмені «Святкові» 5кг",
+    id: '3cc3yut1-j00b-70h0-w72j-57j45175t4m3',
+    name: 'Пельмені «Святкові» 5кг',
     description: (
       <div>
         Пельмені «З м’яса свинини та яловичини»: тісто: борошно пшеничне вищого
@@ -761,18 +843,18 @@ export const semiFinished: ICard[] = [
       </div>
     ),
     price: 87.67,
-    purchaseType: "piece",
-    category: "semiFinished",
+    purchaseType: 'piece',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/dump5kg.jpg"],
+    imgUrl: ['../assets/dump5kg.jpg'],
     shortDesc:
       "Начинка: свинина напівжирна, м'ясо яловичини 1-го ґатунку, шкірка куряча, цибуля ріпчаста, сіль кухонна, спеції",
     weight: 5,
   },
 
   {
-    id: "5ff5yuq1-h33j-20b0-w52j-57j23175t4m3",
-    name: "Пельмені «Черкаські преміум» 5кг",
+    id: '5ff5yuq1-h33j-20b0-w52j-57j23175t4m3',
+    name: 'Пельмені «Черкаські преміум» 5кг',
     description: (
       <div>
         Пельмені «Черкаські преміум»: тісто: борошно пшеничне вищого ґатунку,
@@ -785,17 +867,17 @@ export const semiFinished: ICard[] = [
       </div>
     ),
     price: 119.56,
-    purchaseType: "piece",
-    category: "semiFinished",
+    purchaseType: 'piece',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/dump5kg.jpg", "dumplChePremium_2.jpg"],
+    imgUrl: ['../assets/dump5kg.jpg', 'dumplChePremium_2.jpg'],
     shortDesc:
       "Начинка: м'ясо яловичини 1-го ґатунку, свинина напівжирна, шпиг несолоний, цибуля ріпчаста, сіль кухонна, цукор білий кристалічний, спеції",
     weight: 5,
   },
   {
-    id: "3ff5yuq1-h55n-20n0-n52j-57j23175t4m3",
-    name: "Пельмені Cоковиті свинні 5кг",
+    id: '3ff5yuq1-h55n-20n0-n52j-57j23175t4m3',
+    name: 'Пельмені Cоковиті свинні 5кг',
     description: (
       <div>
         Пельмені Cоковиті свинні: тісто: борошно пшеничне вищого ґатунку, вода
@@ -808,18 +890,18 @@ export const semiFinished: ICard[] = [
       </div>
     ),
     price: 70.41,
-    purchaseType: "piece",
-    category: "semiFinished",
+    purchaseType: 'piece',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/dump5kg.jpg", "dumplChePremium_2.jpg"],
+    imgUrl: ['../assets/dump5kg.jpg', 'dumplChePremium_2.jpg'],
     shortDesc:
       "Начинка: м'ясо яловичини 1-го ґатунку, свинина напівжирна, шпиг несолоний, цибуля ріпчаста, сіль кухонна, цукор білий кристалічний, спеції",
     weight: 5,
   },
 
   {
-    id: "3jj5yuj1-h77n-40n0-n72j-57j33175t4m5",
-    name: "Пельмені Фірмові 5кг",
+    id: '3jj5yuj1-h77n-40n0-n72j-57j33175t4m5',
+    name: 'Пельмені Фірмові 5кг',
     description: (
       <div>
         Пельмені Cоковиті свинні: тісто: борошно пшеничне вищого ґатунку, вода
@@ -832,18 +914,18 @@ export const semiFinished: ICard[] = [
       </div>
     ),
     price: 69.94,
-    purchaseType: "piece",
-    category: "semiFinished",
+    purchaseType: 'piece',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/dump5kg.jpg", "dumplChePremium_2.jpg"],
+    imgUrl: ['../assets/dump5kg.jpg', 'dumplChePremium_2.jpg'],
     shortDesc:
       "Начинка: м'ясо яловичини 1-го ґатунку, свинина напівжирна, шпиг несолоний, цибуля ріпчаста, сіль кухонна, цукор білий кристалічний, спеції",
     weight: 5,
   },
 
   {
-    id: "1jj5yuj1-h11n-10n0-n12j-57j33175t4m5",
-    name: "Пельмені Байрактарчики (курячі) 5кг",
+    id: '1jj5yuj1-h11n-10n0-n12j-57j33175t4m5',
+    name: 'Пельмені Байрактарчики (курячі) 5кг',
     description: (
       <div>
         Пельмені Байрактарчики (курячі): тісто: борошно пшеничне вищого ґатунку,
@@ -856,18 +938,18 @@ export const semiFinished: ICard[] = [
       </div>
     ),
     price: 63.91,
-    purchaseType: "piece",
-    category: "semiFinished",
+    purchaseType: 'piece',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/dump5kg.jpg", "dumplChePremium_2.jpg"],
+    imgUrl: ['../assets/dump5kg.jpg', 'dumplChePremium_2.jpg'],
     shortDesc:
       "Начинка: м'ясо яловичини 1-го ґатунку, свинина напівжирна, шпиг несолоний, цибуля ріпчаста, сіль кухонна, цукор білий кристалічний, спеції",
     weight: 5,
   },
 
   {
-    id: "1jj5yuj1-y11k-10n0-n55d-27j33175t4m5",
-    name: "Пельмені Веселка 5кг",
+    id: '1jj5yuj1-y11k-10n0-n55d-27j33175t4m5',
+    name: 'Пельмені Веселка 5кг',
     description: (
       <div>
         Пельмені Веселка: тісто: борошно пшеничне вищого ґатунку, вода питна,
@@ -880,18 +962,18 @@ export const semiFinished: ICard[] = [
       </div>
     ),
     price: 63.38,
-    purchaseType: "piece",
-    category: "semiFinished",
+    purchaseType: 'piece',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/dump5kg.jpg", "dumplChePremium_2.jpg"],
+    imgUrl: ['../assets/dump5kg.jpg', 'dumplChePremium_2.jpg'],
     shortDesc:
       "Начинка: м'ясо яловичини 1-го ґатунку, свинина напівжирна, шпиг несолоний, цибуля ріпчаста, сіль кухонна, цукор білий кристалічний, спеції",
     weight: 5,
   },
 
   {
-    id: "7ff5yuq1-h13j-20y0-w52j-57j23175t4m3",
-    name: "Пельмені «Черкаські преміум» ~ 0.400kg",
+    id: '7ff5yuq1-h13j-20y0-w52j-57j23175t4m3',
+    name: 'Пельмені «Черкаські преміум» ~ 0.400kg',
     description: (
       <div>
         Пельмені «Черкаські преміум»: тісто: борошно пшеничне вищого ґатунку,
@@ -904,18 +986,18 @@ export const semiFinished: ICard[] = [
       </div>
     ),
     price: 82.0,
-    purchaseType: "1count",
-    category: "semiFinished",
+    purchaseType: '1count',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/dumpChe400.jpg"],
+    imgUrl: ['../assets/dumpChe400.jpg'],
     shortDesc:
       "Начинка: м'ясо яловичини 1-го ґатунку, свинина напівжирна, шпиг несолоний, цибуля ріпчаста, сіль кухонна, цукор білий кристалічний, спеції",
     weight: 0.4,
   },
 
   {
-    id: "5ff5yuq1-h33j-10k0-w31j-89j23175t4m3",
-    name: "Манти 5 кг",
+    id: '5ff5yuq1-h33j-10k0-w31j-89j23175t4m3',
+    name: 'Манти 5 кг',
     description: (
       <div>
         Манти: тісто: борошно пшеничне вищого ґатунку, вода питна, поліпшувач
@@ -927,18 +1009,41 @@ export const semiFinished: ICard[] = [
       </div>
     ),
     price: 65.24,
-    purchaseType: "piece",
-    category: "semiFinished",
+    purchaseType: 'piece',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/nemaPhoto.jpg"],
+    imgUrl: ['../assets/manty.jpg'],
     shortDesc:
       "Начинка: м'ясо яловичини 1-го ґатунку, свинина напівжирна, шпиг несолоний, цибуля ріпчаста, сіль кухонна, цукор білий кристалічний, спеції",
     weight: 5,
   },
 
   {
-    id: "5bb2yuq3-h23k-10k0-w31j-89j23175t4m3",
-    name: "Чебуреки 4кг",
+    id: '5ff5yuq1-h44j-50k0-w31f-89k23175p4m3',
+    name: 'Манти 0.400kg',
+    description: (
+      <div>
+        Манти: тісто: борошно пшеничне вищого ґатунку, вода питна, поліпшувач
+        тіста, сіль кухонна.
+        <br />
+        Начинка: м'ясо яловичини 1-го ґатунку, свинина напівжирна, шпиг
+        несолоний, шкірка куряча, цибуля ріпчаста, сіль кухонна, соєве борошно
+        харчове, сіль кухонна, спеції.
+      </div>
+    ),
+    price: 33.6,
+    purchaseType: '1count',
+    category: 'semiFinished',
+    hot: false,
+    imgUrl: ['../assets/manty.jpg'],
+    shortDesc:
+      "Начинка: м'ясо яловичини 1-го ґатунку, свинина напівжирна, шпиг несолоний, цибуля ріпчаста, сіль кухонна, цукор білий кристалічний, спеції",
+    weight: 5,
+  },
+
+  {
+    id: '5bb2yuq3-h23k-10k0-w31j-89j23175t4m3',
+    name: 'Чебуреки 4кг',
     description: (
       <div>
         Чебуреки: тісто: борошно пшеничне вищого ґатунку, вода питна, олія
@@ -950,18 +1055,18 @@ export const semiFinished: ICard[] = [
       </div>
     ),
     price: 77.64,
-    purchaseType: "piece",
-    category: "semiFinished",
+    purchaseType: 'piece',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/cheb.jpg"],
+    imgUrl: ['../assets/cheb.jpg'],
     shortDesc:
-      "Начинка: свинина напівжирна, шкірка куряча, цибуля ріпчаста, сіль харчова, спеції.",
+      'Начинка: свинина напівжирна, шкірка куряча, цибуля ріпчаста, сіль харчова, спеції.',
     weight: 4,
   },
 
   {
-    id: "5bb2yuq3-h23k-10k3-n31j-90j22175t4k3",
-    name: "Голубці з рисом та м’ясом 5кг",
+    id: '5bb2yuq3-h23k-10k3-n31j-90j22175t4k3',
+    name: 'Голубці з рисом та м’ясом 5кг',
     description: (
       <div>
         Голубці з рисом та м’ясом: листок парений заморожений.
@@ -972,18 +1077,18 @@ export const semiFinished: ICard[] = [
       </div>
     ),
     price: 68.23,
-    purchaseType: "piece",
-    category: "semiFinished",
+    purchaseType: 'piece',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/golubsi_ris_and_meat.jpg"],
+    imgUrl: ['../assets/golubsi_ris_and_meat.jpg'],
     shortDesc:
       "Начинка: м'ясо яловичини 1-го ґатунку, свинина напівжирна, шкіра куряча,шпиг неслоний, цибуля ріпчаста смажена, морква свіжа смажена, вода питна, крупа рисова, жир курячий топлений, сіль кухонна, спеції",
     weight: 5,
   },
 
   {
-    id: "5nn2ynn3-h45n-10k3-n31j-90j22175t4k3",
-    name: "Перець з рисом та мясом 5кг",
+    id: '5nn2ynn3-h45n-10k3-n31j-90j22175t4k3',
+    name: 'Перець з рисом та мясом 5кг',
     description: (
       <div>
         Склад: перець чищений заморожений.
@@ -994,18 +1099,18 @@ export const semiFinished: ICard[] = [
       </div>
     ),
     price: 100.86,
-    purchaseType: "piece",
-    category: "semiFinished",
+    purchaseType: 'piece',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/perets_ris_and_meat.jpg"],
+    imgUrl: ['../assets/perets_ris_and_meat.jpg'],
     shortDesc:
       "Начинка: м'ясо яловичини 1-го ґатунку, свинина напівжирна, шкіра куряча, шпиг неслоний, цибуля ріпчаста смажена, морква свіжа смажена, вода питна, крупа рисова, жир курячий топлений, сіль кухонна, спеції.",
     weight: 5,
   },
 
   {
-    id: "5nn2yjj3-h45n-10k5-n34j-90j42173t4k3",
-    name: "Манники з сиром та родзинками 5кг",
+    id: '5nn2yjj3-h45n-10k5-n34j-90j42173t4k3',
+    name: 'Манники з сиром та родзинками 5кг',
     description: (
       <div>
         Тісто, молоко пастеризоване 2,5 %, вода питна, крупа манна, цукор білий
@@ -1017,18 +1122,21 @@ export const semiFinished: ICard[] = [
       </div>
     ),
     price: 75.42,
-    purchaseType: "piece",
-    category: "semiFinished",
+    purchaseType: 'piece',
+    category: 'semiFinished',
     hot: false,
-    imgUrl: ["../assets/mannik_sir_rodzinka.jpg"],
+    imgUrl: [
+      '../assets/mannikRodzynka.jpg',
+      '../assets/mannik_sir_rodzinka.jpg',
+    ],
     shortDesc:
-      "Начинка: сир кисломолочний 9 %, родзинки без кісточок, цукор білий кристалічний, вода питна, ванілін, сіль кухонна.",
+      'Начинка: сир кисломолочний 9 %, родзинки без кісточок, цукор білий кристалічний, вода питна, ванілін, сіль кухонна.',
     weight: 5,
   },
 
   {
-    id: "1nn2yjj3-h12n-10k5-n34j-90j42171t4k3",
-    name: "Манники з сиром та родзинками ~ 0.600",
+    id: '1nn2yjj3-h12n-10k5-n34j-90j42171t4k3',
+    name: 'Манники з сиром та родзинками ~ 0.600',
     description: (
       <div>
         Тісто, молоко пастеризоване 2,5 %, вода питна, крупа манна, цукор білий
@@ -1039,13 +1147,37 @@ export const semiFinished: ICard[] = [
       </div>
     ),
     price: 55.85,
-    purchaseType: "0.600kg",
-    category: "1count",
+    purchaseType: '0.600kg',
+    category: '1count',
     hot: false,
-    imgUrl: ["../assets/mannik_sir_rodzinka.jpg"],
+    imgUrl: ['../assets/mannik_sir_rodzinka.jpg'],
     shortDesc:
-      "Начинка: сир кисломолочний 9 %, родзинки без кісточок, цукор білий кристалічний, вода питна, ванілін, сіль кухонна.",
+      'Начинка: сир кисломолочний 9 %, родзинки без кісточок, цукор білий кристалічний, вода питна, ванілін, сіль кухонна.',
     weight: 0.6,
+  },
+  {
+    id: '1nn2kjj5-h12n-10k5-n14j-90j42171t4k3',
+    name: 'Манники з сиром та родзинками ~ 0.400kg',
+    description: (
+      <div>
+        Тісто, молоко пастеризоване 2,5 %, вода питна, крупа манна, цукор білий
+        кристалічний, сіль кухонна, ванілін, куркума.
+        <br />
+        Начинка: сир кисломолочний 9 %, родзинки без кісточок, цукор білий
+        кристалічний, вода питна, ванілін, сіль кухонна.
+      </div>
+    ),
+    price: 55.85,
+    purchaseType: '1count',
+    category: 'semiFinished',
+    hot: false,
+    imgUrl: [
+      '../assets/mannikRodzynka.jpg',
+      '../assets/mannik_sir_rodzinka.jpg',
+    ],
+    shortDesc:
+      'Начинка: сир кисломолочний 9 %, родзинки без кісточок, цукор білий кристалічний, вода питна, ванілін, сіль кухонна.',
+    weight: 0.4,
   },
   // {
   //   id: "5gy1tyt5-h15g-37s7-w35b-37g45175t4m3",
