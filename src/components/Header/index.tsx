@@ -1,13 +1,13 @@
-import React from "react";
-import { Link, useLocation } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
-import classNames from "classnames";
-import { useTranslation } from "react-i18next";
+import React from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import classNames from 'classnames';
+import { useTranslation } from 'react-i18next';
 
-import { navigationMiddleBottom, phoneNumber } from "../../utils/const";
-import { IRoutes } from "../../routes/routes";
+import { navigationMiddleBottom, phoneNumber } from '../../utils/const';
+import { IRoutes } from '../../routes/routes';
 
-import useStyles from "./style";
+import useStyles from './style';
 
 export default function Header() {
   const classes = useStyles();
@@ -24,7 +24,7 @@ export default function Header() {
         <div className={classes.cover}>
           <img
             src="../assets/logoSmakovynka.png"
-            onClick={() => history("/")}
+            onClick={() => history('/')}
             className={classes.img}
             alt="logo"
           />
@@ -41,10 +41,10 @@ export default function Header() {
               <p
                 className={classes.colorWordsAbove}
                 onClick={() =>
-                  i18n.changeLanguage(i18n.language === "ua" ? "en" : "ua")
+                  i18n.changeLanguage(i18n.language === 'ua' ? 'en' : 'ua')
                 }
               >
-                {i18n.language === "ua" ? "УКРАЇНСЬКА" : "ENGLISH"}
+                {i18n.language === 'ua' ? 'УКРАЇНСЬКА' : 'ENGLISH'}
               </p>
             </div>
             <div className={classes.middleBottom}>
@@ -57,15 +57,15 @@ export default function Header() {
                   }
                   to={String(item.path)}
                 >
-                  {t(item.name !== undefined ? item.name : "")}
+                  {t(item.name !== undefined ? item.name : '')}
                   <p className={classes.antIcon}>{item.component}</p>
                 </Link>
               ))}
             </div>
           </div>
           <img
-            src="../assets/chpk_logo.png"
-            onClick={() => history("/")}
+            src="../assets/newLogo.PNG"
+            onClick={() => history('/')}
             className={classes.img}
             alt="logo"
           />
