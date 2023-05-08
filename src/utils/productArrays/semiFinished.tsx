@@ -494,8 +494,8 @@ export const semiFinished: ICard[] = [
         кісточки, цукор, ванілін).
       </div>
     ),
-    price: 66.88,
-    purchaseType: 'piece',
+    price: 36.0,
+    purchaseType: '1count',
     category: 'semiFinished',
     hot: false,
     imgUrl: ['../assets/varenykWithCheeseAndD.jpg'],
